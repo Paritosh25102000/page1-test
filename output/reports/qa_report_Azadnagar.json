@@ -1,0 +1,19 @@
+{
+  "project": "Azadnagar",
+  "total_tasks": 17456,
+  "parents": 1740,
+  "leaves": 15705,
+  "milestones": 11,
+  "sample_size": 10,
+  "sample_pass_rate": 1.0,
+  "validation_issues": [],
+  "sample_failures": [],
+  "field_coverage": {
+    "dates.actual.start": 0.11,
+    "dates.actual.end": 0.11,
+    "dates.actual.duration_days": 0.11,
+    "cost_timeline": 0.51,
+    "attributes": 0.9,
+    "progress": 0.9
+  }
+}

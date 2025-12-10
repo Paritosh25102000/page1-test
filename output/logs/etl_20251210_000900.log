@@ -1,0 +1,121 @@
+2025-12-10 00:09:00,168 - INFO - utils - Logging initialized. Log file: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/logs/etl_20251210_000900.log
+2025-12-10 00:09:00,168 - INFO - runner - ============================================================
+2025-12-10 00:09:00,168 - INFO - runner - CCO Dashboard ETL - XML to JSON Conversion
+2025-12-10 00:09:00,168 - INFO - runner - ============================================================
+2025-12-10 00:09:00,168 - INFO - runner - Input directory: /Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines
+2025-12-10 00:09:00,168 - INFO - runner - Output directory: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output
+2025-12-10 00:09:00,169 - INFO - runner - Found 12 XML files to process
+2025-12-10 00:09:00,169 - INFO - runner - Processing Aristocrat...
+2025-12-10 00:09:00,169 - DEBUG - runner - Parsing XML: /Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Aristocrat.xml
+2025-12-10 00:09:01,087 - INFO - runner -   Found 5614 tasks
+2025-12-10 00:09:01,087 - DEBUG - runner - Transforming tasks...
+2025-12-10 00:09:01,242 - DEBUG - runner - Running validation...
+2025-12-10 00:09:01,245 - INFO - runner -   Types: 630 parents, 4984 leaves, 0 milestones
+2025-12-10 00:09:03,163 - INFO - runner -   Sample validation: 10/10 passed
+2025-12-10 00:09:03,589 - INFO - runner -   Saved: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Aristocrat.json
+2025-12-10 00:09:03,590 - DEBUG - runner -   QA report: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/reports/qa_report_Aristocrat.json
+2025-12-10 00:09:03,606 - INFO - runner - Processing Azadnagar...
+2025-12-10 00:09:03,606 - DEBUG - runner - Parsing XML: /Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Azadnagar.xml
+2025-12-10 00:09:05,518 - INFO - runner -   Found 17456 tasks
+2025-12-10 00:09:05,520 - DEBUG - runner - Transforming tasks...
+2025-12-10 00:09:06,031 - DEBUG - runner - Running validation...
+2025-12-10 00:09:06,082 - INFO - runner -   Types: 1740 parents, 15705 leaves, 11 milestones
+2025-12-10 00:09:13,494 - INFO - runner -   Sample validation: 10/10 passed
+2025-12-10 00:09:14,752 - INFO - runner -   Saved: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Azadnagar.json
+2025-12-10 00:09:14,753 - DEBUG - runner -   QA report: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/reports/qa_report_Azadnagar.json
+2025-12-10 00:09:14,824 - INFO - runner - Processing BLSaha...
+2025-12-10 00:09:14,824 - DEBUG - runner - Parsing XML: /Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/BLSaha.xml
+2025-12-10 00:09:15,479 - INFO - runner -   Found 10065 tasks
+2025-12-10 00:09:15,479 - DEBUG - runner - Transforming tasks...
+2025-12-10 00:09:15,677 - DEBUG - runner - Running validation...
+2025-12-10 00:09:15,686 - INFO - runner -   Types: 457 parents, 9517 leaves, 91 milestones
+2025-12-10 00:09:18,202 - INFO - runner -   Sample validation: 10/10 passed
+2025-12-10 00:09:18,930 - INFO - runner -   Saved: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/BLSaha.json
+2025-12-10 00:09:18,932 - DEBUG - runner -   QA report: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/reports/qa_report_BLSaha.json
+2025-12-10 00:09:18,991 - INFO - runner - Processing Bigbull-Reserve...
+2025-12-10 00:09:18,991 - DEBUG - runner - Parsing XML: /Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Bigbull-Reserve.xml
+2025-12-10 00:09:19,939 - INFO - runner -   Found 16438 tasks
+2025-12-10 00:09:19,940 - DEBUG - runner - Transforming tasks...
+2025-12-10 00:09:20,190 - DEBUG - runner - Running validation...
+2025-12-10 00:09:20,198 - INFO - runner -   Types: 1595 parents, 14843 leaves, 0 milestones
+2025-12-10 00:09:24,581 - INFO - runner -   Sample validation: 10/10 passed
+2025-12-10 00:09:25,285 - INFO - runner -   Saved: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Bigbull-Reserve.json
+2025-12-10 00:09:25,286 - DEBUG - runner -   QA report: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/reports/qa_report_Bigbull-Reserve.json
+2025-12-10 00:09:25,318 - INFO - runner - Processing Jardinia...
+2025-12-10 00:09:25,318 - DEBUG - runner - Parsing XML: /Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Jardinia.xml
+2025-12-10 00:09:25,733 - INFO - runner -   Found 4723 tasks
+2025-12-10 00:09:25,733 - DEBUG - runner - Transforming tasks...
+2025-12-10 00:09:25,921 - DEBUG - runner - Running validation...
+2025-12-10 00:09:25,925 - INFO - runner -   Types: 514 parents, 4209 leaves, 0 milestones
+2025-12-10 00:09:27,873 - INFO - runner -   Sample validation: 10/10 passed
+2025-12-10 00:09:28,136 - INFO - runner -   Saved: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Jardinia.json
+2025-12-10 00:09:28,136 - DEBUG - runner -   QA report: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/reports/qa_report_Jardinia.json
+2025-12-10 00:09:28,143 - INFO - runner - Processing Miraya...
+2025-12-10 00:09:28,143 - DEBUG - runner - Parsing XML: /Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Miraya.xml
+2025-12-10 00:09:28,300 - INFO - runner -   Found 2849 tasks
+2025-12-10 00:09:28,300 - DEBUG - runner - Transforming tasks...
+2025-12-10 00:09:28,378 - DEBUG - runner - Running validation...
+2025-12-10 00:09:28,380 - INFO - runner -   Types: 318 parents, 2527 leaves, 4 milestones
+2025-12-10 00:09:29,392 - INFO - runner -   Sample validation: 10/10 passed
+2025-12-10 00:09:29,739 - INFO - runner -   Saved: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Miraya.json
+2025-12-10 00:09:29,741 - DEBUG - runner -   QA report: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/reports/qa_report_Miraya.json
+2025-12-10 00:09:29,750 - INFO - runner - Processing OneM...
+2025-12-10 00:09:29,750 - DEBUG - runner - Parsing XML: /Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/OneM.xml
+2025-12-10 00:09:30,304 - INFO - runner -   Found 3910 tasks
+2025-12-10 00:09:30,304 - DEBUG - runner - Transforming tasks...
+2025-12-10 00:09:30,694 - DEBUG - runner - Running validation...
+2025-12-10 00:09:30,700 - INFO - runner -   Types: 426 parents, 3483 leaves, 1 milestones
+2025-12-10 00:09:32,875 - INFO - runner -   Sample validation: 10/10 passed
+2025-12-10 00:09:33,201 - INFO - runner -   Saved: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/OneM.json
+2025-12-10 00:09:33,202 - DEBUG - runner -   QA report: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/reports/qa_report_OneM.json
+2025-12-10 00:09:33,241 - INFO - runner - Processing RGA Land2...
+2025-12-10 00:09:33,241 - DEBUG - runner - Parsing XML: /Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/RGA Land2.xml
+2025-12-10 00:09:33,800 - INFO - runner -   Found 8492 tasks
+2025-12-10 00:09:33,801 - DEBUG - runner - Transforming tasks...
+2025-12-10 00:09:34,055 - DEBUG - runner - Running validation...
+2025-12-10 00:09:34,068 - INFO - runner -   Types: 1281 parents, 7198 leaves, 13 milestones
+2025-12-10 00:09:36,577 - INFO - runner -   Sample validation: 10/10 passed
+2025-12-10 00:09:37,314 - INFO - runner -   Saved: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/RGA Land2.json
+2025-12-10 00:09:37,315 - DEBUG - runner -   QA report: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/reports/qa_report_RGA Land2.json
+2025-12-10 00:09:37,337 - INFO - runner - Processing Riverine...
+2025-12-10 00:09:37,337 - DEBUG - runner - Parsing XML: /Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Riverine.xml
+2025-12-10 00:09:37,659 - INFO - runner -   Found 3635 tasks
+2025-12-10 00:09:37,660 - DEBUG - runner - Transforming tasks...
+2025-12-10 00:09:37,938 - DEBUG - runner - Running validation...
+2025-12-10 00:09:37,946 - INFO - runner -   Types: 558 parents, 3037 leaves, 40 milestones
+2025-12-10 00:09:39,329 - INFO - runner -   Sample validation: 10/10 passed
+2025-12-10 00:09:39,546 - INFO - runner -   Saved: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Riverine.json
+2025-12-10 00:09:39,547 - DEBUG - runner -   QA report: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/reports/qa_report_Riverine.json
+2025-12-10 00:09:39,563 - INFO - runner - Processing Tropical Isle 146...
+2025-12-10 00:09:39,563 - DEBUG - runner - Parsing XML: /Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Tropical Isle 146.xml
+2025-12-10 00:09:40,050 - INFO - runner -   Found 4770 tasks
+2025-12-10 00:09:40,050 - DEBUG - runner - Transforming tasks...
+2025-12-10 00:09:40,178 - DEBUG - runner - Running validation...
+2025-12-10 00:09:40,181 - INFO - runner -   Types: 513 parents, 4257 leaves, 0 milestones
+2025-12-10 00:09:41,917 - INFO - runner -   Sample validation: 10/10 passed
+2025-12-10 00:09:42,255 - INFO - runner -   Saved: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Tropical Isle 146.json
+2025-12-10 00:09:42,257 - DEBUG - runner -   QA report: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/reports/qa_report_Tropical Isle 146.json
+2025-12-10 00:09:42,277 - INFO - runner - Processing Woodscapes...
+2025-12-10 00:09:42,277 - DEBUG - runner - Parsing XML: /Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Woodscapes.xml
+2025-12-10 00:09:43,686 - INFO - runner -   Found 23494 tasks
+2025-12-10 00:09:43,686 - DEBUG - runner - Transforming tasks...
+2025-12-10 00:09:44,576 - DEBUG - runner - Running validation...
+2025-12-10 00:09:44,601 - INFO - runner -   Types: 3277 parents, 20201 leaves, 16 milestones
+2025-12-10 00:09:50,240 - INFO - runner -   Sample validation: 10/10 passed
+2025-12-10 00:09:51,669 - INFO - runner -   Saved: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Woodscapes.json
+2025-12-10 00:09:51,670 - DEBUG - runner -   QA report: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/reports/qa_report_Woodscapes.json
+2025-12-10 00:09:51,737 - INFO - runner - Processing Zenith...
+2025-12-10 00:09:51,737 - DEBUG - runner - Parsing XML: /Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Zenith.xml
+2025-12-10 00:09:52,566 - INFO - runner -   Found 8978 tasks
+2025-12-10 00:09:52,567 - DEBUG - runner - Transforming tasks...
+2025-12-10 00:09:52,806 - DEBUG - runner - Running validation...
+2025-12-10 00:09:52,814 - INFO - runner -   Types: 961 parents, 8016 leaves, 1 milestones
+2025-12-10 00:09:55,539 - INFO - runner -   Sample validation: 10/10 passed
+2025-12-10 00:09:56,375 - INFO - runner -   Saved: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Zenith.json
+2025-12-10 00:09:56,376 - DEBUG - runner -   QA report: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/reports/qa_report_Zenith.json
+2025-12-10 00:09:56,399 - INFO - runner - Summary report: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/reports/summary_report.json
+2025-12-10 00:09:56,399 - INFO - runner - ============================================================
+2025-12-10 00:09:56,399 - INFO - runner - Processing Complete
+2025-12-10 00:09:56,399 - INFO - runner - ============================================================
+2025-12-10 00:09:56,399 - INFO - runner - Files processed: 12/12
+2025-12-10 00:09:56,399 - INFO - runner - Total tasks: 110424

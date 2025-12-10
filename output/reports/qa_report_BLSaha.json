@@ -1,0 +1,19 @@
+{
+  "project": "BLSaha",
+  "total_tasks": 10065,
+  "parents": 457,
+  "leaves": 9517,
+  "milestones": 91,
+  "sample_size": 10,
+  "sample_pass_rate": 1.0,
+  "validation_issues": [],
+  "sample_failures": [],
+  "field_coverage": {
+    "dates.actual.start": 0.01,
+    "dates.actual.end": 0.01,
+    "dates.actual.duration_days": 0.01,
+    "cost_timeline": 0.53,
+    "attributes": 0.95,
+    "progress": 0.95
+  }
+}

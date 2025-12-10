@@ -1,0 +1,313 @@
+{
+  "$schema": "task_schema.json",
+  "$comment": "Sample tasks demonstrating the three task types: parent, leaf, and milestone.",
+
+  "samples": [
+    {
+      "$comment": "PARENT ELEMENT - Summary task with children. Null: attributes, progress, cost_plan_total, cost_timeline.",
+
+      "uid": 37300,
+      "id": 150,
+      "wbs": "37300",
+      "outline_number": "2",
+      "name": "Civil Works",
+      "parent_wbs": null,
+      "is_summary": true,
+      "is_milestone": false,
+
+      "dates": {
+        "plan": {
+          "start": "2025-06-01",
+          "end": "2028-12-15",
+          "duration_days": 1293
+        },
+        "manual": {
+          "start": "2025-06-01",
+          "end": "2028-12-15",
+          "duration_days": 1293
+        },
+        "sprint": {
+          "start": null,
+          "end": null,
+          "duration_days": null
+        },
+        "actual": {
+          "start": null,
+          "end": null,
+          "duration_days": null
+        }
+      },
+
+      "attributes": null,
+      "progress": null,
+      "cost_plan_total": null,
+      "cost_timeline": null
+    },
+
+    {
+      "$comment": "LEAF ELEMENT - Work task with full cost timeline and attributes.",
+
+      "uid": 51923,
+      "id": 2847,
+      "wbs": "37300.37500.51900.51923",
+      "outline_number": "2.7.3.5",
+      "name": "Reinforcement - Column",
+      "parent_wbs": "37300.37500.51900",
+      "is_summary": false,
+      "is_milestone": false,
+
+      "dates": {
+        "plan": {
+          "start": "2025-03-15",
+          "end": "2025-05-20",
+          "duration_days": 47
+        },
+        "manual": {
+          "start": "2025-03-15",
+          "end": "2025-05-20",
+          "duration_days": 47
+        },
+        "sprint": {
+          "start": null,
+          "end": null,
+          "duration_days": null
+        },
+        "actual": {
+          "start": "2025-03-18",
+          "end": "2025-05-25",
+          "duration_days": 49
+        }
+      },
+
+      "attributes": {
+        "project_name": "Tropical Isle",
+        "zone": "MZ",
+        "region": "NZ2",
+        "tower": "Tower 1",
+        "floor": "Floor 1",
+        "main_category": "Civil Works- RCC",
+        "sub_category": "RCC",
+        "trade_type": "Reinforcement",
+        "slab_works": "Typical"
+      },
+
+      "progress": {
+        "percent_complete": 75,
+        "is_complete": false
+      },
+
+      "cost_plan_total": 500000,
+
+      "cost_timeline": {
+        "fy_period": {
+          "start": "2025-04-01",
+          "end": "2026-03-31"
+        },
+
+        "incoming_cost": {
+          "plan": {
+            "days_before_fy": 17,
+            "cost": 180851.06
+          },
+          "actual": {
+            "days_before_fy": 14,
+            "cost": 142857.14
+          }
+        },
+
+        "weekly_costs": [
+          {
+            "week_number": 1,
+            "week_start": "2025-03-31",
+            "week_end": "2025-04-06",
+            "days_in_task": {
+              "plan": 6,
+              "actual": 6
+            },
+            "plan": {
+              "cost": 63829.79,
+              "accumulated": 244680.85
+            },
+            "actual": {
+              "cost": 61224.49,
+              "accumulated": 204081.63
+            }
+          },
+          {
+            "week_number": 2,
+            "week_start": "2025-04-07",
+            "week_end": "2025-04-13",
+            "days_in_task": {
+              "plan": 7,
+              "actual": 7
+            },
+            "plan": {
+              "cost": 74468.09,
+              "accumulated": 319148.94
+            },
+            "actual": {
+              "cost": 71428.57,
+              "accumulated": 275510.20
+            }
+          },
+          {
+            "week_number": 3,
+            "week_start": "2025-04-14",
+            "week_end": "2025-04-20",
+            "days_in_task": {
+              "plan": 7,
+              "actual": 7
+            },
+            "plan": {
+              "cost": 74468.09,
+              "accumulated": 393617.03
+            },
+            "actual": {
+              "cost": 71428.57,
+              "accumulated": 346938.77
+            }
+          },
+          {
+            "week_number": 4,
+            "week_start": "2025-04-21",
+            "week_end": "2025-04-27",
+            "days_in_task": {
+              "plan": 7,
+              "actual": 7
+            },
+            "plan": {
+              "cost": 74468.09,
+              "accumulated": 468085.12
+            },
+            "actual": {
+              "cost": 71428.57,
+              "accumulated": 418367.34
+            }
+          },
+          {
+            "week_number": 5,
+            "week_start": "2025-04-28",
+            "week_end": "2025-05-04",
+            "days_in_task": {
+              "plan": 7,
+              "actual": 7
+            },
+            "plan": {
+              "cost": 74468.09,
+              "accumulated": 542553.21
+            },
+            "actual": {
+              "cost": 71428.57,
+              "accumulated": 489795.91
+            }
+          },
+          {
+            "week_number": 6,
+            "week_start": "2025-05-05",
+            "week_end": "2025-05-11",
+            "days_in_task": {
+              "plan": 7,
+              "actual": 7
+            },
+            "plan": {
+              "cost": 74468.09,
+              "accumulated": 617021.30
+            },
+            "actual": {
+              "cost": 71428.57,
+              "accumulated": 561224.48
+            }
+          },
+          {
+            "week_number": 7,
+            "week_start": "2025-05-12",
+            "week_end": "2025-05-18",
+            "days_in_task": {
+              "plan": 7,
+              "actual": 7
+            },
+            "plan": {
+              "cost": 74468.09,
+              "accumulated": 691489.39
+            },
+            "actual": {
+              "cost": 71428.57,
+              "accumulated": 632653.05
+            }
+          },
+          {
+            "week_number": 8,
+            "week_start": "2025-05-19",
+            "week_end": "2025-05-25",
+            "days_in_task": {
+              "plan": 2,
+              "actual": 7
+            },
+            "plan": {
+              "cost": 21276.60,
+              "accumulated": 712765.99
+            },
+            "actual": {
+              "cost": 71428.57,
+              "accumulated": 704081.62
+            }
+          }
+        ],
+
+        "summary": {
+          "total_weeks_in_fy": 8,
+          "plan_cost_in_fy": 531914.93,
+          "actual_cost_in_fy": 561224.48,
+          "plan_cost_before_fy": 180851.06,
+          "actual_cost_before_fy": 142857.14
+        }
+      }
+    },
+
+    {
+      "$comment": "MILESTONE ELEMENT - Zero duration event marker. Has progress but no cost_timeline or attributes.",
+
+      "uid": 51950,
+      "id": 2900,
+      "wbs": "37300.37500.51950",
+      "outline_number": "2.7.10",
+      "name": "RCC Works Complete",
+      "parent_wbs": "37300.37500",
+      "is_summary": false,
+      "is_milestone": true,
+
+      "dates": {
+        "plan": {
+          "start": "2025-08-15",
+          "end": "2025-08-15",
+          "duration_days": 0
+        },
+        "manual": {
+          "start": "2025-08-15",
+          "end": "2025-08-15",
+          "duration_days": 0
+        },
+        "sprint": {
+          "start": null,
+          "end": null,
+          "duration_days": null
+        },
+        "actual": {
+          "start": "2025-08-18",
+          "end": "2025-08-18",
+          "duration_days": 0
+        }
+      },
+
+      "attributes": null,
+
+      "progress": {
+        "percent_complete": 100,
+        "is_complete": true
+      },
+
+      "cost_plan_total": 0,
+      "cost_timeline": null
+    }
+  ]
+}

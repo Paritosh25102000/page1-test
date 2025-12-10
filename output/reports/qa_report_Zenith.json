@@ -1,0 +1,19 @@
+{
+  "project": "Zenith",
+  "total_tasks": 8978,
+  "parents": 961,
+  "leaves": 8016,
+  "milestones": 1,
+  "sample_size": 10,
+  "sample_pass_rate": 1.0,
+  "validation_issues": [],
+  "sample_failures": [],
+  "field_coverage": {
+    "dates.actual.start": 0.03,
+    "dates.actual.end": 0.03,
+    "dates.actual.duration_days": 0.03,
+    "cost_timeline": 0.87,
+    "attributes": 0.89,
+    "progress": 0.89
+  }
+}

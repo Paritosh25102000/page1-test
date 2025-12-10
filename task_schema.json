@@ -1,0 +1,500 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://easybim.com/schemas/task/v2.0",
+  "title": "Construction Task Schema",
+  "description": "Schema for construction project tasks extracted from Asta Powerproject XML, with cost timeline for financial year analysis.",
+  "type": "object",
+  "$comment": "Field order: identity → hierarchy → flags → dates → attributes → progress → cost. Parent tasks have null for attributes, progress, cost_plan_total, cost_timeline.",
+
+  "properties": {
+    "uid": {
+      "type": "integer",
+      "description": "Unique identifier from XML source (Task/UID)."
+    },
+    "id": {
+      "type": "integer",
+      "description": "Sequential ID from XML source (Task/ID)."
+    },
+    "wbs": {
+      "type": "string",
+      "pattern": "^[0-9]+(\\.[0-9]+)*$",
+      "description": "Work Breakdown Structure code - dot-separated hierarchy (e.g., '37300.37500.51900')."
+    },
+    "outline_number": {
+      "type": "string",
+      "pattern": "^[0-9]+(\\.[0-9]+)*$",
+      "description": "Human-readable outline number (e.g., '2.7.3.5')."
+    },
+    "name": {
+      "type": "string",
+      "description": "Task name/title from XML source."
+    },
+    "parent_wbs": {
+      "type": ["string", "null"],
+      "pattern": "^[0-9]+(\\.[0-9]+)*$",
+      "description": "WBS code of parent task. Derived by removing last segment. Null for root-level tasks."
+    },
+    "is_summary": {
+      "type": "boolean",
+      "description": "True if task is a summary/parent task with children (XML Summary='1')."
+    },
+    "is_milestone": {
+      "type": "boolean",
+      "description": "True if task is a milestone - zero duration event marker (XML Milestone='1')."
+    },
+
+    "dates": {
+      "type": "object",
+      "description": "All date-related fields grouped together.",
+      "properties": {
+        "plan": {
+          "type": "object",
+          "description": "Planned/baseline dates from schedule.",
+          "properties": {
+            "start": {
+              "type": ["string", "null"],
+              "format": "date",
+              "description": "Plan start date (YYYY-MM-DD) from XML Start field."
+            },
+            "end": {
+              "type": ["string", "null"],
+              "format": "date",
+              "description": "Plan end date (YYYY-MM-DD) from XML Finish field."
+            },
+            "duration_days": {
+              "type": ["number", "null"],
+              "minimum": 0,
+              "description": "Plan duration in days. Converted from XML Duration (PT{hours}H0M0S ÷ 8)."
+            }
+          },
+          "required": ["start", "end", "duration_days"],
+          "additionalProperties": false
+        },
+        "manual": {
+          "type": "object",
+          "description": "Manually entered dates (may differ from calculated).",
+          "properties": {
+            "start": {
+              "type": ["string", "null"],
+              "format": "date",
+              "description": "Manual start date from XML ManualStart field."
+            },
+            "end": {
+              "type": ["string", "null"],
+              "format": "date",
+              "description": "Manual end date from XML ManualFinish field."
+            },
+            "duration_days": {
+              "type": ["number", "null"],
+              "minimum": 0,
+              "description": "Manual duration in days from XML ManualDuration."
+            }
+          },
+          "required": ["start", "end", "duration_days"],
+          "additionalProperties": false
+        },
+        "sprint": {
+          "type": "object",
+          "description": "Sprint/short-term planning dates. Populated from separate sprint XML files.",
+          "properties": {
+            "start": {
+              "type": ["string", "null"],
+              "format": "date",
+              "description": "Sprint start date. Source: separate sprint XML files."
+            },
+            "end": {
+              "type": ["string", "null"],
+              "format": "date",
+              "description": "Sprint end date. Source: separate sprint XML files."
+            },
+            "duration_days": {
+              "type": ["number", "null"],
+              "minimum": 0,
+              "description": "Sprint duration in days."
+            }
+          },
+          "required": ["start", "end", "duration_days"],
+          "additionalProperties": false
+        },
+        "actual": {
+          "type": "object",
+          "description": "Actual dates. Leaf tasks: derived from TimephasedData Type=2. Milestones: from ActualStart/ActualFinish. Parents: null.",
+          "properties": {
+            "start": {
+              "type": ["string", "null"],
+              "format": "date",
+              "description": "Actual start date. Leaf: earliest TimephasedData Type=2 Start. Milestone: XML ActualStart."
+            },
+            "end": {
+              "type": ["string", "null"],
+              "format": "date",
+              "description": "Actual end date. Leaf: latest TimephasedData Type=2 Finish. Milestone: XML ActualFinish."
+            },
+            "duration_days": {
+              "type": ["number", "null"],
+              "minimum": 0,
+              "description": "Actual duration in calendar days between actual start and end."
+            }
+          },
+          "required": ["start", "end", "duration_days"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["plan", "manual", "sprint", "actual"],
+      "additionalProperties": false
+    },
+
+    "attributes": {
+      "type": ["object", "null"],
+      "description": "Task attributes from external master data. Null for parent/summary tasks and milestones.",
+      "$comment": "Source: External master data lookup by WBS, NOT from XML ExtendedAttributes.",
+      "properties": {
+        "project_name": {
+          "type": "string",
+          "enum": [
+            "Horizon",
+            "Reserve",
+            "Avenue 11",
+            "Miraya",
+            "Aristocrat",
+            "Zenith",
+            "Tropical Isle",
+            "Jardinia",
+            "Sec. 44, Noida",
+            "Ramaiah",
+            "Woodscapes",
+            "RGA 2",
+            "BL Saha"
+          ],
+          "description": "Project name."
+        },
+        "zone": {
+          "type": "string",
+          "enum": ["MZ", "NZ", "SZ", "WEZ"],
+          "description": "Zone identifier."
+        },
+        "region": {
+          "type": "string",
+          "enum": ["MZ1", "NZ1", "NZ2", "SZ2", "SZ1", "Kolkata"],
+          "description": "Region identifier."
+        },
+        "tower": {
+          "type": "string",
+          "description": "Tower identifier (project-specific, e.g., 'Tower 1', 'Tower A')."
+        },
+        "floor": {
+          "type": "string",
+          "description": "Floor identifier (project-specific, e.g., 'Floor 1', 'GF', 'B1')."
+        },
+        "main_category": {
+          "type": "string",
+          "enum": ["Civil Works- RCC", "MEP", "Finishing", "Infra"],
+          "description": "Main work category."
+        },
+        "sub_category": {
+          "type": "string",
+          "enum": [
+            "RCC",
+            "Tower MEP",
+            "Tower Civil Finishes",
+            "Tower Finishing",
+            "Common area finishes",
+            "Common area-MEP",
+            "Ext MEP",
+            "BRM-Security",
+            "Miscellaneous",
+            "Ext Infra",
+            "NTA RCC"
+          ],
+          "description": "Sub-category of work."
+        },
+        "trade_type": {
+          "type": "string",
+          "enum": [
+            "Reinforcement",
+            "Shuttering- Conventional",
+            "Shuttering- AL",
+            "Electrical",
+            "Concreting",
+            "Post Pour",
+            "Blockwork",
+            "Railing",
+            "Waterproofing",
+            "Plumbing",
+            "Door",
+            "Int Plaster",
+            "Paint",
+            "Flooring",
+            "False Ceiling",
+            "CA-Blockwork",
+            "Lift",
+            "CA-Railing",
+            "CA-Flooring",
+            "CA-Door",
+            "CA-Electrical",
+            "CA-Int Plaster",
+            "CA-Paint",
+            "CA-PHE",
+            "CA-Fire-fighting & FAPA",
+            "CA-HVAC",
+            "Ext Electrical",
+            "BRM-Security",
+            "Ext Fire fighting & FAPA",
+            "Ext PHE",
+            "Ext Paint",
+            "CP Sanitary",
+            "Misc",
+            "Ext Plaster",
+            "STP",
+            "OWC",
+            "WTP",
+            "Solar",
+            "Ext Infra",
+            "NTA RCC",
+            "NTA Finishing"
+          ],
+          "description": "Trade/work type."
+        },
+        "slab_works": {
+          "type": "string",
+          "enum": ["Typical", "Non-typical", "Non-slab"],
+          "description": "Slab work classification."
+        }
+      },
+      "required": ["project_name", "zone", "region", "main_category", "sub_category", "trade_type", "slab_works"],
+      "additionalProperties": false
+    },
+
+    "progress": {
+      "type": ["object", "null"],
+      "description": "Task progress. Null for parent/summary tasks.",
+      "properties": {
+        "percent_complete": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage complete from XML PercentComplete field."
+        },
+        "is_complete": {
+          "type": "boolean",
+          "description": "True if percent_complete == 100."
+        }
+      },
+      "required": ["percent_complete", "is_complete"],
+      "additionalProperties": false
+    },
+
+    "cost_plan_total": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "description": "Total planned cost for the task from XML FixedCost. Null for parent/summary tasks. Zero for milestones."
+    },
+
+    "cost_timeline": {
+      "type": ["object", "null"],
+      "description": "Weekly cost breakdown for financial year (FY 2025-26: April 1, 2025 to March 31, 2026). Null for parent tasks and milestones.",
+      "$comment": "Validation rule: Sum of weekly actual costs should equal percent_complete * cost_plan_total.",
+      "properties": {
+        "fy_period": {
+          "type": "object",
+          "description": "Financial year period for cost tracking.",
+          "properties": {
+            "start": {
+              "type": "string",
+              "format": "date",
+              "const": "2025-04-01",
+              "description": "FY start date."
+            },
+            "end": {
+              "type": "string",
+              "format": "date",
+              "const": "2026-03-31",
+              "description": "FY end date."
+            }
+          },
+          "required": ["start", "end"],
+          "additionalProperties": false
+        },
+        "incoming_cost": {
+          "type": "object",
+          "description": "Cost incurred before FY start, prorated to duration.",
+          "properties": {
+            "plan": {
+              "type": "object",
+              "description": "Plan incoming cost before FY.",
+              "properties": {
+                "days_before_fy": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "description": "Number of plan days before FY start."
+                },
+                "cost": {
+                  "type": "number",
+                  "minimum": 0,
+                  "description": "Prorated cost: (cost_plan_total / duration_plan_days) * days_before_fy."
+                }
+              },
+              "required": ["days_before_fy", "cost"],
+              "additionalProperties": false
+            },
+            "actual": {
+              "type": "object",
+              "description": "Actual incoming cost before FY.",
+              "properties": {
+                "days_before_fy": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "description": "Number of actual days before FY start."
+                },
+                "cost": {
+                  "type": "number",
+                  "minimum": 0,
+                  "description": "Prorated cost based on actual start date."
+                }
+              },
+              "required": ["days_before_fy", "cost"],
+              "additionalProperties": false
+            }
+          },
+          "required": ["plan", "actual"],
+          "additionalProperties": false
+        },
+        "weekly_costs": {
+          "type": "array",
+          "description": "Array of weekly cost entries. Weeks run Monday to Sunday.",
+          "items": {
+            "type": "object",
+            "description": "Cost breakdown for a single week.",
+            "properties": {
+              "week_number": {
+                "type": "integer",
+                "minimum": 1,
+                "description": "Sequential week number within task's FY period."
+              },
+              "week_start": {
+                "type": "string",
+                "format": "date",
+                "description": "Monday of the week (YYYY-MM-DD)."
+              },
+              "week_end": {
+                "type": "string",
+                "format": "date",
+                "description": "Sunday of the week (YYYY-MM-DD)."
+              },
+              "days_in_task": {
+                "type": "object",
+                "description": "Number of task days falling within this week (0-7).",
+                "properties": {
+                  "plan": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 7,
+                    "description": "Plan days in this week."
+                  },
+                  "actual": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 7,
+                    "description": "Actual days in this week."
+                  }
+                },
+                "required": ["plan", "actual"],
+                "additionalProperties": false
+              },
+              "plan": {
+                "type": "object",
+                "description": "Plan cost for this week. Formula: cost_plan_total / duration_plan_days * days_in_task.plan.",
+                "properties": {
+                  "cost": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Plan cost for this week."
+                  },
+                  "accumulated": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Running total from task start (including incoming_cost)."
+                  }
+                },
+                "required": ["cost", "accumulated"],
+                "additionalProperties": false
+              },
+              "actual": {
+                "type": "object",
+                "description": "Actual cost for this week. Complete: cost_plan_total/actual_duration*days. Incomplete: use plan rate.",
+                "properties": {
+                  "cost": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Actual cost for this week."
+                  },
+                  "accumulated": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Running total from actual start (including incoming_cost)."
+                  }
+                },
+                "required": ["cost", "accumulated"],
+                "additionalProperties": false
+              }
+            },
+            "required": ["week_number", "week_start", "week_end", "days_in_task", "plan", "actual"],
+            "additionalProperties": false
+          }
+        },
+        "summary": {
+          "type": "object",
+          "description": "Aggregated cost summary for the task within FY.",
+          "properties": {
+            "total_weeks_in_fy": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of weeks the task spans within FY."
+            },
+            "plan_cost_in_fy": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Total plan cost within FY period."
+            },
+            "actual_cost_in_fy": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Total actual cost within FY period."
+            },
+            "plan_cost_before_fy": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Plan cost incurred before FY start (= incoming_cost.plan.cost)."
+            },
+            "actual_cost_before_fy": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Actual cost incurred before FY start (= incoming_cost.actual.cost)."
+            }
+          },
+          "required": ["total_weeks_in_fy", "plan_cost_in_fy", "actual_cost_in_fy", "plan_cost_before_fy", "actual_cost_before_fy"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["fy_period", "incoming_cost", "weekly_costs", "summary"],
+      "additionalProperties": false
+    }
+  },
+
+  "required": [
+    "uid",
+    "id",
+    "wbs",
+    "outline_number",
+    "name",
+    "parent_wbs",
+    "is_summary",
+    "is_milestone",
+    "dates",
+    "attributes",
+    "progress",
+    "cost_plan_total",
+    "cost_timeline"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,19 @@
+{
+  "project": "Aristocrat",
+  "total_tasks": 5614,
+  "parents": 630,
+  "leaves": 4984,
+  "milestones": 0,
+  "sample_size": 10,
+  "sample_pass_rate": 1.0,
+  "validation_issues": [],
+  "sample_failures": [],
+  "field_coverage": {
+    "dates.actual.start": 0.04,
+    "dates.actual.end": 0.04,
+    "dates.actual.duration_days": 0.04,
+    "cost_timeline": 0.75,
+    "attributes": 0.89,
+    "progress": 0.89
+  }
+}

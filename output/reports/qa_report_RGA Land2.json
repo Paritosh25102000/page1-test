@@ -1,0 +1,19 @@
+{
+  "project": "RGA Land2",
+  "total_tasks": 8492,
+  "parents": 1281,
+  "leaves": 7198,
+  "milestones": 13,
+  "sample_size": 10,
+  "sample_pass_rate": 1.0,
+  "validation_issues": [],
+  "sample_failures": [],
+  "field_coverage": {
+    "dates.actual.start": 0.01,
+    "dates.actual.end": 0.01,
+    "dates.actual.duration_days": 0.01,
+    "cost_timeline": 0.8,
+    "attributes": 0.85,
+    "progress": 0.85
+  }
+}

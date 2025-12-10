@@ -1,0 +1,22 @@
+2025-12-10 00:08:24,395 - INFO - utils - Logging initialized. Log file: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/logs/etl_20251210_000824.log
+2025-12-10 00:08:24,395 - INFO - runner - ============================================================
+2025-12-10 00:08:24,395 - INFO - runner - CCO Dashboard ETL - XML to JSON Conversion
+2025-12-10 00:08:24,395 - INFO - runner - ============================================================
+2025-12-10 00:08:24,395 - INFO - runner - Input directory: /Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines
+2025-12-10 00:08:24,395 - INFO - runner - Output directory: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output
+2025-12-10 00:08:24,395 - INFO - runner - Found 1 XML files to process
+2025-12-10 00:08:24,395 - INFO - runner - Processing Miraya...
+2025-12-10 00:08:24,395 - DEBUG - runner - Parsing XML: /Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Miraya.xml
+2025-12-10 00:08:24,580 - INFO - runner -   Found 2849 tasks
+2025-12-10 00:08:24,580 - DEBUG - runner - Transforming tasks...
+2025-12-10 00:08:24,764 - DEBUG - runner - Running validation...
+2025-12-10 00:08:24,767 - INFO - runner -   Types: 318 parents, 2527 leaves, 4 milestones
+2025-12-10 00:08:25,890 - INFO - runner -   Sample validation: 10/10 passed
+2025-12-10 00:08:26,214 - INFO - runner -   Saved: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Miraya.json
+2025-12-10 00:08:26,218 - DEBUG - runner -   QA report: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/reports/qa_report_Miraya.json
+2025-12-10 00:08:26,239 - INFO - runner - Summary report: /Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/reports/summary_report.json
+2025-12-10 00:08:26,239 - INFO - runner - ============================================================
+2025-12-10 00:08:26,239 - INFO - runner - Processing Complete
+2025-12-10 00:08:26,239 - INFO - runner - ============================================================
+2025-12-10 00:08:26,239 - INFO - runner - Files processed: 1/1
+2025-12-10 00:08:26,239 - INFO - runner - Total tasks: 2849

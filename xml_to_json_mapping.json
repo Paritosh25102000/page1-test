@@ -1,0 +1,423 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://easybim.com/schemas/mapping/xml-to-task/v2.0",
+  "title": "XML to Task JSON Field Mapping",
+  "description": "Defines how Asta Powerproject XML fields map to target Task JSON schema",
+
+  "source": {
+    "format": "Microsoft Project XML (MSPDI)",
+    "namespace": "http://schemas.microsoft.com/project",
+    "namespace_prefix": "ms"
+  },
+
+  "target_schema": "task_schema.json",
+
+  "direct_mappings": {
+    "_description": "Fields copied directly from XML with minimal transformation",
+
+    "uid": {
+      "source_xpath": "ms:Tasks/ms:Task/ms:UID",
+      "source_type": "integer",
+      "target_field": "uid",
+      "transformation": "parse_int"
+    },
+    "id": {
+      "source_xpath": "ms:Tasks/ms:Task/ms:ID",
+      "source_type": "integer",
+      "target_field": "id",
+      "transformation": "parse_int"
+    },
+    "wbs": {
+      "source_xpath": "ms:Tasks/ms:Task/ms:WBS",
+      "source_type": "string",
+      "target_field": "wbs",
+      "transformation": "none"
+    },
+    "outline_number": {
+      "source_xpath": "ms:Tasks/ms:Task/ms:OutlineNumber",
+      "source_type": "string",
+      "target_field": "outline_number",
+      "transformation": "none"
+    },
+    "name": {
+      "source_xpath": "ms:Tasks/ms:Task/ms:Name",
+      "source_type": "string",
+      "target_field": "name",
+      "transformation": "none"
+    },
+    "is_summary": {
+      "source_xpath": "ms:Tasks/ms:Task/ms:Summary",
+      "source_type": "string",
+      "target_field": "is_summary",
+      "transformation": "boolean_from_string",
+      "transformation_rule": "'1' -> true, '0' -> false"
+    },
+    "is_milestone": {
+      "source_xpath": "ms:Tasks/ms:Task/ms:Milestone",
+      "source_type": "string",
+      "target_field": "is_milestone",
+      "transformation": "boolean_from_string",
+      "transformation_rule": "'1' -> true, '0' -> false"
+    },
+    "percent_complete": {
+      "source_xpath": "ms:Tasks/ms:Task/ms:PercentComplete",
+      "source_type": "integer",
+      "target_field": "progress.percent_complete",
+      "transformation": "parse_int"
+    },
+    "cost_plan_total": {
+      "source_xpath": "ms:Tasks/ms:Task/ms:FixedCost",
+      "source_type": "decimal",
+      "target_field": "cost_plan_total",
+      "transformation": "parse_float"
+    }
+  },
+
+  "date_mappings": {
+    "_description": "Date fields requiring datetime-to-date extraction",
+
+    "dates.plan.start": {
+      "source_xpath": "ms:Tasks/ms:Task/ms:Start",
+      "source_type": "datetime",
+      "source_format": "ISO 8601 (e.g., 2025-03-15T08:00:00)",
+      "target_field": "dates.plan.start",
+      "transformation": "extract_date",
+      "transformation_rule": "Take first 10 characters (YYYY-MM-DD)"
+    },
+    "dates.plan.end": {
+      "source_xpath": "ms:Tasks/ms:Task/ms:Finish",
+      "source_type": "datetime",
+      "target_field": "dates.plan.end",
+      "transformation": "extract_date"
+    },
+    "dates.manual.start": {
+      "source_xpath": "ms:Tasks/ms:Task/ms:ManualStart",
+      "source_type": "datetime",
+      "target_field": "dates.manual.start",
+      "transformation": "extract_date"
+    },
+    "dates.manual.end": {
+      "source_xpath": "ms:Tasks/ms:Task/ms:ManualFinish",
+      "source_type": "datetime",
+      "target_field": "dates.manual.end",
+      "transformation": "extract_date"
+    }
+  },
+
+  "duration_mappings": {
+    "_description": "Duration fields requiring ISO 8601 duration to days conversion",
+    "_conversion_formula": "hours / 8 = days (assuming 8-hour workday)",
+
+    "dates.plan.duration_days": {
+      "source_xpath": "ms:Tasks/ms:Task/ms:Duration",
+      "source_type": "duration",
+      "source_format": "ISO 8601 (e.g., PT960H0M0S)",
+      "target_field": "dates.plan.duration_days",
+      "transformation": "iso8601_duration_to_days",
+      "transformation_rule": "Parse PT{hours}H{minutes}M{seconds}S, calculate total_hours, divide by 8"
+    },
+    "dates.manual.duration_days": {
+      "source_xpath": "ms:Tasks/ms:Task/ms:ManualDuration",
+      "source_type": "duration",
+      "target_field": "dates.manual.duration_days",
+      "transformation": "iso8601_duration_to_days"
+    }
+  },
+
+  "derived_mappings": {
+    "_description": "Fields calculated from other fields or multiple sources",
+
+    "parent_wbs": {
+      "source_field": "wbs",
+      "target_field": "parent_wbs",
+      "transformation": "remove_last_segment",
+      "transformation_rule": "Split by '.', remove last element, rejoin. If single segment, return null.",
+      "examples": [
+        { "input": "37300.37500.51900", "output": "37300.37500" },
+        { "input": "37300.37500", "output": "37300" },
+        { "input": "37300", "output": null }
+      ]
+    },
+    "progress.is_complete": {
+      "source_field": "progress.percent_complete",
+      "target_field": "progress.is_complete",
+      "transformation": "equals_100",
+      "transformation_rule": "percent_complete == 100 -> true, else false"
+    }
+  },
+
+  "actual_dates_mapping": {
+    "_description": "Actual dates have different sources based on task type",
+
+    "leaf_tasks": {
+      "condition": "is_summary == false AND is_milestone == false",
+      "source": "Assignments with matching TaskUID",
+      "source_xpath": "ms:Assignments/ms:Assignment[ms:TaskUID={task_uid}]/ms:TimephasedData[ms:Type='2']",
+
+      "dates.actual.start": {
+        "derivation": "Find earliest Start date from all TimephasedData Type=2 entries where Value != 'PT0H0M0S'",
+        "transformation": "min_date"
+      },
+      "dates.actual.end": {
+        "derivation": "Find latest Finish date from all TimephasedData Type=2 entries where Value != 'PT0H0M0S'",
+        "transformation": "max_date"
+      },
+      "dates.actual.duration_days": {
+        "derivation": "Calculate calendar days between actual.start and actual.end",
+        "transformation": "date_diff_days"
+      }
+    },
+
+    "milestones": {
+      "condition": "is_milestone == true",
+      "source": "Task fields directly",
+
+      "dates.actual.start": {
+        "source_xpath": "ms:Tasks/ms:Task/ms:ActualStart",
+        "transformation": "extract_date",
+        "note": "Only present in 5/12 files, only for completed milestones"
+      },
+      "dates.actual.end": {
+        "source_xpath": "ms:Tasks/ms:Task/ms:ActualFinish",
+        "transformation": "extract_date"
+      },
+      "dates.actual.duration_days": {
+        "derivation": "Always 0 for milestones",
+        "transformation": "constant_zero"
+      }
+    },
+
+    "summary_tasks": {
+      "condition": "is_summary == true",
+      "note": "Actual dates are rolled up from children - set to null in ETL, calculate in post-processing if needed",
+      "dates.actual.start": null,
+      "dates.actual.end": null,
+      "dates.actual.duration_days": null
+    }
+  },
+
+  "sprint_dates_mapping": {
+    "_description": "Sprint dates come from separate XML files, not baseline files",
+    "source": "Separate sprint XML files (to be processed separately)",
+    "target_fields": ["dates.sprint.start", "dates.sprint.end", "dates.sprint.duration_days"],
+    "default_value": null,
+    "note": "Set to null during baseline ETL, populate in subsequent sprint ETL pass"
+  },
+
+  "attributes_mapping": {
+    "_description": "Attributes come from external master data, not XML source. Position: after dates, before progress.",
+    "source": "External master data (project-specific lookup tables)",
+    "target_field": "attributes",
+
+    "fields": {
+      "project_name": {
+        "source": "Derived from XML filename or Project/Name field",
+        "applies_to": "all_projects",
+        "allowed_values": ["Horizon", "Reserve", "Avenue 11", "Miraya", "Aristocrat", "Zenith", "Tropical Isle", "Jardinia", "Sec. 44, Noida", "Ramaiah", "Woodscapes", "RGA 2", "BL Saha"]
+      },
+      "zone": {
+        "source": "External master data lookup by WBS",
+        "applies_to": "all_projects",
+        "allowed_values": ["MZ", "NZ", "SZ", "WEZ"]
+      },
+      "region": {
+        "source": "External master data lookup by WBS",
+        "applies_to": "all_projects",
+        "allowed_values": ["MZ1", "NZ1", "NZ2", "SZ2", "SZ1", "Kolkata"]
+      },
+      "tower": {
+        "source": "External master data lookup by WBS",
+        "applies_to": "project_specific",
+        "allowed_values": "Project-specific (e.g., 'Tower 1', 'Tower A')"
+      },
+      "floor": {
+        "source": "External master data lookup by WBS",
+        "applies_to": "project_specific",
+        "allowed_values": "Project-specific (e.g., 'Floor 1', 'GF', 'B1')"
+      },
+      "main_category": {
+        "source": "External master data lookup by WBS",
+        "applies_to": "all_projects",
+        "allowed_values": ["Civil Works- RCC", "MEP", "Finishing", "Infra"]
+      },
+      "sub_category": {
+        "source": "External master data lookup by WBS",
+        "applies_to": "all_projects",
+        "allowed_values": ["RCC", "Tower MEP", "Tower Civil Finishes", "Tower Finishing", "Common area finishes", "Common area-MEP", "Ext MEP", "BRM-Security", "Miscellaneous", "Ext Infra", "NTA RCC"]
+      },
+      "trade_type": {
+        "source": "External master data lookup by WBS",
+        "applies_to": "all_projects",
+        "allowed_values": ["Reinforcement", "Shuttering- Conventional", "Shuttering- AL", "Electrical", "Concreting", "Post Pour", "Blockwork", "Railing", "Waterproofing", "Plumbing", "Door", "Int Plaster", "Paint", "Flooring", "False Ceiling", "CA-Blockwork", "Lift", "CA-Railing", "CA-Flooring", "CA-Door", "CA-Electrical", "CA-Int Plaster", "CA-Paint", "CA-PHE", "CA-Fire-fighting & FAPA", "CA-HVAC", "Ext Electrical", "BRM-Security", "Ext Fire fighting & FAPA", "Ext PHE", "Ext Paint", "CP Sanitary", "Misc", "Ext Plaster", "STP", "OWC", "WTP", "Solar", "Ext Infra", "NTA RCC", "NTA Finishing"]
+      },
+      "slab_works": {
+        "source": "External master data lookup by WBS",
+        "applies_to": "all_projects",
+        "allowed_values": ["Typical", "Non-typical", "Non-slab"]
+      }
+    },
+
+    "null_conditions": [
+      "is_summary == true",
+      "is_milestone == true"
+    ]
+  },
+
+  "cost_timeline_mapping": {
+    "_description": "Cost timeline is calculated, not directly mapped from XML",
+    "source_fields": ["cost_plan_total", "dates.plan", "dates.actual", "progress.percent_complete"],
+    "target_field": "cost_timeline",
+
+    "fy_period": {
+      "start": "2025-04-01",
+      "end": "2026-03-31",
+      "note": "Financial year April 1, 2025 to March 31, 2026"
+    },
+
+    "calculation_rules": {
+      "incoming_cost.plan": {
+        "formula": "(cost_plan_total / dates.plan.duration_days) * days_before_fy_start",
+        "condition": "dates.plan.start < fy_period.start"
+      },
+      "incoming_cost.actual": {
+        "formula": "(cost_plan_total / dates.actual.duration_days) * actual_days_before_fy_start",
+        "condition": "dates.actual.start < fy_period.start AND dates.actual.start IS NOT NULL"
+      },
+      "weekly_costs.plan.cost": {
+        "formula": "(cost_plan_total / dates.plan.duration_days) * days_in_week_for_plan",
+        "note": "Prorated for partial weeks at task boundaries"
+      },
+      "weekly_costs.actual.cost": {
+        "formula_complete": "(cost_plan_total / dates.actual.duration_days) * days_in_week_for_actual",
+        "formula_incomplete": "(cost_plan_total / dates.plan.duration_days) * days_in_week_for_actual",
+        "condition": "Use formula_complete if progress.is_complete == true, else formula_incomplete"
+      },
+      "weekly_costs.accumulated": {
+        "formula": "previous_week.accumulated + current_week.cost",
+        "initial_value": "incoming_cost (plan or actual respectively)"
+      }
+    },
+
+    "validation_rule": {
+      "description": "Sum of weekly actual costs should equal current progress",
+      "formula": "sum(weekly_costs[].actual.cost) + incoming_cost.actual.cost ≈ (percent_complete / 100) * cost_plan_total",
+      "tolerance": 0.01
+    },
+
+    "null_conditions": [
+      "is_summary == true",
+      "is_milestone == true",
+      "cost_plan_total == 0",
+      "cost_plan_total IS NULL"
+    ]
+  },
+
+  "excluded_xml_fields": {
+    "_description": "XML fields NOT mapped to target schema",
+    "fields": [
+      {
+        "name": "Type",
+        "reason": "All tasks use Type 0 (Fixed Units) - no variation"
+      },
+      {
+        "name": "IsNull",
+        "reason": "Internal MS Project flag, not needed for analysis"
+      },
+      {
+        "name": "OutlineLevel",
+        "reason": "Can be derived from WBS depth"
+      },
+      {
+        "name": "DurationFormat",
+        "reason": "All use same format, conversion handles it"
+      },
+      {
+        "name": "Resume",
+        "reason": "Internal scheduling field, not needed"
+      },
+      {
+        "name": "ResumeValid",
+        "reason": "Internal scheduling field, not needed"
+      },
+      {
+        "name": "Critical",
+        "reason": "Can be recalculated if needed, variable across projects"
+      },
+      {
+        "name": "FixedCostAccrual",
+        "reason": "Accrual method not needed for cost timeline"
+      },
+      {
+        "name": "ConstraintType",
+        "reason": "Scheduling constraint, not needed for analysis"
+      },
+      {
+        "name": "CalendarUID",
+        "reason": "Calendar reference, not needed in flat output"
+      },
+      {
+        "name": "ConstraintDate",
+        "reason": "Scheduling constraint, not needed for analysis"
+      },
+      {
+        "name": "ExtendedAttribute",
+        "reason": "Attributes come from external master data instead"
+      },
+      {
+        "name": "PredecessorLink",
+        "reason": "Dependencies handled separately if needed"
+      }
+    ]
+  },
+
+  "transformation_functions": {
+    "_description": "Reference implementations for transformation functions",
+
+    "parse_int": {
+      "input": "string",
+      "output": "integer",
+      "implementation": "int(value) if value else None"
+    },
+    "parse_float": {
+      "input": "string",
+      "output": "number",
+      "implementation": "float(value) if value else None"
+    },
+    "boolean_from_string": {
+      "input": "string ('0' or '1')",
+      "output": "boolean",
+      "implementation": "value == '1'"
+    },
+    "extract_date": {
+      "input": "datetime string (ISO 8601)",
+      "output": "date string (YYYY-MM-DD)",
+      "implementation": "value[:10] if value else None"
+    },
+    "iso8601_duration_to_days": {
+      "input": "duration string (e.g., PT960H0M0S)",
+      "output": "number (days)",
+      "implementation": "Parse hours from PT{H}H{M}M{S}S, divide by 8",
+      "example": "PT960H0M0S -> 960 / 8 = 120 days"
+    },
+    "remove_last_segment": {
+      "input": "dot-separated string",
+      "output": "dot-separated string or null",
+      "implementation": "'.'.join(value.split('.')[:-1]) or None"
+    },
+    "min_date": {
+      "input": "array of date strings",
+      "output": "date string",
+      "implementation": "min(dates) if dates else None"
+    },
+    "max_date": {
+      "input": "array of date strings",
+      "output": "date string",
+      "implementation": "max(dates) if dates else None"
+    },
+    "date_diff_days": {
+      "input": "two date strings",
+      "output": "integer",
+      "implementation": "(end_date - start_date).days"
+    }
+  }
+}

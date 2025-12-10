@@ -1,0 +1,19 @@
+{
+  "project": "Miraya",
+  "total_tasks": 2849,
+  "parents": 318,
+  "leaves": 2527,
+  "milestones": 4,
+  "sample_size": 10,
+  "sample_pass_rate": 1.0,
+  "validation_issues": [],
+  "sample_failures": [],
+  "field_coverage": {
+    "dates.actual.start": 0.02,
+    "dates.actual.end": 0.02,
+    "dates.actual.duration_days": 0.02,
+    "cost_timeline": 0.85,
+    "attributes": 0.89,
+    "progress": 0.89
+  }
+}
