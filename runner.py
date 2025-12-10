@@ -6,10 +6,23 @@ Converts Asta Powerproject XML files to JSON format according to
 the master schema (task_schema.json) and mapping rules.
 
 Usage:
-    python runner.py                        # Process all XML files
-    python runner.py --file Miraya.xml      # Process single file
-    python runner.py --validate-only        # Run validation on existing output
-    python runner.py --dry-run              # Parse and transform without saving
+    # Standard processing with enrichment (default)
+    python runner.py                                    # Process all XML files with enrichment
+    python runner.py --file Miraya.xml                  # Process single file with enrichment
+
+    # Enrichment control
+    python runner.py --no-enrich-zone-region            # Skip zone/region enrichment
+    python runner.py --no-enrich-tower-floor            # Skip tower/floor enrichment
+    python runner.py --no-enrich                        # Skip all enrichment
+
+    # Update existing outputs with enrichment
+    python runner.py --enrich-only                      # Enrich existing JSON outputs
+    python runner.py --enrich-only --enrich-zone-region # Only enrich zone/region
+    python runner.py --enrich-only --enrich-tower-floor # Only enrich tower/floor
+
+    # Other modes
+    python runner.py --validate-only                    # Run validation on existing output
+    python runner.py --dry-run                          # Parse and transform without saving
 """
 
 import argparse
@@ -22,6 +35,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from src.cost_timeline import calculate_cost_timeline
+from src.enrichment import enrich_attributes
 from src.task_builder import build_all_tasks
 from src.utils import (
     ensure_directory,
@@ -45,6 +59,8 @@ def process_single_file(
     output_dir: str,
     dry_run: bool = False,
     sample_size: int = 10,
+    enrich_zone_region: bool = True,
+    enrich_tower_floor: bool = True,
     logger=None,
 ) -> dict:
     """
@@ -55,6 +71,8 @@ def process_single_file(
         output_dir: Output directory
         dry_run: If True, don't save output files
         sample_size: Number of tasks for sample validation
+        enrich_zone_region: Whether to enrich zone/region
+        enrich_tower_floor: Whether to enrich tower/floor
         logger: Logger instance
 
     Returns:
@@ -100,6 +118,29 @@ def process_single_file(
         )
 
         stats["tasks_processed"] = len(tasks)
+
+        # Apply enrichment
+        if enrich_zone_region or enrich_tower_floor:
+            if logger:
+                logger.debug("Enriching attributes...")
+
+            tasks = enrich_attributes(
+                tasks=tasks,
+                project_name=project_name,
+                enrich_zone_region_flag=enrich_zone_region,
+                enrich_tower_floor_flag=enrich_tower_floor,
+            )
+
+            if logger:
+                enriched_count = sum(
+                    1 for t in tasks
+                    if t.get("attributes") and (
+                        t["attributes"].get("zone") or
+                        t["attributes"].get("tower") or
+                        t["attributes"].get("floor")
+                    )
+                )
+                logger.info(f"  Enriched {enriched_count} tasks with attributes")
 
         # Run validation
         if logger:
@@ -168,6 +209,87 @@ def process_single_file(
             logger.error(f"  Error: {e}")
 
     return stats
+
+
+def enrich_existing_outputs(
+    output_dir: str,
+    enrich_zone_region: bool = True,
+    enrich_tower_floor: bool = True,
+    logger=None,
+) -> dict:
+    """
+    Enrich existing JSON outputs with attributes.
+
+    Args:
+        output_dir: Output directory with JSON files
+        enrich_zone_region: Whether to enrich zone/region
+        enrich_tower_floor: Whether to enrich tower/floor
+        logger: Logger instance
+
+    Returns:
+        Dictionary with enrichment results
+    """
+    results = {"projects": [], "total_enriched": 0}
+
+    json_dir = os.path.join(output_dir, "json")
+    if not os.path.exists(json_dir):
+        if logger:
+            logger.error(f"JSON directory not found: {json_dir}")
+        return results
+
+    # Find all JSON files
+    json_files = sorted(Path(json_dir).glob("*.json"))
+
+    for json_file in json_files:
+        project_name = json_file.stem
+
+        if logger:
+            logger.info(f"Enriching {project_name}...")
+
+        try:
+            # Load output JSON
+            tasks = load_json_file(str(json_file))
+
+            # Apply enrichment
+            tasks = enrich_attributes(
+                tasks=tasks,
+                project_name=project_name,
+                enrich_zone_region_flag=enrich_zone_region,
+                enrich_tower_floor_flag=enrich_tower_floor,
+            )
+
+            # Count enriched tasks
+            enriched_count = sum(
+                1 for t in tasks
+                if t.get("attributes") and (
+                    t["attributes"].get("zone") or
+                    t["attributes"].get("tower") or
+                    t["attributes"].get("floor")
+                )
+            )
+
+            # Save enriched output
+            save_json_file(tasks, str(json_file))
+
+            results["projects"].append({
+                "project": project_name,
+                "total_tasks": len(tasks),
+                "enriched_tasks": enriched_count,
+            })
+            results["total_enriched"] += enriched_count
+
+            if logger:
+                logger.info(f"  Enriched {enriched_count}/{len(tasks)} tasks")
+
+        except Exception as e:
+            if logger:
+                logger.error(f"  Error enriching {project_name}: {e}")
+            results["projects"].append({
+                "project": project_name,
+                "error": str(e),
+            })
+
+    return results
 
 
 def run_validation_only(
@@ -273,6 +395,36 @@ def main():
         "--verbose", "-v", action="store_true", help="Enable verbose logging"
     )
 
+    # Enrichment arguments
+    parser.add_argument(
+        "--enrich-only",
+        action="store_true",
+        help="Enrich existing JSON outputs (no XML processing)",
+    )
+    parser.add_argument(
+        "--no-enrich", action="store_true", help="Skip all enrichment"
+    )
+    parser.add_argument(
+        "--enrich-zone-region",
+        action="store_true",
+        help="Enrich only zone/region (use with --enrich-only)",
+    )
+    parser.add_argument(
+        "--enrich-tower-floor",
+        action="store_true",
+        help="Enrich only tower/floor (use with --enrich-only)",
+    )
+    parser.add_argument(
+        "--no-enrich-zone-region",
+        action="store_true",
+        help="Skip zone/region enrichment",
+    )
+    parser.add_argument(
+        "--no-enrich-tower-floor",
+        action="store_true",
+        help="Skip tower/floor enrichment",
+    )
+
     args = parser.parse_args()
 
     # Resolve paths relative to script location
@@ -294,6 +446,50 @@ def main():
     logger.info("=" * 60)
     logger.info(f"Input directory: {input_dir}")
     logger.info(f"Output directory: {output_dir}")
+
+    # Determine enrichment flags
+    if args.enrich_only:
+        # When using --enrich-only, default to both unless specific flags are set
+        if args.enrich_zone_region or args.enrich_tower_floor:
+            enrich_zone_region_flag = args.enrich_zone_region
+            enrich_tower_floor_flag = args.enrich_tower_floor
+        else:
+            # Default: enrich both
+            enrich_zone_region_flag = True
+            enrich_tower_floor_flag = True
+    else:
+        # Normal processing mode
+        if args.no_enrich:
+            enrich_zone_region_flag = False
+            enrich_tower_floor_flag = False
+        else:
+            enrich_zone_region_flag = not args.no_enrich_zone_region
+            enrich_tower_floor_flag = not args.no_enrich_tower_floor
+
+    # Log enrichment settings
+    if enrich_zone_region_flag or enrich_tower_floor_flag:
+        enrichments = []
+        if enrich_zone_region_flag:
+            enrichments.append("zone/region")
+        if enrich_tower_floor_flag:
+            enrichments.append("tower/floor")
+        logger.info(f"Enrichment enabled: {', '.join(enrichments)}")
+    else:
+        logger.info("Enrichment disabled")
+
+    # Enrich only mode
+    if args.enrich_only:
+        logger.info("Running enrichment only...")
+        results = enrich_existing_outputs(
+            str(output_dir),
+            enrich_zone_region_flag,
+            enrich_tower_floor_flag,
+            logger,
+        )
+        logger.info(
+            f"Enrichment complete. Total enriched: {results['total_enriched']}"
+        )
+        return 0
 
     # Validate only mode
     if args.validate_only:
@@ -336,6 +532,8 @@ def main():
             output_dir=str(output_dir),
             dry_run=args.dry_run,
             sample_size=args.sample_size,
+            enrich_zone_region=enrich_zone_region_flag,
+            enrich_tower_floor=enrich_tower_floor_flag,
             logger=logger,
         )
         all_stats.append(stats)

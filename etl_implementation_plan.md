@@ -28,6 +28,7 @@ etl-cco-dashboard/
 │   ├── task_builder.py           # Task object construction
 │   ├── cost_timeline.py          # Weekly cost calculations
 │   ├── validators.py             # Schema validation & QA
+│   ├── enrichment.py             # Attribute enrichment (zone, region, tower, floor)
 │   └── utils.py                  # Shared utilities
 │
 ├── runner.py                     # NEW: Main entry point / CLI
@@ -217,7 +218,156 @@ def get_xml_files(directory: str) -> list[str]
 
 ---
 
-### 7. `runner.py` - Main Entry Point
+### 7. `src/enrichment.py` - Attribute Enrichment
+
+**Purpose:** Enrich task attributes with zone, region, tower, and floor information
+
+```python
+# Project name aliases (XML file name -> canonical project name)
+PROJECT_NAME_ALIASES = {
+    "Azadnagar": "Horizon",
+    "Bigbull-Reserve": "Reserve",
+    "OneM": "Avenue 11",
+    "Miraya": "Miraya",
+    "Aristocrat": "Aristocrat",
+    "Zenith": "Zenith",
+    "Tropical Isle 146": "Tropical Isle",
+    "Jardinia": "Jardinia",
+    "Riverine": "Sec. 44, Noida",
+    "Ramaiah": "Ramaiah",
+    "Woodscapes": "Woodscapes",
+    "RGA Land2": "RGA 2",
+    "BLSaha": "BL Saha",
+}
+
+# Zone/Region mapping (using canonical project names)
+ZONE_REGION_MAP = {
+    "Horizon": {"zone": "MZ", "region": "MZ1"},
+    "Reserve": {"zone": "MZ", "region": "MZ1"},
+    "Avenue 11": {"zone": "MZ", "region": "MZ1"},
+    "Miraya": {"zone": "NZ", "region": "NZ1"},
+    "Aristocrat": {"zone": "NZ", "region": "NZ1"},
+    "Zenith": {"zone": "NZ", "region": "NZ1"},
+    "Tropical Isle": {"zone": "NZ", "region": "NZ2"},
+    "Jardinia": {"zone": "NZ", "region": "NZ2"},
+    "Sec. 44, Noida": {"zone": "NZ", "region": "NZ2"},
+    "Ramaiah": {"zone": "SZ", "region": "SZ2"},
+    "Woodscapes": {"zone": "SZ", "region": "SZ1"},
+    "RGA 2": {"zone": "SZ", "region": "SZ1"},
+    "BL Saha": {"zone": "WEZ", "region": "Kolkata"},
+}
+
+def get_canonical_project_name(file_project_name: str) -> str:
+    """
+    Convert XML file-based project name to canonical name.
+
+    Args:
+        file_project_name: Project name from XML file
+
+    Returns:
+        Canonical project name for zone/region lookup
+    """
+
+def enrich_zone_region(tasks: list[dict], project_name: str) -> list[dict]:
+    """
+    Enrich tasks with zone and region based on project name.
+
+    Args:
+        tasks: List of task dictionaries
+        project_name: Name of the project
+
+    Returns:
+        Tasks with zone/region enriched in attributes
+    """
+
+def find_parent_by_wbs(tasks: list[dict], parent_wbs: str) -> dict | None:
+    """Find parent task by WBS"""
+
+def extract_tower(task_name: str) -> str | None:
+    """
+    Extract tower identifier from task name.
+    Looks for patterns like "Tower A", "Tower 1", "Block B", etc.
+
+    Priority: "Tower" patterns take precedence over "Block" patterns
+    If both are present in hierarchy, use Tower.
+
+    Returns:
+        Tower identifier or None
+    """
+
+def extract_floor(task_name: str) -> str | None:
+    """
+    Extract floor identifier from task name.
+    Looks for patterns like "Ground Floor", "1st Floor", "Floor 12", "Terrace", etc.
+
+    Returns:
+        Floor identifier or None
+    """
+
+def build_task_hierarchy(tasks: list[dict]) -> dict[str, dict]:
+    """
+    Build WBS hierarchy mapping.
+
+    Returns:
+        Dictionary mapping WBS -> {parent_wbs, ancestors, children}
+    """
+
+def enrich_tower_floor(tasks: list[dict]) -> list[dict]:
+    """
+    Enrich tasks with tower and floor attributes by traversing parent hierarchy.
+
+    For each leaf task:
+    - Walk up parent chain via parent_wbs
+    - Extract tower from first parent containing tower pattern
+    - Extract floor from first parent containing floor pattern
+    - Populate attributes.tower and attributes.floor
+
+    Args:
+        tasks: List of task dictionaries
+
+    Returns:
+        Tasks with tower/floor enriched in attributes
+    """
+
+def enrich_attributes(
+    tasks: list[dict],
+    project_name: str,
+    enrich_zone_region_flag: bool = True,
+    enrich_tower_floor_flag: bool = True
+) -> list[dict]:
+    """
+    Master enrichment function.
+
+    Args:
+        tasks: List of task dictionaries
+        project_name: Name of the project
+        enrich_zone_region_flag: Whether to enrich zone/region
+        enrich_tower_floor_flag: Whether to enrich tower/floor
+
+    Returns:
+        Enriched tasks
+    """
+```
+
+**Enrichment Logic:**
+
+1. **Zone/Region:** Direct lookup by project name
+2. **Tower/Floor:** Hierarchical extraction
+   - Build task hierarchy from WBS structure
+   - For each leaf task, walk up parent chain
+   - Extract tower from ancestor names (patterns: "Tower X", "Block X")
+   - Extract floor from ancestor names (patterns: "Ground Floor", "Floor N", "Terrace")
+   - Apply to leaf task attributes
+
+**Pattern Matching Examples:**
+- Tower: `Tower A`, `Tower 1`, `Block B`, `T1`, `Building 3`
+  - **Priority Rule:** "Tower" patterns take precedence over "Block" patterns
+  - If hierarchy contains both "Tower A" and "Block B", use "Tower A"
+- Floor: `Ground Floor`, `1st Floor`, `Floor 12`, `2nd Fl`, `Terrace`, `Terrace Floor`
+
+---
+
+### 8. `runner.py` - Main Entry Point
 
 **Purpose:** CLI interface and orchestration
 
@@ -227,10 +377,23 @@ def get_xml_files(directory: str) -> list[str]
 XML to JSON ETL Runner for CCO Dashboard
 
 Usage:
-    python runner.py                     # Process all XML files
-    python runner.py --file Miraya.xml   # Process single file
-    python runner.py --validate-only     # Run validation on existing output
-    python runner.py --dry-run           # Parse and transform without saving
+    # Standard processing with enrichment (default)
+    python runner.py                                    # Process all XML files with enrichment
+    python runner.py --file Miraya.xml                  # Process single file with enrichment
+
+    # Enrichment control
+    python runner.py --no-enrich-zone-region            # Skip zone/region enrichment
+    python runner.py --no-enrich-tower-floor            # Skip tower/floor enrichment
+    python runner.py --no-enrich                        # Skip all enrichment
+
+    # Update existing outputs with enrichment
+    python runner.py --enrich-only                      # Enrich existing JSON outputs
+    python runner.py --enrich-only --enrich-zone-region # Only enrich zone/region
+    python runner.py --enrich-only --enrich-tower-floor # Only enrich tower/floor
+
+    # Other modes
+    python runner.py --validate-only                    # Run validation on existing output
+    python runner.py --dry-run                          # Parse and transform without saving
 """
 
 import argparse
@@ -243,19 +406,37 @@ def main():
     parser.add_argument('--output-dir', default='./output')
     parser.add_argument('--validate-only', action='store_true')
     parser.add_argument('--dry-run', action='store_true')
-    parser.add_argument('--sample-size', type=int, default=10, help='QA sample size per file')
+    parser.add_argument('--sample-size', type=int, default=100, help='QA sample size per file')
+
+    # Enrichment arguments
+    parser.add_argument('--enrich-only', action='store_true',
+                       help='Enrich existing JSON outputs (no XML processing)')
+    parser.add_argument('--no-enrich', action='store_true',
+                       help='Skip all enrichment')
+    parser.add_argument('--enrich-zone-region', action='store_true',
+                       help='Enrich only zone/region (use with --enrich-only)')
+    parser.add_argument('--enrich-tower-floor', action='store_true',
+                       help='Enrich only tower/floor (use with --enrich-only)')
+    parser.add_argument('--no-enrich-zone-region', action='store_true',
+                       help='Skip zone/region enrichment')
+    parser.add_argument('--no-enrich-tower-floor', action='store_true',
+                       help='Skip tower/floor enrichment')
 
     args = parser.parse_args()
 
     # 1. Setup
     # 2. Load schema and mapping
-    # 3. Process XML files
-    # 4. Run QA validation
-    # 5. Generate reports
-    # 6. Print summary
+    # 3. Process XML files (or load existing JSON if --enrich-only)
+    # 4. Apply enrichment (unless --no-enrich)
+    # 5. Run QA validation
+    # 6. Generate reports
+    # 7. Print summary
 
-def process_single_file(xml_path: str, output_dir: str, schema: dict) -> dict:
-    """Process one XML file, return stats"""
+def process_single_file(xml_path: str, output_dir: str, schema: dict, enrich_flags: dict) -> dict:
+    """Process one XML file, apply enrichment, return stats"""
+
+def enrich_existing_outputs(output_dir: str, enrich_flags: dict) -> dict:
+    """Enrich existing JSON outputs with attributes"""
 
 def run_qa_validation(output_dir: str, xml_dir: str, sample_size: int) -> dict:
     """Run sample validation on all output files"""
@@ -311,6 +492,17 @@ output/
 17. Process all 12 files
 18. Generate final QA reports
 
+### Phase 7: Attribute Enrichment
+19. Implement `src/enrichment.py`
+20. Create zone/region mapping lookup
+21. Implement tower extraction with pattern matching
+22. Implement floor extraction with pattern matching
+23. Build hierarchical enrichment (walk parent chain)
+24. Add enrichment CLI arguments to `runner.py`
+25. Test enrichment with sample projects
+26. Run enrichment on all existing outputs
+27. Validate enriched attributes
+
 ---
 
 ## QA/Testing Strategy
@@ -361,7 +553,11 @@ output/
 
 ## Notes
 
-1. **Attributes handling:** Only `project_name` is derived from filename. Other attributes (zone, region, etc.) come from external master data - set to `null` in this ETL, to be enriched separately.
+1. **Attributes handling:**
+   - `project_name`: Derived from filename
+   - `zone` and `region`: Enriched via lookup table based on project name (Phase 7)
+   - `tower` and `floor`: Enriched via hierarchical parent traversal (Phase 7)
+   - Other attributes (if any): Set to `null`, to be enriched from external sources
 
 2. **Sprint dates:** Always `null` in this ETL (comes from separate sprint XML files).
 
@@ -370,3 +566,69 @@ output/
 4. **Memory:** Use iterparse for large files (Woodscapes.xml is 28MB, 23,494 tasks).
 
 5. **Cost timeline:** Only calculated for leaf tasks with cost_plan_total > 0 and valid dates.
+
+6. **Enrichment by default:** The pipeline applies all enrichments by default. Use `--no-enrich-*` flags to skip specific enrichments during processing.
+
+7. **Retroactive enrichment:** Existing JSON outputs can be enriched using `--enrich-only` mode without re-processing XML files.
+
+---
+
+## Enrichment Reference
+
+### Zone/Region Mapping Table
+
+| Canonical Name | XML File Name | Zone | Region |
+|----------------|---------------|------|--------|
+| Horizon | Azadnagar | MZ | MZ1 |
+| Reserve | Bigbull-Reserve | MZ | MZ1 |
+| Avenue 11 | OneM | MZ | MZ1 |
+| Miraya | Miraya | NZ | NZ1 |
+| Aristocrat | Aristocrat | NZ | NZ1 |
+| Zenith | Zenith | NZ | NZ1 |
+| Tropical Isle | Tropical Isle 146 | NZ | NZ2 |
+| Jardinia | Jardinia | NZ | NZ2 |
+| Sec. 44, Noida | Riverine | NZ | NZ2 |
+| Ramaiah | Ramaiah | SZ | SZ2 |
+| Woodscapes | Woodscapes | SZ | SZ1 |
+| RGA 2 | RGA Land2 | SZ | SZ1 |
+| BL Saha | BLSaha | WEZ | Kolkata |
+
+**Mapping Logic:**
+1. Convert XML file name to canonical project name using `PROJECT_NAME_ALIASES`
+2. Lookup zone/region using canonical name in `ZONE_REGION_MAP`
+3. Apply to all tasks (parent and leaf) for the project
+4. Store canonical name in `attributes.project_name`
+
+### Tower/Floor Pattern Examples
+
+**Tower Patterns:**
+```
+Tower A, Tower B, Tower 1, Tower 2
+Block A, Block B, Block 1
+Building 1, Building 2
+T1, T2, T3
+TOWER-A, TOWER-B
+```
+
+**Floor Patterns:**
+```
+Ground Floor, GF
+1st Floor, 2nd Floor, 3rd Floor, ...
+Floor 1, Floor 2, Floor 12, ...
+First Floor, Second Floor, Third Floor
+Terrace, Terrace Floor
+Basement, Basement 1, B1, B2
+```
+
+**Extraction Rules:**
+1. Walk up parent hierarchy from leaf task
+2. Extract tower patterns from all ancestors, prioritize "Tower" over "Block"
+3. Extract first matching floor pattern encountered
+4. Store normalized values (e.g., "1st Floor" → "1st Floor", "Floor 1" → "Floor 1")
+5. Only apply to leaf tasks with non-null attributes
+
+**Tower Priority Example:**
+```
+Parent Chain: Project → Block A → Tower 1 → Floor 2 → Leaf Task
+Result: tower = "Tower 1" (not "Block A", because Tower takes precedence)
+```
