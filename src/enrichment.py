@@ -60,14 +60,17 @@ def extract_tower(task_name: str) -> tuple[str | None, int]:
     """
     Extract tower identifier from task name.
 
-    Priority: "Tower" patterns take precedence over "Block" patterns
-    Returns tower name and priority level (lower number = higher priority)
+    Only extracts actual tower identifiers (numeric or alphabetic).
+    Excludes Block/Building patterns and descriptive tower names.
 
     Patterns (in priority order):
     1. Tower A, Tower 1, Tower-A, TOWER A (priority 1)
     2. T1, T2, T-1 (priority 2)
-    3. Block A, Block 1, BLOCK-A (priority 3)
-    4. Building 1, Building A (priority 4)
+
+    Excluded patterns:
+    - Block, Building (not spatial structures)
+    - Tower Area, Tower Completion, Tower Drop, Tower Finishing
+    - Tower Ground, Tower Raft, Tower Structure (construction phases)
 
     Args:
         task_name: Task name to search
@@ -78,31 +81,26 @@ def extract_tower(task_name: str) -> tuple[str | None, int]:
     if not task_name:
         return None, 999
 
-    # Priority 1: Tower patterns
+    # Excluded descriptive tower names
+    excluded_descriptors = [
+        'area', 'completion', 'drop', 'finishing', 'ground',
+        'raft', 'structure'
+    ]
+
+    # Priority 1: Tower patterns (but exclude descriptive ones)
     tower_pattern = re.search(
         r'\b[Tt][Oo][Ww][Ee][Rr][\s\-_]*([A-Za-z0-9]+)\b', task_name
     )
     if tower_pattern:
-        return f"Tower {tower_pattern.group(1)}", 1
+        identifier = tower_pattern.group(1).lower()
+        # Exclude descriptive tower names
+        if identifier not in excluded_descriptors:
+            return f"Tower {tower_pattern.group(1)}", 1
 
     # Priority 2: T1, T2 patterns (but not "TO", "THE", etc.)
     t_pattern = re.search(r'\b[Tt][\s\-_]*(\d+)\b', task_name)
     if t_pattern:
         return f"T{t_pattern.group(1)}", 2
-
-    # Priority 3: Block patterns
-    block_pattern = re.search(
-        r'\b[Bb][Ll][Oo][Cc][Kk][\s\-_]*([A-Za-z0-9]+)\b', task_name
-    )
-    if block_pattern:
-        return f"Block {block_pattern.group(1)}", 3
-
-    # Priority 4: Building patterns
-    building_pattern = re.search(
-        r'\b[Bb][Uu][Ii][Ll][Dd][Ii][Nn][Gg][\s\-_]*([A-Za-z0-9]+)\b', task_name
-    )
-    if building_pattern:
-        return f"Building {building_pattern.group(1)}", 4
 
     return None, 999
 
@@ -117,7 +115,15 @@ def extract_floor(task_name: str) -> str | None:
     - Floor 1, Floor 2, Floor 12, etc.
     - First Floor, Second Floor, Third Floor
     - Terrace, Terrace Floor
-    - Basement, Basement 1, B1, B2
+    - Basement, Basement 1, Basement 2, Basement 3
+
+    Normalization:
+    - B1 → Basement 1
+    - B2 → Basement 2
+    - B3 → Basement 3
+    - Basement 01 → Basement 1
+    - Basement 02 → Basement 2
+    - Basement 03 → Basement 3
 
     Args:
         task_name: Task name to search
@@ -164,20 +170,25 @@ def extract_floor(task_name: str) -> str | None:
         if re.search(pattern + r'[\s\-_]*[Ff]([Ll][Oo][Oo][Rr])?', task_name):
             return f"{ordinal} Floor"
 
-    # Basement patterns
+    # Basement patterns with normalization
     basement_pattern = re.search(
-        r'\b[Bb]([Aa][Ss][Ee][Mm][Ee][Nn][Tt])?[\s\-_]*(\d*)\b', task_name
+        r'\b[Bb][Aa][Ss][Ee][Mm][Ee][Nn][Tt][\s\-_]*(\d+)\b', task_name
     )
-    if basement_pattern and basement_pattern.group(1):  # Must have "basement" word
-        num = basement_pattern.group(2)
+    if basement_pattern:
+        num = basement_pattern.group(1).lstrip('0')  # Remove leading zeros
         if num:
             return f"Basement {num}"
         return "Basement"
 
-    # B1, B2 patterns (only if clearly basement context)
+    # Basement without number
+    if re.search(r'\b[Bb][Aa][Ss][Ee][Mm][Ee][Nn][Tt]\b', task_name):
+        return "Basement"
+
+    # B1, B2, B3 patterns - normalize to Basement 1, Basement 2, Basement 3
     b_pattern = re.search(r'\b[Bb](\d+)\b', task_name)
     if b_pattern and "floor" not in task_name.lower():
-        return f"B{b_pattern.group(1)}"
+        num = b_pattern.group(1)
+        return f"Basement {num}"
 
     return None
 
@@ -290,8 +301,9 @@ def enrich_tower_floor(tasks: list[dict]) -> list[dict]:
     Enrich tasks with tower and floor attributes by traversing parent hierarchy.
 
     For each leaf task:
+    - Clear existing tower/floor values
     - Walk up parent chain via parent_wbs
-    - Extract tower from ancestors (prioritize "Tower" over "Block")
+    - Extract tower from ancestors (only valid patterns)
     - Extract floor from first parent containing floor pattern
     - Populate attributes.tower and attributes.floor
 
@@ -309,6 +321,10 @@ def enrich_tower_floor(tasks: list[dict]) -> list[dict]:
         # Only enrich tasks with non-null attributes
         if task.get("attributes") is None:
             continue
+
+        # Clear existing tower/floor values first
+        task["attributes"]["tower"] = None
+        task["attributes"]["floor"] = None
 
         # Get ancestor chain
         ancestors = get_ancestor_chain(task, hierarchy)

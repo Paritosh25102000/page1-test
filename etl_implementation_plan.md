@@ -286,10 +286,11 @@ def find_parent_by_wbs(tasks: list[dict], parent_wbs: str) -> dict | None:
 def extract_tower(task_name: str) -> str | None:
     """
     Extract tower identifier from task name.
-    Looks for patterns like "Tower A", "Tower 1", "Block B", etc.
+    Looks for patterns like "Tower A", "Tower 1", "T1", etc.
 
-    Priority: "Tower" patterns take precedence over "Block" patterns
-    If both are present in hierarchy, use Tower.
+    Excludes:
+    - Block/Building patterns (not spatial structures)
+    - Descriptive tower names (Area, Completion, Drop, Finishing, Ground, Raft, Structure)
 
     Returns:
         Tower identifier or None
@@ -360,10 +361,12 @@ def enrich_attributes(
    - Apply to leaf task attributes
 
 **Pattern Matching Examples:**
-- Tower: `Tower A`, `Tower 1`, `Block B`, `T1`, `Building 3`
-  - **Priority Rule:** "Tower" patterns take precedence over "Block" patterns
-  - If hierarchy contains both "Tower A" and "Block B", use "Tower A"
-- Floor: `Ground Floor`, `1st Floor`, `Floor 12`, `2nd Fl`, `Terrace`, `Terrace Floor`
+- Tower: `Tower A`, `Tower 1`, `Tower 01`, `T1`, `T2`
+  - **Excluded Patterns:** Block, Building (not spatial structures)
+  - **Excluded Descriptive:** Tower Area, Tower Completion, Tower Drop, Tower Finishing, Tower Ground, Tower Raft, Tower Structure
+  - Only extract actual tower identifiers (numeric or alphabetic)
+- Floor: `Ground Floor`, `1st Floor`, `Floor 12`, `Terrace`
+  - **Basement Normalization:** B1→Basement 1, B2→Basement 2, Basement 01→Basement 1
 
 ---
 
@@ -603,11 +606,17 @@ output/
 
 **Tower Patterns:**
 ```
-Tower A, Tower B, Tower 1, Tower 2
-Block A, Block B, Block 1
-Building 1, Building 2
+Tower A, Tower B, Tower 1, Tower 2, Tower 01, Tower 02
 T1, T2, T3
 TOWER-A, TOWER-B
+```
+
+**Excluded from Tower Extraction:**
+```
+Block Work, Block A (not spatial structures)
+Building Certification, Building 1 (not spatial structures)
+Tower Area, Tower Completion, Tower Drop, Tower Finishing (descriptive, not identifiers)
+Tower Ground, Tower Raft, Tower Structure (construction phases, not identifiers)
 ```
 
 **Floor Patterns:**
@@ -617,18 +626,28 @@ Ground Floor, GF
 Floor 1, Floor 2, Floor 12, ...
 First Floor, Second Floor, Third Floor
 Terrace, Terrace Floor
-Basement, Basement 1, B1, B2
+Basement, Basement 1, Basement 2, Basement 3
+```
+
+**Floor Normalization:**
+```
+B1 → Basement 1
+B2 → Basement 2
+B3 → Basement 3
+Basement 01 → Basement 1
+Basement 02 → Basement 2
+Basement 03 → Basement 3
 ```
 
 **Extraction Rules:**
 1. Walk up parent hierarchy from leaf task
-2. Extract tower patterns from all ancestors, prioritize "Tower" over "Block"
+2. Extract only valid tower patterns (Tower X, T1, etc.), skip Block/Building/Descriptive patterns
 3. Extract first matching floor pattern encountered
-4. Store normalized values (e.g., "1st Floor" → "1st Floor", "Floor 1" → "Floor 1")
+4. Normalize basement values: B1→Basement 1, Basement 01→Basement 1
 5. Only apply to leaf tasks with non-null attributes
 
-**Tower Priority Example:**
+**Tower Extraction Example:**
 ```
-Parent Chain: Project → Block A → Tower 1 → Floor 2 → Leaf Task
-Result: tower = "Tower 1" (not "Block A", because Tower takes precedence)
+Parent Chain: Project → Block Work → Tower 1 → Floor 2 → Leaf Task
+Result: tower = "Tower 1" (Block Work ignored as non-spatial)
 ```
