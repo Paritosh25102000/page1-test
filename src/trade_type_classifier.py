@@ -197,20 +197,226 @@ CRITICAL REMINDERS:
     return prompt
 
 
+async def _classify_single_batch(
+    activities_batch: List[Dict],
+    project_name: str,
+    llm,
+    cheat_sheet_text: str,
+    batch_num: int = 1,
+    total_batches: int = 1
+) -> List[Dict]:
+    """
+    Classify a single batch of activities.
+
+    Args:
+        activities_batch: List of activities to classify
+        project_name: Name of the project
+        llm: UniversalLLM instance
+        cheat_sheet_text: Cheat sheet markdown text
+        batch_num: Current batch number
+        total_batches: Total number of batches
+
+    Returns:
+        List of classified activities
+    """
+    # Build batch-specific unique_activities dict
+    batch_data = {
+        "project": project_name,
+        "unique_activities": activities_batch
+    }
+
+    # Build prompt for this batch
+    prompt = build_classification_prompt(batch_data, cheat_sheet_text)
+
+    logger.info(f"Processing batch {batch_num}/{total_batches} ({len(activities_batch)} activities)")
+
+    # Call LLM
+    messages = [{"role": "user", "content": prompt}]
+    response = await llm.ainvoke(messages)
+    response_text = response.content
+
+    logger.info(f"Batch {batch_num} response length: {len(response_text)} characters")
+
+    # Parse JSON response
+    classifications = parse_llm_response(response_text)
+
+    if not classifications:
+        raise ValueError(f"No classifications returned for batch {batch_num}")
+
+    return classifications
+
+
+async def _retry_invalid_classifications(
+    invalid_activities: List[Dict],
+    project_name: str,
+    llm,
+    cheat_sheet_text: str,
+    trade_type_lookup: Dict
+) -> List[Dict]:
+    """
+    Retry classification for activities with invalid trade types.
+
+    Args:
+        invalid_activities: Activities that had validation issues
+        project_name: Name of the project
+        llm: UniversalLLM instance
+        cheat_sheet_text: Cheat sheet markdown text
+        trade_type_lookup: Lookup dictionary for validation
+
+    Returns:
+        List of re-classified activities
+    """
+    if not invalid_activities:
+        return []
+
+    logger.info(f"Retrying {len(invalid_activities)} activities with validation issues")
+
+    # Build retry request
+    batch_data = {
+        "project": project_name,
+        "unique_activities": invalid_activities
+    }
+
+    prompt = build_classification_prompt(batch_data, cheat_sheet_text)
+
+    # Add explicit instruction to use exact trade types
+    prompt += f"\n\nIMPORTANT: Previous attempt had validation errors. Please ensure trade_type values EXACTLY match the Trade Type column in the cheat sheet."
+
+    messages = [{"role": "user", "content": prompt}]
+
+    try:
+        response = await llm.ainvoke(messages)
+        response_text = response.content
+        classifications = parse_llm_response(response_text)
+
+        if not classifications:
+            logger.warning("Retry returned no classifications")
+            return []
+
+        # Validate retry results
+        validated_retry = []
+        for classification in classifications:
+            trade_type = classification.get("trade_type")
+            if trade_type in trade_type_lookup:
+                classification["sub_category"] = trade_type_lookup[trade_type]["sub_category"]
+                classification["main_category"] = trade_type_lookup[trade_type]["main_category"]
+                classification["validation_status"] = "valid"
+                classification["validation_issues"] = []
+                validated_retry.append(classification)
+            else:
+                # Still invalid after retry
+                classification["sub_category"] = ""
+                classification["main_category"] = ""
+                classification["validation_status"] = "invalid"
+                classification["validation_issues"] = [f"Trade type '{trade_type}' not found in cheat sheet (after retry)"]
+                validated_retry.append(classification)
+                logger.warning(f"Retry still invalid: '{trade_type}' for '{classification.get('activity_name')}'")
+
+        return validated_retry
+
+    except Exception as e:
+        logger.error(f"Error during retry: {e}")
+        return []
+
+
+async def _classify_in_batches(
+    unique_activities: Dict,
+    project_name: str,
+    llm,
+    cheat_sheet_text: str,
+    trade_type_lookup: Dict,
+    batch_size: int
+) -> Dict:
+    """
+    Classify activities in batches for large activity counts.
+
+    Args:
+        unique_activities: Output from extract_unique_activities
+        project_name: Name of the project
+        llm: UniversalLLM instance
+        cheat_sheet_text: Cheat sheet markdown text
+        trade_type_lookup: Lookup dictionary for validation
+        batch_size: Maximum activities per batch
+
+    Returns:
+        Combined classification results
+    """
+    activities = unique_activities['unique_activities']
+    total_activities = len(activities)
+
+    # Split into batches
+    batches = [activities[i:i + batch_size] for i in range(0, total_activities, batch_size)]
+    total_batches = len(batches)
+
+    logger.info(f"Processing {total_activities} activities in {total_batches} batches")
+
+    all_classifications = []
+
+    for batch_num, batch in enumerate(batches, 1):
+        try:
+            batch_classifications = await _classify_single_batch(
+                batch, project_name, llm, cheat_sheet_text, batch_num, total_batches
+            )
+
+            # Validate batch classifications
+            for classification in batch_classifications:
+                trade_type = classification.get("trade_type")
+                if trade_type in trade_type_lookup:
+                    classification["sub_category"] = trade_type_lookup[trade_type]["sub_category"]
+                    classification["main_category"] = trade_type_lookup[trade_type]["main_category"]
+                    classification["validation_status"] = "valid"
+                    classification["validation_issues"] = []
+                else:
+                    classification["sub_category"] = ""
+                    classification["main_category"] = ""
+                    classification["validation_status"] = "invalid"
+                    classification["validation_issues"] = [f"Trade type '{trade_type}' not found in cheat sheet"]
+
+            all_classifications.extend(batch_classifications)
+
+        except Exception as e:
+            logger.error(f"Error processing batch {batch_num}: {e}")
+            # Continue with other batches
+            continue
+
+    # Calculate stats
+    high_confidence = sum(1 for c in all_classifications if c.get("confidence") == "high")
+    medium_confidence = sum(1 for c in all_classifications if c.get("confidence") == "medium")
+    low_confidence = sum(1 for c in all_classifications if c.get("confidence") == "low")
+
+    validation_issues_count = sum(1 for c in all_classifications if c.get("validation_status") != "valid")
+
+    logger.info(f"Batch processing complete: {len(all_classifications)}/{total_activities} classified")
+    logger.info(f"Valid: {len(all_classifications) - validation_issues_count}, Invalid: {validation_issues_count}")
+
+    return {
+        "project": project_name,
+        "classifications": all_classifications,
+        "total_classified": len(all_classifications),
+        "confidence_distribution": {
+            "high": high_confidence,
+            "medium": medium_confidence,
+            "low": low_confidence
+        }
+    }
+
+
 async def classify_activities_with_llm(
     unique_activities: Dict,
     project_name: str,
     llm,
-    cheat_sheet_path: str
+    cheat_sheet_path: str,
+    batch_size: int = 500
 ) -> Dict:
     """
-    Classify unique activities using Gemini Flash 2.5.
+    Classify unique activities using Gemini Flash 2.5 with batching and retry logic.
 
     Args:
         unique_activities: Output from extract_unique_activities
         project_name: Name of the project
         llm: UniversalLLM instance
         cheat_sheet_path: Path to cheat sheet file
+        batch_size: Maximum activities per LLM request (default: 500)
 
     Returns:
         Classification results dictionary
@@ -220,10 +426,21 @@ async def classify_activities_with_llm(
     # Load cheat sheet
     cheat_sheet_text, trade_type_lookup = load_cheat_sheet(cheat_sheet_path)
 
+    activities = unique_activities['unique_activities']
+    total_activities = len(activities)
+
+    # Check if batching is needed
+    if total_activities > batch_size:
+        logger.info(f"Large activity count ({total_activities}). Processing in batches of {batch_size}")
+        return await _classify_in_batches(
+            unique_activities, project_name, llm, cheat_sheet_text,
+            trade_type_lookup, batch_size
+        )
+
+    logger.info(f"Sending {total_activities} activities to LLM")
+
     # Build prompt
     prompt = build_classification_prompt(unique_activities, cheat_sheet_text)
-
-    logger.info(f"Sending {len(unique_activities['unique_activities'])} activities to LLM")
 
     # Log the prompt for debugging
     logger.info("=" * 80)
@@ -259,7 +476,9 @@ async def classify_activities_with_llm(
 
         # Automatically fill sub_category and main_category based on trade_type
         validated_classifications = []
+        invalid_classifications = []
         validation_issues_count = 0
+
         for classification in classifications:
             trade_type = classification.get("trade_type")
 
@@ -269,16 +488,65 @@ async def classify_activities_with_llm(
                 classification["main_category"] = trade_type_lookup[trade_type]["main_category"]
                 classification["validation_status"] = "valid"
                 classification["validation_issues"] = []
+                validated_classifications.append(classification)
             else:
-                # Trade type not found in cheat sheet
+                # Trade type not found in cheat sheet - collect for retry
                 classification["sub_category"] = ""
                 classification["main_category"] = ""
                 classification["validation_status"] = "invalid"
                 classification["validation_issues"] = [f"Trade type '{trade_type}' not found in cheat sheet"]
                 validation_issues_count += 1
                 logger.warning(f"Trade type not found in cheat sheet: '{trade_type}' for activity '{classification.get('activity_name')}'")
+                invalid_classifications.append(classification)
 
-            validated_classifications.append(classification)
+        # Retry invalid classifications if any exist
+        if invalid_classifications:
+            logger.info(f"Attempting to retry {len(invalid_classifications)} invalid classifications")
+            try:
+                # Build retry activities list (need original unique_activities format)
+                retry_activities = []
+                for invalid_class in invalid_classifications:
+                    # Find the original activity from unique_activities
+                    activity_name = invalid_class.get("activity_name")
+                    context_type = invalid_class.get("context_type")
+
+                    for orig_activity in unique_activities['unique_activities']:
+                        if (orig_activity.get("activity_name") == activity_name and
+                            orig_activity.get("context_type") == context_type):
+                            # Keep the complete original activity structure
+                            retry_activities.append(orig_activity.copy())
+                            break
+
+                if not retry_activities:
+                    logger.warning("Could not find original activities for retry")
+                    validated_classifications.extend(invalid_classifications)
+                else:
+                    # Retry classification
+                    retry_result = await _retry_invalid_classifications(
+                        retry_activities,
+                        project_name,
+                        llm,
+                        cheat_sheet_text,
+                        trade_type_lookup
+                    )
+
+                    # Replace invalid classifications with retry results
+                    if retry_result:
+                        logger.info(f"Retry returned {len(retry_result)} classifications")
+                        validated_classifications.extend(retry_result)
+                        # Update validation_issues_count to reflect only truly failed retries
+                        validation_issues_count = sum(1 for c in retry_result if c.get("validation_status") == "invalid")
+                    else:
+                        # Retry didn't help, keep original invalid classifications
+                        logger.warning("Retry did not return valid classifications, keeping original invalid results")
+                        validated_classifications.extend(invalid_classifications)
+
+            except Exception as retry_error:
+                logger.error(f"Retry failed: {retry_error}")
+                logger.debug(f"Retry error details: {str(retry_error)}", exc_info=True)
+                # Accept partial results - add invalid classifications as-is
+                logger.info("Accepting partial results with invalid classifications")
+                validated_classifications.extend(invalid_classifications)
 
         # Log validation results
         logger.info("=" * 80)
