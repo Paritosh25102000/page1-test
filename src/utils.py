@@ -120,17 +120,34 @@ def get_xml_files(directory: str) -> list[str]:
 
 def get_project_name_from_file(file_path: str) -> str:
     """
-    Extract project name from XML file path.
+    Extract project name from XML file path using mapping.
 
-    The filename (without extension) is used as the project name.
+    The filename (without extension) is looked up in project_name_mapping.json
+    to get the canonical project name. If not found in mapping, returns the
+    filename as-is.
 
     Args:
         file_path: Path to XML file
 
     Returns:
-        Project name derived from filename
+        Canonical project name
     """
-    return Path(file_path).stem
+    file_stem = Path(file_path).stem
+
+    # Try to load mapping file
+    mapping_path = Path(__file__).parent.parent / "project_name_mapping.json"
+
+    if mapping_path.exists():
+        try:
+            with open(mapping_path, 'r', encoding='utf-8') as f:
+                mapping = json.load(f)
+            # Return mapped name if found, otherwise return file stem
+            return mapping.get(file_stem, file_stem)
+        except Exception:
+            # If mapping file can't be read, fall back to file stem
+            pass
+
+    return file_stem
 
 
 def format_number(value: float, decimals: int = 2) -> float:

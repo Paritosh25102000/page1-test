@@ -1,0 +1,16 @@
+# Core dependencies for ETL pipeline
+# Python 3.8+
+
+# LLM API client for trade type enrichment
+openai>=1.0.0
+
+# No other external dependencies required
+# Standard library modules used:
+# - xml.etree.ElementTree (XML parsing)
+# - json (JSON handling)
+# - logging (logging)
+# - pathlib (path operations)
+# - datetime (date/time handling)
+# - collections (defaultdict)
+# - re (regex)
+# - typing (type hints)
