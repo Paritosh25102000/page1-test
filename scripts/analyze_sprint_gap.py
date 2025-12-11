@@ -14,39 +14,42 @@ def parse_xml_schedule(xml_path: str) -> dict:
     tree = ET.parse(xml_path)
     root = tree.getroot()
 
+    # Define namespace
+    ns = {'ms': 'http://schemas.microsoft.com/project'}
+
     # Extract project info
     project_info = {
-        'name': root.find('.//Name').text if root.find('.//Name') is not None else 'Unknown',
-        'start_date': root.find('.//StartDate').text if root.find('.//StartDate') is not None else None,
-        'finish_date': root.find('.//FinishDate').text if root.find('.//FinishDate') is not None else None,
+        'name': root.find('.//ms:Name', ns).text if root.find('.//ms:Name', ns) is not None else 'Unknown',
+        'start_date': root.find('.//ms:StartDate', ns).text if root.find('.//ms:StartDate', ns) is not None else None,
+        'finish_date': root.find('.//ms:FinishDate', ns).text if root.find('.//ms:FinishDate', ns) is not None else None,
     }
 
     # Extract tasks
     tasks = []
-    for task_elem in root.findall('.//Task'):
+    for task_elem in root.findall('.//ms:Task', ns):
         task_data = {}
 
         # Basic fields
         for field in ['UID', 'Name', 'Type', 'WBS', 'OutlineLevel']:
-            elem = task_elem.find(field)
+            elem = task_elem.find(f'ms:{field}', ns)
             task_data[field.lower()] = elem.text if elem is not None else None
 
         # Dates
         for date_field in ['Start', 'Finish', 'BaselineStart', 'BaselineFinish']:
-            elem = task_elem.find(date_field)
+            elem = task_elem.find(f'ms:{date_field}', ns)
             task_data[date_field.lower()] = elem.text if elem is not None else None
 
         # Duration
-        duration_elem = task_elem.find('Duration')
+        duration_elem = task_elem.find('ms:Duration', ns)
         if duration_elem is not None:
             task_data['duration'] = duration_elem.text
 
         # Milestone flag
-        milestone_elem = task_elem.find('Milestone')
+        milestone_elem = task_elem.find('ms:Milestone', ns)
         task_data['is_milestone'] = milestone_elem.text == '1' if milestone_elem is not None else False
 
         # Summary flag
-        summary_elem = task_elem.find('Summary')
+        summary_elem = task_elem.find('ms:Summary', ns)
         task_data['is_summary'] = summary_elem.text == '1' if summary_elem is not None else False
 
         tasks.append(task_data)
