@@ -562,7 +562,7 @@ output/
    - `tower` and `floor`: Enriched via hierarchical parent traversal (Phase 7)
    - Other attributes (if any): Set to `null`, to be enriched from external sources
 
-2. **Sprint dates:** Always `null` in this ETL (comes from separate sprint XML files).
+2. **Sprint dates:** Enriched from separate sprint XML files (see Phase 8: Sprint Schedule Integration).
 
 3. **Actual dates for leaf tasks:** Derived from TimephasedData Type=2 in Assignments, NOT from Task.ActualStart/ActualFinish.
 
@@ -651,3 +651,534 @@ Basement 03 → Basement 3
 Parent Chain: Project → Block Work → Tower 1 → Floor 2 → Leaf Task
 Result: tower = "Tower 1" (Block Work ignored as non-spatial)
 ```
+
+---
+
+## Phase 8: Sprint Schedule Integration
+
+### Overview
+
+**Purpose:** Enrich existing JSON outputs with Sprint schedule dates from separate Sprint XML files.
+
+**Key Principle:** Sprint schedules are **structurally identical** to AOP baselines (verified via gap analysis). Existing XML parser can process Sprint files without modifications.
+
+**Business Context:**
+- Sprint schedules represent **bonus-eligible targets** for teams
+- ~2 years more aggressive than AOP baseline
+- Average task compression: 259 days
+- 96% of tasks finish earlier in Sprint vs AOP
+
+### Data Structure
+
+**Current Schema (dates object):**
+```json
+{
+  "dates": {
+    "plan": {"start": "...", "finish": "...", "duration_days": 123},
+    "manual": {"start": "...", "finish": "...", "duration_days": 123},
+    "sprint": null,  // ← To be populated
+    "actual": {"start": "...", "finish": "...", "duration_days": 123}
+  }
+}
+```
+
+**Target Schema (after Sprint enrichment):**
+```json
+{
+  "dates": {
+    "plan": {"start": "2026-01-15", "finish": "2026-03-20", "duration_days": 65},
+    "manual": {"start": "2026-01-15", "finish": "2026-03-20", "duration_days": 65},
+    "sprint": {"start": "2025-10-10", "finish": "2025-12-15", "duration_days": 67},
+    "actual": {"start": "2026-01-20", "finish": null, "duration_days": null}
+  }
+}
+```
+
+### Module Addition: `src/sprint_enrichment.py`
+
+**Purpose:** Parse Sprint XML files and enrich existing AOP JSON outputs with Sprint dates
+
+```python
+"""
+Sprint Schedule Enrichment Module
+
+Enriches existing AOP baseline JSON outputs with Sprint schedule dates.
+Sprint schedules are stored in separate XML files with identical structure.
+"""
+
+from pathlib import Path
+import logging
+from typing import Dict, List, Optional
+from src.xml_parser import parse_xml_file, extract_tasks
+from src.transformers import extract_date, iso8601_duration_to_days
+
+def parse_sprint_schedule(xml_path: str) -> Dict[str, Dict]:
+    """
+    Parse Sprint XML file and extract task dates by Unique_Task_ID.
+
+    Args:
+        xml_path: Path to Sprint XML file
+
+    Returns:
+        Dictionary mapping Unique_Task_ID -> {start, finish, duration_days}
+
+    Example:
+        {
+            "TASK-001": {
+                "start": "2025-10-10",
+                "finish": "2025-12-15",
+                "duration_days": 67
+            },
+            ...
+        }
+    """
+    logger = logging.getLogger(__name__)
+    logger.info(f"Parsing Sprint schedule: {xml_path}")
+
+    # Use existing XML parser (fully compatible)
+    parsed_data = parse_xml_file(xml_path)
+
+    # Build Sprint dates lookup by Unique_Task_ID
+    sprint_dates = {}
+
+    for task in parsed_data['tasks']:
+        # Get Unique_Task_ID from extended attributes
+        unique_id = task.get('unique_task_id')  # From Text1 field
+
+        if not unique_id:
+            continue
+
+        # Extract and transform dates (reuse existing transformers)
+        start = extract_date(task.get('start'))
+        finish = extract_date(task.get('finish'))
+        duration_iso = task.get('duration')
+        duration_days = iso8601_duration_to_days(duration_iso) if duration_iso else None
+
+        if start and finish:
+            sprint_dates[unique_id] = {
+                'start': start,
+                'finish': finish,
+                'duration_days': duration_days
+            }
+
+    logger.info(f"Extracted {len(sprint_dates)} Sprint task dates")
+    return sprint_dates
+
+
+def match_sprint_to_aop(
+    aop_tasks: List[Dict],
+    sprint_dates: Dict[str, Dict],
+    matching_strategy: str = 'unique_id'
+) -> Dict:
+    """
+    Match Sprint dates to AOP tasks.
+
+    Args:
+        aop_tasks: List of AOP task dictionaries from JSON output
+        sprint_dates: Sprint dates lookup from parse_sprint_schedule()
+        matching_strategy: 'unique_id' (primary) or 'uid' (fallback)
+
+    Returns:
+        Statistics dict with match counts
+    """
+    matched = 0
+    unmatched = 0
+
+    for task in aop_tasks:
+        # Get matching key from AOP task
+        if matching_strategy == 'unique_id':
+            # Primary: Match by Unique_Task_ID (most reliable)
+            match_key = task.get('unique_task_id')
+        else:
+            # Fallback: Match by UID (less reliable due to schedule restructuring)
+            match_key = str(task.get('uid', ''))
+
+        if not match_key or match_key not in sprint_dates:
+            unmatched += 1
+            continue
+
+        # Populate sprint dates in task
+        if task.get('dates'):
+            task['dates']['sprint'] = sprint_dates[match_key]
+            matched += 1
+
+    return {
+        'matched': matched,
+        'unmatched': unmatched,
+        'match_rate': matched / (matched + unmatched) if (matched + unmatched) > 0 else 0
+    }
+
+
+def enrich_sprint_dates(
+    json_output_path: str,
+    sprint_xml_path: str,
+    matching_strategy: str = 'unique_id',
+    save_output: bool = True
+) -> Dict:
+    """
+    Main enrichment function: Load AOP JSON, match Sprint dates, save enriched output.
+
+    Args:
+        json_output_path: Path to existing AOP JSON output file
+        sprint_xml_path: Path to Sprint XML schedule file
+        matching_strategy: Task matching strategy ('unique_id' or 'uid')
+        save_output: Whether to save enriched JSON (False for dry-run)
+
+    Returns:
+        Statistics dictionary
+
+    Example usage:
+        stats = enrich_sprint_dates(
+            'output/json/Miraya.json',
+            'input/all-sprint-schedules/Miraya.xml'
+        )
+    """
+    logger = logging.getLogger(__name__)
+
+    # 1. Load existing AOP JSON output
+    logger.info(f"Loading AOP baseline JSON: {json_output_path}")
+    import json
+    with open(json_output_path, 'r') as f:
+        aop_data = json.load(f)
+
+    # 2. Parse Sprint XML
+    sprint_dates = parse_sprint_schedule(sprint_xml_path)
+
+    # 3. Match and enrich
+    logger.info(f"Matching Sprint dates to AOP tasks (strategy: {matching_strategy})")
+    match_stats = match_sprint_to_aop(aop_data, sprint_dates, matching_strategy)
+
+    # 4. Save enriched output
+    if save_output:
+        logger.info(f"Saving Sprint-enriched JSON: {json_output_path}")
+        with open(json_output_path, 'w') as f:
+            json.dump(aop_data, f, indent=2)
+
+    # 5. Return statistics
+    return {
+        'project': Path(json_output_path).stem,
+        'aop_tasks': len(aop_data),
+        'sprint_dates_available': len(sprint_dates),
+        **match_stats
+    }
+
+
+def batch_enrich_sprint(
+    json_output_dir: str,
+    sprint_xml_dir: str,
+    file_mapping: Optional[Dict[str, str]] = None,
+    matching_strategy: str = 'unique_id'
+) -> List[Dict]:
+    """
+    Batch enrich multiple projects with Sprint dates.
+
+    Args:
+        json_output_dir: Directory containing AOP JSON outputs
+        sprint_xml_dir: Directory containing Sprint XML files
+        file_mapping: Optional custom mapping {json_filename: sprint_xml_filename}
+                     If None, assumes matching filenames (e.g., Miraya.json -> Miraya.xml)
+        matching_strategy: Task matching strategy
+
+    Returns:
+        List of statistics dictionaries for each project
+
+    Example:
+        stats = batch_enrich_sprint(
+            'output/json',
+            'input/all-sprint-schedules'
+        )
+    """
+    logger = logging.getLogger(__name__)
+    results = []
+
+    json_dir = Path(json_output_dir)
+    sprint_dir = Path(sprint_xml_dir)
+
+    for json_file in json_dir.glob('*.json'):
+        # Determine Sprint XML filename
+        if file_mapping and json_file.stem in file_mapping:
+            sprint_filename = file_mapping[json_file.stem]
+        else:
+            sprint_filename = f"{json_file.stem}.xml"
+
+        sprint_file = sprint_dir / sprint_filename
+
+        if not sprint_file.exists():
+            logger.warning(f"Sprint XML not found for {json_file.name}: {sprint_file}")
+            continue
+
+        # Enrich single project
+        try:
+            stats = enrich_sprint_dates(
+                str(json_file),
+                str(sprint_file),
+                matching_strategy=matching_strategy
+            )
+            results.append(stats)
+            logger.info(f"✓ {stats['project']}: {stats['matched']}/{stats['aop_tasks']} "
+                       f"tasks matched ({stats['match_rate']:.1%})")
+        except Exception as e:
+            logger.error(f"✗ Failed to enrich {json_file.name}: {e}")
+            results.append({
+                'project': json_file.stem,
+                'error': str(e)
+            })
+
+    return results
+```
+
+### Runner CLI Integration
+
+**Add to `runner.py` arguments:**
+
+```python
+# Sprint enrichment arguments
+parser.add_argument('--sprint-dir',
+                   help='Directory containing Sprint XML schedules')
+parser.add_argument('--enrich-sprint', action='store_true',
+                   help='Enrich existing JSON outputs with Sprint dates')
+parser.add_argument('--sprint-matching-strategy',
+                   choices=['unique_id', 'uid'],
+                   default='unique_id',
+                   help='Strategy for matching Sprint to AOP tasks (default: unique_id)')
+parser.add_argument('--sprint-file-mapping',
+                   help='JSON file with custom Sprint XML filename mapping')
+```
+
+**Usage Examples:**
+
+```bash
+# Default run: Process AOP baseline only (Sprint dates remain null)
+python runner.py
+
+# Default run with Sprint directory specified (prompts if Sprint not found)
+python runner.py --sprint-dir input/all-sprint-schedules
+
+# Enrich existing JSON outputs with Sprint dates
+python runner.py --enrich-sprint --sprint-dir input/all-sprint-schedules
+
+# Enrich Sprint dates only (skip all other enrichment)
+python runner.py --enrich-sprint --sprint-dir input/all-sprint-schedules --no-enrich
+
+# Process AOP + enrich all attributes + Sprint in single run
+python runner.py --sprint-dir input/all-sprint-schedules
+
+# Custom Sprint XML filename mapping
+python runner.py --enrich-sprint --sprint-dir input/all-sprint-schedules \
+                --sprint-file-mapping mappings/sprint_filenames.json
+```
+
+### Workflow Integration
+
+**Mode 1: Separate Enrichment (Recommended Initial Approach)**
+
+```bash
+# Step 1: Process AOP baseline (existing flow)
+python runner.py --input-dir input/all-aop-baselines
+
+# Step 2: Enrich with Sprint dates separately
+python runner.py --enrich-sprint --sprint-dir input/all-sprint-schedules
+```
+
+**Mode 2: Integrated Processing**
+
+```bash
+# Single command: AOP processing + all enrichments including Sprint
+python runner.py --input-dir input/all-aop-baselines \
+                --sprint-dir input/all-sprint-schedules
+```
+
+**Mode 3: Sprint-Only Enrichment (Update Existing)**
+
+```bash
+# Re-enrich existing JSON files with Sprint dates (no XML re-processing)
+python runner.py --enrich-sprint --sprint-dir input/all-sprint-schedules
+```
+
+### Task Matching Strategy
+
+**Primary Strategy: `unique_id` (Recommended)**
+- Match by Unique_Task_ID (extended attribute Text1)
+- Most reliable: Survives schedule restructuring
+- Expected match rate: 50-60% (based on gap analysis)
+
+**Fallback Strategy: `uid`**
+- Match by Task UID
+- Less reliable: UIDs may be reused for different tasks
+- Use only if Unique_Task_ID is unavailable
+
+**Handling Unmatched Tasks:**
+- Sprint dates remain `null` for unmatched tasks
+- Log warning with task details
+- Include in statistics report
+
+### Error Handling & Best Practices
+
+**1. Sprint XML Not Found:**
+```python
+if not sprint_file.exists():
+    if args.interactive:
+        response = input(f"Sprint XML not found: {sprint_file}. "
+                        "Continue without Sprint enrichment? [y/N]: ")
+        if response.lower() != 'y':
+            sys.exit(1)
+    else:
+        logger.warning(f"Skipping Sprint enrichment: {sprint_file} not found")
+        # Continue processing with sprint dates as null
+```
+
+**2. Low Match Rate Warning:**
+```python
+if match_stats['match_rate'] < 0.4:  # Less than 40% matched
+    logger.warning(f"Low Sprint match rate for {project}: "
+                  f"{match_stats['match_rate']:.1%}. "
+                  f"Consider reviewing matching strategy.")
+```
+
+**3. Validation:**
+```python
+def validate_sprint_dates(task: Dict) -> List[str]:
+    """Validate Sprint dates consistency."""
+    errors = []
+    sprint = task.get('dates', {}).get('sprint')
+
+    if sprint:
+        # Check date ordering
+        if sprint['start'] > sprint['finish']:
+            errors.append(f"Sprint start after finish: {task['uid']}")
+
+        # Check duration consistency
+        from datetime import datetime
+        start = datetime.fromisoformat(sprint['start'])
+        finish = datetime.fromisoformat(sprint['finish'])
+        actual_days = (finish - start).days
+
+        if abs(actual_days - sprint['duration_days']) > 1:  # Allow 1 day tolerance
+            errors.append(f"Sprint duration mismatch: {task['uid']}")
+
+    return errors
+```
+
+**4. Dry-Run Mode:**
+```bash
+# Preview Sprint enrichment without saving
+python runner.py --enrich-sprint --sprint-dir input/all-sprint-schedules --dry-run
+```
+
+### Reporting
+
+**Add to QA Reports:**
+
+```json
+{
+  "project": "Miraya",
+  "sprint_enrichment": {
+    "enabled": true,
+    "sprint_xml_source": "input/all-sprint-schedules/Miraya.xml",
+    "matching_strategy": "unique_id",
+    "total_tasks": 2849,
+    "sprint_dates_available": 2847,
+    "matched": 1444,
+    "unmatched": 1405,
+    "match_rate": 0.507,
+    "validation_errors": []
+  }
+}
+```
+
+### File Naming Conventions
+
+**Sprint XML Files Expected Names:**
+```
+input/all-sprint-schedules/
+├── Miraya.xml           # Matches: output/json/Miraya.json
+├── Aristocrat.xml       # Matches: output/json/Aristocrat.json
+├── Horizon.xml          # Matches: output/json/Horizon.json (from Azadnagar.xml AOP)
+└── ...
+```
+
+**Custom Mapping File (if needed):**
+```json
+{
+  "Horizon": "Azadnagar.xml",
+  "Reserve": "Bigbull-Reserve.xml",
+  "Avenue 11": "One M.xml"
+}
+```
+
+### Implementation Order (Phase 8)
+
+1. **Sprint Parser (Day 1)**
+   - Implement `parse_sprint_schedule()` function
+   - Reuse existing `xml_parser.py` (fully compatible)
+   - Test with Miraya Sprint XML
+
+2. **Matching Logic (Day 1-2)**
+   - Implement `match_sprint_to_aop()` with unique_id strategy
+   - Add fallback UID matching
+   - Test match rate with Miraya
+
+3. **Enrichment Function (Day 2)**
+   - Implement `enrich_sprint_dates()` single-file enrichment
+   - Add validation checks
+   - Test dry-run mode
+
+4. **Batch Processing (Day 2-3)**
+   - Implement `batch_enrich_sprint()` for all projects
+   - Add file mapping support
+   - Test with all 12 projects
+
+5. **Runner Integration (Day 3)**
+   - Add CLI arguments
+   - Integrate into main runner workflow
+   - Add interactive prompts for missing Sprint files
+
+6. **Testing & Validation (Day 3-4)**
+   - Validate Sprint date consistency
+   - Check match rates across all projects
+   - Generate enrichment reports
+
+7. **Documentation (Day 4)**
+   - Update usage examples
+   - Document matching strategies
+   - Create troubleshooting guide
+
+### Success Criteria
+
+- ✅ Sprint dates populated for 40%+ of tasks (based on gap analysis: 50.7% expected)
+- ✅ No structural changes to existing ETL pipeline
+- ✅ Backward compatible: Works with or without Sprint directory
+- ✅ Clear reporting of match statistics
+- ✅ Validation of Sprint date consistency
+- ✅ Support for both separate and integrated workflows
+
+### Risks & Mitigation
+
+| Risk | Impact | Mitigation |
+|------|--------|------------|
+| Low match rate due to UID changes | Medium | Use Unique_Task_ID as primary matching strategy |
+| Sprint XML not available for some projects | Low | Make Sprint enrichment optional, log warnings |
+| Sprint dates inconsistent with AOP | Medium | Add validation checks, flag anomalies |
+| Performance impact on large files | Low | Reuse existing parser, batch processing |
+
+---
+
+## Implementation Timeline
+
+### Phase 1-7: Core ETL ✅ **COMPLETED**
+- XML parsing, task building, cost timeline, validation
+- Attribute enrichment (zone, region, tower, floor)
+- Trade type enrichment with LLM
+
+### Phase 8: Sprint Schedule Integration 📅 **PLANNED**
+- **Duration:** 4 days
+- **Dependencies:** Phase 1-7 complete
+- **Deliverables:**
+  1. `src/sprint_enrichment.py` module
+  2. Updated `runner.py` with Sprint CLI
+  3. Sprint enrichment reports
+  4. Updated documentation
+
+### Total ETL Pipeline Status
+- **Phase 1-7:** Production-ready ✅
+- **Phase 8:** Ready for implementation 📋
