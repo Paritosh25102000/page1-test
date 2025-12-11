@@ -106,12 +106,21 @@ def build_dates_actual_leaf(
 
     Returns:
         Actual dates object
+
+    Note:
+        actual.end is only set for completed tasks (100% progress).
+        For incomplete tasks, actual.end is null even if there are assignment dates.
     """
     task_uid = xml_task.get("uid")
     timephased_data = get_task_timephased_data(task_uid, task_assignment_map)
 
+    # Get percent_complete to check if task is complete
+    percent_complete = parse_int(xml_task.get("percent_complete")) or 0
+    is_complete = percent_complete == 100
+
     actual_start = derive_actual_start(timephased_data)
-    actual_end = derive_actual_end(timephased_data)
+    # Only set actual_end if task is complete
+    actual_end = derive_actual_end(timephased_data) if is_complete else None
     duration_days = calculate_duration_days(actual_start, actual_end)
 
     return {
