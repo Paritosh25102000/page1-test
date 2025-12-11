@@ -1,0 +1,19 @@
+{
+  "project": "Sec. 44, Noida",
+  "total_tasks": 3635,
+  "parents": 558,
+  "leaves": 3037,
+  "milestones": 40,
+  "sample_size": 100,
+  "sample_pass_rate": 1.0,
+  "validation_issues": [],
+  "sample_failures": [],
+  "field_coverage": {
+    "dates.actual.start": 0.02,
+    "dates.actual.end": 0.02,
+    "dates.actual.duration_days": 0.02,
+    "cost_timeline": 0.83,
+    "attributes": 0.84,
+    "progress": 0.85
+  }
+}

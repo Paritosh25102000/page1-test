@@ -1,0 +1,19 @@
+{
+  "project": "Avenue 11",
+  "total_tasks": 3910,
+  "parents": 426,
+  "leaves": 3483,
+  "milestones": 1,
+  "sample_size": 100,
+  "sample_pass_rate": 1.0,
+  "validation_issues": [],
+  "sample_failures": [],
+  "field_coverage": {
+    "dates.actual.start": 0.12,
+    "dates.actual.end": 0.12,
+    "dates.actual.duration_days": 0.12,
+    "cost_timeline": 0.35,
+    "attributes": 0.89,
+    "progress": 0.89
+  }
+}

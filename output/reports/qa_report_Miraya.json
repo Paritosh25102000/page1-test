@@ -4,7 +4,7 @@
   "parents": 318,
   "leaves": 2527,
   "milestones": 4,
-  "sample_size": 10,
+  "sample_size": 100,
   "sample_pass_rate": 1.0,
   "validation_issues": [],
   "sample_failures": [],

@@ -15,6 +15,10 @@ Usage:
     python runner.py --no-enrich-tower-floor            # Skip tower/floor enrichment
     python runner.py --no-enrich                        # Skip all enrichment
 
+    # Trade type enrichment (LLM-based)
+    python runner.py --enrich-trade-types --openrouter-api-key YOUR_KEY  # Enable LLM classification
+    python runner.py --file Miraya.xml --enrich-trade-types              # Single file with trade types
+
     # Update existing outputs with enrichment
     python runner.py --enrich-only                      # Enrich existing JSON outputs
     python runner.py --enrich-only --enrich-zone-region # Only enrich zone/region
@@ -31,12 +35,29 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+# Load .env file if it exists
+def load_env():
+    """Load environment variables from .env file."""
+    env_path = Path(__file__).parent / ".env"
+    if env_path.exists():
+        with open(env_path) as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    key, value = line.split('=', 1)
+                    os.environ[key] = value
+
+load_env()
+
 # Add src to path for imports
 sys.path.insert(0, str(Path(__file__).parent))
 
 from src.cost_timeline import calculate_cost_timeline
 from src.enrichment import enrich_attributes
 from src.task_builder import build_all_tasks
+from src.trade_type_classifier import classify_activities_with_llm, get_classification_summary
+from src.trade_type_extractor import extract_unique_activities, get_activity_summary
+from src.trade_type_mapper import enrich_tasks_with_trade_types, get_enrichment_summary
 from src.utils import (
     ensure_directory,
     get_project_name_from_file,
@@ -61,6 +82,9 @@ def process_single_file(
     sample_size: int = 10,
     enrich_zone_region: bool = True,
     enrich_tower_floor: bool = True,
+    enrich_trade_types: bool = False,
+    llm=None,
+    cheat_sheet_path: str = None,
     logger=None,
 ) -> dict:
     """
@@ -73,6 +97,9 @@ def process_single_file(
         sample_size: Number of tasks for sample validation
         enrich_zone_region: Whether to enrich zone/region
         enrich_tower_floor: Whether to enrich tower/floor
+        enrich_trade_types: Whether to enrich trade types using LLM
+        llm: UniversalLLM instance for trade type classification
+        cheat_sheet_path: Path to trade type cheat sheet
         logger: Logger instance
 
     Returns:
@@ -119,10 +146,10 @@ def process_single_file(
 
         stats["tasks_processed"] = len(tasks)
 
-        # Apply enrichment
+        # Apply spatial enrichment (zone/region/tower/floor)
         if enrich_zone_region or enrich_tower_floor:
             if logger:
-                logger.debug("Enriching attributes...")
+                logger.debug("Enriching spatial attributes...")
 
             tasks = enrich_attributes(
                 tasks=tasks,
@@ -140,7 +167,56 @@ def process_single_file(
                         t["attributes"].get("floor")
                     )
                 )
-                logger.info(f"  Enriched {enriched_count} tasks with attributes")
+                logger.info(f"  Enriched {enriched_count} tasks with spatial attributes")
+
+        # Apply trade type enrichment (LLM-based)
+        if enrich_trade_types and llm and cheat_sheet_path:
+            if logger:
+                logger.info("  Enriching trade types with LLM...")
+
+            try:
+                # Extract unique activities
+                unique_activities = extract_unique_activities(tasks, project_name)
+
+                if logger:
+                    logger.info(
+                        f"  Extracted {unique_activities['unique_activity_count']} unique activities "
+                        f"from {unique_activities['total_leaf_tasks']} leaf tasks"
+                    )
+
+                # Classify with LLM
+                import asyncio
+                classification_result = asyncio.run(
+                    classify_activities_with_llm(
+                        unique_activities, project_name, llm, cheat_sheet_path
+                    )
+                )
+
+                if logger:
+                    logger.info(
+                        f"  Classified {classification_result['total_classified']} activities "
+                        f"(high: {classification_result['confidence_distribution']['high']}, "
+                        f"medium: {classification_result['confidence_distribution']['medium']}, "
+                        f"low: {classification_result['confidence_distribution']['low']})"
+                    )
+
+                # Map classifications back to tasks
+                enrichment_result = enrich_tasks_with_trade_types(
+                    tasks, classification_result, project_name
+                )
+
+                stats["trade_type_enrichment"] = enrichment_result
+
+                if logger:
+                    logger.info(
+                        f"  Enriched {enrichment_result['enrichment_stats']['enriched_tasks']} "
+                        f"tasks with trade types ({enrichment_result['enrichment_rate']:.1%})"
+                    )
+
+            except Exception as e:
+                if logger:
+                    logger.error(f"  Trade type enrichment failed: {e}")
+                stats["trade_type_error"] = str(e)
 
         # Run validation
         if logger:
@@ -424,6 +500,20 @@ def main():
         action="store_true",
         help="Skip tower/floor enrichment",
     )
+    parser.add_argument(
+        "--enrich-trade-types",
+        action="store_true",
+        help="Enable trade type enrichment using LLM",
+    )
+    parser.add_argument(
+        "--openrouter-api-key",
+        help="OpenRouter API key for LLM classification",
+    )
+    parser.add_argument(
+        "--cheat-sheet",
+        default="./trade-type-cheat-sheet.md",
+        help="Path to trade type cheat sheet (default: ./trade-type-cheat-sheet.md)",
+    )
 
     args = parser.parse_args()
 
@@ -467,13 +557,51 @@ def main():
             enrich_tower_floor_flag = not args.no_enrich_tower_floor
 
     # Log enrichment settings
-    if enrich_zone_region_flag or enrich_tower_floor_flag:
-        enrichments = []
-        if enrich_zone_region_flag:
-            enrichments.append("zone/region")
-        if enrich_tower_floor_flag:
-            enrichments.append("tower/floor")
-        logger.info(f"Enrichment enabled: {', '.join(enrichments)}")
+    enrichments_enabled = []
+    if enrich_zone_region_flag:
+        enrichments_enabled.append("zone/region")
+    if enrich_tower_floor_flag:
+        enrichments_enabled.append("tower/floor")
+
+    # Initialize LLM for trade type enrichment
+    llm = None
+    cheat_sheet_path = None
+    enrich_trade_types_flag = args.enrich_trade_types
+
+    if enrich_trade_types_flag:
+        # Check for API key
+        api_key = args.openrouter_api_key or os.getenv("OPENROUTER_API_KEY")
+        if not api_key:
+            logger.error(
+                "Trade type enrichment requires OpenRouter API key. "
+                "Provide --openrouter-api-key or set OPENROUTER_API_KEY environment variable."
+            )
+            return 1
+
+        # Check for cheat sheet
+        script_dir = Path(__file__).parent
+        cheat_sheet_path = (script_dir / args.cheat_sheet).resolve()
+
+        if not cheat_sheet_path.exists():
+            logger.error(f"Cheat sheet not found: {cheat_sheet_path}")
+            return 1
+
+        # Initialize LLM
+        try:
+            from src.llm_utils import UniversalLLM
+
+            llm = UniversalLLM(
+                api_key=api_key, model="google/gemini-2.5-flash"
+            )
+            enrichments_enabled.append("trade_types (LLM)")
+            logger.info(f"Initialized LLM for trade type enrichment")
+            logger.info(f"Cheat sheet: {cheat_sheet_path}")
+        except Exception as e:
+            logger.error(f"Failed to initialize LLM: {e}")
+            return 1
+
+    if enrichments_enabled:
+        logger.info(f"Enrichment enabled: {', '.join(enrichments_enabled)}")
     else:
         logger.info("Enrichment disabled")
 
@@ -534,6 +662,9 @@ def main():
             sample_size=args.sample_size,
             enrich_zone_region=enrich_zone_region_flag,
             enrich_tower_floor=enrich_tower_floor_flag,
+            enrich_trade_types=enrich_trade_types_flag,
+            llm=llm,
+            cheat_sheet_path=str(cheat_sheet_path) if cheat_sheet_path else None,
             logger=logger,
         )
         all_stats.append(stats)

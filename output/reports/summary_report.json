@@ -1,6 +1,6 @@
 {
-  "run_timestamp": "2025-12-10T00:09:56.398863",
-  "input_directory": "/Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines",
+  "run_timestamp": "2025-12-11T03:46:27.863107",
+  "input_directory": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/input/all-aop-baselines",
   "output_directory": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output",
   "dry_run": false,
   "total_files": 12,
@@ -10,11 +10,32 @@
   "file_results": [
     {
       "project": "Aristocrat",
-      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Aristocrat.xml",
+      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/input/all-aop-baselines/Aristocrat.xml",
       "status": "success",
       "tasks_processed": 5614,
       "errors": [],
       "tasks_found": 5614,
+      "trade_type_enrichment": {
+        "project": "Aristocrat",
+        "enrichment_stats": {
+          "total_leaf_tasks": 4984,
+          "enriched_tasks": 4984,
+          "unmatched_tasks": 0,
+          "validation_issues": 0,
+          "by_context": {
+            "tower": 3633,
+            "common_area": 1310,
+            "external": 20,
+            "infrastructure": 21
+          },
+          "by_confidence": {
+            "high": 4605,
+            "medium": 371,
+            "low": 8
+          }
+        },
+        "enrichment_rate": 1.0
+      },
       "parents": 630,
       "leaves": 4984,
       "milestones": 0,
@@ -23,54 +44,98 @@
       "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Aristocrat.json"
     },
     {
-      "project": "Azadnagar",
-      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Azadnagar.xml",
+      "project": "Horizon",
+      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/input/all-aop-baselines/Azadnagar.xml",
       "status": "success",
       "tasks_processed": 17456,
       "errors": [],
       "tasks_found": 17456,
+      "trade_type_error": "'unknown'",
       "parents": 1740,
       "leaves": 15705,
       "milestones": 11,
       "type_issues": 0,
       "sample_pass_rate": 1.0,
-      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Azadnagar.json"
+      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Horizon.json"
     },
     {
-      "project": "BLSaha",
-      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/BLSaha.xml",
+      "project": "BL Saha",
+      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/input/all-aop-baselines/BLSaha.xml",
       "status": "success",
       "tasks_processed": 10065,
       "errors": [],
       "tasks_found": 10065,
+      "trade_type_enrichment": {
+        "project": "BL Saha",
+        "enrichment_stats": {
+          "total_leaf_tasks": 9517,
+          "enriched_tasks": 9517,
+          "unmatched_tasks": 0,
+          "validation_issues": 0,
+          "by_context": {
+            "tower": 8196,
+            "common_area": 1308,
+            "external": 13,
+            "infrastructure": 0
+          },
+          "by_confidence": {
+            "high": 5833,
+            "medium": 2239,
+            "low": 1445
+          }
+        },
+        "enrichment_rate": 1.0
+      },
       "parents": 457,
       "leaves": 9517,
       "milestones": 91,
       "type_issues": 0,
       "sample_pass_rate": 1.0,
-      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/BLSaha.json"
+      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/BL Saha.json"
     },
     {
-      "project": "Bigbull-Reserve",
-      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Bigbull-Reserve.xml",
+      "project": "Reserve",
+      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/input/all-aop-baselines/Bigbull-Reserve.xml",
       "status": "success",
       "tasks_processed": 16438,
       "errors": [],
       "tasks_found": 16438,
+      "trade_type_enrichment": {
+        "project": "Reserve",
+        "enrichment_stats": {
+          "total_leaf_tasks": 14843,
+          "enriched_tasks": 14842,
+          "unmatched_tasks": 1,
+          "validation_issues": 0,
+          "by_context": {
+            "tower": 11263,
+            "common_area": 3562,
+            "external": 7,
+            "infrastructure": 10
+          },
+          "by_confidence": {
+            "high": 13221,
+            "medium": 1470,
+            "low": 151
+          }
+        },
+        "enrichment_rate": 0.9999326281748973
+      },
       "parents": 1595,
       "leaves": 14843,
       "milestones": 0,
       "type_issues": 0,
       "sample_pass_rate": 1.0,
-      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Bigbull-Reserve.json"
+      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Reserve.json"
     },
     {
       "project": "Jardinia",
-      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Jardinia.xml",
+      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/input/all-aop-baselines/Jardinia.xml",
       "status": "success",
       "tasks_processed": 4723,
       "errors": [],
       "tasks_found": 4723,
+      "trade_type_error": "Request timed out.",
       "parents": 514,
       "leaves": 4209,
       "milestones": 0,
@@ -80,11 +145,12 @@
     },
     {
       "project": "Miraya",
-      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Miraya.xml",
+      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/input/all-aop-baselines/Miraya.xml",
       "status": "success",
       "tasks_processed": 2849,
       "errors": [],
       "tasks_found": 2849,
+      "trade_type_error": "Connection error.",
       "parents": 318,
       "leaves": 2527,
       "milestones": 4,
@@ -93,68 +159,93 @@
       "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Miraya.json"
     },
     {
-      "project": "OneM",
-      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/OneM.xml",
+      "project": "Avenue 11",
+      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/input/all-aop-baselines/OneM.xml",
       "status": "success",
       "tasks_processed": 3910,
       "errors": [],
       "tasks_found": 3910,
+      "trade_type_enrichment": {
+        "project": "Avenue 11",
+        "enrichment_stats": {
+          "total_leaf_tasks": 3483,
+          "enriched_tasks": 0,
+          "unmatched_tasks": 3483,
+          "validation_issues": 0,
+          "by_context": {
+            "tower": 0,
+            "common_area": 0,
+            "external": 0,
+            "infrastructure": 0
+          },
+          "by_confidence": {
+            "high": 0,
+            "medium": 0,
+            "low": 0
+          }
+        },
+        "enrichment_rate": 0.0
+      },
       "parents": 426,
       "leaves": 3483,
       "milestones": 1,
       "type_issues": 0,
       "sample_pass_rate": 1.0,
-      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/OneM.json"
+      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Avenue 11.json"
     },
     {
-      "project": "RGA Land2",
-      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/RGA Land2.xml",
+      "project": "RGA 2",
+      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/input/all-aop-baselines/RGA Land2.xml",
       "status": "success",
       "tasks_processed": 8492,
       "errors": [],
       "tasks_found": 8492,
+      "trade_type_error": "Connection error.",
       "parents": 1281,
       "leaves": 7198,
       "milestones": 13,
       "type_issues": 0,
       "sample_pass_rate": 1.0,
-      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/RGA Land2.json"
+      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/RGA 2.json"
     },
     {
-      "project": "Riverine",
-      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Riverine.xml",
+      "project": "Sec. 44, Noida",
+      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/input/all-aop-baselines/Riverine.xml",
       "status": "success",
       "tasks_processed": 3635,
       "errors": [],
       "tasks_found": 3635,
+      "trade_type_error": "Connection error.",
       "parents": 558,
       "leaves": 3037,
       "milestones": 40,
       "type_issues": 0,
       "sample_pass_rate": 1.0,
-      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Riverine.json"
+      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Sec. 44, Noida.json"
     },
     {
-      "project": "Tropical Isle 146",
-      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Tropical Isle 146.xml",
+      "project": "Tropical Isle",
+      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/input/all-aop-baselines/Tropical Isle 146.xml",
       "status": "success",
       "tasks_processed": 4770,
       "errors": [],
       "tasks_found": 4770,
+      "trade_type_error": "Connection error.",
       "parents": 513,
       "leaves": 4257,
       "milestones": 0,
       "type_issues": 0,
       "sample_pass_rate": 1.0,
-      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Tropical Isle 146.json"
+      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Tropical Isle.json"
     },
     {
       "project": "Woodscapes",
-      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Woodscapes.xml",
+      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/input/all-aop-baselines/Woodscapes.xml",
       "status": "success",
       "tasks_processed": 23494,
       "errors": [],
       "tasks_found": 23494,
+      "trade_type_error": "Connection error.",
       "parents": 3277,
       "leaves": 20201,
       "milestones": 16,
@@ -164,11 +255,12 @@
     },
     {
       "project": "Zenith",
-      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/source_data/asta-source-cco-dashboard/all-aop-baselines/Zenith.xml",
+      "xml_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/input/all-aop-baselines/Zenith.xml",
       "status": "success",
       "tasks_processed": 8978,
       "errors": [],
       "tasks_found": 8978,
+      "trade_type_error": "Connection error.",
       "parents": 961,
       "leaves": 8016,
       "milestones": 1,
