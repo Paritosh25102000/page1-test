@@ -19,6 +19,11 @@ Usage:
     python runner.py --enrich-trade-types --openrouter-api-key YOUR_KEY  # Enable LLM classification
     python runner.py --file Miraya.xml --enrich-trade-types              # Single file with trade types
 
+    # Sprint schedule enrichment
+    python runner.py --enrich-sprint                                      # Enrich with Sprint dates
+    python runner.py --file Miraya.xml --enrich-sprint                   # Single file with Sprint dates
+    python runner.py --enrich-sprint --sprint-dir ./custom/sprint/path   # Custom Sprint XML directory
+
     # Update existing outputs with enrichment
     python runner.py --enrich-only                      # Enrich existing JSON outputs
     python runner.py --enrich-only --enrich-zone-region # Only enrich zone/region
@@ -73,6 +78,7 @@ from src.validators import (
     validate_task_types,
 )
 from src.xml_parser import parse_xml_file
+from src.sprint_enrichment import enrich_sprint_dates
 
 
 def process_single_file(
@@ -85,6 +91,8 @@ def process_single_file(
     enrich_trade_types: bool = False,
     llm=None,
     cheat_sheet_path: str = None,
+    enrich_sprint: bool = False,
+    sprint_dir: str = None,
     logger=None,
 ) -> dict:
     """
@@ -100,6 +108,8 @@ def process_single_file(
         enrich_trade_types: Whether to enrich trade types using LLM
         llm: UniversalLLM instance for trade type classification
         cheat_sheet_path: Path to trade type cheat sheet
+        enrich_sprint: Whether to enrich with Sprint schedule dates
+        sprint_dir: Directory containing Sprint XML files
         logger: Logger instance
 
     Returns:
@@ -267,6 +277,32 @@ def process_single_file(
 
             if logger:
                 logger.info(f"  Saved: {output_file}")
+
+            # Enrich with Sprint dates if requested
+            if enrich_sprint and sprint_dir:
+                if logger:
+                    logger.info(f"  Enriching with Sprint dates...")
+
+                sprint_xml_path = os.path.join(sprint_dir, f"{project_name}.xml")
+
+                if os.path.exists(sprint_xml_path):
+                    try:
+                        sprint_stats = enrich_sprint_dates(output_file, sprint_xml_path)
+                        stats["sprint_enrichment"] = {
+                            "matched": sprint_stats["matched"],
+                            "unmatched": sprint_stats["unmatched"],
+                            "match_rate": sprint_stats["match_rate"]
+                        }
+                        if logger:
+                            logger.info(f"  Sprint: {sprint_stats['matched']}/{sprint_stats['aop_tasks']} "
+                                      f"tasks matched ({sprint_stats['match_rate']:.1%})")
+                    except Exception as e:
+                        stats["errors"].append(f"Sprint enrichment failed: {e}")
+                        if logger:
+                            logger.error(f"  Sprint enrichment error: {e}")
+                else:
+                    if logger:
+                        logger.warning(f"  Sprint XML not found: {sprint_xml_path}")
 
             # Save QA report
             reports_dir = os.path.join(output_dir, "reports")
@@ -514,6 +550,16 @@ def main():
         default="./trade-type-cheat-sheet.md",
         help="Path to trade type cheat sheet (default: ./trade-type-cheat-sheet.md)",
     )
+    parser.add_argument(
+        "--enrich-sprint",
+        action="store_true",
+        help="Enrich with Sprint schedule dates",
+    )
+    parser.add_argument(
+        "--sprint-dir",
+        default="./input/all-sprint-schedules",
+        help="Directory containing Sprint XML files (default: ./input/all-sprint-schedules)",
+    )
 
     args = parser.parse_args()
 
@@ -521,6 +567,7 @@ def main():
     script_dir = Path(__file__).parent
     input_dir = (script_dir / args.input_dir).resolve()
     output_dir = (script_dir / args.output_dir).resolve()
+    sprint_dir = (script_dir / args.sprint_dir).resolve() if args.enrich_sprint else None
 
     # Setup logging
     logs_dir = os.path.join(output_dir, "logs")
@@ -562,6 +609,8 @@ def main():
         enrichments_enabled.append("zone/region")
     if enrich_tower_floor_flag:
         enrichments_enabled.append("tower/floor")
+    if args.enrich_sprint:
+        enrichments_enabled.append("sprint")
 
     # Initialize LLM for trade type enrichment
     llm = None
@@ -665,6 +714,8 @@ def main():
             enrich_trade_types=enrich_trade_types_flag,
             llm=llm,
             cheat_sheet_path=str(cheat_sheet_path) if cheat_sheet_path else None,
+            enrich_sprint=args.enrich_sprint,
+            sprint_dir=str(sprint_dir) if sprint_dir else None,
             logger=logger,
         )
         all_stats.append(stats)

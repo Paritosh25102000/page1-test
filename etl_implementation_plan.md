@@ -714,23 +714,27 @@ from src.transformers import extract_date, iso8601_duration_to_days
 
 def parse_sprint_schedule(xml_path: str) -> Dict[str, Dict]:
     """
-    Parse Sprint XML file and extract task dates by Unique_Task_ID.
+    Parse Sprint XML file and extract task dates by outline_number.
 
     Args:
         xml_path: Path to Sprint XML file
 
     Returns:
-        Dictionary mapping Unique_Task_ID -> {start, finish, duration_days}
+        Dictionary mapping outline_number -> {start, finish, duration_days}
 
     Example:
         {
-            "TASK-001": {
+            "1.1.4.2.3.1.4.13": {
                 "start": "2025-10-10",
                 "finish": "2025-12-15",
                 "duration_days": 67
             },
             ...
         }
+
+    Note:
+        Gap analysis showed outline_number is 99.5% stable across schedules,
+        while UIDs are completely reassigned (0% stable).
     """
     logger = logging.getLogger(__name__)
     logger.info(f"Parsing Sprint schedule: {xml_path}")
@@ -738,14 +742,14 @@ def parse_sprint_schedule(xml_path: str) -> Dict[str, Dict]:
     # Use existing XML parser (fully compatible)
     parsed_data = parse_xml_file(xml_path)
 
-    # Build Sprint dates lookup by Unique_Task_ID
+    # Build Sprint dates lookup by outline_number
     sprint_dates = {}
 
     for task in parsed_data['tasks']:
-        # Get Unique_Task_ID from extended attributes
-        unique_id = task.get('unique_task_id')  # From Text1 field
+        # Get outline_number (stable identifier across schedules)
+        outline_number = task.get('outline_number')
 
-        if not unique_id:
+        if not outline_number:
             continue
 
         # Extract and transform dates (reuse existing transformers)
@@ -755,7 +759,7 @@ def parse_sprint_schedule(xml_path: str) -> Dict[str, Dict]:
         duration_days = iso8601_duration_to_days(duration_iso) if duration_iso else None
 
         if start and finish:
-            sprint_dates[unique_id] = {
+            sprint_dates[outline_number] = {
                 'start': start,
                 'finish': finish,
                 'duration_days': duration_days
@@ -767,44 +771,58 @@ def parse_sprint_schedule(xml_path: str) -> Dict[str, Dict]:
 
 def match_sprint_to_aop(
     aop_tasks: List[Dict],
-    sprint_dates: Dict[str, Dict],
-    matching_strategy: str = 'unique_id'
+    sprint_dates: Dict[str, Dict]
 ) -> Dict:
     """
-    Match Sprint dates to AOP tasks.
+    Match Sprint dates to AOP tasks by outline_number.
 
     Args:
         aop_tasks: List of AOP task dictionaries from JSON output
         sprint_dates: Sprint dates lookup from parse_sprint_schedule()
-        matching_strategy: 'unique_id' (primary) or 'uid' (fallback)
 
     Returns:
         Statistics dict with match counts
+
+    Note:
+        Matching is done by outline_number. Gap analysis showed 99.5% match rate
+        (2518 out of 2531 leaf tasks in Miraya). outline_number is stable across
+        schedules, unlike UID (0% stable) or name (massive duplicates).
     """
     matched = 0
     unmatched = 0
+    unmatched_tasks = []
 
     for task in aop_tasks:
-        # Get matching key from AOP task
-        if matching_strategy == 'unique_id':
-            # Primary: Match by Unique_Task_ID (most reliable)
-            match_key = task.get('unique_task_id')
-        else:
-            # Fallback: Match by UID (less reliable due to schedule restructuring)
-            match_key = str(task.get('uid', ''))
-
-        if not match_key or match_key not in sprint_dates:
+        # Match by outline_number
+        outline_number = task.get('outline_number')
+        if not outline_number:
             unmatched += 1
+            unmatched_tasks.append({
+                'uid': task.get('uid'),
+                'name': task.get('name'),
+                'reason': 'no_outline_number'
+            })
+            continue
+
+        if outline_number not in sprint_dates:
+            unmatched += 1
+            unmatched_tasks.append({
+                'uid': task.get('uid'),
+                'name': task.get('name'),
+                'outline_number': outline_number,
+                'reason': 'not_in_sprint'
+            })
             continue
 
         # Populate sprint dates in task
         if task.get('dates'):
-            task['dates']['sprint'] = sprint_dates[match_key]
+            task['dates']['sprint'] = sprint_dates[outline_number]
             matched += 1
 
     return {
         'matched': matched,
         'unmatched': unmatched,
+        'unmatched_tasks': unmatched_tasks,
         'match_rate': matched / (matched + unmatched) if (matched + unmatched) > 0 else 0
     }
 
@@ -812,7 +830,6 @@ def match_sprint_to_aop(
 def enrich_sprint_dates(
     json_output_path: str,
     sprint_xml_path: str,
-    matching_strategy: str = 'unique_id',
     save_output: bool = True
 ) -> Dict:
     """
@@ -821,7 +838,6 @@ def enrich_sprint_dates(
     Args:
         json_output_path: Path to existing AOP JSON output file
         sprint_xml_path: Path to Sprint XML schedule file
-        matching_strategy: Task matching strategy ('unique_id' or 'uid')
         save_output: Whether to save enriched JSON (False for dry-run)
 
     Returns:
@@ -845,8 +861,8 @@ def enrich_sprint_dates(
     sprint_dates = parse_sprint_schedule(sprint_xml_path)
 
     # 3. Match and enrich
-    logger.info(f"Matching Sprint dates to AOP tasks (strategy: {matching_strategy})")
-    match_stats = match_sprint_to_aop(aop_data, sprint_dates, matching_strategy)
+    logger.info(f"Matching Sprint dates to AOP tasks by outline_number")
+    match_stats = match_sprint_to_aop(aop_data, sprint_dates)
 
     # 4. Save enriched output
     if save_output:
@@ -866,8 +882,7 @@ def enrich_sprint_dates(
 def batch_enrich_sprint(
     json_output_dir: str,
     sprint_xml_dir: str,
-    file_mapping: Optional[Dict[str, str]] = None,
-    matching_strategy: str = 'unique_id'
+    file_mapping: Optional[Dict[str, str]] = None
 ) -> List[Dict]:
     """
     Batch enrich multiple projects with Sprint dates.
@@ -877,7 +892,6 @@ def batch_enrich_sprint(
         sprint_xml_dir: Directory containing Sprint XML files
         file_mapping: Optional custom mapping {json_filename: sprint_xml_filename}
                      If None, assumes matching filenames (e.g., Miraya.json -> Miraya.xml)
-        matching_strategy: Task matching strategy
 
     Returns:
         List of statistics dictionaries for each project
@@ -911,8 +925,7 @@ def batch_enrich_sprint(
         try:
             stats = enrich_sprint_dates(
                 str(json_file),
-                str(sprint_file),
-                matching_strategy=matching_strategy
+                str(sprint_file)
             )
             results.append(stats)
             logger.info(f"✓ {stats['project']}: {stats['matched']}/{stats['aop_tasks']} "

@@ -1,0 +1,64 @@
+# UID-Based Task Matching Analysis - Miraya
+
+**Generated:** 2025-12-11 12:40:58
+
+## Overview
+
+- **Total AOP Tasks:** 2849
+- **Total Sprint Tasks:** 2847
+- **Common UIDs:** 1444 (50.7%)
+- **AOP-Only UIDs:** 1405
+- **Sprint-Only UIDs:** 1403
+
+## Matching Quality for Common UIDs
+
+Out of 1444 tasks with matching UIDs:
+
+- **Exact Matches** (same name, same WBS): 0 (0.0%)
+- **Name Mismatch Only**: 0 (0.0%)
+- **WBS Mismatch Only**: 221 (15.3%)
+- **Both Name & WBS Mismatch**: 1223 (84.7%)
+
+## Sample: Same UID, Different Task (Name & WBS Mismatch)
+
+These are cases where the UID was reused for completely different work:
+
+| UID | AOP Name | Sprint Name | AOP WBS | Sprint WBS |
+|-----|----------|-------------|---------|------------|
+| 5680 | Toilet flooring work | Living dinning flooring | 37300.37500.38800.40000.42200.43400.55900.1267300 | 37300.37600.38600.40000.42500.43300.53700.1268100 |
+| 4219 | Energy meter | Shaft Plumbing | 37300.37500.38800.40800.116400.124000.886700 | 37300.37600.38600.40600.116100.130700.869000 |
+| 2761 | 25th floor - Refuge Floor | Concreting | 37300.37500.38800.40800.45200.46600.205500 | 37300.37600.38600.40600.45600.46600.211200.1165300 |
+| 4059 | Electrical wiring work | Waterproofing | 37300.37500.38800.40800.43100.44000.58000.1216700 | 37300.37600.38600.40600.42900.44000.56000.1215800 |
+| 2231 | 10th Floor | 23rd Floor | 37300.37500.38800.40500.43000.49700.873400 | 37300.37600.38600.40500.42800.50300.856000 |
+| 4579 | Concreting | Reinforcement | 37300.37500.38800.40000.44500.46300.207800.1226300 | 37300.37600.38600.40000.44300.46100.206600.1226800 |
+| 1419 | 12th floor | Aluminium door-window fixing | 37300.37500.38800.40500.43000.43900.59500 | 37300.37600.38600.40500.42800.43900.61300.1120300 |
+| 1785 | Electrical wiring work | Internal Plaster | 37300.37500.38800.40500.43000.43900.60900.1137600 | 37300.37600.38600.40500.42800.43900.60300.1135700 |
+| 4649 | 21st floor | Shuttering | 37300.37500.38800.40000.44500.46300.208500 | 37300.37600.38600.40000.44300.46100.205900.1229400 |
+| 2526 | Concreting | Wall/slab conduiting | 37300.37500.38800.40800.45200.46600.203300.1157200 | 37300.37600.38600.40600.45600.46600.212200.1156700 |
+
+## Sample: Same UID & Name, Different WBS
+
+These are tasks that were restructured in the WBS:
+
+| UID | Name | AOP WBS | Sprint WBS |
+|-----|------|---------|------------|
+| 5272 | Prehung door fixing | 37300.37500.38800.40000.42200.43400.52800.1250100 | 37300.37600.38600.40000.42500.43300.54900.1250900 |
+| 5047 | Painting 1st coat | 37300.37500.38800.40000.42200.43400.53800.1240600 | 37300.37600.38600.40000.42500.43300.55500.1241400 |
+| 4984 | Internal Plumbing Works | 37300.37500.38800.40000.42200.43400.54000.1237900 | 37300.37600.38600.40000.42500.43300.55600.1238700 |
+| 5091 | Block Work  | 37300.37500.38800.40000.42200.43400.53500.1242400 | 37300.37600.38600.40000.42500.43300.55300.1243200 |
+| 4950 | Internal Plaster | 37300.37500.38800.40000.42200.43400.54200.1236500 | 37300.37600.38600.40000.42500.43300.55700.1237300 |
+| 5133 | Fire sprinkler pipe fixing | 37300.37500.38800.40000.42200.43400.53400.1244200 | 37300.37600.38600.40000.42500.43300.55200.1245000 |
+| 5116 | Aluminium door-window fixing | 37300.37500.38800.40000.42200.43400.53500.1243500 | 37300.37600.38600.40000.42500.43300.55300.1244300 |
+| 269 | Shuttering | 37300.37500.51900.52300.114400.218200.864300 | 37300.37600.51900.52300.114800.220000.846100 |
+| 5376 | Living dinning flooring | 37300.37500.38800.40000.42200.43400.53300.1254500 | 37300.37600.38600.40000.42500.43300.54500.1255300 |
+| 5312 | Painting 1st coat | 37300.37500.38800.40000.42200.43400.52700.1251800 | 37300.37600.38600.40000.42500.43300.54800.1252600 |
+
+## Conclusion
+
+**UID Matching Quality:** 0/1444 tasks (0.0%) are exact matches
+
+### Implications for Sprint Enrichment:
+
+❌ **LOW QUALITY** - UIDs were heavily reused. UID-based matching is unreliable.
+
+**Recommendation:** Need alternative matching strategy (e.g., name + WBS similarity)
