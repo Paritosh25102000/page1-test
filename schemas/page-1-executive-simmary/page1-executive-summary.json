@@ -1,0 +1,193 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://easybim.com/schemas/staging/page1-executive-summary",
+    "title": "Page 1 Staging Dataset",
+    "description": "Pre-aggregated dataset for Executive Summary. Contains pre-calculated KPIs, Trends, and Matrix distributions for every node in the organizational hierarchy.",
+    "type": "object",
+    
+    "properties": {
+      "meta": {
+        "type": "object",
+        "description": "Metadata about the ETL run.",
+        "properties": {
+          "generated_at": { "type": "string", "format": "date-time" },
+          "data_version": { "type": "string" },
+          "currency_unit": { "type": "string", "default": "INR" }
+        },
+        "required": ["generated_at"]
+      },
+  
+      "controls": {
+        "type": "object",
+        "description": "Configuration data to populate UI Filters and Time Toggle logic.",
+        "properties": {
+          "hierarchy_tree": {
+            "type": "object",
+            "description": "Nested object for cascading dropdowns (Zone -> Region -> Project).",
+            "additionalProperties": {
+              "type": "object",
+              "description": "Key is Zone ID (e.g., 'MZ'). Value is object of Regions.",
+              "additionalProperties": {
+                "type": "array",
+                "description": "Key is Region ID (e.g., 'MZ1'). Value is list of Project Objects.",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "string", "description": "Project ID used in dashboard_data keys." },
+                    "name": { "type": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "time_modes": {
+            "type": "object",
+            "description": "Definitions for the Time Toggle switch.",
+            "properties": {
+              "fy": {
+                "type": "object",
+                "properties": {
+                  "label": { "type": "string", "const": "Financial Year" },
+                  "start": { "type": "string", "format": "date", "const": "2025-04-01" },
+                  "end": { "type": "string", "format": "date", "const": "2026-03-31" },
+                  "resolution": { "type": "string", "const": "month" }
+                }
+              },
+              "quarter": {
+                "type": "object",
+                "properties": {
+                  "label": { "type": "string", "const": "Current Quarter" },
+                  "start": { "type": "string", "format": "date" },
+                  "end": { "type": "string", "format": "date" },
+                  "resolution": { "type": "string", "const": "week" }
+                }
+              },
+              "month": {
+                "type": "object",
+                "properties": {
+                  "label": { "type": "string", "const": "Looking Glass (+/- 5 Wks)" },
+                  "start": { "type": "string", "format": "date" },
+                  "end": { "type": "string", "format": "date" },
+                  "resolution": { "type": "string", "const": "week" }
+                }
+              }
+            },
+            "required": ["fy", "quarter", "month"]
+          }
+        },
+        "required": ["hierarchy_tree", "time_modes"]
+      },
+  
+      "dashboard_data": {
+        "type": "object",
+        "description": "Flattened dictionary containing data for every possible filter selection.",
+        "$comment": "Keys are composite IDs: 'ALL' (Global), 'ZONE_{ID}', 'REG_{ID}', 'PROJ_{ID}'. The UI constructs the key based on dropdown selection.",
+        "patternProperties": {
+          "^.*$": {
+            "type": "object",
+            "properties": {
+              "kpi_gauges": {
+                "type": "object",
+                "description": "Data for Element PG1-WIDGET-03 (AOP/Sprint Gauges).",
+                "properties": {
+                  "aop": {
+                    "type": "object",
+                    "properties": {
+                      "achieved_pct": { "type": "number" },
+                      "status_color": { "type": "string", "enum": ["red", "amber", "green"] },
+                      "actual_ytd": { "type": "number" },
+                      "plan_ytd": { "type": "number" }
+                    },
+                    "required": ["achieved_pct", "status_color"]
+                  },
+                  "sprint": {
+                    "type": "object",
+                    "properties": {
+                      "achieved_pct": { "type": "number" },
+                      "status_color": { "type": "string", "enum": ["red", "amber", "green"] },
+                      "sprint_actual": { "type": "number" },
+                      "sprint_plan": { "type": "number" }
+                    },
+                    "required": ["achieved_pct", "status_color"]
+                  }
+                },
+                "required": ["aop", "sprint"]
+              },
+  
+              "coc_trend": {
+                "type": "object",
+                "description": "Data for Element PG1-WIDGET-01 (COC Trend). Pre-sliced for the 3 time modes.",
+                "properties": {
+                  "fy_series": {
+                    "type": "array",
+                    "description": "Monthly data points for the full Financial Year.",
+                    "items": { "$ref": "#/$defs/trend_point" }
+                  },
+                  "quarter_series": {
+                    "type": "array",
+                    "description": "Weekly data points for the current quarter.",
+                    "items": { "$ref": "#/$defs/trend_point" }
+                  },
+                  "month_series": {
+                    "type": "array",
+                    "description": "Weekly data points for the +/- 5 week looking glass.",
+                    "items": { "$ref": "#/$defs/trend_point" }
+                  }
+                },
+                "required": ["fy_series", "quarter_series", "month_series"]
+              },
+  
+              "project_matrix": {
+                "type": "object",
+                "description": "Data for Element PG1-WIDGET-04 (Project Counts).",
+                "properties": {
+                  "rows": {
+                    "type": "array",
+                    "description": "Rows for the heatmap table. For 'ALL', this contains Zone rows. For 'ZONE', this contains Region rows.",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "label": { "type": "string", "description": "Row Header (e.g., 'MZ', 'WEZ')." },
+                        "id": { "type": "string", "description": "ID to trigger drill-down if clicked." },
+                        "buckets": {
+                          "type": "object",
+                          "properties": {
+                            "gt_120": { "type": "integer", "description": "Count of projects > 120%" },
+                            "100_120": { "type": "integer" },
+                            "85_100": { "type": "integer" },
+                            "60_85": { "type": "integer" },
+                            "lt_60": { "type": "integer" }
+                          },
+                          "required": ["gt_120", "100_120", "85_100", "60_85", "lt_60"]
+                        }
+                      },
+                      "required": ["label", "buckets"]
+                    }
+                  }
+                },
+                "required": ["rows"]
+              }
+            },
+            "required": ["kpi_gauges", "coc_trend", "project_matrix"]
+          }
+        }
+      }
+    },
+  
+    "$defs": {
+      "trend_point": {
+        "type": "object",
+        "properties": {
+          "label": { "type": "string", "description": "X-Axis Label (e.g., 'Apr-25' or 'Wk 14')." },
+          "sort_date": { "type": "string", "format": "date", "description": "ISO date for sorting." },
+          "plan_cost": { "type": ["number", "null"], "description": "Bar height." },
+          "actual_cost": { "type": ["number", "null"], "description": "Bar height." },
+          "cumm_plan": { "type": ["number", "null"], "description": "Line Y-value." },
+          "cumm_actual": { "type": ["number", "null"], "description": "Line Y-value." }
+        },
+        "required": ["label", "sort_date", "plan_cost", "actual_cost"]
+      }
+    },
+  
+    "required": ["meta", "controls", "dashboard_data"]
+  }
