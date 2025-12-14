@@ -1,0 +1,698 @@
+{
+  "$schema": "page1-executive-summary.json",
+  "$comment": "Mock dataset for Page 1 Executive Summary dashboard testing",
+
+  "meta": {
+    "generated_at": "2025-12-14T10:00:00Z",
+    "data_version": "1.0.0-mock",
+    "currency_unit": "INR"
+  },
+
+  "controls": {
+    "hierarchy_tree": {
+      "MZ": {
+        "MZ1": [
+          { "id": "Horizon", "name": "Horizon" },
+          { "id": "Reserve", "name": "Reserve" }
+        ]
+      },
+      "NZ": {
+        "NZ1": [
+          { "id": "Avenue11", "name": "Avenue 11" },
+          { "id": "Miraya", "name": "Miraya" }
+        ],
+        "NZ2": [
+          { "id": "Aristocrat", "name": "Aristocrat" },
+          { "id": "Zenith", "name": "Zenith" }
+        ]
+      },
+      "SZ": {
+        "SZ1": [
+          { "id": "TropicalIsle", "name": "Tropical Isle" },
+          { "id": "Jardinia", "name": "Jardinia" }
+        ],
+        "SZ2": [
+          { "id": "Sec44Noida", "name": "Sec. 44, Noida" },
+          { "id": "Ramaiah", "name": "Ramaiah" }
+        ]
+      },
+      "WEZ": {
+        "Kolkata": [
+          { "id": "Woodscapes", "name": "Woodscapes" },
+          { "id": "RGA2", "name": "RGA 2" },
+          { "id": "BLSaha", "name": "BL Saha" }
+        ]
+      }
+    },
+    "time_modes": {
+      "fy": {
+        "label": "Financial Year",
+        "start": "2025-04-01",
+        "end": "2026-03-31",
+        "resolution": "month"
+      },
+      "quarter": {
+        "label": "Current Quarter",
+        "start": "2025-10-01",
+        "end": "2025-12-31",
+        "resolution": "week"
+      },
+      "month": {
+        "label": "Looking Glass (+/- 5 Wks)",
+        "start": "2025-11-10",
+        "end": "2026-01-19",
+        "resolution": "week"
+      }
+    }
+  },
+
+  "dashboard_data": {
+    "ALL": {
+      "coc_trend": {
+        "fy_series": [
+          { "label": "Apr-25", "sort_date": "2025-04-01", "plan_cost": 850000, "actual_cost": 820000, "cumm_plan": 850000, "cumm_actual": 820000 },
+          { "label": "May-25", "sort_date": "2025-05-01", "plan_cost": 920000, "actual_cost": 890000, "cumm_plan": 1770000, "cumm_actual": 1710000 },
+          { "label": "Jun-25", "sort_date": "2025-06-01", "plan_cost": 1100000, "actual_cost": 1050000, "cumm_plan": 2870000, "cumm_actual": 2760000 },
+          { "label": "Jul-25", "sort_date": "2025-07-01", "plan_cost": 1250000, "actual_cost": 1180000, "cumm_plan": 4120000, "cumm_actual": 3940000 },
+          { "label": "Aug-25", "sort_date": "2025-08-01", "plan_cost": 1400000, "actual_cost": 1320000, "cumm_plan": 5520000, "cumm_actual": 5260000 },
+          { "label": "Sep-25", "sort_date": "2025-09-01", "plan_cost": 1350000, "actual_cost": 1380000, "cumm_plan": 6870000, "cumm_actual": 6640000 },
+          { "label": "Oct-25", "sort_date": "2025-10-01", "plan_cost": 1200000, "actual_cost": 1250000, "cumm_plan": 8070000, "cumm_actual": 7890000 },
+          { "label": "Nov-25", "sort_date": "2025-11-01", "plan_cost": 1150000, "actual_cost": 1200000, "cumm_plan": 9220000, "cumm_actual": 9090000 },
+          { "label": "Dec-25", "sort_date": "2025-12-01", "plan_cost": 1000000, "actual_cost": null, "cumm_plan": 10220000, "cumm_actual": null },
+          { "label": "Jan-26", "sort_date": "2026-01-01", "plan_cost": 1100000, "actual_cost": null, "cumm_plan": 11320000, "cumm_actual": null },
+          { "label": "Feb-26", "sort_date": "2026-02-01", "plan_cost": 1050000, "actual_cost": null, "cumm_plan": 12370000, "cumm_actual": null },
+          { "label": "Mar-26", "sort_date": "2026-03-01", "plan_cost": 1130000, "actual_cost": null, "cumm_plan": 13500000, "cumm_actual": null }
+        ],
+        "quarter_series": [
+          { "label": "Wk 40", "sort_date": "2025-09-29", "plan_cost": 280000, "actual_cost": 295000, "cumm_plan": 280000, "cumm_actual": 295000 },
+          { "label": "Wk 41", "sort_date": "2025-10-06", "plan_cost": 290000, "actual_cost": 305000, "cumm_plan": 570000, "cumm_actual": 600000 },
+          { "label": "Wk 42", "sort_date": "2025-10-13", "plan_cost": 310000, "actual_cost": 320000, "cumm_plan": 880000, "cumm_actual": 920000 },
+          { "label": "Wk 43", "sort_date": "2025-10-20", "plan_cost": 300000, "actual_cost": 310000, "cumm_plan": 1180000, "cumm_actual": 1230000 },
+          { "label": "Wk 44", "sort_date": "2025-10-27", "plan_cost": 295000, "actual_cost": 305000, "cumm_plan": 1475000, "cumm_actual": 1535000 },
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 285000, "actual_cost": 300000, "cumm_plan": 1760000, "cumm_actual": 1835000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 290000, "actual_cost": 298000, "cumm_plan": 2050000, "cumm_actual": 2133000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 275000, "actual_cost": 285000, "cumm_plan": 2325000, "cumm_actual": 2418000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 280000, "actual_cost": 290000, "cumm_plan": 2605000, "cumm_actual": 2708000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 265000, "actual_cost": null, "cumm_plan": 2870000, "cumm_actual": null },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 250000, "actual_cost": null, "cumm_plan": 3120000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 240000, "actual_cost": null, "cumm_plan": 3360000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 220000, "actual_cost": null, "cumm_plan": 3580000, "cumm_actual": null }
+        ],
+        "month_series": [
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 285000, "actual_cost": 300000, "cumm_plan": 285000, "cumm_actual": 300000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 290000, "actual_cost": 298000, "cumm_plan": 575000, "cumm_actual": 598000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 275000, "actual_cost": 285000, "cumm_plan": 850000, "cumm_actual": 883000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 280000, "actual_cost": 290000, "cumm_plan": 1130000, "cumm_actual": 1173000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 265000, "actual_cost": 275000, "cumm_plan": 1395000, "cumm_actual": 1448000 },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 250000, "actual_cost": null, "cumm_plan": 1645000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 240000, "actual_cost": null, "cumm_plan": 1885000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 220000, "actual_cost": null, "cumm_plan": 2105000, "cumm_actual": null },
+          { "label": "Wk 1", "sort_date": "2025-12-29", "plan_cost": 180000, "actual_cost": null, "cumm_plan": 2285000, "cumm_actual": null },
+          { "label": "Wk 2", "sort_date": "2026-01-05", "plan_cost": 260000, "actual_cost": null, "cumm_plan": 2545000, "cumm_actual": null },
+          { "label": "Wk 3", "sort_date": "2026-01-12", "plan_cost": 275000, "actual_cost": null, "cumm_plan": 2820000, "cumm_actual": null }
+        ]
+      },
+      "kpi_gauges": {
+        "aop": { "achieved_pct": 98.6, "status_color": "green", "actual_ytd": 9090000, "plan_ytd": 9220000 },
+        "sprint": { "achieved_pct": 92.0, "status_color": "amber", "sprint_actual": 2708000, "sprint_plan": 2943000 }
+      },
+      "project_matrix": {
+        "rows": [
+          { "label": "MZ", "id": "ZONE_MZ", "buckets": { "gt_120": 0, "100_120": 2, "85_100": 0, "60_85": 0, "lt_60": 0 } },
+          { "label": "NZ", "id": "ZONE_NZ", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 2, "60_85": 1, "lt_60": 0 } },
+          { "label": "SZ", "id": "ZONE_SZ", "buckets": { "gt_120": 1, "100_120": 2, "85_100": 1, "60_85": 0, "lt_60": 0 } },
+          { "label": "WEZ", "id": "ZONE_WEZ", "buckets": { "gt_120": 1, "100_120": 1, "85_100": 1, "60_85": 0, "lt_60": 0 } }
+        ]
+      }
+    },
+
+    "ZONE_MZ": {
+      "coc_trend": {
+        "fy_series": [
+          { "label": "Apr-25", "sort_date": "2025-04-01", "plan_cost": 210000, "actual_cost": 205000, "cumm_plan": 210000, "cumm_actual": 205000 },
+          { "label": "May-25", "sort_date": "2025-05-01", "plan_cost": 230000, "actual_cost": 225000, "cumm_plan": 440000, "cumm_actual": 430000 },
+          { "label": "Jun-25", "sort_date": "2025-06-01", "plan_cost": 275000, "actual_cost": 268000, "cumm_plan": 715000, "cumm_actual": 698000 },
+          { "label": "Jul-25", "sort_date": "2025-07-01", "plan_cost": 310000, "actual_cost": 298000, "cumm_plan": 1025000, "cumm_actual": 996000 },
+          { "label": "Aug-25", "sort_date": "2025-08-01", "plan_cost": 350000, "actual_cost": 340000, "cumm_plan": 1375000, "cumm_actual": 1336000 },
+          { "label": "Sep-25", "sort_date": "2025-09-01", "plan_cost": 340000, "actual_cost": 355000, "cumm_plan": 1715000, "cumm_actual": 1691000 },
+          { "label": "Oct-25", "sort_date": "2025-10-01", "plan_cost": 300000, "actual_cost": 315000, "cumm_plan": 2015000, "cumm_actual": 2006000 },
+          { "label": "Nov-25", "sort_date": "2025-11-01", "plan_cost": 290000, "actual_cost": 305000, "cumm_plan": 2305000, "cumm_actual": 2311000 },
+          { "label": "Dec-25", "sort_date": "2025-12-01", "plan_cost": 250000, "actual_cost": null, "cumm_plan": 2555000, "cumm_actual": null },
+          { "label": "Jan-26", "sort_date": "2026-01-01", "plan_cost": 275000, "actual_cost": null, "cumm_plan": 2830000, "cumm_actual": null },
+          { "label": "Feb-26", "sort_date": "2026-02-01", "plan_cost": 265000, "actual_cost": null, "cumm_plan": 3095000, "cumm_actual": null },
+          { "label": "Mar-26", "sort_date": "2026-03-01", "plan_cost": 280000, "actual_cost": null, "cumm_plan": 3375000, "cumm_actual": null }
+        ],
+        "quarter_series": [
+          { "label": "Wk 40", "sort_date": "2025-09-29", "plan_cost": 70000, "actual_cost": 74000, "cumm_plan": 70000, "cumm_actual": 74000 },
+          { "label": "Wk 41", "sort_date": "2025-10-06", "plan_cost": 72000, "actual_cost": 76000, "cumm_plan": 142000, "cumm_actual": 150000 },
+          { "label": "Wk 42", "sort_date": "2025-10-13", "plan_cost": 78000, "actual_cost": 80000, "cumm_plan": 220000, "cumm_actual": 230000 },
+          { "label": "Wk 43", "sort_date": "2025-10-20", "plan_cost": 75000, "actual_cost": 78000, "cumm_plan": 295000, "cumm_actual": 308000 },
+          { "label": "Wk 44", "sort_date": "2025-10-27", "plan_cost": 74000, "actual_cost": 77000, "cumm_plan": 369000, "cumm_actual": 385000 },
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 71000, "actual_cost": 75000, "cumm_plan": 440000, "cumm_actual": 460000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 73000, "actual_cost": 76000, "cumm_plan": 513000, "cumm_actual": 536000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 69000, "actual_cost": 72000, "cumm_plan": 582000, "cumm_actual": 608000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 70000, "actual_cost": 73000, "cumm_plan": 652000, "cumm_actual": 681000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 66000, "actual_cost": null, "cumm_plan": 718000, "cumm_actual": null },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 63000, "actual_cost": null, "cumm_plan": 781000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 60000, "actual_cost": null, "cumm_plan": 841000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 55000, "actual_cost": null, "cumm_plan": 896000, "cumm_actual": null }
+        ],
+        "month_series": [
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 71000, "actual_cost": 75000, "cumm_plan": 71000, "cumm_actual": 75000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 73000, "actual_cost": 76000, "cumm_plan": 144000, "cumm_actual": 151000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 69000, "actual_cost": 72000, "cumm_plan": 213000, "cumm_actual": 223000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 70000, "actual_cost": 73000, "cumm_plan": 283000, "cumm_actual": 296000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 66000, "actual_cost": 69000, "cumm_plan": 349000, "cumm_actual": 365000 },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 63000, "actual_cost": null, "cumm_plan": 412000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 60000, "actual_cost": null, "cumm_plan": 472000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 55000, "actual_cost": null, "cumm_plan": 527000, "cumm_actual": null },
+          { "label": "Wk 1", "sort_date": "2025-12-29", "plan_cost": 45000, "actual_cost": null, "cumm_plan": 572000, "cumm_actual": null },
+          { "label": "Wk 2", "sort_date": "2026-01-05", "plan_cost": 65000, "actual_cost": null, "cumm_plan": 637000, "cumm_actual": null },
+          { "label": "Wk 3", "sort_date": "2026-01-12", "plan_cost": 69000, "actual_cost": null, "cumm_plan": 706000, "cumm_actual": null }
+        ]
+      },
+      "kpi_gauges": {
+        "aop": { "achieved_pct": 100.3, "status_color": "green", "actual_ytd": 2311000, "plan_ytd": 2305000 },
+        "sprint": { "achieved_pct": 104.4, "status_color": "green", "sprint_actual": 681000, "sprint_plan": 652000 }
+      },
+      "project_matrix": {
+        "rows": [
+          { "label": "MZ1", "id": "REG_MZ1", "buckets": { "gt_120": 0, "100_120": 2, "85_100": 0, "60_85": 0, "lt_60": 0 } }
+        ]
+      }
+    },
+
+    "ZONE_NZ": {
+      "coc_trend": {
+        "fy_series": [
+          { "label": "Apr-25", "sort_date": "2025-04-01", "plan_cost": 255000, "actual_cost": 240000, "cumm_plan": 255000, "cumm_actual": 240000 },
+          { "label": "May-25", "sort_date": "2025-05-01", "plan_cost": 275000, "actual_cost": 258000, "cumm_plan": 530000, "cumm_actual": 498000 },
+          { "label": "Jun-25", "sort_date": "2025-06-01", "plan_cost": 330000, "actual_cost": 305000, "cumm_plan": 860000, "cumm_actual": 803000 },
+          { "label": "Jul-25", "sort_date": "2025-07-01", "plan_cost": 375000, "actual_cost": 345000, "cumm_plan": 1235000, "cumm_actual": 1148000 },
+          { "label": "Aug-25", "sort_date": "2025-08-01", "plan_cost": 420000, "actual_cost": 380000, "cumm_plan": 1655000, "cumm_actual": 1528000 },
+          { "label": "Sep-25", "sort_date": "2025-09-01", "plan_cost": 405000, "actual_cost": 395000, "cumm_plan": 2060000, "cumm_actual": 1923000 },
+          { "label": "Oct-25", "sort_date": "2025-10-01", "plan_cost": 360000, "actual_cost": 355000, "cumm_plan": 2420000, "cumm_actual": 2278000 },
+          { "label": "Nov-25", "sort_date": "2025-11-01", "plan_cost": 345000, "actual_cost": 340000, "cumm_plan": 2765000, "cumm_actual": 2618000 },
+          { "label": "Dec-25", "sort_date": "2025-12-01", "plan_cost": 300000, "actual_cost": null, "cumm_plan": 3065000, "cumm_actual": null },
+          { "label": "Jan-26", "sort_date": "2026-01-01", "plan_cost": 330000, "actual_cost": null, "cumm_plan": 3395000, "cumm_actual": null },
+          { "label": "Feb-26", "sort_date": "2026-02-01", "plan_cost": 315000, "actual_cost": null, "cumm_plan": 3710000, "cumm_actual": null },
+          { "label": "Mar-26", "sort_date": "2026-03-01", "plan_cost": 340000, "actual_cost": null, "cumm_plan": 4050000, "cumm_actual": null }
+        ],
+        "quarter_series": [
+          { "label": "Wk 40", "sort_date": "2025-09-29", "plan_cost": 84000, "actual_cost": 82000, "cumm_plan": 84000, "cumm_actual": 82000 },
+          { "label": "Wk 41", "sort_date": "2025-10-06", "plan_cost": 87000, "actual_cost": 86000, "cumm_plan": 171000, "cumm_actual": 168000 },
+          { "label": "Wk 42", "sort_date": "2025-10-13", "plan_cost": 93000, "actual_cost": 91000, "cumm_plan": 264000, "cumm_actual": 259000 },
+          { "label": "Wk 43", "sort_date": "2025-10-20", "plan_cost": 90000, "actual_cost": 88000, "cumm_plan": 354000, "cumm_actual": 347000 },
+          { "label": "Wk 44", "sort_date": "2025-10-27", "plan_cost": 88000, "actual_cost": 86000, "cumm_plan": 442000, "cumm_actual": 433000 },
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 86000, "actual_cost": 85000, "cumm_plan": 528000, "cumm_actual": 518000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 87000, "actual_cost": 86000, "cumm_plan": 615000, "cumm_actual": 604000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 82000, "actual_cost": 81000, "cumm_plan": 697000, "cumm_actual": 685000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 84000, "actual_cost": 83000, "cumm_plan": 781000, "cumm_actual": 768000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 80000, "actual_cost": null, "cumm_plan": 861000, "cumm_actual": null },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 75000, "actual_cost": null, "cumm_plan": 936000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 72000, "actual_cost": null, "cumm_plan": 1008000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 66000, "actual_cost": null, "cumm_plan": 1074000, "cumm_actual": null }
+        ],
+        "month_series": [
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 86000, "actual_cost": 85000, "cumm_plan": 86000, "cumm_actual": 85000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 87000, "actual_cost": 86000, "cumm_plan": 173000, "cumm_actual": 171000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 82000, "actual_cost": 81000, "cumm_plan": 255000, "cumm_actual": 252000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 84000, "actual_cost": 83000, "cumm_plan": 339000, "cumm_actual": 335000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 80000, "actual_cost": 79000, "cumm_plan": 419000, "cumm_actual": 414000 },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 75000, "actual_cost": null, "cumm_plan": 494000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 72000, "actual_cost": null, "cumm_plan": 566000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 66000, "actual_cost": null, "cumm_plan": 632000, "cumm_actual": null },
+          { "label": "Wk 1", "sort_date": "2025-12-29", "plan_cost": 54000, "actual_cost": null, "cumm_plan": 686000, "cumm_actual": null },
+          { "label": "Wk 2", "sort_date": "2026-01-05", "plan_cost": 78000, "actual_cost": null, "cumm_plan": 764000, "cumm_actual": null },
+          { "label": "Wk 3", "sort_date": "2026-01-12", "plan_cost": 82000, "actual_cost": null, "cumm_plan": 846000, "cumm_actual": null }
+        ]
+      },
+      "kpi_gauges": {
+        "aop": { "achieved_pct": 94.7, "status_color": "amber", "actual_ytd": 2618000, "plan_ytd": 2765000 },
+        "sprint": { "achieved_pct": 98.3, "status_color": "green", "sprint_actual": 768000, "sprint_plan": 781000 }
+      },
+      "project_matrix": {
+        "rows": [
+          { "label": "NZ1", "id": "REG_NZ1", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 1, "60_85": 1, "lt_60": 0 } },
+          { "label": "NZ2", "id": "REG_NZ2", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 1, "60_85": 0, "lt_60": 0 } }
+        ]
+      }
+    },
+
+    "ZONE_SZ": {
+      "coc_trend": {
+        "fy_series": [
+          { "label": "Apr-25", "sort_date": "2025-04-01", "plan_cost": 215000, "actual_cost": 210000, "cumm_plan": 215000, "cumm_actual": 210000 },
+          { "label": "May-25", "sort_date": "2025-05-01", "plan_cost": 235000, "actual_cost": 230000, "cumm_plan": 450000, "cumm_actual": 440000 },
+          { "label": "Jun-25", "sort_date": "2025-06-01", "plan_cost": 280000, "actual_cost": 275000, "cumm_plan": 730000, "cumm_actual": 715000 },
+          { "label": "Jul-25", "sort_date": "2025-07-01", "plan_cost": 320000, "actual_cost": 315000, "cumm_plan": 1050000, "cumm_actual": 1030000 },
+          { "label": "Aug-25", "sort_date": "2025-08-01", "plan_cost": 355000, "actual_cost": 350000, "cumm_plan": 1405000, "cumm_actual": 1380000 },
+          { "label": "Sep-25", "sort_date": "2025-09-01", "plan_cost": 340000, "actual_cost": 355000, "cumm_plan": 1745000, "cumm_actual": 1735000 },
+          { "label": "Oct-25", "sort_date": "2025-10-01", "plan_cost": 305000, "actual_cost": 320000, "cumm_plan": 2050000, "cumm_actual": 2055000 },
+          { "label": "Nov-25", "sort_date": "2025-11-01", "plan_cost": 290000, "actual_cost": 305000, "cumm_plan": 2340000, "cumm_actual": 2360000 },
+          { "label": "Dec-25", "sort_date": "2025-12-01", "plan_cost": 255000, "actual_cost": null, "cumm_plan": 2595000, "cumm_actual": null },
+          { "label": "Jan-26", "sort_date": "2026-01-01", "plan_cost": 280000, "actual_cost": null, "cumm_plan": 2875000, "cumm_actual": null },
+          { "label": "Feb-26", "sort_date": "2026-02-01", "plan_cost": 265000, "actual_cost": null, "cumm_plan": 3140000, "cumm_actual": null },
+          { "label": "Mar-26", "sort_date": "2026-03-01", "plan_cost": 285000, "actual_cost": null, "cumm_plan": 3425000, "cumm_actual": null }
+        ],
+        "quarter_series": [
+          { "label": "Wk 40", "sort_date": "2025-09-29", "plan_cost": 71000, "actual_cost": 75000, "cumm_plan": 71000, "cumm_actual": 75000 },
+          { "label": "Wk 41", "sort_date": "2025-10-06", "plan_cost": 74000, "actual_cost": 78000, "cumm_plan": 145000, "cumm_actual": 153000 },
+          { "label": "Wk 42", "sort_date": "2025-10-13", "plan_cost": 79000, "actual_cost": 82000, "cumm_plan": 224000, "cumm_actual": 235000 },
+          { "label": "Wk 43", "sort_date": "2025-10-20", "plan_cost": 76000, "actual_cost": 80000, "cumm_plan": 300000, "cumm_actual": 315000 },
+          { "label": "Wk 44", "sort_date": "2025-10-27", "plan_cost": 75000, "actual_cost": 78000, "cumm_plan": 375000, "cumm_actual": 393000 },
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 72000, "actual_cost": 76000, "cumm_plan": 447000, "cumm_actual": 469000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 73000, "actual_cost": 77000, "cumm_plan": 520000, "cumm_actual": 546000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 69000, "actual_cost": 73000, "cumm_plan": 589000, "cumm_actual": 619000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 71000, "actual_cost": 74000, "cumm_plan": 660000, "cumm_actual": 693000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 67000, "actual_cost": null, "cumm_plan": 727000, "cumm_actual": null },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 64000, "actual_cost": null, "cumm_plan": 791000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 61000, "actual_cost": null, "cumm_plan": 852000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 56000, "actual_cost": null, "cumm_plan": 908000, "cumm_actual": null }
+        ],
+        "month_series": [
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 72000, "actual_cost": 76000, "cumm_plan": 72000, "cumm_actual": 76000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 73000, "actual_cost": 77000, "cumm_plan": 145000, "cumm_actual": 153000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 69000, "actual_cost": 73000, "cumm_plan": 214000, "cumm_actual": 226000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 71000, "actual_cost": 74000, "cumm_plan": 285000, "cumm_actual": 300000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 67000, "actual_cost": 70000, "cumm_plan": 352000, "cumm_actual": 370000 },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 64000, "actual_cost": null, "cumm_plan": 416000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 61000, "actual_cost": null, "cumm_plan": 477000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 56000, "actual_cost": null, "cumm_plan": 533000, "cumm_actual": null },
+          { "label": "Wk 1", "sort_date": "2025-12-29", "plan_cost": 46000, "actual_cost": null, "cumm_plan": 579000, "cumm_actual": null },
+          { "label": "Wk 2", "sort_date": "2026-01-05", "plan_cost": 66000, "actual_cost": null, "cumm_plan": 645000, "cumm_actual": null },
+          { "label": "Wk 3", "sort_date": "2026-01-12", "plan_cost": 70000, "actual_cost": null, "cumm_plan": 715000, "cumm_actual": null }
+        ]
+      },
+      "kpi_gauges": {
+        "aop": { "achieved_pct": 100.9, "status_color": "green", "actual_ytd": 2360000, "plan_ytd": 2340000 },
+        "sprint": { "achieved_pct": 105.0, "status_color": "green", "sprint_actual": 693000, "sprint_plan": 660000 }
+      },
+      "project_matrix": {
+        "rows": [
+          { "label": "SZ1", "id": "REG_SZ1", "buckets": { "gt_120": 1, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 } },
+          { "label": "SZ2", "id": "REG_SZ2", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 1, "60_85": 0, "lt_60": 0 } }
+        ]
+      }
+    },
+
+    "ZONE_WEZ": {
+      "coc_trend": {
+        "fy_series": [
+          { "label": "Apr-25", "sort_date": "2025-04-01", "plan_cost": 170000, "actual_cost": 165000, "cumm_plan": 170000, "cumm_actual": 165000 },
+          { "label": "May-25", "sort_date": "2025-05-01", "plan_cost": 180000, "actual_cost": 177000, "cumm_plan": 350000, "cumm_actual": 342000 },
+          { "label": "Jun-25", "sort_date": "2025-06-01", "plan_cost": 215000, "actual_cost": 202000, "cumm_plan": 565000, "cumm_actual": 544000 },
+          { "label": "Jul-25", "sort_date": "2025-07-01", "plan_cost": 245000, "actual_cost": 222000, "cumm_plan": 810000, "cumm_actual": 766000 },
+          { "label": "Aug-25", "sort_date": "2025-08-01", "plan_cost": 275000, "actual_cost": 250000, "cumm_plan": 1085000, "cumm_actual": 1016000 },
+          { "label": "Sep-25", "sort_date": "2025-09-01", "plan_cost": 265000, "actual_cost": 275000, "cumm_plan": 1350000, "cumm_actual": 1291000 },
+          { "label": "Oct-25", "sort_date": "2025-10-01", "plan_cost": 235000, "actual_cost": 260000, "cumm_plan": 1585000, "cumm_actual": 1551000 },
+          { "label": "Nov-25", "sort_date": "2025-11-01", "plan_cost": 225000, "actual_cost": 250000, "cumm_plan": 1810000, "cumm_actual": 1801000 },
+          { "label": "Dec-25", "sort_date": "2025-12-01", "plan_cost": 195000, "actual_cost": null, "cumm_plan": 2005000, "cumm_actual": null },
+          { "label": "Jan-26", "sort_date": "2026-01-01", "plan_cost": 215000, "actual_cost": null, "cumm_plan": 2220000, "cumm_actual": null },
+          { "label": "Feb-26", "sort_date": "2026-02-01", "plan_cost": 205000, "actual_cost": null, "cumm_plan": 2425000, "cumm_actual": null },
+          { "label": "Mar-26", "sort_date": "2026-03-01", "plan_cost": 225000, "actual_cost": null, "cumm_plan": 2650000, "cumm_actual": null }
+        ],
+        "quarter_series": [
+          { "label": "Wk 40", "sort_date": "2025-09-29", "plan_cost": 55000, "actual_cost": 64000, "cumm_plan": 55000, "cumm_actual": 64000 },
+          { "label": "Wk 41", "sort_date": "2025-10-06", "plan_cost": 57000, "actual_cost": 65000, "cumm_plan": 112000, "cumm_actual": 129000 },
+          { "label": "Wk 42", "sort_date": "2025-10-13", "plan_cost": 60000, "actual_cost": 67000, "cumm_plan": 172000, "cumm_actual": 196000 },
+          { "label": "Wk 43", "sort_date": "2025-10-20", "plan_cost": 59000, "actual_cost": 64000, "cumm_plan": 231000, "cumm_actual": 260000 },
+          { "label": "Wk 44", "sort_date": "2025-10-27", "plan_cost": 58000, "actual_cost": 64000, "cumm_plan": 289000, "cumm_actual": 324000 },
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 56000, "actual_cost": 64000, "cumm_plan": 345000, "cumm_actual": 388000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 57000, "actual_cost": 59000, "cumm_plan": 402000, "cumm_actual": 447000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 55000, "actual_cost": 59000, "cumm_plan": 457000, "cumm_actual": 506000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 55000, "actual_cost": 60000, "cumm_plan": 512000, "cumm_actual": 566000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 52000, "actual_cost": null, "cumm_plan": 564000, "cumm_actual": null },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 48000, "actual_cost": null, "cumm_plan": 612000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 47000, "actual_cost": null, "cumm_plan": 659000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 43000, "actual_cost": null, "cumm_plan": 702000, "cumm_actual": null }
+        ],
+        "month_series": [
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 56000, "actual_cost": 64000, "cumm_plan": 56000, "cumm_actual": 64000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 57000, "actual_cost": 59000, "cumm_plan": 113000, "cumm_actual": 123000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 55000, "actual_cost": 59000, "cumm_plan": 168000, "cumm_actual": 182000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 55000, "actual_cost": 60000, "cumm_plan": 223000, "cumm_actual": 242000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 52000, "actual_cost": 57000, "cumm_plan": 275000, "cumm_actual": 299000 },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 48000, "actual_cost": null, "cumm_plan": 323000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 47000, "actual_cost": null, "cumm_plan": 370000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 43000, "actual_cost": null, "cumm_plan": 413000, "cumm_actual": null },
+          { "label": "Wk 1", "sort_date": "2025-12-29", "plan_cost": 35000, "actual_cost": null, "cumm_plan": 448000, "cumm_actual": null },
+          { "label": "Wk 2", "sort_date": "2026-01-05", "plan_cost": 51000, "actual_cost": null, "cumm_plan": 499000, "cumm_actual": null },
+          { "label": "Wk 3", "sort_date": "2026-01-12", "plan_cost": 54000, "actual_cost": null, "cumm_plan": 553000, "cumm_actual": null }
+        ]
+      },
+      "kpi_gauges": {
+        "aop": { "achieved_pct": 99.5, "status_color": "green", "actual_ytd": 1801000, "plan_ytd": 1810000 },
+        "sprint": { "achieved_pct": 110.5, "status_color": "green", "sprint_actual": 566000, "sprint_plan": 512000 }
+      },
+      "project_matrix": {
+        "rows": [
+          { "label": "Kolkata", "id": "REG_Kolkata", "buckets": { "gt_120": 1, "100_120": 1, "85_100": 1, "60_85": 0, "lt_60": 0 } }
+        ]
+      }
+    },
+
+    "REG_MZ1": {
+      "coc_trend": {
+        "fy_series": [
+          { "label": "Apr-25", "sort_date": "2025-04-01", "plan_cost": 210000, "actual_cost": 205000, "cumm_plan": 210000, "cumm_actual": 205000 },
+          { "label": "May-25", "sort_date": "2025-05-01", "plan_cost": 230000, "actual_cost": 225000, "cumm_plan": 440000, "cumm_actual": 430000 },
+          { "label": "Jun-25", "sort_date": "2025-06-01", "plan_cost": 275000, "actual_cost": 268000, "cumm_plan": 715000, "cumm_actual": 698000 },
+          { "label": "Jul-25", "sort_date": "2025-07-01", "plan_cost": 310000, "actual_cost": 298000, "cumm_plan": 1025000, "cumm_actual": 996000 },
+          { "label": "Aug-25", "sort_date": "2025-08-01", "plan_cost": 350000, "actual_cost": 340000, "cumm_plan": 1375000, "cumm_actual": 1336000 },
+          { "label": "Sep-25", "sort_date": "2025-09-01", "plan_cost": 340000, "actual_cost": 355000, "cumm_plan": 1715000, "cumm_actual": 1691000 },
+          { "label": "Oct-25", "sort_date": "2025-10-01", "plan_cost": 300000, "actual_cost": 315000, "cumm_plan": 2015000, "cumm_actual": 2006000 },
+          { "label": "Nov-25", "sort_date": "2025-11-01", "plan_cost": 290000, "actual_cost": 305000, "cumm_plan": 2305000, "cumm_actual": 2311000 },
+          { "label": "Dec-25", "sort_date": "2025-12-01", "plan_cost": 250000, "actual_cost": null, "cumm_plan": 2555000, "cumm_actual": null },
+          { "label": "Jan-26", "sort_date": "2026-01-01", "plan_cost": 275000, "actual_cost": null, "cumm_plan": 2830000, "cumm_actual": null },
+          { "label": "Feb-26", "sort_date": "2026-02-01", "plan_cost": 265000, "actual_cost": null, "cumm_plan": 3095000, "cumm_actual": null },
+          { "label": "Mar-26", "sort_date": "2026-03-01", "plan_cost": 280000, "actual_cost": null, "cumm_plan": 3375000, "cumm_actual": null }
+        ],
+        "quarter_series": [
+          { "label": "Wk 40", "sort_date": "2025-09-29", "plan_cost": 70000, "actual_cost": 74000, "cumm_plan": 70000, "cumm_actual": 74000 },
+          { "label": "Wk 41", "sort_date": "2025-10-06", "plan_cost": 72000, "actual_cost": 76000, "cumm_plan": 142000, "cumm_actual": 150000 },
+          { "label": "Wk 42", "sort_date": "2025-10-13", "plan_cost": 78000, "actual_cost": 80000, "cumm_plan": 220000, "cumm_actual": 230000 },
+          { "label": "Wk 43", "sort_date": "2025-10-20", "plan_cost": 75000, "actual_cost": 78000, "cumm_plan": 295000, "cumm_actual": 308000 },
+          { "label": "Wk 44", "sort_date": "2025-10-27", "plan_cost": 74000, "actual_cost": 77000, "cumm_plan": 369000, "cumm_actual": 385000 },
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 71000, "actual_cost": 75000, "cumm_plan": 440000, "cumm_actual": 460000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 73000, "actual_cost": 76000, "cumm_plan": 513000, "cumm_actual": 536000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 69000, "actual_cost": 72000, "cumm_plan": 582000, "cumm_actual": 608000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 70000, "actual_cost": 73000, "cumm_plan": 652000, "cumm_actual": 681000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 66000, "actual_cost": null, "cumm_plan": 718000, "cumm_actual": null },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 63000, "actual_cost": null, "cumm_plan": 781000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 60000, "actual_cost": null, "cumm_plan": 841000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 55000, "actual_cost": null, "cumm_plan": 896000, "cumm_actual": null }
+        ],
+        "month_series": [
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 71000, "actual_cost": 75000, "cumm_plan": 71000, "cumm_actual": 75000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 73000, "actual_cost": 76000, "cumm_plan": 144000, "cumm_actual": 151000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 69000, "actual_cost": 72000, "cumm_plan": 213000, "cumm_actual": 223000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 70000, "actual_cost": 73000, "cumm_plan": 283000, "cumm_actual": 296000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 66000, "actual_cost": 69000, "cumm_plan": 349000, "cumm_actual": 365000 },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 63000, "actual_cost": null, "cumm_plan": 412000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 60000, "actual_cost": null, "cumm_plan": 472000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 55000, "actual_cost": null, "cumm_plan": 527000, "cumm_actual": null },
+          { "label": "Wk 1", "sort_date": "2025-12-29", "plan_cost": 45000, "actual_cost": null, "cumm_plan": 572000, "cumm_actual": null },
+          { "label": "Wk 2", "sort_date": "2026-01-05", "plan_cost": 65000, "actual_cost": null, "cumm_plan": 637000, "cumm_actual": null },
+          { "label": "Wk 3", "sort_date": "2026-01-12", "plan_cost": 69000, "actual_cost": null, "cumm_plan": 706000, "cumm_actual": null }
+        ]
+      },
+      "kpi_gauges": {
+        "aop": { "achieved_pct": 100.3, "status_color": "green", "actual_ytd": 2311000, "plan_ytd": 2305000 },
+        "sprint": { "achieved_pct": 104.4, "status_color": "green", "sprint_actual": 681000, "sprint_plan": 652000 }
+      },
+      "project_matrix": {
+        "rows": [
+          { "label": "Horizon", "id": "PROJ_Horizon", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 } },
+          { "label": "Reserve", "id": "PROJ_Reserve", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 } }
+        ]
+      }
+    },
+
+    "REG_NZ1": {
+      "coc_trend": {
+        "fy_series": [
+          { "label": "Apr-25", "sort_date": "2025-04-01", "plan_cost": 130000, "actual_cost": 125000, "cumm_plan": 130000, "cumm_actual": 125000 },
+          { "label": "May-25", "sort_date": "2025-05-01", "plan_cost": 140000, "actual_cost": 132000, "cumm_plan": 270000, "cumm_actual": 257000 },
+          { "label": "Jun-25", "sort_date": "2025-06-01", "plan_cost": 168000, "actual_cost": 155000, "cumm_plan": 438000, "cumm_actual": 412000 },
+          { "label": "Jul-25", "sort_date": "2025-07-01", "plan_cost": 190000, "actual_cost": 175000, "cumm_plan": 628000, "cumm_actual": 587000 },
+          { "label": "Aug-25", "sort_date": "2025-08-01", "plan_cost": 215000, "actual_cost": 195000, "cumm_plan": 843000, "cumm_actual": 782000 },
+          { "label": "Sep-25", "sort_date": "2025-09-01", "plan_cost": 205000, "actual_cost": 200000, "cumm_plan": 1048000, "cumm_actual": 982000 },
+          { "label": "Oct-25", "sort_date": "2025-10-01", "plan_cost": 183000, "actual_cost": 180000, "cumm_plan": 1231000, "cumm_actual": 1162000 },
+          { "label": "Nov-25", "sort_date": "2025-11-01", "plan_cost": 175000, "actual_cost": 172000, "cumm_plan": 1406000, "cumm_actual": 1334000 },
+          { "label": "Dec-25", "sort_date": "2025-12-01", "plan_cost": 152000, "actual_cost": null, "cumm_plan": 1558000, "cumm_actual": null },
+          { "label": "Jan-26", "sort_date": "2026-01-01", "plan_cost": 167000, "actual_cost": null, "cumm_plan": 1725000, "cumm_actual": null },
+          { "label": "Feb-26", "sort_date": "2026-02-01", "plan_cost": 160000, "actual_cost": null, "cumm_plan": 1885000, "cumm_actual": null },
+          { "label": "Mar-26", "sort_date": "2026-03-01", "plan_cost": 172000, "actual_cost": null, "cumm_plan": 2057000, "cumm_actual": null }
+        ],
+        "quarter_series": [
+          { "label": "Wk 40", "sort_date": "2025-09-29", "plan_cost": 43000, "actual_cost": 42000, "cumm_plan": 43000, "cumm_actual": 42000 },
+          { "label": "Wk 41", "sort_date": "2025-10-06", "plan_cost": 44000, "actual_cost": 44000, "cumm_plan": 87000, "cumm_actual": 86000 },
+          { "label": "Wk 42", "sort_date": "2025-10-13", "plan_cost": 47000, "actual_cost": 46000, "cumm_plan": 134000, "cumm_actual": 132000 },
+          { "label": "Wk 43", "sort_date": "2025-10-20", "plan_cost": 46000, "actual_cost": 45000, "cumm_plan": 180000, "cumm_actual": 177000 },
+          { "label": "Wk 44", "sort_date": "2025-10-27", "plan_cost": 45000, "actual_cost": 44000, "cumm_plan": 225000, "cumm_actual": 221000 },
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 44000, "actual_cost": 43000, "cumm_plan": 269000, "cumm_actual": 264000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 44000, "actual_cost": 44000, "cumm_plan": 313000, "cumm_actual": 308000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 42000, "actual_cost": 41000, "cumm_plan": 355000, "cumm_actual": 349000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 43000, "actual_cost": 42000, "cumm_plan": 398000, "cumm_actual": 391000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 40000, "actual_cost": null, "cumm_plan": 438000, "cumm_actual": null },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 38000, "actual_cost": null, "cumm_plan": 476000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 36000, "actual_cost": null, "cumm_plan": 512000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 33000, "actual_cost": null, "cumm_plan": 545000, "cumm_actual": null }
+        ],
+        "month_series": [
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 44000, "actual_cost": 43000, "cumm_plan": 44000, "cumm_actual": 43000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 44000, "actual_cost": 44000, "cumm_plan": 88000, "cumm_actual": 87000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 42000, "actual_cost": 41000, "cumm_plan": 130000, "cumm_actual": 128000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 43000, "actual_cost": 42000, "cumm_plan": 173000, "cumm_actual": 170000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 40000, "actual_cost": 40000, "cumm_plan": 213000, "cumm_actual": 210000 },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 38000, "actual_cost": null, "cumm_plan": 251000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 36000, "actual_cost": null, "cumm_plan": 287000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 33000, "actual_cost": null, "cumm_plan": 320000, "cumm_actual": null },
+          { "label": "Wk 1", "sort_date": "2025-12-29", "plan_cost": 27000, "actual_cost": null, "cumm_plan": 347000, "cumm_actual": null },
+          { "label": "Wk 2", "sort_date": "2026-01-05", "plan_cost": 40000, "actual_cost": null, "cumm_plan": 387000, "cumm_actual": null },
+          { "label": "Wk 3", "sort_date": "2026-01-12", "plan_cost": 42000, "actual_cost": null, "cumm_plan": 429000, "cumm_actual": null }
+        ]
+      },
+      "kpi_gauges": {
+        "aop": { "achieved_pct": 94.9, "status_color": "amber", "actual_ytd": 1334000, "plan_ytd": 1406000 },
+        "sprint": { "achieved_pct": 98.2, "status_color": "green", "sprint_actual": 391000, "sprint_plan": 398000 }
+      },
+      "project_matrix": {
+        "rows": [
+          { "label": "Avenue 11", "id": "PROJ_Avenue11", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 1, "60_85": 0, "lt_60": 0 } },
+          { "label": "Miraya", "id": "PROJ_Miraya", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 0, "60_85": 1, "lt_60": 0 } }
+        ]
+      }
+    },
+
+    "REG_NZ2": {
+      "coc_trend": {
+        "fy_series": [
+          { "label": "Apr-25", "sort_date": "2025-04-01", "plan_cost": 125000, "actual_cost": 115000, "cumm_plan": 125000, "cumm_actual": 115000 },
+          { "label": "May-25", "sort_date": "2025-05-01", "plan_cost": 135000, "actual_cost": 126000, "cumm_plan": 260000, "cumm_actual": 241000 },
+          { "label": "Jun-25", "sort_date": "2025-06-01", "plan_cost": 162000, "actual_cost": 150000, "cumm_plan": 422000, "cumm_actual": 391000 },
+          { "label": "Jul-25", "sort_date": "2025-07-01", "plan_cost": 185000, "actual_cost": 170000, "cumm_plan": 607000, "cumm_actual": 561000 },
+          { "label": "Aug-25", "sort_date": "2025-08-01", "plan_cost": 205000, "actual_cost": 185000, "cumm_plan": 812000, "cumm_actual": 746000 },
+          { "label": "Sep-25", "sort_date": "2025-09-01", "plan_cost": 200000, "actual_cost": 195000, "cumm_plan": 1012000, "cumm_actual": 941000 },
+          { "label": "Oct-25", "sort_date": "2025-10-01", "plan_cost": 177000, "actual_cost": 175000, "cumm_plan": 1189000, "cumm_actual": 1116000 },
+          { "label": "Nov-25", "sort_date": "2025-11-01", "plan_cost": 170000, "actual_cost": 168000, "cumm_plan": 1359000, "cumm_actual": 1284000 },
+          { "label": "Dec-25", "sort_date": "2025-12-01", "plan_cost": 148000, "actual_cost": null, "cumm_plan": 1507000, "cumm_actual": null },
+          { "label": "Jan-26", "sort_date": "2026-01-01", "plan_cost": 163000, "actual_cost": null, "cumm_plan": 1670000, "cumm_actual": null },
+          { "label": "Feb-26", "sort_date": "2026-02-01", "plan_cost": 155000, "actual_cost": null, "cumm_plan": 1825000, "cumm_actual": null },
+          { "label": "Mar-26", "sort_date": "2026-03-01", "plan_cost": 168000, "actual_cost": null, "cumm_plan": 1993000, "cumm_actual": null }
+        ],
+        "quarter_series": [
+          { "label": "Wk 40", "sort_date": "2025-09-29", "plan_cost": 41000, "actual_cost": 40000, "cumm_plan": 41000, "cumm_actual": 40000 },
+          { "label": "Wk 41", "sort_date": "2025-10-06", "plan_cost": 43000, "actual_cost": 42000, "cumm_plan": 84000, "cumm_actual": 82000 },
+          { "label": "Wk 42", "sort_date": "2025-10-13", "plan_cost": 46000, "actual_cost": 45000, "cumm_plan": 130000, "cumm_actual": 127000 },
+          { "label": "Wk 43", "sort_date": "2025-10-20", "plan_cost": 44000, "actual_cost": 43000, "cumm_plan": 174000, "cumm_actual": 170000 },
+          { "label": "Wk 44", "sort_date": "2025-10-27", "plan_cost": 43000, "actual_cost": 42000, "cumm_plan": 217000, "cumm_actual": 212000 },
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 42000, "actual_cost": 42000, "cumm_plan": 259000, "cumm_actual": 254000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 43000, "actual_cost": 42000, "cumm_plan": 302000, "cumm_actual": 296000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 40000, "actual_cost": 40000, "cumm_plan": 342000, "cumm_actual": 336000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 41000, "actual_cost": 41000, "cumm_plan": 383000, "cumm_actual": 377000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 40000, "actual_cost": null, "cumm_plan": 423000, "cumm_actual": null },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 37000, "actual_cost": null, "cumm_plan": 460000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 36000, "actual_cost": null, "cumm_plan": 496000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 33000, "actual_cost": null, "cumm_plan": 529000, "cumm_actual": null }
+        ],
+        "month_series": [
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 42000, "actual_cost": 42000, "cumm_plan": 42000, "cumm_actual": 42000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 43000, "actual_cost": 42000, "cumm_plan": 85000, "cumm_actual": 84000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 40000, "actual_cost": 40000, "cumm_plan": 125000, "cumm_actual": 124000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 41000, "actual_cost": 41000, "cumm_plan": 166000, "cumm_actual": 165000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 40000, "actual_cost": 39000, "cumm_plan": 206000, "cumm_actual": 204000 },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 37000, "actual_cost": null, "cumm_plan": 243000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 36000, "actual_cost": null, "cumm_plan": 279000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 33000, "actual_cost": null, "cumm_plan": 312000, "cumm_actual": null },
+          { "label": "Wk 1", "sort_date": "2025-12-29", "plan_cost": 27000, "actual_cost": null, "cumm_plan": 339000, "cumm_actual": null },
+          { "label": "Wk 2", "sort_date": "2026-01-05", "plan_cost": 38000, "actual_cost": null, "cumm_plan": 377000, "cumm_actual": null },
+          { "label": "Wk 3", "sort_date": "2026-01-12", "plan_cost": 40000, "actual_cost": null, "cumm_plan": 417000, "cumm_actual": null }
+        ]
+      },
+      "kpi_gauges": {
+        "aop": { "achieved_pct": 94.5, "status_color": "amber", "actual_ytd": 1284000, "plan_ytd": 1359000 },
+        "sprint": { "achieved_pct": 98.4, "status_color": "green", "sprint_actual": 377000, "sprint_plan": 383000 }
+      },
+      "project_matrix": {
+        "rows": [
+          { "label": "Aristocrat", "id": "PROJ_Aristocrat", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 } },
+          { "label": "Zenith", "id": "PROJ_Zenith", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 1, "60_85": 0, "lt_60": 0 } }
+        ]
+      }
+    },
+
+    "REG_SZ1": {
+      "coc_trend": {
+        "fy_series": [
+          { "label": "Apr-25", "sort_date": "2025-04-01", "plan_cost": 110000, "actual_cost": 108000, "cumm_plan": 110000, "cumm_actual": 108000 },
+          { "label": "May-25", "sort_date": "2025-05-01", "plan_cost": 120000, "actual_cost": 118000, "cumm_plan": 230000, "cumm_actual": 226000 },
+          { "label": "Jun-25", "sort_date": "2025-06-01", "plan_cost": 143000, "actual_cost": 140000, "cumm_plan": 373000, "cumm_actual": 366000 },
+          { "label": "Jul-25", "sort_date": "2025-07-01", "plan_cost": 163000, "actual_cost": 160000, "cumm_plan": 536000, "cumm_actual": 526000 },
+          { "label": "Aug-25", "sort_date": "2025-08-01", "plan_cost": 181000, "actual_cost": 178000, "cumm_plan": 717000, "cumm_actual": 704000 },
+          { "label": "Sep-25", "sort_date": "2025-09-01", "plan_cost": 173000, "actual_cost": 180000, "cumm_plan": 890000, "cumm_actual": 884000 },
+          { "label": "Oct-25", "sort_date": "2025-10-01", "plan_cost": 156000, "actual_cost": 163000, "cumm_plan": 1046000, "cumm_actual": 1047000 },
+          { "label": "Nov-25", "sort_date": "2025-11-01", "plan_cost": 148000, "actual_cost": 155000, "cumm_plan": 1194000, "cumm_actual": 1202000 },
+          { "label": "Dec-25", "sort_date": "2025-12-01", "plan_cost": 130000, "actual_cost": null, "cumm_plan": 1324000, "cumm_actual": null },
+          { "label": "Jan-26", "sort_date": "2026-01-01", "plan_cost": 143000, "actual_cost": null, "cumm_plan": 1467000, "cumm_actual": null },
+          { "label": "Feb-26", "sort_date": "2026-02-01", "plan_cost": 135000, "actual_cost": null, "cumm_plan": 1602000, "cumm_actual": null },
+          { "label": "Mar-26", "sort_date": "2026-03-01", "plan_cost": 145000, "actual_cost": null, "cumm_plan": 1747000, "cumm_actual": null }
+        ],
+        "quarter_series": [
+          { "label": "Wk 40", "sort_date": "2025-09-29", "plan_cost": 36000, "actual_cost": 38000, "cumm_plan": 36000, "cumm_actual": 38000 },
+          { "label": "Wk 41", "sort_date": "2025-10-06", "plan_cost": 38000, "actual_cost": 40000, "cumm_plan": 74000, "cumm_actual": 78000 },
+          { "label": "Wk 42", "sort_date": "2025-10-13", "plan_cost": 40000, "actual_cost": 42000, "cumm_plan": 114000, "cumm_actual": 120000 },
+          { "label": "Wk 43", "sort_date": "2025-10-20", "plan_cost": 39000, "actual_cost": 41000, "cumm_plan": 153000, "cumm_actual": 161000 },
+          { "label": "Wk 44", "sort_date": "2025-10-27", "plan_cost": 38000, "actual_cost": 40000, "cumm_plan": 191000, "cumm_actual": 201000 },
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 37000, "actual_cost": 39000, "cumm_plan": 228000, "cumm_actual": 240000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 37000, "actual_cost": 39000, "cumm_plan": 265000, "cumm_actual": 279000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 35000, "actual_cost": 37000, "cumm_plan": 300000, "cumm_actual": 316000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 36000, "actual_cost": 38000, "cumm_plan": 336000, "cumm_actual": 354000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 34000, "actual_cost": null, "cumm_plan": 370000, "cumm_actual": null },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 33000, "actual_cost": null, "cumm_plan": 403000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 31000, "actual_cost": null, "cumm_plan": 434000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 29000, "actual_cost": null, "cumm_plan": 463000, "cumm_actual": null }
+        ],
+        "month_series": [
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 37000, "actual_cost": 39000, "cumm_plan": 37000, "cumm_actual": 39000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 37000, "actual_cost": 39000, "cumm_plan": 74000, "cumm_actual": 78000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 35000, "actual_cost": 37000, "cumm_plan": 109000, "cumm_actual": 115000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 36000, "actual_cost": 38000, "cumm_plan": 145000, "cumm_actual": 153000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 34000, "actual_cost": 36000, "cumm_plan": 179000, "cumm_actual": 189000 },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 33000, "actual_cost": null, "cumm_plan": 212000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 31000, "actual_cost": null, "cumm_plan": 243000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 29000, "actual_cost": null, "cumm_plan": 272000, "cumm_actual": null },
+          { "label": "Wk 1", "sort_date": "2025-12-29", "plan_cost": 23000, "actual_cost": null, "cumm_plan": 295000, "cumm_actual": null },
+          { "label": "Wk 2", "sort_date": "2026-01-05", "plan_cost": 34000, "actual_cost": null, "cumm_plan": 329000, "cumm_actual": null },
+          { "label": "Wk 3", "sort_date": "2026-01-12", "plan_cost": 36000, "actual_cost": null, "cumm_plan": 365000, "cumm_actual": null }
+        ]
+      },
+      "kpi_gauges": {
+        "aop": { "achieved_pct": 100.7, "status_color": "green", "actual_ytd": 1202000, "plan_ytd": 1194000 },
+        "sprint": { "achieved_pct": 105.4, "status_color": "green", "sprint_actual": 354000, "sprint_plan": 336000 }
+      },
+      "project_matrix": {
+        "rows": [
+          { "label": "Tropical Isle", "id": "PROJ_TropicalIsle", "buckets": { "gt_120": 1, "100_120": 0, "85_100": 0, "60_85": 0, "lt_60": 0 } },
+          { "label": "Jardinia", "id": "PROJ_Jardinia", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 } }
+        ]
+      }
+    },
+
+    "REG_SZ2": {
+      "coc_trend": {
+        "fy_series": [
+          { "label": "Apr-25", "sort_date": "2025-04-01", "plan_cost": 105000, "actual_cost": 102000, "cumm_plan": 105000, "cumm_actual": 102000 },
+          { "label": "May-25", "sort_date": "2025-05-01", "plan_cost": 115000, "actual_cost": 112000, "cumm_plan": 220000, "cumm_actual": 214000 },
+          { "label": "Jun-25", "sort_date": "2025-06-01", "plan_cost": 137000, "actual_cost": 135000, "cumm_plan": 357000, "cumm_actual": 349000 },
+          { "label": "Jul-25", "sort_date": "2025-07-01", "plan_cost": 157000, "actual_cost": 155000, "cumm_plan": 514000, "cumm_actual": 504000 },
+          { "label": "Aug-25", "sort_date": "2025-08-01", "plan_cost": 174000, "actual_cost": 172000, "cumm_plan": 688000, "cumm_actual": 676000 },
+          { "label": "Sep-25", "sort_date": "2025-09-01", "plan_cost": 167000, "actual_cost": 175000, "cumm_plan": 855000, "cumm_actual": 851000 },
+          { "label": "Oct-25", "sort_date": "2025-10-01", "plan_cost": 149000, "actual_cost": 157000, "cumm_plan": 1004000, "cumm_actual": 1008000 },
+          { "label": "Nov-25", "sort_date": "2025-11-01", "plan_cost": 142000, "actual_cost": 150000, "cumm_plan": 1146000, "cumm_actual": 1158000 },
+          { "label": "Dec-25", "sort_date": "2025-12-01", "plan_cost": 125000, "actual_cost": null, "cumm_plan": 1271000, "cumm_actual": null },
+          { "label": "Jan-26", "sort_date": "2026-01-01", "plan_cost": 137000, "actual_cost": null, "cumm_plan": 1408000, "cumm_actual": null },
+          { "label": "Feb-26", "sort_date": "2026-02-01", "plan_cost": 130000, "actual_cost": null, "cumm_plan": 1538000, "cumm_actual": null },
+          { "label": "Mar-26", "sort_date": "2026-03-01", "plan_cost": 140000, "actual_cost": null, "cumm_plan": 1678000, "cumm_actual": null }
+        ],
+        "quarter_series": [
+          { "label": "Wk 40", "sort_date": "2025-09-29", "plan_cost": 35000, "actual_cost": 37000, "cumm_plan": 35000, "cumm_actual": 37000 },
+          { "label": "Wk 41", "sort_date": "2025-10-06", "plan_cost": 36000, "actual_cost": 38000, "cumm_plan": 71000, "cumm_actual": 75000 },
+          { "label": "Wk 42", "sort_date": "2025-10-13", "plan_cost": 39000, "actual_cost": 40000, "cumm_plan": 110000, "cumm_actual": 115000 },
+          { "label": "Wk 43", "sort_date": "2025-10-20", "plan_cost": 37000, "actual_cost": 39000, "cumm_plan": 147000, "cumm_actual": 154000 },
+          { "label": "Wk 44", "sort_date": "2025-10-27", "plan_cost": 37000, "actual_cost": 38000, "cumm_plan": 184000, "cumm_actual": 192000 },
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 35000, "actual_cost": 37000, "cumm_plan": 219000, "cumm_actual": 229000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 36000, "actual_cost": 38000, "cumm_plan": 255000, "cumm_actual": 267000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 34000, "actual_cost": 36000, "cumm_plan": 289000, "cumm_actual": 303000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 35000, "actual_cost": 36000, "cumm_plan": 324000, "cumm_actual": 339000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 33000, "actual_cost": null, "cumm_plan": 357000, "cumm_actual": null },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 31000, "actual_cost": null, "cumm_plan": 388000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 30000, "actual_cost": null, "cumm_plan": 418000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 27000, "actual_cost": null, "cumm_plan": 445000, "cumm_actual": null }
+        ],
+        "month_series": [
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 35000, "actual_cost": 37000, "cumm_plan": 35000, "cumm_actual": 37000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 36000, "actual_cost": 38000, "cumm_plan": 71000, "cumm_actual": 75000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 34000, "actual_cost": 36000, "cumm_plan": 105000, "cumm_actual": 111000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 35000, "actual_cost": 36000, "cumm_plan": 140000, "cumm_actual": 147000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 33000, "actual_cost": 34000, "cumm_plan": 173000, "cumm_actual": 181000 },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 31000, "actual_cost": null, "cumm_plan": 204000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 30000, "actual_cost": null, "cumm_plan": 234000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 27000, "actual_cost": null, "cumm_plan": 261000, "cumm_actual": null },
+          { "label": "Wk 1", "sort_date": "2025-12-29", "plan_cost": 23000, "actual_cost": null, "cumm_plan": 284000, "cumm_actual": null },
+          { "label": "Wk 2", "sort_date": "2026-01-05", "plan_cost": 32000, "actual_cost": null, "cumm_plan": 316000, "cumm_actual": null },
+          { "label": "Wk 3", "sort_date": "2026-01-12", "plan_cost": 34000, "actual_cost": null, "cumm_plan": 350000, "cumm_actual": null }
+        ]
+      },
+      "kpi_gauges": {
+        "aop": { "achieved_pct": 101.0, "status_color": "green", "actual_ytd": 1158000, "plan_ytd": 1146000 },
+        "sprint": { "achieved_pct": 104.6, "status_color": "green", "sprint_actual": 339000, "sprint_plan": 324000 }
+      },
+      "project_matrix": {
+        "rows": [
+          { "label": "Sec. 44, Noida", "id": "PROJ_Sec44Noida", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 } },
+          { "label": "Ramaiah", "id": "PROJ_Ramaiah", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 1, "60_85": 0, "lt_60": 0 } }
+        ]
+      }
+    },
+
+    "REG_Kolkata": {
+      "coc_trend": {
+        "fy_series": [
+          { "label": "Apr-25", "sort_date": "2025-04-01", "plan_cost": 170000, "actual_cost": 165000, "cumm_plan": 170000, "cumm_actual": 165000 },
+          { "label": "May-25", "sort_date": "2025-05-01", "plan_cost": 180000, "actual_cost": 177000, "cumm_plan": 350000, "cumm_actual": 342000 },
+          { "label": "Jun-25", "sort_date": "2025-06-01", "plan_cost": 215000, "actual_cost": 202000, "cumm_plan": 565000, "cumm_actual": 544000 },
+          { "label": "Jul-25", "sort_date": "2025-07-01", "plan_cost": 245000, "actual_cost": 222000, "cumm_plan": 810000, "cumm_actual": 766000 },
+          { "label": "Aug-25", "sort_date": "2025-08-01", "plan_cost": 275000, "actual_cost": 250000, "cumm_plan": 1085000, "cumm_actual": 1016000 },
+          { "label": "Sep-25", "sort_date": "2025-09-01", "plan_cost": 265000, "actual_cost": 275000, "cumm_plan": 1350000, "cumm_actual": 1291000 },
+          { "label": "Oct-25", "sort_date": "2025-10-01", "plan_cost": 235000, "actual_cost": 260000, "cumm_plan": 1585000, "cumm_actual": 1551000 },
+          { "label": "Nov-25", "sort_date": "2025-11-01", "plan_cost": 225000, "actual_cost": 250000, "cumm_plan": 1810000, "cumm_actual": 1801000 },
+          { "label": "Dec-25", "sort_date": "2025-12-01", "plan_cost": 195000, "actual_cost": null, "cumm_plan": 2005000, "cumm_actual": null },
+          { "label": "Jan-26", "sort_date": "2026-01-01", "plan_cost": 215000, "actual_cost": null, "cumm_plan": 2220000, "cumm_actual": null },
+          { "label": "Feb-26", "sort_date": "2026-02-01", "plan_cost": 205000, "actual_cost": null, "cumm_plan": 2425000, "cumm_actual": null },
+          { "label": "Mar-26", "sort_date": "2026-03-01", "plan_cost": 225000, "actual_cost": null, "cumm_plan": 2650000, "cumm_actual": null }
+        ],
+        "quarter_series": [
+          { "label": "Wk 40", "sort_date": "2025-09-29", "plan_cost": 55000, "actual_cost": 64000, "cumm_plan": 55000, "cumm_actual": 64000 },
+          { "label": "Wk 41", "sort_date": "2025-10-06", "plan_cost": 57000, "actual_cost": 65000, "cumm_plan": 112000, "cumm_actual": 129000 },
+          { "label": "Wk 42", "sort_date": "2025-10-13", "plan_cost": 60000, "actual_cost": 67000, "cumm_plan": 172000, "cumm_actual": 196000 },
+          { "label": "Wk 43", "sort_date": "2025-10-20", "plan_cost": 59000, "actual_cost": 64000, "cumm_plan": 231000, "cumm_actual": 260000 },
+          { "label": "Wk 44", "sort_date": "2025-10-27", "plan_cost": 58000, "actual_cost": 64000, "cumm_plan": 289000, "cumm_actual": 324000 },
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 56000, "actual_cost": 64000, "cumm_plan": 345000, "cumm_actual": 388000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 57000, "actual_cost": 59000, "cumm_plan": 402000, "cumm_actual": 447000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 55000, "actual_cost": 59000, "cumm_plan": 457000, "cumm_actual": 506000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 55000, "actual_cost": 60000, "cumm_plan": 512000, "cumm_actual": 566000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 52000, "actual_cost": null, "cumm_plan": 564000, "cumm_actual": null },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 48000, "actual_cost": null, "cumm_plan": 612000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 47000, "actual_cost": null, "cumm_plan": 659000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 43000, "actual_cost": null, "cumm_plan": 702000, "cumm_actual": null }
+        ],
+        "month_series": [
+          { "label": "Wk 45", "sort_date": "2025-11-03", "plan_cost": 56000, "actual_cost": 64000, "cumm_plan": 56000, "cumm_actual": 64000 },
+          { "label": "Wk 46", "sort_date": "2025-11-10", "plan_cost": 57000, "actual_cost": 59000, "cumm_plan": 113000, "cumm_actual": 123000 },
+          { "label": "Wk 47", "sort_date": "2025-11-17", "plan_cost": 55000, "actual_cost": 59000, "cumm_plan": 168000, "cumm_actual": 182000 },
+          { "label": "Wk 48", "sort_date": "2025-11-24", "plan_cost": 55000, "actual_cost": 60000, "cumm_plan": 223000, "cumm_actual": 242000 },
+          { "label": "Wk 49", "sort_date": "2025-12-01", "plan_cost": 52000, "actual_cost": 57000, "cumm_plan": 275000, "cumm_actual": 299000 },
+          { "label": "Wk 50", "sort_date": "2025-12-08", "plan_cost": 48000, "actual_cost": null, "cumm_plan": 323000, "cumm_actual": null },
+          { "label": "Wk 51", "sort_date": "2025-12-15", "plan_cost": 47000, "actual_cost": null, "cumm_plan": 370000, "cumm_actual": null },
+          { "label": "Wk 52", "sort_date": "2025-12-22", "plan_cost": 43000, "actual_cost": null, "cumm_plan": 413000, "cumm_actual": null },
+          { "label": "Wk 1", "sort_date": "2025-12-29", "plan_cost": 35000, "actual_cost": null, "cumm_plan": 448000, "cumm_actual": null },
+          { "label": "Wk 2", "sort_date": "2026-01-05", "plan_cost": 51000, "actual_cost": null, "cumm_plan": 499000, "cumm_actual": null },
+          { "label": "Wk 3", "sort_date": "2026-01-12", "plan_cost": 54000, "actual_cost": null, "cumm_plan": 553000, "cumm_actual": null }
+        ]
+      },
+      "kpi_gauges": {
+        "aop": { "achieved_pct": 99.5, "status_color": "green", "actual_ytd": 1801000, "plan_ytd": 1810000 },
+        "sprint": { "achieved_pct": 110.5, "status_color": "green", "sprint_actual": 566000, "sprint_plan": 512000 }
+      },
+      "project_matrix": {
+        "rows": [
+          { "label": "Woodscapes", "id": "PROJ_Woodscapes", "buckets": { "gt_120": 1, "100_120": 0, "85_100": 0, "60_85": 0, "lt_60": 0 } },
+          { "label": "RGA 2", "id": "PROJ_RGA2", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 } },
+          { "label": "BL Saha", "id": "PROJ_BLSaha", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 1, "60_85": 0, "lt_60": 0 } }
+        ]
+      }
+    }
+  }
+}
