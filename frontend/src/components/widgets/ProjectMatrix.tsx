@@ -1,4 +1,5 @@
-import { Stack, Title, Table, Text } from '@mantine/core';
+import { Stack, Title, Table, Text, Alert } from '@mantine/core';
+import { IconInfoCircle } from '@tabler/icons-react';
 import { MatrixCell } from './MatrixCell';
 import { LoadingSpinner } from '@/components/common/LoadingSpinner';
 import { ErrorMessage } from '@/components/common/ErrorMessage';
@@ -15,6 +16,18 @@ export function ProjectMatrix() {
 
   if (state.error) {
     return <ErrorMessage message={state.error} />;
+  }
+
+  // At project level, matrix is not applicable (no drill-down available)
+  if (filters.project) {
+    return (
+      <Stack gap="xs">
+        <Title order={5}>Project Achievement Matrix</Title>
+        <Alert icon={<IconInfoCircle size={16} />} color="blue" variant="light">
+          Matrix view is not available at project level. Select a Zone or Region to see the achievement matrix.
+        </Alert>
+      </Stack>
+    );
   }
 
   if (!currentData?.project_matrix?.rows) {

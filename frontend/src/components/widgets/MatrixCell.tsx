@@ -58,7 +58,7 @@ export function MatrixCell({ value, bucketKey, rowId: _rowId, maxValue, projects
 
   const tooltipContent = projects && projects.length > 0 ? (
     <Stack gap={4}>
-      <Text size="xs" fw={600}>Projects ({value}):</Text>
+      <Text size="xs" fw={600} c="white">Projects ({value}):</Text>
       {projects.map((project) => (
         <Anchor
           key={project.id}

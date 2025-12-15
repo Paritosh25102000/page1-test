@@ -95,14 +95,17 @@ export function COCTrendChart() {
       position: 'top',
       horizontalAlign: 'center',
       floating: false,
+      offsetY: 0,
+      height: 30,
       itemMargin: {
-        horizontal: 20,
+        horizontal: 12,
         vertical: 0,
       },
       markers: {
-        size: 8,
+        size: 6,
+        offsetX: -2,
       },
-      fontSize: '12px',
+      fontSize: '11px',
     },
     tooltip: {
       shared: true,
