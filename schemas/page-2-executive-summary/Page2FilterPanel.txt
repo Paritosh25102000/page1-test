@@ -1,0 +1,42 @@
+# Dashboard Element Definition: Slab Cycle Filters
+
+## 1. General Meta-Information
+* **Element Name:** Operational Filters & Time Mode
+* **Element ID:** `PG2-CTRL-01`
+* **Dashboard Page:** Page 2 (Slab Cycle Analysis)
+* **Element Type:** Control Component
+
+## 2. Business Context
+* **Business Goal:** Allow analysis of cycle times based on construction methodology and structural complexity.
+* **Key Questions Answered:** N/A (Control).
+* **Target Audience Action:** Toggle between "Typical" (standard floors) and "Non-Typical" (podiums/basements) to isolate performance trends.
+
+## 3. Metric Definition
+* **Hierarchy Inputs:** Zone -> Region -> Project (Same as Page 1).
+* **Timeline Inputs:** FY / Quarter / Month (Same as Page 1).
+* **Operational Inputs:**
+    *   **Slab Type:** Toggle ["Typical", "Non-Typical", "All"].
+    *   **Formwork Type:** Dropdown ["All", "Aluform", "Conventional", "Table Form", "Jump Form"].
+
+## 4. Source Data Requirements
+* **Required JSON Objects:**
+    *   `tasks.attributes.slab_works` (Typical/Non-Typical)
+    *   `tasks.attributes.trade_type` (To derive Formwork Type)
+    *   `tasks.dates.actual.end` (To filter by Timeline)
+
+## 5. Data Transformation Logic
+* **Formwork Mapping:**
+    *   Map `attributes.trade_type` values (e.g., "Shuttering- AL", "Shuttering- Conventional") to UI categories ("Aluform", "Conventional").
+* **Timeline Logic:**
+    *   Only include slabs/floors that were *completed* (Actual End Date) within the selected Timeline window.
+
+## 6. Staging Dataset Structure
+* **Output Format:** JSON Dictionary (Configuration Object)
+* **Structure:**
+  ```json
+  {
+    "filter_options": {
+      "slab_types": ["Typical", "Non-Typical"],
+      "formwork_types": ["Aluform", "Conventional"]
+    }
+  }
