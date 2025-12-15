@@ -27,8 +27,18 @@ export function COCTrendChart() {
   const seriesKey = timeMode === 'FY' ? 'fy_series' : timeMode === 'Quarter' ? 'quarter_series' : 'month_series';
   const trendData: TrendPoint[] = currentData.coc_trend[seriesKey] || [];
 
-  // Use label directly (already formatted as date in mock data for Quarter/Month)
-  const categories = trendData.map((point) => point.label);
+  // Convert sort_date to display format (DD-MMM) for Quarter/Month views
+  const formatDateLabel = (sortDate: string): string => {
+    const date = new Date(sortDate);
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = date.toLocaleString('en-US', { month: 'short' });
+    return `${day}-${month}`;
+  };
+
+  // Use sort_date for Quarter/Month, label for FY
+  const categories = trendData.map((point) =>
+    timeMode === 'FY' ? point.label : formatDateLabel(point.sort_date)
+  );
   const planCostData = trendData.map((point) => point.plan_cost);
   const actualCostData = trendData.map((point) => point.actual_cost);
   const cummPlanData = trendData.map((point) => point.cumm_plan ?? null);
@@ -84,10 +94,15 @@ export function COCTrendChart() {
     legend: {
       position: 'top',
       horizontalAlign: 'center',
+      floating: false,
       itemMargin: {
-        horizontal: 15,
+        horizontal: 20,
         vertical: 0,
       },
+      markers: {
+        size: 8,
+      },
+      fontSize: '12px',
     },
     tooltip: {
       shared: true,

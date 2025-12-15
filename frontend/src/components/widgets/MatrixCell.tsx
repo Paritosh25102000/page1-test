@@ -1,4 +1,4 @@
-import { Box, Text, Tooltip, Stack, Anchor } from '@mantine/core';
+import { Box, Text, HoverCard, Stack, Anchor } from '@mantine/core';
 import type { BucketKey, ProjectInfo } from '@/types/dashboard';
 import { useDashboard } from '@/context/DashboardContext';
 
@@ -103,15 +103,21 @@ export function MatrixCell({ value, bucketKey, rowId: _rowId, maxValue, projects
 
   if (tooltipContent && value > 0) {
     return (
-      <Tooltip
-        label={tooltipContent}
+      <HoverCard
+        width={220}
         position="top"
         withArrow
-        multiline
-        w={200}
+        shadow="md"
+        openDelay={100}
+        closeDelay={200}
       >
-        {cellContent}
-      </Tooltip>
+        <HoverCard.Target>
+          {cellContent}
+        </HoverCard.Target>
+        <HoverCard.Dropdown bg="dark.7" p="xs">
+          {tooltipContent}
+        </HoverCard.Dropdown>
+      </HoverCard>
     );
   }
 
