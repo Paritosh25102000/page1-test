@@ -4,6 +4,7 @@ import type { ApexOptions } from 'apexcharts';
 import { useDashboard } from '@/context/DashboardContext';
 import { LoadingSpinner } from '@/components/common/LoadingSpinner';
 import { ErrorMessage } from '@/components/common/ErrorMessage';
+import { formatIndianCurrency, formatIndianAxisLabel } from '@/utils/indianFormat';
 import type { TrendPoint } from '@/types/dashboard';
 
 export function COCTrendChart() {
@@ -26,6 +27,7 @@ export function COCTrendChart() {
   const seriesKey = timeMode === 'FY' ? 'fy_series' : timeMode === 'Quarter' ? 'quarter_series' : 'month_series';
   const trendData: TrendPoint[] = currentData.coc_trend[seriesKey] || [];
 
+  // Use label directly (already formatted as date in mock data for Quarter/Month)
   const categories = trendData.map((point) => point.label);
   const planCostData = trendData.map((point) => point.plan_cost);
   const actualCostData = trendData.map((point) => point.actual_cost);
@@ -54,6 +56,7 @@ export function COCTrendChart() {
       categories,
       labels: {
         rotate: -45,
+        rotateAlways: true,
         style: {
           fontSize: '10px',
         },
@@ -65,7 +68,7 @@ export function COCTrendChart() {
           text: 'Periodic Cost',
         },
         labels: {
-          formatter: (value: number) => (value ? `${(value / 1000000).toFixed(1)}M` : ''),
+          formatter: (value: number) => formatIndianAxisLabel(value),
         },
       },
       {
@@ -74,19 +77,23 @@ export function COCTrendChart() {
           text: 'Cumulative Cost',
         },
         labels: {
-          formatter: (value: number) => (value ? `${(value / 1000000).toFixed(1)}M` : ''),
+          formatter: (value: number) => formatIndianAxisLabel(value),
         },
       },
     ],
     legend: {
       position: 'top',
       horizontalAlign: 'center',
+      itemMargin: {
+        horizontal: 15,
+        vertical: 0,
+      },
     },
     tooltip: {
       shared: true,
       intersect: false,
       y: {
-        formatter: (value: number) => (value ? `₹${(value / 1000000).toFixed(2)}M` : '-'),
+        formatter: (value: number) => formatIndianCurrency(value),
       },
     },
   };

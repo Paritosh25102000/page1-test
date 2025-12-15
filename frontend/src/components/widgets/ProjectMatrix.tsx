@@ -77,6 +77,7 @@ export function ProjectMatrix() {
                     bucketKey={bucket.key as BucketKey}
                     rowId={row.id}
                     maxValue={maxValue}
+                    projects={row.projects?.[bucket.key]}
                   />
                 </Table.Td>
               ))}

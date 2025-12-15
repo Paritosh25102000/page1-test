@@ -118,10 +118,10 @@
       },
       "project_matrix": {
         "rows": [
-          { "label": "MZ", "id": "ZONE_MZ", "buckets": { "gt_120": 0, "100_120": 2, "85_100": 0, "60_85": 0, "lt_60": 0 } },
-          { "label": "NZ", "id": "ZONE_NZ", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 2, "60_85": 1, "lt_60": 0 } },
-          { "label": "SZ", "id": "ZONE_SZ", "buckets": { "gt_120": 1, "100_120": 2, "85_100": 1, "60_85": 0, "lt_60": 0 } },
-          { "label": "WEZ", "id": "ZONE_WEZ", "buckets": { "gt_120": 1, "100_120": 1, "85_100": 1, "60_85": 0, "lt_60": 0 } }
+          { "label": "MZ", "id": "ZONE_MZ", "buckets": { "gt_120": 0, "100_120": 2, "85_100": 0, "60_85": 0, "lt_60": 0 }, "projects": { "100_120": [{ "id": "Horizon", "name": "Horizon" }, { "id": "Reserve", "name": "Reserve" }] } },
+          { "label": "NZ", "id": "ZONE_NZ", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 2, "60_85": 1, "lt_60": 0 }, "projects": { "100_120": [{ "id": "Avenue11", "name": "Avenue 11" }], "85_100": [{ "id": "Miraya", "name": "Miraya" }, { "id": "Aristocrat", "name": "Aristocrat" }], "60_85": [{ "id": "Zenith", "name": "Zenith" }] } },
+          { "label": "SZ", "id": "ZONE_SZ", "buckets": { "gt_120": 1, "100_120": 2, "85_100": 1, "60_85": 0, "lt_60": 0 }, "projects": { "gt_120": [{ "id": "TropicalIsle", "name": "Tropical Isle" }], "100_120": [{ "id": "Jardinia", "name": "Jardinia" }, { "id": "Sec44Noida", "name": "Sec. 44, Noida" }], "85_100": [{ "id": "Ramaiah", "name": "Ramaiah" }] } },
+          { "label": "WEZ", "id": "ZONE_WEZ", "buckets": { "gt_120": 1, "100_120": 1, "85_100": 1, "60_85": 0, "lt_60": 0 }, "projects": { "gt_120": [{ "id": "Woodscapes", "name": "Woodscapes" }], "100_120": [{ "id": "RGA2", "name": "RGA 2" }], "85_100": [{ "id": "BLSaha", "name": "BL Saha" }] } }
         ]
       }
     },
@@ -177,7 +177,7 @@
       },
       "project_matrix": {
         "rows": [
-          { "label": "MZ1", "id": "REG_MZ1", "buckets": { "gt_120": 0, "100_120": 2, "85_100": 0, "60_85": 0, "lt_60": 0 } }
+          { "label": "MZ1", "id": "REG_MZ1", "buckets": { "gt_120": 0, "100_120": 2, "85_100": 0, "60_85": 0, "lt_60": 0 }, "projects": { "100_120": [{ "id": "Horizon", "name": "Horizon" }, { "id": "Reserve", "name": "Reserve" }] } }
         ]
       }
     },
@@ -233,8 +233,8 @@
       },
       "project_matrix": {
         "rows": [
-          { "label": "NZ1", "id": "REG_NZ1", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 1, "60_85": 1, "lt_60": 0 } },
-          { "label": "NZ2", "id": "REG_NZ2", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 1, "60_85": 0, "lt_60": 0 } }
+          { "label": "NZ1", "id": "REG_NZ1", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 1, "60_85": 1, "lt_60": 0 }, "projects": { "85_100": [{ "id": "Avenue11", "name": "Avenue 11" }], "60_85": [{ "id": "Miraya", "name": "Miraya" }] } },
+          { "label": "NZ2", "id": "REG_NZ2", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 1, "60_85": 0, "lt_60": 0 }, "projects": { "100_120": [{ "id": "Aristocrat", "name": "Aristocrat" }], "85_100": [{ "id": "Zenith", "name": "Zenith" }] } }
         ]
       }
     },
@@ -290,8 +290,8 @@
       },
       "project_matrix": {
         "rows": [
-          { "label": "SZ1", "id": "REG_SZ1", "buckets": { "gt_120": 1, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 } },
-          { "label": "SZ2", "id": "REG_SZ2", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 1, "60_85": 0, "lt_60": 0 } }
+          { "label": "SZ1", "id": "REG_SZ1", "buckets": { "gt_120": 1, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 }, "projects": { "gt_120": [{ "id": "TropicalIsle", "name": "Tropical Isle" }], "100_120": [{ "id": "Jardinia", "name": "Jardinia" }] } },
+          { "label": "SZ2", "id": "REG_SZ2", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 1, "60_85": 0, "lt_60": 0 }, "projects": { "100_120": [{ "id": "Sec44Noida", "name": "Sec. 44, Noida" }], "85_100": [{ "id": "Ramaiah", "name": "Ramaiah" }] } }
         ]
       }
     },
@@ -347,7 +347,7 @@
       },
       "project_matrix": {
         "rows": [
-          { "label": "Kolkata", "id": "REG_Kolkata", "buckets": { "gt_120": 1, "100_120": 1, "85_100": 1, "60_85": 0, "lt_60": 0 } }
+          { "label": "Kolkata", "id": "REG_Kolkata", "buckets": { "gt_120": 1, "100_120": 1, "85_100": 1, "60_85": 0, "lt_60": 0 }, "projects": { "gt_120": [{ "id": "Woodscapes", "name": "Woodscapes" }], "100_120": [{ "id": "RGA2", "name": "RGA 2" }], "85_100": [{ "id": "BLSaha", "name": "BL Saha" }] } }
         ]
       }
     },
@@ -403,8 +403,8 @@
       },
       "project_matrix": {
         "rows": [
-          { "label": "Horizon", "id": "PROJ_Horizon", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 } },
-          { "label": "Reserve", "id": "PROJ_Reserve", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 } }
+          { "label": "Horizon", "id": "PROJ_Horizon", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 }, "projects": { "100_120": [{ "id": "Horizon", "name": "Horizon" }] } },
+          { "label": "Reserve", "id": "PROJ_Reserve", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 }, "projects": { "100_120": [{ "id": "Reserve", "name": "Reserve" }] } }
         ]
       }
     },
@@ -460,8 +460,8 @@
       },
       "project_matrix": {
         "rows": [
-          { "label": "Avenue 11", "id": "PROJ_Avenue11", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 1, "60_85": 0, "lt_60": 0 } },
-          { "label": "Miraya", "id": "PROJ_Miraya", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 0, "60_85": 1, "lt_60": 0 } }
+          { "label": "Avenue 11", "id": "PROJ_Avenue11", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 1, "60_85": 0, "lt_60": 0 }, "projects": { "85_100": [{ "id": "Avenue11", "name": "Avenue 11" }] } },
+          { "label": "Miraya", "id": "PROJ_Miraya", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 0, "60_85": 1, "lt_60": 0 }, "projects": { "60_85": [{ "id": "Miraya", "name": "Miraya" }] } }
         ]
       }
     },
@@ -517,8 +517,8 @@
       },
       "project_matrix": {
         "rows": [
-          { "label": "Aristocrat", "id": "PROJ_Aristocrat", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 } },
-          { "label": "Zenith", "id": "PROJ_Zenith", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 1, "60_85": 0, "lt_60": 0 } }
+          { "label": "Aristocrat", "id": "PROJ_Aristocrat", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 }, "projects": { "100_120": [{ "id": "Aristocrat", "name": "Aristocrat" }] } },
+          { "label": "Zenith", "id": "PROJ_Zenith", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 1, "60_85": 0, "lt_60": 0 }, "projects": { "85_100": [{ "id": "Zenith", "name": "Zenith" }] } }
         ]
       }
     },
@@ -574,8 +574,8 @@
       },
       "project_matrix": {
         "rows": [
-          { "label": "Tropical Isle", "id": "PROJ_TropicalIsle", "buckets": { "gt_120": 1, "100_120": 0, "85_100": 0, "60_85": 0, "lt_60": 0 } },
-          { "label": "Jardinia", "id": "PROJ_Jardinia", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 } }
+          { "label": "Tropical Isle", "id": "PROJ_TropicalIsle", "buckets": { "gt_120": 1, "100_120": 0, "85_100": 0, "60_85": 0, "lt_60": 0 }, "projects": { "gt_120": [{ "id": "TropicalIsle", "name": "Tropical Isle" }] } },
+          { "label": "Jardinia", "id": "PROJ_Jardinia", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 }, "projects": { "100_120": [{ "id": "Jardinia", "name": "Jardinia" }] } }
         ]
       }
     },
@@ -631,8 +631,8 @@
       },
       "project_matrix": {
         "rows": [
-          { "label": "Sec. 44, Noida", "id": "PROJ_Sec44Noida", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 } },
-          { "label": "Ramaiah", "id": "PROJ_Ramaiah", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 1, "60_85": 0, "lt_60": 0 } }
+          { "label": "Sec. 44, Noida", "id": "PROJ_Sec44Noida", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 }, "projects": { "100_120": [{ "id": "Sec44Noida", "name": "Sec. 44, Noida" }] } },
+          { "label": "Ramaiah", "id": "PROJ_Ramaiah", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 1, "60_85": 0, "lt_60": 0 }, "projects": { "85_100": [{ "id": "Ramaiah", "name": "Ramaiah" }] } }
         ]
       }
     },
@@ -688,10 +688,64 @@
       },
       "project_matrix": {
         "rows": [
-          { "label": "Woodscapes", "id": "PROJ_Woodscapes", "buckets": { "gt_120": 1, "100_120": 0, "85_100": 0, "60_85": 0, "lt_60": 0 } },
-          { "label": "RGA 2", "id": "PROJ_RGA2", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 } },
-          { "label": "BL Saha", "id": "PROJ_BLSaha", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 1, "60_85": 0, "lt_60": 0 } }
+          { "label": "Woodscapes", "id": "PROJ_Woodscapes", "buckets": { "gt_120": 1, "100_120": 0, "85_100": 0, "60_85": 0, "lt_60": 0 }, "projects": { "gt_120": [{ "id": "Woodscapes", "name": "Woodscapes" }] } },
+          { "label": "RGA 2", "id": "PROJ_RGA2", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 }, "projects": { "100_120": [{ "id": "RGA2", "name": "RGA 2" }] } },
+          { "label": "BL Saha", "id": "PROJ_BLSaha", "buckets": { "gt_120": 0, "100_120": 0, "85_100": 1, "60_85": 0, "lt_60": 0 }, "projects": { "85_100": [{ "id": "BLSaha", "name": "BL Saha" }] } }
         ]
+      }
+    },
+
+    "PROJ_Horizon": {
+      "coc_trend": {
+        "fy_series": [
+          { "label": "Apr-25", "sort_date": "2025-04-01", "plan_cost": 105000, "actual_cost": 102000, "cumm_plan": 105000, "cumm_actual": 102000 },
+          { "label": "May-25", "sort_date": "2025-05-01", "plan_cost": 115000, "actual_cost": 112000, "cumm_plan": 220000, "cumm_actual": 214000 },
+          { "label": "Jun-25", "sort_date": "2025-06-01", "plan_cost": 137000, "actual_cost": 134000, "cumm_plan": 357000, "cumm_actual": 348000 },
+          { "label": "Jul-25", "sort_date": "2025-07-01", "plan_cost": 155000, "actual_cost": 149000, "cumm_plan": 512000, "cumm_actual": 497000 },
+          { "label": "Aug-25", "sort_date": "2025-08-01", "plan_cost": 175000, "actual_cost": 170000, "cumm_plan": 687000, "cumm_actual": 667000 },
+          { "label": "Sep-25", "sort_date": "2025-09-01", "plan_cost": 170000, "actual_cost": 177000, "cumm_plan": 857000, "cumm_actual": 844000 },
+          { "label": "Oct-25", "sort_date": "2025-10-01", "plan_cost": 150000, "actual_cost": 157000, "cumm_plan": 1007000, "cumm_actual": 1001000 },
+          { "label": "Nov-25", "sort_date": "2025-11-01", "plan_cost": 145000, "actual_cost": 152000, "cumm_plan": 1152000, "cumm_actual": 1153000 },
+          { "label": "Dec-25", "sort_date": "2025-12-01", "plan_cost": 125000, "actual_cost": null, "cumm_plan": 1277000, "cumm_actual": null },
+          { "label": "Jan-26", "sort_date": "2026-01-01", "plan_cost": 137000, "actual_cost": null, "cumm_plan": 1414000, "cumm_actual": null },
+          { "label": "Feb-26", "sort_date": "2026-02-01", "plan_cost": 132000, "actual_cost": null, "cumm_plan": 1546000, "cumm_actual": null },
+          { "label": "Mar-26", "sort_date": "2026-03-01", "plan_cost": 140000, "actual_cost": null, "cumm_plan": 1686000, "cumm_actual": null }
+        ],
+        "quarter_series": [
+          { "label": "29-Sep", "sort_date": "2025-09-29", "plan_cost": 35000, "actual_cost": 37000, "cumm_plan": 35000, "cumm_actual": 37000 },
+          { "label": "06-Oct", "sort_date": "2025-10-06", "plan_cost": 36000, "actual_cost": 38000, "cumm_plan": 71000, "cumm_actual": 75000 },
+          { "label": "13-Oct", "sort_date": "2025-10-13", "plan_cost": 39000, "actual_cost": 40000, "cumm_plan": 110000, "cumm_actual": 115000 },
+          { "label": "20-Oct", "sort_date": "2025-10-20", "plan_cost": 37000, "actual_cost": 39000, "cumm_plan": 147000, "cumm_actual": 154000 },
+          { "label": "27-Oct", "sort_date": "2025-10-27", "plan_cost": 37000, "actual_cost": 38000, "cumm_plan": 184000, "cumm_actual": 192000 },
+          { "label": "03-Nov", "sort_date": "2025-11-03", "plan_cost": 35000, "actual_cost": 37000, "cumm_plan": 219000, "cumm_actual": 229000 },
+          { "label": "10-Nov", "sort_date": "2025-11-10", "plan_cost": 36000, "actual_cost": 38000, "cumm_plan": 255000, "cumm_actual": 267000 },
+          { "label": "17-Nov", "sort_date": "2025-11-17", "plan_cost": 34000, "actual_cost": 36000, "cumm_plan": 289000, "cumm_actual": 303000 },
+          { "label": "24-Nov", "sort_date": "2025-11-24", "plan_cost": 35000, "actual_cost": 36000, "cumm_plan": 324000, "cumm_actual": 339000 },
+          { "label": "01-Dec", "sort_date": "2025-12-01", "plan_cost": 33000, "actual_cost": null, "cumm_plan": 357000, "cumm_actual": null },
+          { "label": "08-Dec", "sort_date": "2025-12-08", "plan_cost": 31000, "actual_cost": null, "cumm_plan": 388000, "cumm_actual": null },
+          { "label": "15-Dec", "sort_date": "2025-12-15", "plan_cost": 30000, "actual_cost": null, "cumm_plan": 418000, "cumm_actual": null },
+          { "label": "22-Dec", "sort_date": "2025-12-22", "plan_cost": 27000, "actual_cost": null, "cumm_plan": 445000, "cumm_actual": null }
+        ],
+        "month_series": [
+          { "label": "03-Nov", "sort_date": "2025-11-03", "plan_cost": 35000, "actual_cost": 37000, "cumm_plan": 35000, "cumm_actual": 37000 },
+          { "label": "10-Nov", "sort_date": "2025-11-10", "plan_cost": 36000, "actual_cost": 38000, "cumm_plan": 71000, "cumm_actual": 75000 },
+          { "label": "17-Nov", "sort_date": "2025-11-17", "plan_cost": 34000, "actual_cost": 36000, "cumm_plan": 105000, "cumm_actual": 111000 },
+          { "label": "24-Nov", "sort_date": "2025-11-24", "plan_cost": 35000, "actual_cost": 36000, "cumm_plan": 140000, "cumm_actual": 147000 },
+          { "label": "01-Dec", "sort_date": "2025-12-01", "plan_cost": 33000, "actual_cost": 35000, "cumm_plan": 173000, "cumm_actual": 182000 },
+          { "label": "08-Dec", "sort_date": "2025-12-08", "plan_cost": 31000, "actual_cost": null, "cumm_plan": 204000, "cumm_actual": null },
+          { "label": "15-Dec", "sort_date": "2025-12-15", "plan_cost": 30000, "actual_cost": null, "cumm_plan": 234000, "cumm_actual": null },
+          { "label": "22-Dec", "sort_date": "2025-12-22", "plan_cost": 27000, "actual_cost": null, "cumm_plan": 261000, "cumm_actual": null },
+          { "label": "29-Dec", "sort_date": "2025-12-29", "plan_cost": 17000, "actual_cost": null, "cumm_plan": 278000, "cumm_actual": null },
+          { "label": "05-Jan", "sort_date": "2026-01-05", "plan_cost": 25000, "actual_cost": null, "cumm_plan": 303000, "cumm_actual": null },
+          { "label": "12-Jan", "sort_date": "2026-01-12", "plan_cost": 27000, "actual_cost": null, "cumm_plan": 330000, "cumm_actual": null }
+        ]
+      },
+      "kpi_gauges": {
+        "aop": { "achieved_pct": 100.1, "status_color": "green", "actual_ytd": 1153000, "plan_ytd": 1152000 },
+        "sprint": { "achieved_pct": 104.6, "status_color": "green", "sprint_actual": 339000, "sprint_plan": 324000 }
+      },
+      "project_matrix": {
+        "rows": []
       }
     }
   }

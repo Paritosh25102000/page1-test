@@ -127,6 +127,7 @@ export interface MatrixRow {
   label: string; // Row header (Zone or Region name)
   id?: string; // ID for drill-down
   buckets: Buckets;
+  projects?: BucketProjects; // Project names per bucket for tooltips
 }
 
 export interface Buckets {
@@ -135,6 +136,19 @@ export interface Buckets {
   '85_100': number;
   '60_85': number;
   lt_60: number;
+}
+
+export interface ProjectInfo {
+  id: string;
+  name: string;
+}
+
+export interface BucketProjects {
+  gt_120?: ProjectInfo[];
+  '100_120'?: ProjectInfo[];
+  '85_100'?: ProjectInfo[];
+  '60_85'?: ProjectInfo[];
+  lt_60?: ProjectInfo[];
 }
 
 // =============================================================================
