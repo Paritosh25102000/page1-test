@@ -96,7 +96,7 @@ export function COCTrendChart() {
       horizontalAlign: 'center',
       floating: false,
       offsetY: 0,
-      height: 30,
+      height: 40,
       itemMargin: {
         horizontal: 12,
         vertical: 0,

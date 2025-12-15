@@ -745,7 +745,9 @@
         "sprint": { "achieved_pct": 104.6, "status_color": "green", "sprint_actual": 339000, "sprint_plan": 324000 }
       },
       "project_matrix": {
-        "rows": []
+        "rows": [
+          { "label": "Horizon", "id": "PROJ_Horizon", "buckets": { "gt_120": 0, "100_120": 1, "85_100": 0, "60_85": 0, "lt_60": 0 }, "projects": { "100_120": [{ "id": "Horizon", "name": "Horizon" }] } }
+        ]
       }
     }
   }

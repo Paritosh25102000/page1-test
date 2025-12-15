@@ -63,7 +63,8 @@ export function MatrixCell({ value, bucketKey, rowId: _rowId, maxValue, projects
         <Anchor
           key={project.id}
           size="xs"
-          c="white"
+          c="blue.3"
+          underline="hover"
           onClick={(e) => {
             e.stopPropagation();
             handleProjectClick(project.id);
