@@ -4847,8 +4847,8 @@
       },
       "actual": {
         "start": "2025-08-11",
-        "end": "2025-12-16",
-        "duration_days": 127
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -5195,22 +5195,22 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 3,
-            "actual": 2
+            "actual": 3
           },
           "plan": {
             "cost": 129613191.6,
             "accumulated": 5573367238.8
           },
           "actual": {
-            "cost": 86408794.4,
-            "accumulated": 5530162841.6
+            "cost": 129613191.6,
+            "accumulated": 5573367238.8
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 19,
         "plan_cost_in_fy": 5573367238.8,
-        "actual_cost_in_fy": 5530162841.6,
+        "actual_cost_in_fy": 5573367238.8,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -5243,8 +5243,8 @@
       },
       "actual": {
         "start": "2025-08-31",
-        "end": "2025-12-16",
-        "duration_days": 107
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -5557,22 +5557,22 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 4,
-            "actual": 2
+            "actual": 4
           },
           "plan": {
             "cost": 116819160.0,
             "accumulated": 3212526900.0
           },
           "actual": {
-            "cost": 58409580.0,
-            "accumulated": 3154117320.0
+            "cost": 116819160.0,
+            "accumulated": 3212526900.0
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 17,
         "plan_cost_in_fy": 3212526900.0,
-        "actual_cost_in_fy": 3154117320.0,
+        "actual_cost_in_fy": 3212526900.0,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -5605,8 +5605,8 @@
       },
       "actual": {
         "start": "2025-09-02",
-        "end": "2025-12-16",
-        "duration_days": 105
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -5902,22 +5902,22 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 5,
-            "actual": 2
+            "actual": 5
           },
           "plan": {
             "cost": 379435740.0,
             "accumulated": 8271699132.0
           },
           "actual": {
-            "cost": 151774296.0,
-            "accumulated": 8044037688.0
+            "cost": 379435740.0,
+            "accumulated": 8271699132.0
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 16,
         "plan_cost_in_fy": 8271699132.0,
-        "actual_cost_in_fy": 8044037688.0,
+        "actual_cost_in_fy": 8271699132.0,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -5950,8 +5950,8 @@
       },
       "actual": {
         "start": "2025-09-14",
-        "end": "2025-12-16",
-        "duration_days": 93
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -6230,15 +6230,15 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 7,
-            "actual": 2
+            "actual": 7
           },
           "plan": {
             "cost": 120528369.23,
             "accumulated": 1704615507.69
           },
           "actual": {
-            "cost": 34436676.92,
-            "accumulated": 1618523815.38
+            "cost": 120528369.23,
+            "accumulated": 1704615507.69
           }
         },
         {
@@ -6247,22 +6247,22 @@
           "week_end": "2025-12-28",
           "days_in_task": {
             "plan": 4,
-            "actual": 0
+            "actual": 4
           },
           "plan": {
             "cost": 68873353.85,
             "accumulated": 1773488861.54
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 1618523815.38
+            "cost": 68873353.85,
+            "accumulated": 1773488861.54
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 16,
         "plan_cost_in_fy": 1773488861.54,
-        "actual_cost_in_fy": 1618523815.38,
+        "actual_cost_in_fy": 1773488861.54,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -55156,9 +55156,9 @@
       "region": "NZ1",
       "tower": "Tower 6",
       "floor": null,
-      "main_category": "",
-      "sub_category": "",
-      "trade_type": "NTA Finishing",
+      "main_category": "Finishing",
+      "sub_category": "Common area finishes",
+      "trade_type": "CA-Blockwork",
       "slab_works": null
     },
     "progress": {
@@ -59009,8 +59009,8 @@
       "tower": "Tower 6",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "BRM-Security",
-      "trade_type": "BRM-Security",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -59080,9 +59080,9 @@
       "region": "NZ1",
       "tower": "Tower 6",
       "floor": null,
-      "main_category": "Infra",
-      "sub_category": "Ext Infra",
-      "trade_type": "Solar",
+      "main_category": "MEP",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -59585,8 +59585,8 @@
       "tower": "Tower 6",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-Fire-fighting & FAPA",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -59657,8 +59657,8 @@
       "tower": "Tower 6",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-Fire-fighting & FAPA",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -60161,8 +60161,8 @@
       "tower": "Tower 6",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-HVAC",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -60270,7 +60270,7 @@
       "floor": null,
       "main_category": "Finishing",
       "sub_category": "Tower Finishing",
-      "trade_type": "Ext Plaster",
+      "trade_type": "Paint",
       "slab_works": null
     },
     "progress": {
@@ -66828,8 +66828,8 @@
       },
       "actual": {
         "start": "2025-10-18",
-        "end": "2025-12-16",
-        "duration_days": 59
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -67023,22 +67023,22 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 6,
-            "actual": 2
+            "actual": 6
           },
           "plan": {
             "cost": 185161702.29,
             "accumulated": 1975058157.71
           },
           "actual": {
-            "cost": 61720567.43,
-            "accumulated": 1851617022.86
+            "cost": 185161702.29,
+            "accumulated": 1975058157.71
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 10,
         "plan_cost_in_fy": 1975058157.71,
-        "actual_cost_in_fy": 1851617022.86,
+        "actual_cost_in_fy": 1975058157.71,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -67071,8 +67071,8 @@
       },
       "actual": {
         "start": "2025-10-30",
-        "end": "2025-12-16",
-        "duration_days": 47
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -67232,22 +67232,22 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 4,
-            "actual": 2
+            "actual": 4
           },
           "plan": {
             "cost": 233638320.0,
             "accumulated": 2920479000.0
           },
           "actual": {
-            "cost": 116819160.0,
-            "accumulated": 2803659840.0
+            "cost": 233638320.0,
+            "accumulated": 2920479000.0
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 8,
         "plan_cost_in_fy": 2920479000.0,
-        "actual_cost_in_fy": 2803659840.0,
+        "actual_cost_in_fy": 2920479000.0,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -67280,8 +67280,8 @@
       },
       "actual": {
         "start": "2025-10-30",
-        "end": "2025-12-16",
-        "duration_days": 47
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -67441,22 +67441,22 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 5,
-            "actual": 2
+            "actual": 5
           },
           "plan": {
             "cost": 498733255.0,
             "accumulated": 5087079201.0
           },
           "actual": {
-            "cost": 199493302.0,
-            "accumulated": 4787839248.0
+            "cost": 498733255.0,
+            "accumulated": 5087079201.0
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 8,
         "plan_cost_in_fy": 5087079201.0,
-        "actual_cost_in_fy": 4787839248.0,
+        "actual_cost_in_fy": 5087079201.0,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -67489,8 +67489,8 @@
       },
       "actual": {
         "start": "2025-10-30",
-        "end": "2025-12-16",
-        "duration_days": 47
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -67650,15 +67650,15 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 7,
-            "actual": 2
+            "actual": 7
           },
           "plan": {
             "cost": 48674650.0,
             "accumulated": 368536635.71
           },
           "actual": {
-            "cost": 13907042.86,
-            "accumulated": 333769028.57
+            "cost": 48674650.0,
+            "accumulated": 368536635.71
           }
         },
         {
@@ -67667,15 +67667,15 @@
           "week_end": "2025-12-28",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 48674650.0,
             "accumulated": 417211285.71
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 333769028.57
+            "cost": 48674650.0,
+            "accumulated": 417211285.71
           }
         },
         {
@@ -67684,15 +67684,15 @@
           "week_end": "2026-01-04",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 48674650.0,
             "accumulated": 465885935.71
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 333769028.57
+            "cost": 48674650.0,
+            "accumulated": 465885935.71
           }
         },
         {
@@ -67701,22 +67701,22 @@
           "week_end": "2026-01-11",
           "days_in_task": {
             "plan": 6,
-            "actual": 0
+            "actual": 6
           },
           "plan": {
             "cost": 41721128.57,
             "accumulated": 507607064.29
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 333769028.57
+            "cost": 41721128.57,
+            "accumulated": 507607064.29
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 11,
         "plan_cost_in_fy": 507607064.29,
-        "actual_cost_in_fy": 333769028.57,
+        "actual_cost_in_fy": 507607064.29,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -116461,9 +116461,9 @@
       "region": "NZ1",
       "tower": "Tower 5",
       "floor": null,
-      "main_category": "",
-      "sub_category": "",
-      "trade_type": "NTA Finishing",
+      "main_category": "Finishing",
+      "sub_category": "Common area finishes",
+      "trade_type": "CA-Blockwork",
       "slab_works": null
     },
     "progress": {
@@ -120314,8 +120314,8 @@
       "tower": "Tower 5",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "BRM-Security",
-      "trade_type": "BRM-Security",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -120385,9 +120385,9 @@
       "region": "NZ1",
       "tower": "Tower 5",
       "floor": null,
-      "main_category": "Infra",
-      "sub_category": "Ext Infra",
-      "trade_type": "Solar",
+      "main_category": "MEP",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -120890,8 +120890,8 @@
       "tower": "Tower 5",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-Fire-fighting & FAPA",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -120962,8 +120962,8 @@
       "tower": "Tower 5",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-Fire-fighting & FAPA",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -121466,8 +121466,8 @@
       "tower": "Tower 5",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-HVAC",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -121575,7 +121575,7 @@
       "floor": null,
       "main_category": "Finishing",
       "sub_category": "Tower Finishing",
-      "trade_type": "Ext Plaster",
+      "trade_type": "Paint",
       "slab_works": null
     },
     "progress": {
@@ -126832,8 +126832,8 @@
       },
       "actual": {
         "start": "2025-06-23",
-        "end": "2025-12-16",
-        "duration_days": 176
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -127347,8 +127347,8 @@
       },
       "actual": {
         "start": "2025-06-24",
-        "end": "2025-12-16",
-        "duration_days": 175
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -127814,22 +127814,22 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 4,
-            "actual": 2
+            "actual": 4
           },
           "plan": {
             "cost": 71207146.67,
             "accumulated": 3168718026.67
           },
           "actual": {
-            "cost": 35603573.33,
-            "accumulated": 3133114453.33
+            "cost": 71207146.67,
+            "accumulated": 3168718026.67
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 26,
         "plan_cost_in_fy": 3168718026.67,
-        "actual_cost_in_fy": 3133114453.33,
+        "actual_cost_in_fy": 3168718026.67,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -127862,8 +127862,8 @@
       },
       "actual": {
         "start": "2025-06-26",
-        "end": "2025-12-16",
-        "duration_days": 173
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -128329,22 +128329,22 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 5,
-            "actual": 2
+            "actual": 5
           },
           "plan": {
             "cost": 275508000.0,
             "accumulated": 9752983200.0
           },
           "actual": {
-            "cost": 110203200.0,
-            "accumulated": 9587678400.0
+            "cost": 275508000.0,
+            "accumulated": 9752983200.0
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 26,
         "plan_cost_in_fy": 9752983200.0,
-        "actual_cost_in_fy": 9587678400.0,
+        "actual_cost_in_fy": 9752983200.0,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -128377,8 +128377,8 @@
       },
       "actual": {
         "start": "2025-08-13",
-        "end": "2025-12-16",
-        "duration_days": 125
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -128725,22 +128725,22 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 4,
-            "actual": 2
+            "actual": 4
           },
           "plan": {
             "cost": 63730430.77,
             "accumulated": 2039373784.62
           },
           "actual": {
-            "cost": 31865215.38,
-            "accumulated": 2007508569.23
+            "cost": 63730430.77,
+            "accumulated": 2039373784.62
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 19,
         "plan_cost_in_fy": 2039373784.62,
-        "actual_cost_in_fy": 2007508569.23,
+        "actual_cost_in_fy": 2039373784.62,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -128773,8 +128773,8 @@
       },
       "actual": {
         "start": "2025-09-08",
-        "end": "2025-12-16",
-        "duration_days": 99
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -129053,22 +129053,22 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 6,
-            "actual": 2
+            "actual": 6
           },
           "plan": {
             "cost": 104809796.31,
             "accumulated": 1816703136.0
           },
           "actual": {
-            "cost": 34936598.77,
-            "accumulated": 1746829938.46
+            "cost": 104809796.31,
+            "accumulated": 1816703136.0
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 15,
         "plan_cost_in_fy": 1816703136.0,
-        "actual_cost_in_fy": 1746829938.46,
+        "actual_cost_in_fy": 1816703136.0,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -129101,8 +129101,8 @@
       },
       "actual": {
         "start": "2025-09-13",
-        "end": "2025-12-16",
-        "duration_days": 94
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -129381,15 +129381,15 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 7,
-            "actual": 2
+            "actual": 7
           },
           "plan": {
             "cost": 54820400.0,
             "accumulated": 783148571.43
           },
           "actual": {
-            "cost": 15662971.43,
-            "accumulated": 743991142.86
+            "cost": 54820400.0,
+            "accumulated": 783148571.43
           }
         },
         {
@@ -129398,22 +129398,22 @@
           "week_end": "2025-12-28",
           "days_in_task": {
             "plan": 2,
-            "actual": 0
+            "actual": 2
           },
           "plan": {
             "cost": 15662971.43,
             "accumulated": 798811542.86
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 743991142.86
+            "cost": 15662971.43,
+            "accumulated": 798811542.86
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 16,
         "plan_cost_in_fy": 798811542.86,
-        "actual_cost_in_fy": 743991142.86,
+        "actual_cost_in_fy": 798811542.86,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -129482,8 +129482,8 @@
       },
       "actual": {
         "start": "2025-09-24",
-        "end": "2025-12-16",
-        "duration_days": 83
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -129728,15 +129728,15 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 7,
-            "actual": 2
+            "actual": 7
           },
           "plan": {
             "cost": 204353268.0,
             "accumulated": 2598205836.0
           },
           "actual": {
-            "cost": 58386648.0,
-            "accumulated": 2452239216.0
+            "cost": 204353268.0,
+            "accumulated": 2598205836.0
           }
         },
         {
@@ -129745,22 +129745,22 @@
           "week_end": "2025-12-28",
           "days_in_task": {
             "plan": 4,
-            "actual": 0
+            "actual": 4
           },
           "plan": {
             "cost": 116773296.0,
             "accumulated": 2714979132.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 2452239216.0
+            "cost": 116773296.0,
+            "accumulated": 2714979132.0
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 14,
         "plan_cost_in_fy": 2714979132.0,
-        "actual_cost_in_fy": 2452239216.0,
+        "actual_cost_in_fy": 2714979132.0,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -177367,9 +177367,9 @@
       "region": "NZ1",
       "tower": "Tower 4",
       "floor": null,
-      "main_category": "",
-      "sub_category": "",
-      "trade_type": "NTA Finishing",
+      "main_category": "Finishing",
+      "sub_category": "Common area finishes",
+      "trade_type": "CA-Blockwork",
       "slab_works": null
     },
     "progress": {
@@ -181148,8 +181148,8 @@
       "tower": "Tower 4",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "BRM-Security",
-      "trade_type": "BRM-Security",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -181219,9 +181219,9 @@
       "region": "NZ1",
       "tower": "Tower 4",
       "floor": null,
-      "main_category": "Infra",
-      "sub_category": "Ext Infra",
-      "trade_type": "Solar",
+      "main_category": "MEP",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -181724,8 +181724,8 @@
       "tower": "Tower 4",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-Fire-fighting & FAPA",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -181796,8 +181796,8 @@
       "tower": "Tower 4",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-Fire-fighting & FAPA",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -182300,8 +182300,8 @@
       "tower": "Tower 4",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-HVAC",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -182409,7 +182409,7 @@
       "floor": null,
       "main_category": "Finishing",
       "sub_category": "Tower Finishing",
-      "trade_type": "Ext Plaster",
+      "trade_type": "Paint",
       "slab_works": null
     },
     "progress": {
@@ -188525,8 +188525,8 @@
       },
       "actual": {
         "start": "2025-09-01",
-        "end": "2025-12-16",
-        "duration_days": 106
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -188822,15 +188822,15 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 7,
-            "actual": 2
+            "actual": 7
           },
           "plan": {
             "cost": 222930837.82,
             "accumulated": 3566893405.09
           },
           "actual": {
-            "cost": 63694525.09,
-            "accumulated": 3407657092.36
+            "cost": 222930837.82,
+            "accumulated": 3566893405.09
           }
         },
         {
@@ -188839,22 +188839,22 @@
           "week_end": "2025-12-28",
           "days_in_task": {
             "plan": 2,
-            "actual": 0
+            "actual": 2
           },
           "plan": {
             "cost": 63694525.09,
             "accumulated": 3630587930.18
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 3407657092.36
+            "cost": 63694525.09,
+            "accumulated": 3630587930.18
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 17,
         "plan_cost_in_fy": 3630587930.18,
-        "actual_cost_in_fy": 3407657092.36,
+        "actual_cost_in_fy": 3630587930.18,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -188887,8 +188887,8 @@
       },
       "actual": {
         "start": "2025-09-15",
-        "end": "2025-12-16",
-        "duration_days": 92
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -189150,22 +189150,22 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 4,
-            "actual": 2
+            "actual": 4
           },
           "plan": {
             "cost": 106810720.0,
             "accumulated": 2536754600.0
           },
           "actual": {
-            "cost": 53405360.0,
-            "accumulated": 2483349240.0
+            "cost": 106810720.0,
+            "accumulated": 2536754600.0
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 14,
         "plan_cost_in_fy": 2536754600.0,
-        "actual_cost_in_fy": 2483349240.0,
+        "actual_cost_in_fy": 2536754600.0,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -189198,8 +189198,8 @@
       },
       "actual": {
         "start": "2025-09-23",
-        "end": "2025-12-16",
-        "duration_days": 84
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -189444,22 +189444,22 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 5,
-            "actual": 2
+            "actual": 5
           },
           "plan": {
             "cost": 172299642.0,
             "accumulated": 3032473699.2
           },
           "actual": {
-            "cost": 68919856.8,
-            "accumulated": 2929093914.0
+            "cost": 172299642.0,
+            "accumulated": 3032473699.2
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 13,
         "plan_cost_in_fy": 3032473699.2,
-        "actual_cost_in_fy": 2929093914.0,
+        "actual_cost_in_fy": 3032473699.2,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -189492,8 +189492,8 @@
       },
       "actual": {
         "start": "2025-10-13",
-        "end": "2025-12-16",
-        "duration_days": 64
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -189687,15 +189687,15 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 7,
-            "actual": 2
+            "actual": 7
           },
           "plan": {
             "cost": 83059246.67,
             "accumulated": 830592466.67
           },
           "actual": {
-            "cost": 23731213.33,
-            "accumulated": 771264433.33
+            "cost": 83059246.67,
+            "accumulated": 830592466.67
           }
         },
         {
@@ -189704,22 +189704,22 @@
           "week_end": "2025-12-28",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 83059246.67,
             "accumulated": 913651713.33
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 771264433.33
+            "cost": 83059246.67,
+            "accumulated": 913651713.33
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 11,
         "plan_cost_in_fy": 913651713.33,
-        "actual_cost_in_fy": 771264433.33,
+        "actual_cost_in_fy": 913651713.33,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -237690,9 +237690,9 @@
       "region": "NZ1",
       "tower": "Tower 3",
       "floor": null,
-      "main_category": "",
-      "sub_category": "",
-      "trade_type": "NTA Finishing",
+      "main_category": "Finishing",
+      "sub_category": "Common area finishes",
+      "trade_type": "CA-Blockwork",
       "slab_works": null
     },
     "progress": {
@@ -241471,8 +241471,8 @@
       "tower": "Tower 3",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "BRM-Security",
-      "trade_type": "BRM-Security",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -241542,9 +241542,9 @@
       "region": "NZ1",
       "tower": "Tower 3",
       "floor": null,
-      "main_category": "Infra",
-      "sub_category": "Ext Infra",
-      "trade_type": "Solar",
+      "main_category": "MEP",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -242047,8 +242047,8 @@
       "tower": "Tower 3",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-Fire-fighting & FAPA",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -242119,8 +242119,8 @@
       "tower": "Tower 3",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-Fire-fighting & FAPA",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -242623,8 +242623,8 @@
       "tower": "Tower 3",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-HVAC",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -242732,7 +242732,7 @@
       "floor": null,
       "main_category": "Finishing",
       "sub_category": "Tower Finishing",
-      "trade_type": "Ext Plaster",
+      "trade_type": "Paint",
       "slab_works": null
     },
     "progress": {
@@ -250640,8 +250640,8 @@
       },
       "actual": {
         "start": "2025-10-21",
-        "end": "2025-12-16",
-        "duration_days": 56
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -250818,22 +250818,22 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 4,
-            "actual": 2
+            "actual": 4
           },
           "plan": {
             "cost": 113957142.86,
             "accumulated": 1680867857.14
           },
           "actual": {
-            "cost": 56978571.43,
-            "accumulated": 1623889285.71
+            "cost": 113957142.86,
+            "accumulated": 1680867857.14
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 9,
         "plan_cost_in_fy": 1680867857.14,
-        "actual_cost_in_fy": 1623889285.71,
+        "actual_cost_in_fy": 1680867857.14,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -250866,8 +250866,8 @@
       },
       "actual": {
         "start": "2025-10-23",
-        "end": "2025-12-16",
-        "duration_days": 54
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -251044,22 +251044,22 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 3,
-            "actual": 2
+            "actual": 3
           },
           "plan": {
             "cost": 44325000.0,
             "accumulated": 827400000.0
           },
           "actual": {
-            "cost": 29550000.0,
-            "accumulated": 812625000.0
+            "cost": 44325000.0,
+            "accumulated": 827400000.0
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 9,
         "plan_cost_in_fy": 827400000.0,
-        "actual_cost_in_fy": 812625000.0,
+        "actual_cost_in_fy": 827400000.0,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -251092,8 +251092,8 @@
       },
       "actual": {
         "start": "2025-10-26",
-        "end": "2025-12-16",
-        "duration_days": 51
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -251270,22 +251270,22 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 5,
-            "actual": 2
+            "actual": 5
           },
           "plan": {
             "cost": 105190694.0,
             "accumulated": 1157097634.0
           },
           "actual": {
-            "cost": 42076277.6,
-            "accumulated": 1093983217.6
+            "cost": 105190694.0,
+            "accumulated": 1157097634.0
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 9,
         "plan_cost_in_fy": 1157097634.0,
-        "actual_cost_in_fy": 1093983217.6,
+        "actual_cost_in_fy": 1157097634.0,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -251318,8 +251318,8 @@
       },
       "actual": {
         "start": "2025-10-29",
-        "end": "2025-12-16",
-        "duration_days": 48
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -251479,22 +251479,22 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 6,
-            "actual": 2
+            "actual": 6
           },
           "plan": {
             "cost": 296434350.0,
             "accumulated": 2618503425.0
           },
           "actual": {
-            "cost": 98811450.0,
-            "accumulated": 2420880525.0
+            "cost": 296434350.0,
+            "accumulated": 2618503425.0
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 8,
         "plan_cost_in_fy": 2618503425.0,
-        "actual_cost_in_fy": 2420880525.0,
+        "actual_cost_in_fy": 2618503425.0,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -299566,9 +299566,9 @@
       "region": "NZ1",
       "tower": "Tower 2",
       "floor": null,
-      "main_category": "",
-      "sub_category": "",
-      "trade_type": "NTA Finishing",
+      "main_category": "Finishing",
+      "sub_category": "Common area finishes",
+      "trade_type": "CA-Blockwork",
       "slab_works": null
     },
     "progress": {
@@ -303347,8 +303347,8 @@
       "tower": "Tower 2",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "BRM-Security",
-      "trade_type": "BRM-Security",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -303418,9 +303418,9 @@
       "region": "NZ1",
       "tower": "Tower 2",
       "floor": null,
-      "main_category": "Infra",
-      "sub_category": "Ext Infra",
-      "trade_type": "Solar",
+      "main_category": "MEP",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -303923,8 +303923,8 @@
       "tower": "Tower 2",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-Fire-fighting & FAPA",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -303995,8 +303995,8 @@
       "tower": "Tower 2",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-Fire-fighting & FAPA",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -304499,8 +304499,8 @@
       "tower": "Tower 2",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-HVAC",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -304608,7 +304608,7 @@
       "floor": null,
       "main_category": "Finishing",
       "sub_category": "Tower Finishing",
-      "trade_type": "Ext Plaster",
+      "trade_type": "Paint",
       "slab_works": null
     },
     "progress": {
@@ -310434,8 +310434,8 @@
       },
       "actual": {
         "start": "2025-08-25",
-        "end": "2025-12-16",
-        "duration_days": 113
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -310796,8 +310796,8 @@
       },
       "actual": {
         "start": "2025-08-31",
-        "end": "2025-12-16",
-        "duration_days": 107
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -311158,8 +311158,8 @@
       },
       "actual": {
         "start": "2025-09-02",
-        "end": "2025-12-16",
-        "duration_days": 105
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -311455,22 +311455,22 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 4,
-            "actual": 2
+            "actual": 4
           },
           "plan": {
             "cost": 190377485.71,
             "accumulated": 5140192114.29
           },
           "actual": {
-            "cost": 95188742.86,
-            "accumulated": 5045003371.43
+            "cost": 190377485.71,
+            "accumulated": 5140192114.29
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 16,
         "plan_cost_in_fy": 5140192114.29,
-        "actual_cost_in_fy": 5045003371.43,
+        "actual_cost_in_fy": 5140192114.29,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -311503,8 +311503,8 @@
       },
       "actual": {
         "start": "2025-09-15",
-        "end": "2025-12-16",
-        "duration_days": 92
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -311766,15 +311766,15 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 7,
-            "actual": 2
+            "actual": 7
           },
           "plan": {
             "cost": 73214575.0,
             "accumulated": 1025004050.0
           },
           "actual": {
-            "cost": 20918450.0,
-            "accumulated": 972707925.0
+            "cost": 73214575.0,
+            "accumulated": 1025004050.0
           }
         },
         {
@@ -311783,22 +311783,22 @@
           "week_end": "2025-12-28",
           "days_in_task": {
             "plan": 3,
-            "actual": 0
+            "actual": 3
           },
           "plan": {
             "cost": 31377675.0,
             "accumulated": 1056381725.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 972707925.0
+            "cost": 31377675.0,
+            "accumulated": 1056381725.0
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 15,
         "plan_cost_in_fy": 1056381725.0,
-        "actual_cost_in_fy": 972707925.0,
+        "actual_cost_in_fy": 1056381725.0,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -311831,8 +311831,8 @@
       },
       "actual": {
         "start": "2025-09-24",
-        "end": "2025-12-16",
-        "duration_days": 83
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -312077,15 +312077,15 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 7,
-            "actual": 2
+            "actual": 7
           },
           "plan": {
             "cost": 98177981.07,
             "accumulated": 1248262902.13
           },
           "actual": {
-            "cost": 28050851.73,
-            "accumulated": 1178135772.8
+            "cost": 98177981.07,
+            "accumulated": 1248262902.13
           }
         },
         {
@@ -312094,22 +312094,22 @@
           "week_end": "2025-12-28",
           "days_in_task": {
             "plan": 2,
-            "actual": 0
+            "actual": 2
           },
           "plan": {
             "cost": 28050851.73,
             "accumulated": 1276313753.87
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 1178135772.8
+            "cost": 28050851.73,
+            "accumulated": 1276313753.87
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 14,
         "plan_cost_in_fy": 1276313753.87,
-        "actual_cost_in_fy": 1178135772.8,
+        "actual_cost_in_fy": 1276313753.87,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -312142,8 +312142,8 @@
       },
       "actual": {
         "start": "2025-09-24",
-        "end": "2025-12-16",
-        "duration_days": 83
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -312388,15 +312388,15 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 7,
-            "actual": 2
+            "actual": 7
           },
           "plan": {
             "cost": 71584550.0,
             "accumulated": 910146421.43
           },
           "actual": {
-            "cost": 20452728.57,
-            "accumulated": 859014600.0
+            "cost": 71584550.0,
+            "accumulated": 910146421.43
           }
         },
         {
@@ -312405,22 +312405,22 @@
           "week_end": "2025-12-28",
           "days_in_task": {
             "plan": 3,
-            "actual": 0
+            "actual": 3
           },
           "plan": {
             "cost": 30679092.86,
             "accumulated": 940825514.29
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 859014600.0
+            "cost": 30679092.86,
+            "accumulated": 940825514.29
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 14,
         "plan_cost_in_fy": 940825514.29,
-        "actual_cost_in_fy": 859014600.0,
+        "actual_cost_in_fy": 940825514.29,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -312489,8 +312489,8 @@
       },
       "actual": {
         "start": "2025-10-12",
-        "end": "2025-12-16",
-        "duration_days": 65
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -312701,15 +312701,15 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 7,
-            "actual": 2
+            "actual": 7
           },
           "plan": {
             "cost": 454158560.8,
             "accumulated": 4606465402.4
           },
           "actual": {
-            "cost": 129759588.8,
-            "accumulated": 4282066430.4
+            "cost": 454158560.8,
+            "accumulated": 4606465402.4
           }
         },
         {
@@ -312718,22 +312718,22 @@
           "week_end": "2025-12-28",
           "days_in_task": {
             "plan": 6,
-            "actual": 0
+            "actual": 6
           },
           "plan": {
             "cost": 389278766.4,
             "accumulated": 4995744168.8
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 4282066430.4
+            "cost": 389278766.4,
+            "accumulated": 4995744168.8
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 12,
         "plan_cost_in_fy": 4995744168.8,
-        "actual_cost_in_fy": 4282066430.4,
+        "actual_cost_in_fy": 4995744168.8,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -360091,9 +360091,9 @@
       "region": "NZ1",
       "tower": "Tower 1",
       "floor": null,
-      "main_category": "",
-      "sub_category": "",
-      "trade_type": "NTA Finishing",
+      "main_category": "Finishing",
+      "sub_category": "Common area finishes",
+      "trade_type": "CA-Blockwork",
       "slab_works": null
     },
     "progress": {
@@ -363872,8 +363872,8 @@
       "tower": "Tower 1",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "BRM-Security",
-      "trade_type": "BRM-Security",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -363943,9 +363943,9 @@
       "region": "NZ1",
       "tower": "Tower 1",
       "floor": null,
-      "main_category": "Infra",
-      "sub_category": "Ext Infra",
-      "trade_type": "Solar",
+      "main_category": "MEP",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -364448,8 +364448,8 @@
       "tower": "Tower 1",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-Fire-fighting & FAPA",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -364520,8 +364520,8 @@
       "tower": "Tower 1",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-Fire-fighting & FAPA",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -365024,8 +365024,8 @@
       "tower": "Tower 1",
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-HVAC",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -365133,7 +365133,7 @@
       "floor": null,
       "main_category": "Finishing",
       "sub_category": "Tower Finishing",
-      "trade_type": "Ext Plaster",
+      "trade_type": "Paint",
       "slab_works": null
     },
     "progress": {
@@ -366652,8 +366652,8 @@
       },
       "actual": {
         "start": "2024-12-16",
-        "end": "2025-12-16",
-        "duration_days": 365
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -366683,8 +366683,8 @@
           "cost": 1413691267.61
         },
         "actual": {
-          "days_before_fy": 106,
-          "cost": 437237280.0
+          "days_before_fy": 0,
+          "cost": 0.0
         }
       },
       "weekly_costs": [
@@ -366702,7 +366702,7 @@
           },
           "actual": {
             "cost": 848214760.56,
-            "accumulated": 1285452040.56
+            "accumulated": 2261906028.17
           }
         },
         {
@@ -366719,7 +366719,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 2275035927.89
+            "accumulated": 3251489915.5
           }
         },
         {
@@ -366736,7 +366736,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 3264619815.21
+            "accumulated": 4241073802.82
           }
         },
         {
@@ -366753,7 +366753,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 4254203702.54
+            "accumulated": 5230657690.15
           }
         },
         {
@@ -366770,7 +366770,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 5243787589.86
+            "accumulated": 6220241577.47
           }
         },
         {
@@ -366787,7 +366787,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 6233371477.18
+            "accumulated": 7209825464.79
           }
         },
         {
@@ -366804,7 +366804,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 7222955364.51
+            "accumulated": 8199409352.12
           }
         },
         {
@@ -366821,7 +366821,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 8212539251.83
+            "accumulated": 9188993239.44
           }
         },
         {
@@ -366838,7 +366838,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 9202123139.15
+            "accumulated": 10178577126.76
           }
         },
         {
@@ -366855,7 +366855,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 10191707026.48
+            "accumulated": 11168161014.09
           }
         },
         {
@@ -366872,7 +366872,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 11181290913.8
+            "accumulated": 12157744901.41
           }
         },
         {
@@ -366889,7 +366889,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 12170874801.13
+            "accumulated": 13147328788.74
           }
         },
         {
@@ -366906,7 +366906,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 13160458688.45
+            "accumulated": 14136912676.06
           }
         },
         {
@@ -366923,7 +366923,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 14150042575.77
+            "accumulated": 15126496563.38
           }
         },
         {
@@ -366940,7 +366940,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 15139626463.1
+            "accumulated": 16116080450.71
           }
         },
         {
@@ -366957,7 +366957,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 16129210350.42
+            "accumulated": 17105664338.03
           }
         },
         {
@@ -366974,7 +366974,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 17118794237.75
+            "accumulated": 18095248225.36
           }
         },
         {
@@ -366991,7 +366991,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 18108378125.07
+            "accumulated": 19084832112.68
           }
         },
         {
@@ -367008,7 +367008,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 19097962012.39
+            "accumulated": 20074416000.0
           }
         },
         {
@@ -367025,7 +367025,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 20087545899.72
+            "accumulated": 21063999887.33
           }
         },
         {
@@ -367042,7 +367042,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 21077129787.04
+            "accumulated": 22053583774.65
           }
         },
         {
@@ -367059,7 +367059,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 22066713674.37
+            "accumulated": 23043167661.98
           }
         },
         {
@@ -367076,7 +367076,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 23056297561.69
+            "accumulated": 24032751549.3
           }
         },
         {
@@ -367093,7 +367093,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 24045881449.01
+            "accumulated": 25022335436.62
           }
         },
         {
@@ -367110,7 +367110,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 25035465336.34
+            "accumulated": 26011919323.95
           }
         },
         {
@@ -367127,7 +367127,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 26025049223.66
+            "accumulated": 27001503211.27
           }
         },
         {
@@ -367144,7 +367144,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 27014633110.99
+            "accumulated": 27991087098.6
           }
         },
         {
@@ -367161,7 +367161,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 28004216998.31
+            "accumulated": 28980670985.92
           }
         },
         {
@@ -367178,7 +367178,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 28993800885.63
+            "accumulated": 29970254873.24
           }
         },
         {
@@ -367195,7 +367195,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 29983384772.96
+            "accumulated": 30959838760.57
           }
         },
         {
@@ -367212,7 +367212,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 30972968660.28
+            "accumulated": 31949422647.89
           }
         },
         {
@@ -367229,7 +367229,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 31962552547.61
+            "accumulated": 32939006535.22
           }
         },
         {
@@ -367246,7 +367246,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 32952136434.93
+            "accumulated": 33928590422.54
           }
         },
         {
@@ -367263,7 +367263,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 33941720322.25
+            "accumulated": 34918174309.86
           }
         },
         {
@@ -367280,7 +367280,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 34931304209.58
+            "accumulated": 35907758197.19
           }
         },
         {
@@ -367297,7 +367297,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 35920888096.9
+            "accumulated": 36897342084.51
           }
         },
         {
@@ -367314,7 +367314,7 @@
           },
           "actual": {
             "cost": 989583887.32,
-            "accumulated": 36910471984.23
+            "accumulated": 37886925971.84
           }
         },
         {
@@ -367323,24 +367323,24 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 4,
-            "actual": 2
+            "actual": 4
           },
           "plan": {
             "cost": 565476507.04,
             "accumulated": 38452402478.88
           },
           "actual": {
-            "cost": 282738253.52,
-            "accumulated": 37193210237.75
+            "cost": 565476507.04,
+            "accumulated": 38452402478.88
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 38,
         "plan_cost_in_fy": 37038711211.27,
-        "actual_cost_in_fy": 36755972957.75,
+        "actual_cost_in_fy": 37038711211.27,
         "plan_cost_before_fy": 1413691267.61,
-        "actual_cost_before_fy": 437237280.0
+        "actual_cost_before_fy": 1413691267.61
       }
     }
   },
@@ -367371,8 +367371,8 @@
       },
       "actual": {
         "start": "2024-12-22",
-        "end": "2025-12-16",
-        "duration_days": 359
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -367402,8 +367402,8 @@
           "cost": 5210638683.43
         },
         "actual": {
-          "days_before_fy": 100,
-          "cost": 5080009858.5
+          "days_before_fy": 0,
+          "cost": 0.0
         }
       },
       "weekly_costs": [
@@ -367421,7 +367421,7 @@
           },
           "actual": {
             "cost": 312638321.01,
-            "accumulated": 5392648179.51
+            "accumulated": 5523277004.44
           }
         },
         {
@@ -367438,7 +367438,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 5757392887.35
+            "accumulated": 5888021712.28
           }
         },
         {
@@ -367455,7 +367455,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 6122137595.19
+            "accumulated": 6252766420.12
           }
         },
         {
@@ -367472,7 +367472,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 6486882303.03
+            "accumulated": 6617511127.96
           }
         },
         {
@@ -367489,7 +367489,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 6851627010.87
+            "accumulated": 6982255835.8
           }
         },
         {
@@ -367506,7 +367506,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 7216371718.71
+            "accumulated": 7347000543.64
           }
         },
         {
@@ -367523,7 +367523,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 7581116426.55
+            "accumulated": 7711745251.48
           }
         },
         {
@@ -367540,7 +367540,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 7945861134.39
+            "accumulated": 8076489959.32
           }
         },
         {
@@ -367557,7 +367557,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 8310605842.23
+            "accumulated": 8441234667.16
           }
         },
         {
@@ -367574,7 +367574,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 8675350550.07
+            "accumulated": 8805979375.0
           }
         },
         {
@@ -367591,7 +367591,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 9040095257.91
+            "accumulated": 9170724082.84
           }
         },
         {
@@ -367608,7 +367608,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 9404839965.75
+            "accumulated": 9535468790.68
           }
         },
         {
@@ -367625,7 +367625,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 9769584673.59
+            "accumulated": 9900213498.52
           }
         },
         {
@@ -367642,7 +367642,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 10134329381.43
+            "accumulated": 10264958206.36
           }
         },
         {
@@ -367659,7 +367659,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 10499074089.27
+            "accumulated": 10629702914.2
           }
         },
         {
@@ -367676,7 +367676,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 10863818797.11
+            "accumulated": 10994447622.04
           }
         },
         {
@@ -367693,7 +367693,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 11228563504.95
+            "accumulated": 11359192329.88
           }
         },
         {
@@ -367710,7 +367710,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 11593308212.79
+            "accumulated": 11723937037.72
           }
         },
         {
@@ -367727,7 +367727,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 11958052920.63
+            "accumulated": 12088681745.56
           }
         },
         {
@@ -367744,7 +367744,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 12322797628.47
+            "accumulated": 12453426453.4
           }
         },
         {
@@ -367761,7 +367761,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 12687542336.31
+            "accumulated": 12818171161.24
           }
         },
         {
@@ -367778,7 +367778,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 13052287044.15
+            "accumulated": 13182915869.08
           }
         },
         {
@@ -367795,7 +367795,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 13417031751.99
+            "accumulated": 13547660576.92
           }
         },
         {
@@ -367812,7 +367812,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 13781776459.83
+            "accumulated": 13912405284.76
           }
         },
         {
@@ -367829,7 +367829,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 14146521167.67
+            "accumulated": 14277149992.6
           }
         },
         {
@@ -367846,7 +367846,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 14511265875.51
+            "accumulated": 14641894700.44
           }
         },
         {
@@ -367863,7 +367863,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 14876010583.35
+            "accumulated": 15006639408.28
           }
         },
         {
@@ -367880,7 +367880,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 15240755291.19
+            "accumulated": 15371384116.12
           }
         },
         {
@@ -367897,7 +367897,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 15605499999.03
+            "accumulated": 15736128823.96
           }
         },
         {
@@ -367914,7 +367914,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 15970244706.87
+            "accumulated": 16100873531.8
           }
         },
         {
@@ -367931,7 +367931,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 16334989414.71
+            "accumulated": 16465618239.64
           }
         },
         {
@@ -367948,7 +367948,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 16699734122.55
+            "accumulated": 16830362947.48
           }
         },
         {
@@ -367965,7 +367965,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 17064478830.39
+            "accumulated": 17195107655.32
           }
         },
         {
@@ -367982,7 +367982,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 17429223538.23
+            "accumulated": 17559852363.16
           }
         },
         {
@@ -367999,7 +367999,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 17793968246.07
+            "accumulated": 17924597071.0
           }
         },
         {
@@ -368016,7 +368016,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 18158712953.91
+            "accumulated": 18289341778.84
           }
         },
         {
@@ -368033,7 +368033,7 @@
           },
           "actual": {
             "cost": 364744707.84,
-            "accumulated": 18523457661.75
+            "accumulated": 18654086486.68
           }
         },
         {
@@ -368042,15 +368042,15 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 7,
-            "actual": 2
+            "actual": 7
           },
           "plan": {
             "cost": 364744707.84,
             "accumulated": 19018831194.52
           },
           "actual": {
-            "cost": 104212773.67,
-            "accumulated": 18627670435.41
+            "cost": 364744707.84,
+            "accumulated": 19018831194.52
           }
         },
         {
@@ -368059,15 +368059,15 @@
           "week_end": "2025-12-28",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 364744707.84,
             "accumulated": 19383575902.36
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 18627670435.41
+            "cost": 364744707.84,
+            "accumulated": 19383575902.36
           }
         },
         {
@@ -368076,15 +368076,15 @@
           "week_end": "2026-01-04",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 364744707.84,
             "accumulated": 19748320610.2
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 18627670435.41
+            "cost": 364744707.84,
+            "accumulated": 19748320610.2
           }
         },
         {
@@ -368093,15 +368093,15 @@
           "week_end": "2026-01-11",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 364744707.84,
             "accumulated": 20113065318.04
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 18627670435.41
+            "cost": 364744707.84,
+            "accumulated": 20113065318.04
           }
         },
         {
@@ -368110,15 +368110,15 @@
           "week_end": "2026-01-18",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 364744707.84,
             "accumulated": 20477810025.88
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 18627670435.41
+            "cost": 364744707.84,
+            "accumulated": 20477810025.88
           }
         },
         {
@@ -368127,15 +368127,15 @@
           "week_end": "2026-01-25",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 364744707.84,
             "accumulated": 20842554733.72
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 18627670435.41
+            "cost": 364744707.84,
+            "accumulated": 20842554733.72
           }
         },
         {
@@ -368144,15 +368144,15 @@
           "week_end": "2026-02-01",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 364744707.84,
             "accumulated": 21207299441.56
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 18627670435.41
+            "cost": 364744707.84,
+            "accumulated": 21207299441.56
           }
         },
         {
@@ -368161,15 +368161,15 @@
           "week_end": "2026-02-08",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 364744707.84,
             "accumulated": 21572044149.4
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 18627670435.41
+            "cost": 364744707.84,
+            "accumulated": 21572044149.4
           }
         },
         {
@@ -368178,15 +368178,15 @@
           "week_end": "2026-02-15",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 364744707.84,
             "accumulated": 21936788857.24
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 18627670435.41
+            "cost": 364744707.84,
+            "accumulated": 21936788857.24
           }
         },
         {
@@ -368195,15 +368195,15 @@
           "week_end": "2026-02-22",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 364744707.84,
             "accumulated": 22301533565.08
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 18627670435.41
+            "cost": 364744707.84,
+            "accumulated": 22301533565.08
           }
         },
         {
@@ -368212,15 +368212,15 @@
           "week_end": "2026-03-01",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 364744707.84,
             "accumulated": 22666278272.92
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 18627670435.41
+            "cost": 364744707.84,
+            "accumulated": 22666278272.92
           }
         },
         {
@@ -368229,15 +368229,15 @@
           "week_end": "2026-03-08",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 364744707.84,
             "accumulated": 23031022980.76
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 18627670435.41
+            "cost": 364744707.84,
+            "accumulated": 23031022980.76
           }
         },
         {
@@ -368246,15 +368246,15 @@
           "week_end": "2026-03-15",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 364744707.84,
             "accumulated": 23395767688.6
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 18627670435.41
+            "cost": 364744707.84,
+            "accumulated": 23395767688.6
           }
         },
         {
@@ -368263,15 +368263,15 @@
           "week_end": "2026-03-22",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 364744707.84,
             "accumulated": 23760512396.44
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 18627670435.41
+            "cost": 364744707.84,
+            "accumulated": 23760512396.44
           }
         },
         {
@@ -368280,15 +368280,15 @@
           "week_end": "2026-03-29",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 364744707.84,
             "accumulated": 24125257104.28
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 18627670435.41
+            "cost": 364744707.84,
+            "accumulated": 24125257104.28
           }
         },
         {
@@ -368297,24 +368297,24 @@
           "week_end": "2026-04-05",
           "days_in_task": {
             "plan": 2,
-            "actual": 0
+            "actual": 2
           },
           "plan": {
             "cost": 104212773.67,
             "accumulated": 24229469877.94
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 18627670435.41
+            "cost": 104212773.67,
+            "accumulated": 24229469877.94
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 53,
         "plan_cost_in_fy": 19018831194.51,
-        "actual_cost_in_fy": 13547660576.91,
+        "actual_cost_in_fy": 19018831194.51,
         "plan_cost_before_fy": 5210638683.43,
-        "actual_cost_before_fy": 5080009858.5
+        "actual_cost_before_fy": 5210638683.43
       }
     }
   },
@@ -368345,8 +368345,8 @@
       },
       "actual": {
         "start": "2025-01-06",
-        "end": "2025-12-16",
-        "duration_days": 344
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -368376,8 +368376,8 @@
           "cost": 149598088.96
         },
         "actual": {
-          "days_before_fy": 85,
-          "cost": 152207357.95
+          "days_before_fy": 0,
+          "cost": 0.0
         }
       },
       "weekly_costs": [
@@ -368395,7 +368395,7 @@
           },
           "actual": {
             "cost": 10559865.1,
-            "accumulated": 162767223.05
+            "accumulated": 160157954.06
           }
         },
         {
@@ -368412,7 +368412,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 175087065.67
+            "accumulated": 172477796.68
           }
         },
         {
@@ -368429,7 +368429,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 187406908.29
+            "accumulated": 184797639.3
           }
         },
         {
@@ -368446,7 +368446,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 199726750.91
+            "accumulated": 197117481.92
           }
         },
         {
@@ -368463,7 +368463,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 212046593.53
+            "accumulated": 209437324.54
           }
         },
         {
@@ -368480,7 +368480,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 224366436.15
+            "accumulated": 221757167.16
           }
         },
         {
@@ -368497,7 +368497,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 236686278.77
+            "accumulated": 234077009.78
           }
         },
         {
@@ -368514,7 +368514,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 249006121.39
+            "accumulated": 246396852.4
           }
         },
         {
@@ -368531,7 +368531,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 261325964.01
+            "accumulated": 258716695.02
           }
         },
         {
@@ -368548,7 +368548,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 273645806.63
+            "accumulated": 271036537.64
           }
         },
         {
@@ -368565,7 +368565,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 285965649.25
+            "accumulated": 283356380.26
           }
         },
         {
@@ -368582,7 +368582,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 298285491.87
+            "accumulated": 295676222.88
           }
         },
         {
@@ -368599,7 +368599,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 310605334.49
+            "accumulated": 307996065.5
           }
         },
         {
@@ -368616,7 +368616,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 322925177.11
+            "accumulated": 320315908.12
           }
         },
         {
@@ -368633,7 +368633,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 335245019.73
+            "accumulated": 332635750.74
           }
         },
         {
@@ -368650,7 +368650,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 347564862.35
+            "accumulated": 344955593.36
           }
         },
         {
@@ -368667,7 +368667,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 359884704.97
+            "accumulated": 357275435.98
           }
         },
         {
@@ -368684,7 +368684,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 372204547.59
+            "accumulated": 369595278.6
           }
         },
         {
@@ -368701,7 +368701,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 384524390.21
+            "accumulated": 381915121.22
           }
         },
         {
@@ -368718,7 +368718,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 396844232.83
+            "accumulated": 394234963.84
           }
         },
         {
@@ -368735,7 +368735,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 409164075.45
+            "accumulated": 406554806.46
           }
         },
         {
@@ -368752,7 +368752,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 421483918.07
+            "accumulated": 418874649.08
           }
         },
         {
@@ -368769,7 +368769,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 433803760.69
+            "accumulated": 431194491.7
           }
         },
         {
@@ -368786,7 +368786,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 446123603.31
+            "accumulated": 443514334.32
           }
         },
         {
@@ -368803,7 +368803,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 458443445.93
+            "accumulated": 455834176.94
           }
         },
         {
@@ -368820,7 +368820,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 470763288.55
+            "accumulated": 468154019.56
           }
         },
         {
@@ -368837,7 +368837,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 483083131.17
+            "accumulated": 480473862.18
           }
         },
         {
@@ -368854,7 +368854,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 495402973.79
+            "accumulated": 492793704.8
           }
         },
         {
@@ -368871,7 +368871,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 507722816.41
+            "accumulated": 505113547.42
           }
         },
         {
@@ -368888,7 +368888,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 520042659.03
+            "accumulated": 517433390.04
           }
         },
         {
@@ -368905,7 +368905,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 532362501.65
+            "accumulated": 529753232.66
           }
         },
         {
@@ -368922,7 +368922,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 544682344.27
+            "accumulated": 542073075.28
           }
         },
         {
@@ -368939,7 +368939,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 557002186.89
+            "accumulated": 554392917.9
           }
         },
         {
@@ -368956,7 +368956,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 569322029.51
+            "accumulated": 566712760.52
           }
         },
         {
@@ -368973,7 +368973,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 581641872.13
+            "accumulated": 579032603.14
           }
         },
         {
@@ -368990,7 +368990,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 593961714.75
+            "accumulated": 591352445.76
           }
         },
         {
@@ -369007,7 +369007,7 @@
           },
           "actual": {
             "cost": 12319842.62,
-            "accumulated": 606281557.37
+            "accumulated": 603672288.38
           }
         },
         {
@@ -369016,15 +369016,15 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 7,
-            "actual": 2
+            "actual": 7
           },
           "plan": {
             "cost": 12319842.62,
             "accumulated": 615992131.0
           },
           "actual": {
-            "cost": 3519955.03,
-            "accumulated": 609801512.41
+            "cost": 12319842.62,
+            "accumulated": 615992131.0
           }
         },
         {
@@ -369033,15 +369033,15 @@
           "week_end": "2025-12-28",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 12319842.62,
             "accumulated": 628311973.62
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 609801512.41
+            "cost": 12319842.62,
+            "accumulated": 628311973.62
           }
         },
         {
@@ -369050,15 +369050,15 @@
           "week_end": "2026-01-04",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 12319842.62,
             "accumulated": 640631816.24
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 609801512.41
+            "cost": 12319842.62,
+            "accumulated": 640631816.24
           }
         },
         {
@@ -369067,15 +369067,15 @@
           "week_end": "2026-01-11",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 12319842.62,
             "accumulated": 652951658.86
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 609801512.41
+            "cost": 12319842.62,
+            "accumulated": 652951658.86
           }
         },
         {
@@ -369084,15 +369084,15 @@
           "week_end": "2026-01-18",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 12319842.62,
             "accumulated": 665271501.48
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 609801512.41
+            "cost": 12319842.62,
+            "accumulated": 665271501.48
           }
         },
         {
@@ -369101,15 +369101,15 @@
           "week_end": "2026-01-25",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 12319842.62,
             "accumulated": 677591344.1
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 609801512.41
+            "cost": 12319842.62,
+            "accumulated": 677591344.1
           }
         },
         {
@@ -369118,15 +369118,15 @@
           "week_end": "2026-02-01",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 12319842.62,
             "accumulated": 689911186.72
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 609801512.41
+            "cost": 12319842.62,
+            "accumulated": 689911186.72
           }
         },
         {
@@ -369135,15 +369135,15 @@
           "week_end": "2026-02-08",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 12319842.62,
             "accumulated": 702231029.34
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 609801512.41
+            "cost": 12319842.62,
+            "accumulated": 702231029.34
           }
         },
         {
@@ -369152,15 +369152,15 @@
           "week_end": "2026-02-15",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 12319842.62,
             "accumulated": 714550871.96
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 609801512.41
+            "cost": 12319842.62,
+            "accumulated": 714550871.96
           }
         },
         {
@@ -369169,15 +369169,15 @@
           "week_end": "2026-02-22",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 12319842.62,
             "accumulated": 726870714.58
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 609801512.41
+            "cost": 12319842.62,
+            "accumulated": 726870714.58
           }
         },
         {
@@ -369186,15 +369186,15 @@
           "week_end": "2026-03-01",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 12319842.62,
             "accumulated": 739190557.2
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 609801512.41
+            "cost": 12319842.62,
+            "accumulated": 739190557.2
           }
         },
         {
@@ -369203,15 +369203,15 @@
           "week_end": "2026-03-08",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 12319842.62,
             "accumulated": 751510399.82
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 609801512.41
+            "cost": 12319842.62,
+            "accumulated": 751510399.82
           }
         },
         {
@@ -369220,15 +369220,15 @@
           "week_end": "2026-03-15",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 12319842.62,
             "accumulated": 763830242.44
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 609801512.41
+            "cost": 12319842.62,
+            "accumulated": 763830242.44
           }
         },
         {
@@ -369237,15 +369237,15 @@
           "week_end": "2026-03-22",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 12319842.62,
             "accumulated": 776150085.06
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 609801512.41
+            "cost": 12319842.62,
+            "accumulated": 776150085.06
           }
         },
         {
@@ -369254,15 +369254,15 @@
           "week_end": "2026-03-29",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 12319842.62,
             "accumulated": 788469927.68
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 609801512.41
+            "cost": 12319842.62,
+            "accumulated": 788469927.68
           }
         },
         {
@@ -369271,24 +369271,24 @@
           "week_end": "2026-04-05",
           "days_in_task": {
             "plan": 2,
-            "actual": 0
+            "actual": 2
           },
           "plan": {
             "cost": 3519955.03,
             "accumulated": 791989882.72
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 609801512.41
+            "cost": 3519955.03,
+            "accumulated": 791989882.72
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 53,
         "plan_cost_in_fy": 642391793.76,
-        "actual_cost_in_fy": 457594154.46,
+        "actual_cost_in_fy": 642391793.76,
         "plan_cost_before_fy": 149598088.96,
-        "actual_cost_before_fy": 152207357.95
+        "actual_cost_before_fy": 149598088.96
       }
     }
   },
@@ -369319,8 +369319,8 @@
       },
       "actual": {
         "start": "2025-01-26",
-        "end": "2025-12-16",
-        "duration_days": 324
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -369350,8 +369350,8 @@
           "cost": 2270570138.57
         },
         "actual": {
-          "days_before_fy": 65,
-          "cost": 2452776384.26
+          "days_before_fy": 0,
+          "cost": 0.0
         }
       },
       "weekly_costs": [
@@ -369369,7 +369369,7 @@
           },
           "actual": {
             "cost": 209591089.71,
-            "accumulated": 2662367473.97
+            "accumulated": 2480161228.28
           }
         },
         {
@@ -369386,7 +369386,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 2906890411.97
+            "accumulated": 2724684166.28
           }
         },
         {
@@ -369403,7 +369403,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 3151413349.97
+            "accumulated": 2969207104.28
           }
         },
         {
@@ -369420,7 +369420,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 3395936287.97
+            "accumulated": 3213730042.28
           }
         },
         {
@@ -369437,7 +369437,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 3640459225.97
+            "accumulated": 3458252980.28
           }
         },
         {
@@ -369454,7 +369454,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 3884982163.97
+            "accumulated": 3702775918.28
           }
         },
         {
@@ -369471,7 +369471,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 4129505101.97
+            "accumulated": 3947298856.28
           }
         },
         {
@@ -369488,7 +369488,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 4374028039.97
+            "accumulated": 4191821794.28
           }
         },
         {
@@ -369505,7 +369505,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 4618550977.97
+            "accumulated": 4436344732.28
           }
         },
         {
@@ -369522,7 +369522,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 4863073915.97
+            "accumulated": 4680867670.28
           }
         },
         {
@@ -369539,7 +369539,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 5107596853.97
+            "accumulated": 4925390608.28
           }
         },
         {
@@ -369556,7 +369556,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 5352119791.97
+            "accumulated": 5169913546.28
           }
         },
         {
@@ -369573,7 +369573,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 5596642729.97
+            "accumulated": 5414436484.28
           }
         },
         {
@@ -369590,7 +369590,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 5841165667.97
+            "accumulated": 5658959422.28
           }
         },
         {
@@ -369607,7 +369607,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 6085688605.97
+            "accumulated": 5903482360.28
           }
         },
         {
@@ -369624,7 +369624,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 6330211543.97
+            "accumulated": 6148005298.28
           }
         },
         {
@@ -369641,7 +369641,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 6574734481.97
+            "accumulated": 6392528236.28
           }
         },
         {
@@ -369658,7 +369658,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 6819257419.97
+            "accumulated": 6637051174.28
           }
         },
         {
@@ -369675,7 +369675,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 7063780357.97
+            "accumulated": 6881574112.28
           }
         },
         {
@@ -369692,7 +369692,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 7308303295.97
+            "accumulated": 7126097050.28
           }
         },
         {
@@ -369709,7 +369709,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 7552826233.97
+            "accumulated": 7370619988.28
           }
         },
         {
@@ -369726,7 +369726,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 7797349171.97
+            "accumulated": 7615142926.28
           }
         },
         {
@@ -369743,7 +369743,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 8041872109.97
+            "accumulated": 7859665864.28
           }
         },
         {
@@ -369760,7 +369760,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 8286395047.97
+            "accumulated": 8104188802.28
           }
         },
         {
@@ -369777,7 +369777,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 8530917985.97
+            "accumulated": 8348711740.28
           }
         },
         {
@@ -369794,7 +369794,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 8775440923.97
+            "accumulated": 8593234678.28
           }
         },
         {
@@ -369811,7 +369811,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 9019963861.97
+            "accumulated": 8837757616.28
           }
         },
         {
@@ -369828,7 +369828,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 9264486799.97
+            "accumulated": 9082280554.28
           }
         },
         {
@@ -369845,7 +369845,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 9509009737.97
+            "accumulated": 9326803492.28
           }
         },
         {
@@ -369862,7 +369862,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 9753532675.97
+            "accumulated": 9571326430.28
           }
         },
         {
@@ -369879,7 +369879,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 9998055613.97
+            "accumulated": 9815849368.28
           }
         },
         {
@@ -369896,7 +369896,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 10242578551.97
+            "accumulated": 10060372306.28
           }
         },
         {
@@ -369913,7 +369913,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 10487101489.97
+            "accumulated": 10304895244.28
           }
         },
         {
@@ -369930,7 +369930,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 10731624427.97
+            "accumulated": 10549418182.28
           }
         },
         {
@@ -369947,7 +369947,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 10976147365.97
+            "accumulated": 10793941120.28
           }
         },
         {
@@ -369964,7 +369964,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 11220670303.97
+            "accumulated": 11038464058.28
           }
         },
         {
@@ -369981,7 +369981,7 @@
           },
           "actual": {
             "cost": 244522938.0,
-            "accumulated": 11465193241.97
+            "accumulated": 11282986996.28
           }
         },
         {
@@ -369990,15 +369990,15 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 7,
-            "actual": 2
+            "actual": 7
           },
           "plan": {
             "cost": 244522938.0,
             "accumulated": 11527509934.28
           },
           "actual": {
-            "cost": 69863696.57,
-            "accumulated": 11535056938.55
+            "cost": 244522938.0,
+            "accumulated": 11527509934.28
           }
         },
         {
@@ -370007,15 +370007,15 @@
           "week_end": "2025-12-28",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 244522938.0,
             "accumulated": 11772032872.28
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 11535056938.55
+            "cost": 244522938.0,
+            "accumulated": 11772032872.28
           }
         },
         {
@@ -370024,15 +370024,15 @@
           "week_end": "2026-01-04",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 244522938.0,
             "accumulated": 12016555810.28
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 11535056938.55
+            "cost": 244522938.0,
+            "accumulated": 12016555810.28
           }
         },
         {
@@ -370041,15 +370041,15 @@
           "week_end": "2026-01-11",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 244522938.0,
             "accumulated": 12261078748.28
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 11535056938.55
+            "cost": 244522938.0,
+            "accumulated": 12261078748.28
           }
         },
         {
@@ -370058,15 +370058,15 @@
           "week_end": "2026-01-18",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 244522938.0,
             "accumulated": 12505601686.28
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 11535056938.55
+            "cost": 244522938.0,
+            "accumulated": 12505601686.28
           }
         },
         {
@@ -370075,15 +370075,15 @@
           "week_end": "2026-01-25",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 244522938.0,
             "accumulated": 12750124624.28
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 11535056938.55
+            "cost": 244522938.0,
+            "accumulated": 12750124624.28
           }
         },
         {
@@ -370092,15 +370092,15 @@
           "week_end": "2026-02-01",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 244522938.0,
             "accumulated": 12994647562.28
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 11535056938.55
+            "cost": 244522938.0,
+            "accumulated": 12994647562.28
           }
         },
         {
@@ -370109,15 +370109,15 @@
           "week_end": "2026-02-08",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 244522938.0,
             "accumulated": 13239170500.28
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 11535056938.55
+            "cost": 244522938.0,
+            "accumulated": 13239170500.28
           }
         },
         {
@@ -370126,15 +370126,15 @@
           "week_end": "2026-02-15",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 244522938.0,
             "accumulated": 13483693438.28
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 11535056938.55
+            "cost": 244522938.0,
+            "accumulated": 13483693438.28
           }
         },
         {
@@ -370143,15 +370143,15 @@
           "week_end": "2026-02-22",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 244522938.0,
             "accumulated": 13728216376.28
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 11535056938.55
+            "cost": 244522938.0,
+            "accumulated": 13728216376.28
           }
         },
         {
@@ -370160,15 +370160,15 @@
           "week_end": "2026-03-01",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 244522938.0,
             "accumulated": 13972739314.28
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 11535056938.55
+            "cost": 244522938.0,
+            "accumulated": 13972739314.28
           }
         },
         {
@@ -370177,15 +370177,15 @@
           "week_end": "2026-03-08",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 244522938.0,
             "accumulated": 14217262252.28
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 11535056938.55
+            "cost": 244522938.0,
+            "accumulated": 14217262252.28
           }
         },
         {
@@ -370194,15 +370194,15 @@
           "week_end": "2026-03-15",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 244522938.0,
             "accumulated": 14461785190.28
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 11535056938.55
+            "cost": 244522938.0,
+            "accumulated": 14461785190.28
           }
         },
         {
@@ -370211,15 +370211,15 @@
           "week_end": "2026-03-22",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 244522938.0,
             "accumulated": 14706308128.28
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 11535056938.55
+            "cost": 244522938.0,
+            "accumulated": 14706308128.28
           }
         },
         {
@@ -370228,15 +370228,15 @@
           "week_end": "2026-03-29",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 244522938.0,
             "accumulated": 14950831066.28
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 11535056938.55
+            "cost": 244522938.0,
+            "accumulated": 14950831066.28
           }
         },
         {
@@ -370245,24 +370245,24 @@
           "week_end": "2026-04-05",
           "days_in_task": {
             "plan": 2,
-            "actual": 0
+            "actual": 2
           },
           "plan": {
             "cost": 69863696.57,
             "accumulated": 15020694762.86
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 11535056938.55
+            "cost": 69863696.57,
+            "accumulated": 15020694762.86
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 53,
         "plan_cost_in_fy": 12750124624.29,
-        "actual_cost_in_fy": 9082280554.29,
+        "actual_cost_in_fy": 12750124624.29,
         "plan_cost_before_fy": 2270570138.57,
-        "actual_cost_before_fy": 2452776384.26
+        "actual_cost_before_fy": 2270570138.57
       }
     }
   },
@@ -370329,8 +370329,8 @@
       },
       "actual": {
         "start": "2025-06-26",
-        "end": "2025-12-16",
-        "duration_days": 173
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -370796,15 +370796,15 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 7,
-            "actual": 2
+            "actual": 7
           },
           "plan": {
             "cost": 157479216.53,
             "accumulated": 4026968537.07
           },
           "actual": {
-            "cost": 44994061.87,
-            "accumulated": 3914483382.4
+            "cost": 157479216.53,
+            "accumulated": 4026968537.07
           }
         },
         {
@@ -370813,15 +370813,15 @@
           "week_end": "2025-12-28",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 157479216.53,
             "accumulated": 4184447753.6
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 3914483382.4
+            "cost": 157479216.53,
+            "accumulated": 4184447753.6
           }
         },
         {
@@ -370830,15 +370830,15 @@
           "week_end": "2026-01-04",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 157479216.53,
             "accumulated": 4341926970.13
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 3914483382.4
+            "cost": 157479216.53,
+            "accumulated": 4341926970.13
           }
         },
         {
@@ -370847,15 +370847,15 @@
           "week_end": "2026-01-11",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 157479216.53,
             "accumulated": 4499406186.67
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 3914483382.4
+            "cost": 157479216.53,
+            "accumulated": 4499406186.67
           }
         },
         {
@@ -370864,15 +370864,15 @@
           "week_end": "2026-01-18",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 157479216.53,
             "accumulated": 4656885403.2
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 3914483382.4
+            "cost": 157479216.53,
+            "accumulated": 4656885403.2
           }
         },
         {
@@ -370881,15 +370881,15 @@
           "week_end": "2026-01-25",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 157479216.53,
             "accumulated": 4814364619.73
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 3914483382.4
+            "cost": 157479216.53,
+            "accumulated": 4814364619.73
           }
         },
         {
@@ -370898,15 +370898,15 @@
           "week_end": "2026-02-01",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 157479216.53,
             "accumulated": 4971843836.27
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 3914483382.4
+            "cost": 157479216.53,
+            "accumulated": 4971843836.27
           }
         },
         {
@@ -370915,15 +370915,15 @@
           "week_end": "2026-02-08",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 157479216.53,
             "accumulated": 5129323052.8
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 3914483382.4
+            "cost": 157479216.53,
+            "accumulated": 5129323052.8
           }
         },
         {
@@ -370932,15 +370932,15 @@
           "week_end": "2026-02-15",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 157479216.53,
             "accumulated": 5286802269.33
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 3914483382.4
+            "cost": 157479216.53,
+            "accumulated": 5286802269.33
           }
         },
         {
@@ -370949,15 +370949,15 @@
           "week_end": "2026-02-22",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 157479216.53,
             "accumulated": 5444281485.87
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 3914483382.4
+            "cost": 157479216.53,
+            "accumulated": 5444281485.87
           }
         },
         {
@@ -370966,15 +370966,15 @@
           "week_end": "2026-03-01",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 157479216.53,
             "accumulated": 5601760702.4
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 3914483382.4
+            "cost": 157479216.53,
+            "accumulated": 5601760702.4
           }
         },
         {
@@ -370983,15 +370983,15 @@
           "week_end": "2026-03-08",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 157479216.53,
             "accumulated": 5759239918.93
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 3914483382.4
+            "cost": 157479216.53,
+            "accumulated": 5759239918.93
           }
         },
         {
@@ -371000,15 +371000,15 @@
           "week_end": "2026-03-15",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 157479216.53,
             "accumulated": 5916719135.47
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 3914483382.4
+            "cost": 157479216.53,
+            "accumulated": 5916719135.47
           }
         },
         {
@@ -371017,15 +371017,15 @@
           "week_end": "2026-03-22",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 157479216.53,
             "accumulated": 6074198352.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 3914483382.4
+            "cost": 157479216.53,
+            "accumulated": 6074198352.0
           }
         },
         {
@@ -371034,15 +371034,15 @@
           "week_end": "2026-03-29",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 157479216.53,
             "accumulated": 6231677568.53
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 3914483382.4
+            "cost": 157479216.53,
+            "accumulated": 6231677568.53
           }
         },
         {
@@ -371051,22 +371051,22 @@
           "week_end": "2026-04-05",
           "days_in_task": {
             "plan": 2,
-            "actual": 0
+            "actual": 2
           },
           "plan": {
             "cost": 44994061.87,
             "accumulated": 6276671630.4
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 3914483382.4
+            "cost": 44994061.87,
+            "accumulated": 6276671630.4
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 41,
         "plan_cost_in_fy": 6276671630.4,
-        "actual_cost_in_fy": 3914483382.4,
+        "actual_cost_in_fy": 6276671630.4,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -371099,8 +371099,8 @@
       },
       "actual": {
         "start": "2025-07-01",
-        "end": "2025-12-16",
-        "duration_days": 168
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -371549,15 +371549,15 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 7,
-            "actual": 2
+            "actual": 7
           },
           "plan": {
             "cost": 36922443.06,
             "accumulated": 917786441.67
           },
           "actual": {
-            "cost": 10549269.44,
-            "accumulated": 891413268.06
+            "cost": 36922443.06,
+            "accumulated": 917786441.67
           }
         },
         {
@@ -371566,15 +371566,15 @@
           "week_end": "2025-12-28",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 36922443.06,
             "accumulated": 954708884.72
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 891413268.06
+            "cost": 36922443.06,
+            "accumulated": 954708884.72
           }
         },
         {
@@ -371583,15 +371583,15 @@
           "week_end": "2026-01-04",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 36922443.06,
             "accumulated": 991631327.78
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 891413268.06
+            "cost": 36922443.06,
+            "accumulated": 991631327.78
           }
         },
         {
@@ -371600,15 +371600,15 @@
           "week_end": "2026-01-11",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 36922443.06,
             "accumulated": 1028553770.83
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 891413268.06
+            "cost": 36922443.06,
+            "accumulated": 1028553770.83
           }
         },
         {
@@ -371617,15 +371617,15 @@
           "week_end": "2026-01-18",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 36922443.06,
             "accumulated": 1065476213.89
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 891413268.06
+            "cost": 36922443.06,
+            "accumulated": 1065476213.89
           }
         },
         {
@@ -371634,15 +371634,15 @@
           "week_end": "2026-01-25",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 36922443.06,
             "accumulated": 1102398656.94
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 891413268.06
+            "cost": 36922443.06,
+            "accumulated": 1102398656.94
           }
         },
         {
@@ -371651,15 +371651,15 @@
           "week_end": "2026-02-01",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 36922443.06,
             "accumulated": 1139321100.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 891413268.06
+            "cost": 36922443.06,
+            "accumulated": 1139321100.0
           }
         },
         {
@@ -371668,15 +371668,15 @@
           "week_end": "2026-02-08",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 36922443.06,
             "accumulated": 1176243543.06
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 891413268.06
+            "cost": 36922443.06,
+            "accumulated": 1176243543.06
           }
         },
         {
@@ -371685,15 +371685,15 @@
           "week_end": "2026-02-15",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 36922443.06,
             "accumulated": 1213165986.11
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 891413268.06
+            "cost": 36922443.06,
+            "accumulated": 1213165986.11
           }
         },
         {
@@ -371702,15 +371702,15 @@
           "week_end": "2026-02-22",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 36922443.06,
             "accumulated": 1250088429.17
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 891413268.06
+            "cost": 36922443.06,
+            "accumulated": 1250088429.17
           }
         },
         {
@@ -371719,15 +371719,15 @@
           "week_end": "2026-03-01",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 36922443.06,
             "accumulated": 1287010872.22
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 891413268.06
+            "cost": 36922443.06,
+            "accumulated": 1287010872.22
           }
         },
         {
@@ -371736,15 +371736,15 @@
           "week_end": "2026-03-08",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 36922443.06,
             "accumulated": 1323933315.28
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 891413268.06
+            "cost": 36922443.06,
+            "accumulated": 1323933315.28
           }
         },
         {
@@ -371753,15 +371753,15 @@
           "week_end": "2026-03-15",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 36922443.06,
             "accumulated": 1360855758.33
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 891413268.06
+            "cost": 36922443.06,
+            "accumulated": 1360855758.33
           }
         },
         {
@@ -371770,15 +371770,15 @@
           "week_end": "2026-03-22",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 36922443.06,
             "accumulated": 1397778201.39
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 891413268.06
+            "cost": 36922443.06,
+            "accumulated": 1397778201.39
           }
         },
         {
@@ -371787,15 +371787,15 @@
           "week_end": "2026-03-29",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 36922443.06,
             "accumulated": 1434700644.44
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 891413268.06
+            "cost": 36922443.06,
+            "accumulated": 1434700644.44
           }
         },
         {
@@ -371804,22 +371804,22 @@
           "week_end": "2026-04-05",
           "days_in_task": {
             "plan": 2,
-            "actual": 0
+            "actual": 2
           },
           "plan": {
             "cost": 10549269.44,
             "accumulated": 1445249913.89
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 891413268.06
+            "cost": 10549269.44,
+            "accumulated": 1445249913.89
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 40,
         "plan_cost_in_fy": 1445249913.89,
-        "actual_cost_in_fy": 891413268.06,
+        "actual_cost_in_fy": 1445249913.89,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -371852,8 +371852,8 @@
       },
       "actual": {
         "start": "2025-07-01",
-        "end": "2025-12-16",
-        "duration_days": 168
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -372302,15 +372302,15 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 7,
-            "actual": 2
+            "actual": 7
           },
           "plan": {
             "cost": 107959702.24,
             "accumulated": 2683569741.37
           },
           "actual": {
-            "cost": 30845629.21,
-            "accumulated": 2606455668.34
+            "cost": 107959702.24,
+            "accumulated": 2683569741.37
           }
         },
         {
@@ -372319,15 +372319,15 @@
           "week_end": "2025-12-28",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 107959702.24,
             "accumulated": 2791529443.61
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 2606455668.34
+            "cost": 107959702.24,
+            "accumulated": 2791529443.61
           }
         },
         {
@@ -372336,15 +372336,15 @@
           "week_end": "2026-01-04",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 107959702.24,
             "accumulated": 2899489145.84
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 2606455668.34
+            "cost": 107959702.24,
+            "accumulated": 2899489145.84
           }
         },
         {
@@ -372353,15 +372353,15 @@
           "week_end": "2026-01-11",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 107959702.24,
             "accumulated": 3007448848.08
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 2606455668.34
+            "cost": 107959702.24,
+            "accumulated": 3007448848.08
           }
         },
         {
@@ -372370,15 +372370,15 @@
           "week_end": "2026-01-18",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 107959702.24,
             "accumulated": 3115408550.32
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 2606455668.34
+            "cost": 107959702.24,
+            "accumulated": 3115408550.32
           }
         },
         {
@@ -372387,15 +372387,15 @@
           "week_end": "2026-01-25",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 107959702.24,
             "accumulated": 3223368252.56
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 2606455668.34
+            "cost": 107959702.24,
+            "accumulated": 3223368252.56
           }
         },
         {
@@ -372404,15 +372404,15 @@
           "week_end": "2026-02-01",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 107959702.24,
             "accumulated": 3331327954.8
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 2606455668.34
+            "cost": 107959702.24,
+            "accumulated": 3331327954.8
           }
         },
         {
@@ -372421,15 +372421,15 @@
           "week_end": "2026-02-08",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 107959702.24,
             "accumulated": 3439287657.04
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 2606455668.34
+            "cost": 107959702.24,
+            "accumulated": 3439287657.04
           }
         },
         {
@@ -372438,15 +372438,15 @@
           "week_end": "2026-02-15",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 107959702.24,
             "accumulated": 3547247359.28
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 2606455668.34
+            "cost": 107959702.24,
+            "accumulated": 3547247359.28
           }
         },
         {
@@ -372455,15 +372455,15 @@
           "week_end": "2026-02-22",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 107959702.24,
             "accumulated": 3655207061.52
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 2606455668.34
+            "cost": 107959702.24,
+            "accumulated": 3655207061.52
           }
         },
         {
@@ -372472,15 +372472,15 @@
           "week_end": "2026-03-01",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 107959702.24,
             "accumulated": 3763166763.76
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 2606455668.34
+            "cost": 107959702.24,
+            "accumulated": 3763166763.76
           }
         },
         {
@@ -372489,15 +372489,15 @@
           "week_end": "2026-03-08",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 107959702.24,
             "accumulated": 3871126465.99
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 2606455668.34
+            "cost": 107959702.24,
+            "accumulated": 3871126465.99
           }
         },
         {
@@ -372506,15 +372506,15 @@
           "week_end": "2026-03-15",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 107959702.24,
             "accumulated": 3979086168.23
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 2606455668.34
+            "cost": 107959702.24,
+            "accumulated": 3979086168.23
           }
         },
         {
@@ -372523,15 +372523,15 @@
           "week_end": "2026-03-22",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 107959702.24,
             "accumulated": 4087045870.47
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 2606455668.34
+            "cost": 107959702.24,
+            "accumulated": 4087045870.47
           }
         },
         {
@@ -372540,15 +372540,15 @@
           "week_end": "2026-03-29",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 107959702.24,
             "accumulated": 4195005572.71
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 2606455668.34
+            "cost": 107959702.24,
+            "accumulated": 4195005572.71
           }
         },
         {
@@ -372557,22 +372557,22 @@
           "week_end": "2026-04-05",
           "days_in_task": {
             "plan": 2,
-            "actual": 0
+            "actual": 2
           },
           "plan": {
             "cost": 30845629.21,
             "accumulated": 4225851201.92
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 2606455668.34
+            "cost": 30845629.21,
+            "accumulated": 4225851201.92
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 40,
         "plan_cost_in_fy": 4225851201.92,
-        "actual_cost_in_fy": 2606455668.34,
+        "actual_cost_in_fy": 4225851201.92,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -375404,8 +375404,8 @@
       "tower": null,
       "floor": "Basement 2",
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-Fire-fighting & FAPA",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -375453,8 +375453,8 @@
       "tower": null,
       "floor": "Basement 2",
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-HVAC",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -375551,8 +375551,8 @@
       "tower": null,
       "floor": "Basement 2",
       "main_category": "MEP",
-      "sub_category": "BRM-Security",
-      "trade_type": "BRM-Security",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -375734,8 +375734,8 @@
       "tower": null,
       "floor": "Basement 1",
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-Fire-fighting & FAPA",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -375783,8 +375783,8 @@
       "tower": null,
       "floor": "Basement 1",
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-HVAC",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -375881,8 +375881,8 @@
       "tower": null,
       "floor": "Basement 1",
       "main_category": "MEP",
-      "sub_category": "BRM-Security",
-      "trade_type": "BRM-Security",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -376110,8 +376110,8 @@
       "tower": null,
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-Fire-fighting & FAPA",
+      "sub_category": "Tower MEP",
+      "trade_type": "Plumbing",
       "slab_works": null
     },
     "progress": {
@@ -376182,8 +376182,8 @@
       "tower": null,
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "Common area-MEP",
-      "trade_type": "CA-HVAC",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -376326,8 +376326,8 @@
       "tower": null,
       "floor": null,
       "main_category": "MEP",
-      "sub_category": "BRM-Security",
-      "trade_type": "BRM-Security",
+      "sub_category": "Tower MEP",
+      "trade_type": "Electrical",
       "slab_works": null
     },
     "progress": {
@@ -388204,9 +388204,9 @@
       "region": "NZ1",
       "tower": null,
       "floor": null,
-      "main_category": "MEP",
-      "sub_category": "Ext MEP",
-      "trade_type": "Ext PHE",
+      "main_category": "Infra",
+      "sub_category": "Ext Infra",
+      "trade_type": "Ext Infra",
       "slab_works": null
     },
     "progress": {
@@ -388734,8 +388734,8 @@
       },
       "actual": {
         "start": "2025-04-26",
-        "end": "2025-12-16",
-        "duration_days": 234
+        "end": null,
+        "duration_days": null
       }
     },
     "attributes": {
@@ -389354,15 +389354,15 @@
           "week_end": "2025-12-21",
           "days_in_task": {
             "plan": 7,
-            "actual": 2
+            "actual": 7
           },
           "plan": {
             "cost": 177625000.0,
             "accumulated": 6090000000.0
           },
           "actual": {
-            "cost": 50750000.0,
-            "accumulated": 5963125000.0
+            "cost": 177625000.0,
+            "accumulated": 6090000000.0
           }
         },
         {
@@ -389371,15 +389371,15 @@
           "week_end": "2025-12-28",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 177625000.0,
             "accumulated": 6267625000.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 5963125000.0
+            "cost": 177625000.0,
+            "accumulated": 6267625000.0
           }
         },
         {
@@ -389388,15 +389388,15 @@
           "week_end": "2026-01-04",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 177625000.0,
             "accumulated": 6445250000.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 5963125000.0
+            "cost": 177625000.0,
+            "accumulated": 6445250000.0
           }
         },
         {
@@ -389405,15 +389405,15 @@
           "week_end": "2026-01-11",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 177625000.0,
             "accumulated": 6622875000.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 5963125000.0
+            "cost": 177625000.0,
+            "accumulated": 6622875000.0
           }
         },
         {
@@ -389422,15 +389422,15 @@
           "week_end": "2026-01-18",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 177625000.0,
             "accumulated": 6800500000.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 5963125000.0
+            "cost": 177625000.0,
+            "accumulated": 6800500000.0
           }
         },
         {
@@ -389439,15 +389439,15 @@
           "week_end": "2026-01-25",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 177625000.0,
             "accumulated": 6978125000.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 5963125000.0
+            "cost": 177625000.0,
+            "accumulated": 6978125000.0
           }
         },
         {
@@ -389456,15 +389456,15 @@
           "week_end": "2026-02-01",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 177625000.0,
             "accumulated": 7155750000.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 5963125000.0
+            "cost": 177625000.0,
+            "accumulated": 7155750000.0
           }
         },
         {
@@ -389473,15 +389473,15 @@
           "week_end": "2026-02-08",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 177625000.0,
             "accumulated": 7333375000.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 5963125000.0
+            "cost": 177625000.0,
+            "accumulated": 7333375000.0
           }
         },
         {
@@ -389490,15 +389490,15 @@
           "week_end": "2026-02-15",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 177625000.0,
             "accumulated": 7511000000.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 5963125000.0
+            "cost": 177625000.0,
+            "accumulated": 7511000000.0
           }
         },
         {
@@ -389507,15 +389507,15 @@
           "week_end": "2026-02-22",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 177625000.0,
             "accumulated": 7688625000.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 5963125000.0
+            "cost": 177625000.0,
+            "accumulated": 7688625000.0
           }
         },
         {
@@ -389524,15 +389524,15 @@
           "week_end": "2026-03-01",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 177625000.0,
             "accumulated": 7866250000.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 5963125000.0
+            "cost": 177625000.0,
+            "accumulated": 7866250000.0
           }
         },
         {
@@ -389541,15 +389541,15 @@
           "week_end": "2026-03-08",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 177625000.0,
             "accumulated": 8043875000.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 5963125000.0
+            "cost": 177625000.0,
+            "accumulated": 8043875000.0
           }
         },
         {
@@ -389558,15 +389558,15 @@
           "week_end": "2026-03-15",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 177625000.0,
             "accumulated": 8221500000.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 5963125000.0
+            "cost": 177625000.0,
+            "accumulated": 8221500000.0
           }
         },
         {
@@ -389575,15 +389575,15 @@
           "week_end": "2026-03-22",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 177625000.0,
             "accumulated": 8399125000.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 5963125000.0
+            "cost": 177625000.0,
+            "accumulated": 8399125000.0
           }
         },
         {
@@ -389592,15 +389592,15 @@
           "week_end": "2026-03-29",
           "days_in_task": {
             "plan": 7,
-            "actual": 0
+            "actual": 7
           },
           "plan": {
             "cost": 177625000.0,
             "accumulated": 8576750000.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 5963125000.0
+            "cost": 177625000.0,
+            "accumulated": 8576750000.0
           }
         },
         {
@@ -389609,22 +389609,22 @@
           "week_end": "2026-04-05",
           "days_in_task": {
             "plan": 2,
-            "actual": 0
+            "actual": 2
           },
           "plan": {
             "cost": 50750000.0,
             "accumulated": 8627500000.0
           },
           "actual": {
-            "cost": 0.0,
-            "accumulated": 5963125000.0
+            "cost": 50750000.0,
+            "accumulated": 8627500000.0
           }
         }
       ],
       "summary": {
         "total_weeks_in_fy": 50,
         "plan_cost_in_fy": 8627500000.0,
-        "actual_cost_in_fy": 5963125000.0,
+        "actual_cost_in_fy": 8627500000.0,
         "plan_cost_before_fy": 0.0,
         "actual_cost_before_fy": 0.0
       }
@@ -397819,7 +397819,7 @@
       "floor": null,
       "main_category": "Finishing",
       "sub_category": "Tower Finishing",
-      "trade_type": "Ext Plaster",
+      "trade_type": "Paint",
       "slab_works": null
     },
     "progress": {

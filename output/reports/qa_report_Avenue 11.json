@@ -10,8 +10,8 @@
   "sample_failures": [],
   "field_coverage": {
     "dates.actual.start": 0.12,
-    "dates.actual.end": 0.12,
-    "dates.actual.duration_days": 0.12,
+    "dates.actual.end": 0.1,
+    "dates.actual.duration_days": 0.1,
     "cost_timeline": 0.35,
     "attributes": 0.89,
     "progress": 0.89

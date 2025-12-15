@@ -1,5 +1,5 @@
 {
-  "run_timestamp": "2025-12-11T03:46:27.863107",
+  "run_timestamp": "2025-12-11T14:31:54.905631",
   "input_directory": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/input/all-aop-baselines",
   "output_directory": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output",
   "dry_run": false,
@@ -29,9 +29,9 @@
             "infrastructure": 21
           },
           "by_confidence": {
-            "high": 4605,
-            "medium": 371,
-            "low": 8
+            "high": 4646,
+            "medium": 325,
+            "low": 13
           }
         },
         "enrichment_rate": 1.0
@@ -50,7 +50,27 @@
       "tasks_processed": 17456,
       "errors": [],
       "tasks_found": 17456,
-      "trade_type_error": "'unknown'",
+      "trade_type_enrichment": {
+        "project": "Horizon",
+        "enrichment_stats": {
+          "total_leaf_tasks": 15705,
+          "enriched_tasks": 15657,
+          "unmatched_tasks": 48,
+          "validation_issues": 0,
+          "by_context": {
+            "tower": 10656,
+            "common_area": 4919,
+            "external": 24,
+            "infrastructure": 58
+          },
+          "by_confidence": {
+            "high": 14219,
+            "medium": 1365,
+            "low": 73
+          }
+        },
+        "enrichment_rate": 0.9969436485195797
+      },
       "parents": 1740,
       "leaves": 15705,
       "milestones": 11,
@@ -79,9 +99,9 @@
             "infrastructure": 0
           },
           "by_confidence": {
-            "high": 5833,
-            "medium": 2239,
-            "low": 1445
+            "high": 5839,
+            "medium": 2385,
+            "low": 1293
           }
         },
         "enrichment_rate": 1.0
@@ -91,7 +111,12 @@
       "milestones": 91,
       "type_issues": 0,
       "sample_pass_rate": 1.0,
-      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/BL Saha.json"
+      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/BL Saha.json",
+      "sprint_enrichment": {
+        "matched": 387,
+        "unmatched": 9678,
+        "match_rate": 0.03845007451564829
+      }
     },
     {
       "project": "Reserve",
@@ -114,9 +139,9 @@
             "infrastructure": 10
           },
           "by_confidence": {
-            "high": 13221,
-            "medium": 1470,
-            "low": 151
+            "high": 12549,
+            "medium": 1838,
+            "low": 455
           }
         },
         "enrichment_rate": 0.9999326281748973
@@ -135,13 +160,38 @@
       "tasks_processed": 4723,
       "errors": [],
       "tasks_found": 4723,
-      "trade_type_error": "Request timed out.",
+      "trade_type_enrichment": {
+        "project": "Jardinia",
+        "enrichment_stats": {
+          "total_leaf_tasks": 4209,
+          "enriched_tasks": 4208,
+          "unmatched_tasks": 1,
+          "validation_issues": 0,
+          "by_context": {
+            "tower": 4023,
+            "common_area": 173,
+            "external": 12,
+            "infrastructure": 0
+          },
+          "by_confidence": {
+            "high": 3955,
+            "medium": 222,
+            "low": 31
+          }
+        },
+        "enrichment_rate": 0.9997624138750297
+      },
       "parents": 514,
       "leaves": 4209,
       "milestones": 0,
       "type_issues": 0,
       "sample_pass_rate": 1.0,
-      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Jardinia.json"
+      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Jardinia.json",
+      "sprint_enrichment": {
+        "matched": 4723,
+        "unmatched": 0,
+        "match_rate": 1.0
+      }
     },
     {
       "project": "Miraya",
@@ -150,13 +200,38 @@
       "tasks_processed": 2849,
       "errors": [],
       "tasks_found": 2849,
-      "trade_type_error": "Connection error.",
+      "trade_type_enrichment": {
+        "project": "Miraya",
+        "enrichment_stats": {
+          "total_leaf_tasks": 2527,
+          "enriched_tasks": 2525,
+          "unmatched_tasks": 2,
+          "validation_issues": 0,
+          "by_context": {
+            "tower": 2346,
+            "common_area": 145,
+            "external": 11,
+            "infrastructure": 23
+          },
+          "by_confidence": {
+            "high": 2180,
+            "medium": 326,
+            "low": 19
+          }
+        },
+        "enrichment_rate": 0.999208547685002
+      },
       "parents": 318,
       "leaves": 2527,
       "milestones": 4,
       "type_issues": 0,
       "sample_pass_rate": 1.0,
-      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Miraya.json"
+      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Miraya.json",
+      "sprint_enrichment": {
+        "matched": 2845,
+        "unmatched": 4,
+        "match_rate": 0.9985959985959986
+      }
     },
     {
       "project": "Avenue 11",
@@ -169,22 +244,22 @@
         "project": "Avenue 11",
         "enrichment_stats": {
           "total_leaf_tasks": 3483,
-          "enriched_tasks": 0,
-          "unmatched_tasks": 3483,
+          "enriched_tasks": 3438,
+          "unmatched_tasks": 45,
           "validation_issues": 0,
           "by_context": {
-            "tower": 0,
-            "common_area": 0,
+            "tower": 1845,
+            "common_area": 1593,
             "external": 0,
             "infrastructure": 0
           },
           "by_confidence": {
-            "high": 0,
-            "medium": 0,
-            "low": 0
+            "high": 3307,
+            "medium": 61,
+            "low": 70
           }
         },
-        "enrichment_rate": 0.0
+        "enrichment_rate": 0.9870801033591732
       },
       "parents": 426,
       "leaves": 3483,
@@ -200,7 +275,27 @@
       "tasks_processed": 8492,
       "errors": [],
       "tasks_found": 8492,
-      "trade_type_error": "Connection error.",
+      "trade_type_enrichment": {
+        "project": "RGA 2",
+        "enrichment_stats": {
+          "total_leaf_tasks": 7198,
+          "enriched_tasks": 7198,
+          "unmatched_tasks": 0,
+          "validation_issues": 0,
+          "by_context": {
+            "tower": 1327,
+            "common_area": 5776,
+            "external": 46,
+            "infrastructure": 49
+          },
+          "by_confidence": {
+            "high": 6641,
+            "medium": 114,
+            "low": 443
+          }
+        },
+        "enrichment_rate": 1.0
+      },
       "parents": 1281,
       "leaves": 7198,
       "milestones": 13,
@@ -215,7 +310,27 @@
       "tasks_processed": 3635,
       "errors": [],
       "tasks_found": 3635,
-      "trade_type_error": "Connection error.",
+      "trade_type_enrichment": {
+        "project": "Sec. 44, Noida",
+        "enrichment_stats": {
+          "total_leaf_tasks": 3037,
+          "enriched_tasks": 3037,
+          "unmatched_tasks": 0,
+          "validation_issues": 0,
+          "by_context": {
+            "tower": 2712,
+            "common_area": 285,
+            "external": 17,
+            "infrastructure": 23
+          },
+          "by_confidence": {
+            "high": 2780,
+            "medium": 203,
+            "low": 54
+          }
+        },
+        "enrichment_rate": 1.0
+      },
       "parents": 558,
       "leaves": 3037,
       "milestones": 40,
@@ -230,7 +345,27 @@
       "tasks_processed": 4770,
       "errors": [],
       "tasks_found": 4770,
-      "trade_type_error": "Connection error.",
+      "trade_type_enrichment": {
+        "project": "Tropical Isle",
+        "enrichment_stats": {
+          "total_leaf_tasks": 4257,
+          "enriched_tasks": 4254,
+          "unmatched_tasks": 3,
+          "validation_issues": 0,
+          "by_context": {
+            "tower": 4039,
+            "common_area": 200,
+            "external": 15,
+            "infrastructure": 0
+          },
+          "by_confidence": {
+            "high": 3702,
+            "medium": 506,
+            "low": 46
+          }
+        },
+        "enrichment_rate": 0.9992952783650458
+      },
       "parents": 513,
       "leaves": 4257,
       "milestones": 0,
@@ -245,13 +380,38 @@
       "tasks_processed": 23494,
       "errors": [],
       "tasks_found": 23494,
-      "trade_type_error": "Connection error.",
+      "trade_type_enrichment": {
+        "project": "Woodscapes",
+        "enrichment_stats": {
+          "total_leaf_tasks": 20201,
+          "enriched_tasks": 20201,
+          "unmatched_tasks": 0,
+          "validation_issues": 0,
+          "by_context": {
+            "tower": 3909,
+            "common_area": 16198,
+            "external": 45,
+            "infrastructure": 49
+          },
+          "by_confidence": {
+            "high": 18397,
+            "medium": 1626,
+            "low": 178
+          }
+        },
+        "enrichment_rate": 1.0
+      },
       "parents": 3277,
       "leaves": 20201,
       "milestones": 16,
       "type_issues": 0,
       "sample_pass_rate": 1.0,
-      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Woodscapes.json"
+      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Woodscapes.json",
+      "sprint_enrichment": {
+        "matched": 23338,
+        "unmatched": 156,
+        "match_rate": 0.9933600068102494
+      }
     },
     {
       "project": "Zenith",
@@ -260,13 +420,38 @@
       "tasks_processed": 8978,
       "errors": [],
       "tasks_found": 8978,
-      "trade_type_error": "Connection error.",
+      "trade_type_enrichment": {
+        "project": "Zenith",
+        "enrichment_stats": {
+          "total_leaf_tasks": 8016,
+          "enriched_tasks": 7999,
+          "unmatched_tasks": 17,
+          "validation_issues": 0,
+          "by_context": {
+            "tower": 1618,
+            "common_area": 6373,
+            "external": 2,
+            "infrastructure": 6
+          },
+          "by_confidence": {
+            "high": 7521,
+            "medium": 147,
+            "low": 331
+          }
+        },
+        "enrichment_rate": 0.997879241516966
+      },
       "parents": 961,
       "leaves": 8016,
       "milestones": 1,
       "type_issues": 0,
       "sample_pass_rate": 1.0,
-      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Zenith.json"
+      "output_file": "/Users/alexanderbankov/Documents/Projects/easybim_data/etl-cco-dashboard/output/json/Zenith.json",
+      "sprint_enrichment": {
+        "matched": 8961,
+        "unmatched": 17,
+        "match_rate": 0.9981064825128091
+      }
     }
   ]
 }

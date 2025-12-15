@@ -1,0 +1,116 @@
+{
+  "total_projects": 12,
+  "successful": 12,
+  "failed": 0,
+  "total_rows": 110424,
+  "projects": [
+    {
+      "project": "Aristocrat",
+      "total_tasks": 5614,
+      "summary_tasks": 630,
+      "milestones": 0,
+      "leaf_tasks": 4984,
+      "rows_written": 5614,
+      "output_file": "output/table/Aristocrat.csv"
+    },
+    {
+      "project": "Avenue 11",
+      "total_tasks": 3910,
+      "summary_tasks": 426,
+      "milestones": 1,
+      "leaf_tasks": 3483,
+      "rows_written": 3910,
+      "output_file": "output/table/Avenue 11.csv"
+    },
+    {
+      "project": "BL Saha",
+      "total_tasks": 10065,
+      "summary_tasks": 457,
+      "milestones": 91,
+      "leaf_tasks": 9517,
+      "rows_written": 10065,
+      "output_file": "output/table/BL Saha.csv"
+    },
+    {
+      "project": "Horizon",
+      "total_tasks": 17456,
+      "summary_tasks": 1740,
+      "milestones": 11,
+      "leaf_tasks": 15705,
+      "rows_written": 17456,
+      "output_file": "output/table/Horizon.csv"
+    },
+    {
+      "project": "Jardinia",
+      "total_tasks": 4723,
+      "summary_tasks": 514,
+      "milestones": 0,
+      "leaf_tasks": 4209,
+      "rows_written": 4723,
+      "output_file": "output/table/Jardinia.csv"
+    },
+    {
+      "project": "Miraya",
+      "total_tasks": 2849,
+      "summary_tasks": 318,
+      "milestones": 4,
+      "leaf_tasks": 2527,
+      "rows_written": 2849,
+      "output_file": "output/table/Miraya.csv"
+    },
+    {
+      "project": "RGA 2",
+      "total_tasks": 8492,
+      "summary_tasks": 1281,
+      "milestones": 13,
+      "leaf_tasks": 7198,
+      "rows_written": 8492,
+      "output_file": "output/table/RGA 2.csv"
+    },
+    {
+      "project": "Reserve",
+      "total_tasks": 16438,
+      "summary_tasks": 1595,
+      "milestones": 0,
+      "leaf_tasks": 14843,
+      "rows_written": 16438,
+      "output_file": "output/table/Reserve.csv"
+    },
+    {
+      "project": "Sec. 44, Noida",
+      "total_tasks": 3635,
+      "summary_tasks": 558,
+      "milestones": 40,
+      "leaf_tasks": 3037,
+      "rows_written": 3635,
+      "output_file": "output/table/Sec. 44, Noida.csv"
+    },
+    {
+      "project": "Tropical Isle",
+      "total_tasks": 4770,
+      "summary_tasks": 513,
+      "milestones": 0,
+      "leaf_tasks": 4257,
+      "rows_written": 4770,
+      "output_file": "output/table/Tropical Isle.csv"
+    },
+    {
+      "project": "Woodscapes",
+      "total_tasks": 23494,
+      "summary_tasks": 3277,
+      "milestones": 16,
+      "leaf_tasks": 20201,
+      "rows_written": 23494,
+      "output_file": "output/table/Woodscapes.csv"
+    },
+    {
+      "project": "Zenith",
+      "total_tasks": 8978,
+      "summary_tasks": 961,
+      "milestones": 1,
+      "leaf_tasks": 8016,
+      "rows_written": 8978,
+      "output_file": "output/table/Zenith.csv"
+    }
+  ]
+}
