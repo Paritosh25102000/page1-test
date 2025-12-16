@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://easybim.com/schemas/staging/page4-finishing-gaps",
+  "title": "Page 4 Staging Dataset",
+  "description": "Pre-aggregated dataset for Sequence Management and Slab Gaps.",
+  "type": "object",
+  
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "generated_at": { "type": "string" },
+        "pi_targets": {
+          "type": "object",
+          "description": "Global definitions for the PI lines (Benchmarks).",
+          "properties": {
+            "pi0": { "type": "number", "description": "Benchmark value (e.g., 8 floors)" },
+            "pi1": { "type": "number" },
+            "pi3": { "type": "number" },
+            "pi5": { "type": "number" }
+          }
+        }
+      }
+    },
+
+    "controls": {
+      "type": "object",
+      "properties": {
+        "alpha_options": { 
+          "type": "array", 
+          "items": { "type": "string" },
+          "default": ["All", "Alpha", "Non-Alpha"]
+        },
+        "rera_options": { 
+          "type": "array", 
+          "items": { "type": "string" },
+          "default": ["All", "Registered", "Applied", "Pending"]
+        }
+      }
+    },
+
+    "dashboard_data": {
+      "type": "object",
+      "description": "Keyed by composite ID (ALL, ZONE_MZ, etc.). Filters (Alpha/RERA) must be handled by generating Keys or Frontend Filtering. Recommended: Backend generates keys for standard hierarchy, Frontend filters table rows for Attributes.",
+      "patternProperties": {
+        "^.*$": {
+          "type": "object",
+          "properties": {
+            "gap_charts": {
+              "type": "object",
+              "description": "Data for Top 4 Bar Charts.",
+              "properties": {
+                "blockwork": { "$ref": "#/$defs/gap_metric" },
+                "plaster": { "$ref": "#/$defs/gap_metric" },
+                "toilet": { "$ref": "#/$defs/gap_metric" },
+                "flooring": { "$ref": "#/$defs/gap_metric" }
+              },
+              "required": ["blockwork", "plaster", "toilet", "flooring"]
+            },
+
+            "gap_table": {
+              "type": "array",
+              "description": "Recursive tree data for PG4-WIDGET-05.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": { "type": "string" },
+                  "name": { "type": "string" },
+                  "type": { "type": "string", "enum": ["Zone", "Region", "Project"] },
+                  "is_alpha": { "type": "boolean" },
+                  "rera_status": { "type": "string" },
+                  "gaps": {
+                    "type": "object",
+                    "properties": {
+                      "blockwork": { "type": "number" },
+                      "plaster": { "type": "number" },
+                      "toilet": { "type": "number" },
+                      "flooring": { "type": "number" }
+                    }
+                  },
+                  "children": { 
+                    "type": "array",
+                    "items": { "type": "object" } 
+                  }
+                },
+                "required": ["id", "name", "gaps"]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "$defs": {
+    "gap_metric": {
+      "type": "object",
+      "description": "Aggregated gap data for a chart.",
+      "properties": {
+        "avg_gap": { "type": "number" },
+        "pi_benchmarks": {
+          "type": "object",
+          "properties": {
+             "pi0": { "type": "number" },
+             "pi1": { "type": "number" },
+             "pi3": { "type": "number" },
+             "pi5": { "type": "number" }
+          }
+        }
+      },
+      "required": ["avg_gap"]
+    }
+  },
+  "required": ["meta", "dashboard_data"]
+}
