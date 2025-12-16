@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://easybim.com/schemas/staging/page2-slab-cycle",
+  "title": "Page 2 Staging Dataset",
+  "description": "Pre-aggregated dataset for Slab Cycle Analysis.",
+  "type": "object",
+  
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "generated_at": { "type": "string" }
+      }
+    },
+
+    "controls": {
+      "type": "object",
+      "description": "Populates the specific dropdowns for Page 2.",
+      "properties": {
+        "formwork_options": { 
+          "type": "array", 
+          "items": { "type": "string" },
+          "description": "Unique list of Formwork types found in dataset."
+        }
+      }
+    },
+
+    "dashboard_data": {
+      "type": "object",
+      "description": "Keyed by composite ID (ALL, ZONE_MZ, etc.).",
+      "patternProperties": {
+        "^.*$": {
+          "type": "object",
+          "properties": {
+            "region_chart": {
+              "type": "array",
+              "description": "Data for Region-wise Bar Chart (PG2-WIDGET-01).",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "region_name": { "type": "string" },
+                  "avg_days": { "type": "number" },
+                  "total_slabs_context": { "type": "integer" }
+                },
+                "required": ["region_name", "avg_days"]
+              }
+            },
+
+            "tech_chart": {
+              "type": "array",
+              "description": "Data for Tech-wise Combo Chart (PG2-WIDGET-02).",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "technology": { "type": "string" },
+                  "slab_count": { "type": "integer" },
+                  "avg_days": { "type": "number" }
+                },
+                "required": ["technology", "slab_count", "avg_days"]
+              }
+            },
+
+            "slab_matrix": {
+              "type": "object",
+              "description": "Data for the Heatmap Table (PG2-WIDGET-03).",
+              "properties": {
+                "rows": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": { "type": "string" },
+                      "label": { "type": "string" },
+                      "type": { "type": "string", "enum": ["Zone", "Region", "Project"] },
+                      "kpis": {
+                        "type": "object",
+                        "properties": {
+                          "total_slabs": { "type": "integer" },
+                          "avg_cycle": { "type": "number" }
+                        }
+                      },
+                      "distribution": {
+                        "type": "object",
+                        "properties": {
+                          "upto_7": { "type": "integer" },
+                          "7_10": { "type": "integer" },
+                          "11_14": { "type": "integer" },
+                          "15_20": { "type": "integer" },
+                          "21_25": { "type": "integer" },
+                          "26_30": { "type": "integer" },
+                          "gt_30": { "type": "integer" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+
+            "top_5_leaderboard": {
+              "type": "array",
+              "description": "Data for 'Best Last 5 Slabs' (PG2-WIDGET-04).",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "project_name": { "type": "string" },
+                  "tower_name": { "type": "string" },
+                  "avg_last_5_days": { "type": "number" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": ["meta", "dashboard_data"]
+}
