@@ -2,80 +2,66 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://easybim.com/schemas/staging/page3-physical-progress",
   "title": "Page 3 Staging Dataset",
-  "description": "Pre-aggregated dataset for Physical Progress (Floor Counts) and Sprint Activity.",
+  "description": "Pre-aggregated dataset for Physical Progress (Floor Counts) supporting FY/Quarter/Month timeline modes.",
   "type": "object",
   
   "properties": {
     "meta": {
       "type": "object",
       "properties": {
-        "generated_at": { "type": "string" },
-        "sprint_window": {
-          "type": "object",
-          "description": "Context for the Sprint Metrics.",
-          "properties": {
-            "start": { "type": "string", "format": "date" },
-            "end": { "type": "string", "format": "date" }
-          }
-        }
+        "generated_at": { "type": "string" }
       }
     },
 
     "controls": {
       "type": "object",
-      "description": "Uses shared control logic from Page 1 (Hierarchy), no unique controls."
+      "description": "Configuration for UI Controls (Timeline Modes).",
+      "properties": {
+        "time_modes": {
+          "type": "object",
+          "properties": {
+            "fy": { "type": "object", "properties": { "start": {"type": "string"}, "end": {"type": "string"} }},
+            "quarter": { "type": "object", "properties": { "start": {"type": "string"}, "end": {"type": "string"} }},
+            "month": { "type": "object", "properties": { "start": {"type": "string"}, "end": {"type": "string"} }}
+          }
+        }
+      }
     },
 
     "dashboard_data": {
       "type": "object",
+      "description": "Keyed by composite ID (ALL, ZONE_MZ, etc.). Inside each ID, data is pre-calculated for 'fy', 'quarter', and 'month'.",
       "patternProperties": {
         "^.*$": {
           "type": "object",
           "properties": {
             "floor_performance_table": {
-              "type": "array",
-              "description": "Recursive structure for Zone -> Region -> Project table (PG3-WIDGET-01).",
-              "items": { "$ref": "#/$defs/performance_node" }
+              "type": "object",
+              "description": "Data for PG3-WIDGET-01",
+              "properties": {
+                "fy": { "type": "array", "items": { "$ref": "#/$defs/performance_node" } },
+                "quarter": { "type": "array", "items": { "$ref": "#/$defs/performance_node" } },
+                "month": { "type": "array", "items": { "$ref": "#/$defs/performance_node" } }
+              }
             },
 
             "achievement_matrix_physical": {
               "type": "object",
-              "description": "Heatmap data for Sprint Achievement (PG3-WIDGET-02).",
+              "description": "Data for PG3-WIDGET-02",
               "properties": {
-                "rows": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "label": { "type": "string" },
-                      "buckets": {
-                        "type": "object",
-                        "properties": {
-                          "gt_120": { "type": "integer" },
-                          "100_120": { "type": "integer" },
-                          "85_100": { "type": "integer" },
-                          "60_85": { "type": "integer" },
-                          "lt_60": { "type": "integer" }
-                        }
-                      }
-                    }
-                  }
-                }
+                "fy": { "type": "array", "items": { "$ref": "#/$defs/matrix_row" } },
+                "quarter": { "type": "array", "items": { "$ref": "#/$defs/matrix_row" } },
+                "month": { "type": "array", "items": { "$ref": "#/$defs/matrix_row" } }
               }
             },
 
             "sprint_leaderboards": {
               "type": "object",
-              "description": "Top 5 and Bottom 5 Projects (PG3-WIDGET-03/04).",
+              "description": "Data for PG3-WIDGET-03 and 04",
               "properties": {
-                "top_5": {
-                  "type": "array",
-                  "items": { "$ref": "#/$defs/project_rank" }
-                },
-                "bottom_5": {
-                  "type": "array",
-                  "items": { "$ref": "#/$defs/project_rank" }
-                }
+                "fy": { "$ref": "#/$defs/leaderboard_pair" },
+                "quarter": { "$ref": "#/$defs/leaderboard_pair" },
+                "month": { "$ref": "#/$defs/leaderboard_pair" }
               }
             }
           }
@@ -99,7 +85,8 @@
             "actual_floors": { "type": "integer" },
             "pct_aop": { "type": "number" },
             "pct_sprint": { "type": "number" }
-          }
+          },
+          "required": ["aop_plan_floors", "sprint_plan_floors", "actual_floors"]
         },
         "children": {
           "type": "array",
@@ -108,6 +95,38 @@
       },
       "required": ["id", "name", "metrics"]
     },
+    "matrix_row": {
+      "type": "object",
+      "properties": {
+        "label": { "type": "string" },
+        "buckets": {
+          "type": "object",
+          "properties": {
+            "gt_120": { "type": "integer" },
+            "100_120": { "type": "integer" },
+            "85_100": { "type": "integer" },
+            "60_85": { "type": "integer" },
+            "lt_60": { "type": "integer" }
+          },
+          "required": ["gt_120", "100_120", "85_100", "60_85", "lt_60"]
+        }
+      },
+      "required": ["label", "buckets"]
+    },
+    "leaderboard_pair": {
+      "type": "object",
+      "properties": {
+        "top_5": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/project_rank" }
+        },
+        "bottom_5": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/project_rank" }
+        }
+      },
+      "required": ["top_5", "bottom_5"]
+    },
     "project_rank": {
       "type": "object",
       "properties": {
@@ -115,7 +134,8 @@
         "sprint_plan": { "type": "integer" },
         "actual_completed": { "type": "integer" },
         "pct_achieve": { "type": "number" }
-      }
+      },
+      "required": ["project_name", "pct_achieve"]
     }
   },
   "required": ["meta", "dashboard_data"]
