@@ -64,7 +64,18 @@ SlabWorks = Literal["Typical", "Non-typical", "Non-slab"]
 class DateRange:
     """Date range with start, end, and duration."""
     start: Optional[str] = None  # YYYY-MM-DD
-    end: Optional[str] = None    # YYYY-MM-DD (was 'finish')
+    end: Optional[str] = None    # YYYY-MM-DD
+    duration_days: Optional[float] = None
+
+
+@dataclass
+class SprintDateRange:
+    """Sprint date range with start, end, and duration.
+
+    Note: Sprint uses 'end' to match the standard date range terminology.
+    """
+    start: Optional[str] = None   # YYYY-MM-DD
+    end: Optional[str] = None     # YYYY-MM-DD
     duration_days: Optional[float] = None
 
 
@@ -73,7 +84,7 @@ class Dates:
     """All date-related fields."""
     plan: DateRange
     manual: DateRange
-    sprint: Optional[DateRange] = None
+    sprint: Optional[SprintDateRange] = None
     actual: Optional[DateRange] = None
 
 
@@ -329,7 +340,7 @@ if __name__ == "__main__":
     sample_dates = Dates(
         plan=DateRange(start="2025-04-15", end="2025-05-20", duration_days=35),
         manual=DateRange(start="2025-04-15", end="2025-05-20", duration_days=35),
-        sprint=DateRange(start="2025-04-10", end="2025-05-10", duration_days=30),
+        sprint=SprintDateRange(start="2025-04-10", end="2025-05-10", duration_days=30),
         actual=DateRange(start="2025-04-18", end=None, duration_days=None)
     )
 

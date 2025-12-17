@@ -129,6 +129,9 @@ Nested structure for cascading dropdowns.
     "SZ1": [
       {"id": "Woodscapes", "name": "Woodscapes"},
       {"id": "RGA 2", "name": "RGA 2"}
+    ],
+    "SZ2": [
+      {"id": "Ramaiah", "name": "Ramaiah"}
     ]
   },
   "WEZ": {
@@ -199,10 +202,10 @@ Pattern for `dashboard_data` keys:
 |---------|---------|-------------|-------|
 | `"ALL"` | `"ALL"` | Global aggregate | 1 |
 | `"ZONE_{id}"` | `"ZONE_MZ"` | Zone aggregate | 4 |
-| `"REG_{id}"` | `"REG_MZ1"` | Region aggregate | ~6 |
-| `"PROJ_{id}"` | `"PROJ_Horizon"` | Project data | 12 |
+| `"REG_{id}"` | `"REG_MZ1"` | Region aggregate | 7 |
+| `"PROJ_{id}"` | `"PROJ_Horizon"` | Project data | 13 |
 
-**Total Filter Keys**: ~23 (1 + 4 + 6 + 12)
+**Total Filter Keys**: 25 (1 + 4 + 7 + 13)
 
 ### 4.2 Key Construction Logic
 
@@ -220,6 +223,96 @@ def construct_filter_key(zone: str = None, region: str = None, project: str = No
     if zone:
         return f"ZONE_{zone}"
     return "ALL"
+```
+
+### 4.3 Zone/Region Mapping Helper
+
+The following mapping defines the organizational hierarchy used for filter construction and hierarchy tree generation:
+
+```python
+ZONE_REGION_MAP = {
+    "MZ": {
+        "name": "MZ",
+        "regions": {
+            "MZ1": {
+                "name": "MZ1",
+                "projects": ["Horizon", "Reserve", "Avenue 11"]
+            }
+        }
+    },
+    "NZ": {
+        "name": "NZ",
+        "regions": {
+            "NZ1": {
+                "name": "NZ1",
+                "projects": ["Miraya", "Aristocrat", "Zenith"]
+            },
+            "NZ2": {
+                "name": "NZ2",
+                "projects": ["Tropical Isle", "Jardinia", "Sec. 44, Noida"]
+            }
+        }
+    },
+    "SZ": {
+        "name": "SZ",
+        "regions": {
+            "SZ1": {
+                "name": "SZ1",
+                "projects": ["Woodscapes", "RGA 2"]
+            },
+            "SZ2": {
+                "name": "SZ2",
+                "projects": ["Ramaiah"]
+            }
+        }
+    },
+    "WEZ": {
+        "name": "WEZ",
+        "regions": {
+            "Kolkata": {
+                "name": "Kolkata",
+                "projects": ["BL Saha"]
+            }
+        }
+    }
+}
+```
+
+**Helper Functions**:
+
+```python
+def get_zone_for_project(project_name: str) -> str:
+    """Get zone ID for a project."""
+    for zone_id, zone_data in ZONE_REGION_MAP.items():
+        for region_data in zone_data["regions"].values():
+            if project_name in region_data["projects"]:
+                return zone_id
+    raise ValueError(f"Project not found: {project_name}")
+
+def get_region_for_project(project_name: str) -> str:
+    """Get region ID for a project."""
+    for zone_data in ZONE_REGION_MAP.values():
+        for region_id, region_data in zone_data["regions"].items():
+            if project_name in region_data["projects"]:
+                return region_id
+    raise ValueError(f"Project not found: {project_name}")
+
+def get_projects_for_region(region_id: str) -> list[str]:
+    """Get all projects in a region."""
+    for zone_data in ZONE_REGION_MAP.values():
+        if region_id in zone_data["regions"]:
+            return zone_data["regions"][region_id]["projects"]
+    raise ValueError(f"Region not found: {region_id}")
+
+def get_projects_for_zone(zone_id: str) -> list[str]:
+    """Get all projects in a zone."""
+    if zone_id not in ZONE_REGION_MAP:
+        raise ValueError(f"Zone not found: {zone_id}")
+
+    projects = []
+    for region_data in ZONE_REGION_MAP[zone_id]["regions"].values():
+        projects.extend(region_data["projects"])
+    return projects
 ```
 
 ---

@@ -147,11 +147,15 @@
 
 ### 3.1 Classification
 
+Task type is determined by the `is_summary` and `is_milestone` boolean flags in the XML source:
+
 ```
 is_summary == true  →  type = "parent"
 is_milestone == true →  type = "milestone"
 otherwise           →  type = "leaf"
 ```
+
+**Note**: While task type is not explicitly stored as a separate field in the Master JSON schema, it can be derived from these two flags using the logic above. The helper function `determine_task_type(is_summary: bool, is_milestone: bool)` is available in `task_schema.py` for this purpose.
 
 ### 3.2 Nullability by Type
 

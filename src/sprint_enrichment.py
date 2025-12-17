@@ -26,13 +26,13 @@ def parse_sprint_schedule(xml_path: str) -> Dict[str, Dict]:
         xml_path: Path to Sprint XML file
 
     Returns:
-        Dictionary mapping outline_number -> {start, finish, duration_days}
+        Dictionary mapping outline_number -> {start, end, duration_days}
 
     Example:
         {
             "1.1.4.2.3.1.4.13": {
                 "start": "2025-10-10",
-                "finish": "2025-12-15",
+                "end": "2025-12-15",
                 "duration_days": 67
             },
             ...
@@ -60,14 +60,14 @@ def parse_sprint_schedule(xml_path: str) -> Dict[str, Dict]:
 
         # Extract and transform dates (reuse existing transformers)
         start = extract_date(task.get('start'))
-        finish = extract_date(task.get('finish'))
+        end = extract_date(task.get('finish'))
         duration_iso = task.get('duration')
         duration_days = iso8601_duration_to_days(duration_iso) if duration_iso else None
 
-        if start and finish:
+        if start and end:
             sprint_dates[outline_number] = {
                 'start': start,
-                'finish': finish,
+                'end': end,
                 'duration_days': duration_days
             }
 

@@ -88,27 +88,27 @@
             "properties": {
               "kpi_gauges": {
                 "type": "object",
-                "description": "Data for Element PG1-WIDGET-03 (AOP/Sprint Gauges).",
+                "description": "Data for Element PG1-WIDGET-03 (AOP/Sprint Gauges). Pre-calculated for all 3 time modes.",
                 "properties": {
                   "aop": {
                     "type": "object",
+                    "description": "AOP Achievement gauge with time-mode values.",
                     "properties": {
-                      "achieved_pct": { "type": "number" },
-                      "status_color": { "type": "string", "enum": ["red", "amber", "green"] },
-                      "actual_ytd": { "type": "number" },
-                      "plan_ytd": { "type": "number" }
+                      "fy": { "$ref": "#/$defs/aop_gauge_data" },
+                      "quarter": { "$ref": "#/$defs/aop_gauge_data" },
+                      "month": { "$ref": "#/$defs/aop_gauge_data" }
                     },
-                    "required": ["achieved_pct", "status_color"]
+                    "required": ["fy", "quarter", "month"]
                   },
                   "sprint": {
                     "type": "object",
+                    "description": "Sprint Achievement gauge with time-mode values.",
                     "properties": {
-                      "achieved_pct": { "type": "number" },
-                      "status_color": { "type": "string", "enum": ["red", "amber", "green"] },
-                      "sprint_actual": { "type": "number" },
-                      "sprint_plan": { "type": "number" }
+                      "fy": { "$ref": "#/$defs/sprint_gauge_data" },
+                      "quarter": { "$ref": "#/$defs/sprint_gauge_data" },
+                      "month": { "$ref": "#/$defs/sprint_gauge_data" }
                     },
-                    "required": ["achieved_pct", "status_color"]
+                    "required": ["fy", "quarter", "month"]
                   }
                 },
                 "required": ["aop", "sprint"]
@@ -175,6 +175,72 @@
     },
   
     "$defs": {
+      "aop_gauge_data": {
+        "type": "object",
+        "description": "AOP Achievement gauge data for a specific time mode.",
+        "properties": {
+          "achieved_pct": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Percentage achieved. Formula: (actual / plan) * 100"
+          },
+          "status_color": {
+            "type": "string",
+            "enum": ["red", "amber", "green"],
+            "description": "Gauge color: red (<60%), amber (60-85%), green (≥85%)"
+          },
+          "actual": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Actual cost within the time period"
+          },
+          "plan": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Plan cost within the time period"
+          },
+          "tasks_with_sprint": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Count of tasks with sprint dates (quality control metric)"
+          }
+        },
+        "required": ["achieved_pct", "status_color", "actual", "plan", "tasks_with_sprint"]
+      },
+
+      "sprint_gauge_data": {
+        "type": "object",
+        "description": "Sprint Achievement gauge data for a specific time mode.",
+        "properties": {
+          "achieved_pct": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Percentage achieved. Formula: (actual / sprint_plan) * 100"
+          },
+          "status_color": {
+            "type": "string",
+            "enum": ["red", "amber", "green"],
+            "description": "Gauge color: red (<60%), amber (60-85%), green (≥85%)"
+          },
+          "actual": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Actual cost within the time period"
+          },
+          "plan": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Sprint plan cost within the time period (re-distributed from original plan)"
+          },
+          "tasks_with_sprint": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Count of tasks with sprint dates (quality control metric)"
+          }
+        },
+        "required": ["achieved_pct", "status_color", "actual", "plan", "tasks_with_sprint"]
+      },
+
       "trend_point": {
         "type": "object",
         "properties": {

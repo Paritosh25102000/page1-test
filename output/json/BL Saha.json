@@ -21,8 +21,8 @@
       },
       "sprint": {
         "start": "2024-06-24",
-        "finish": "2028-03-10",
-        "duration_days": 969.05
+        "duration_days": 969.05,
+        "end": "2028-03-10"
       },
       "actual": {
         "start": null,
@@ -57,8 +57,8 @@
       },
       "sprint": {
         "start": "2024-06-24",
-        "finish": "2028-03-10",
-        "duration_days": 1355.05
+        "duration_days": 1355.05,
+        "end": "2028-03-10"
       },
       "actual": {
         "start": null,
@@ -93,8 +93,8 @@
       },
       "sprint": {
         "start": "2025-04-01",
-        "finish": "2025-07-29",
-        "duration_days": 120.0
+        "duration_days": 120.0,
+        "end": "2025-07-29"
       },
       "actual": {
         "start": null,
@@ -129,8 +129,8 @@
       },
       "sprint": {
         "start": "2025-04-01",
-        "finish": "2025-04-05",
-        "duration_days": 5.0
+        "duration_days": 5.0,
+        "end": "2025-04-05"
       },
       "actual": {
         "start": "2025-02-04",
@@ -178,8 +178,8 @@
       },
       "sprint": {
         "start": "2025-04-01",
-        "finish": "2025-04-30",
-        "duration_days": 30.0
+        "duration_days": 30.0,
+        "end": "2025-04-30"
       },
       "actual": {
         "start": "2025-02-04",
@@ -227,8 +227,8 @@
       },
       "sprint": {
         "start": "2025-04-01",
-        "finish": "2025-04-20",
-        "duration_days": 20.0
+        "duration_days": 20.0,
+        "end": "2025-04-20"
       },
       "actual": {
         "start": null,
@@ -263,8 +263,8 @@
       },
       "sprint": {
         "start": "2025-04-01",
-        "finish": "2025-04-20",
-        "duration_days": 20.0
+        "duration_days": 20.0,
+        "end": "2025-04-20"
       },
       "actual": {
         "start": null,
@@ -312,8 +312,8 @@
       },
       "sprint": {
         "start": "2025-04-01",
-        "finish": "2025-04-20",
-        "duration_days": 20.0
+        "duration_days": 20.0,
+        "end": "2025-04-20"
       },
       "actual": {
         "start": null,
@@ -361,8 +361,8 @@
       },
       "sprint": {
         "start": "2025-04-01",
-        "finish": "2025-04-20",
-        "duration_days": 20.0
+        "duration_days": 20.0,
+        "end": "2025-04-20"
       },
       "actual": {
         "start": null,
@@ -410,8 +410,8 @@
       },
       "sprint": {
         "start": "2025-04-11",
-        "finish": "2025-04-20",
-        "duration_days": 10.0
+        "duration_days": 10.0,
+        "end": "2025-04-20"
       },
       "actual": {
         "start": null,
@@ -459,8 +459,8 @@
       },
       "sprint": {
         "start": "2025-04-11",
-        "finish": "2025-04-20",
-        "duration_days": 10.0
+        "duration_days": 10.0,
+        "end": "2025-04-20"
       },
       "actual": {
         "start": null,
@@ -508,8 +508,8 @@
       },
       "sprint": {
         "start": "2025-04-11",
-        "finish": "2025-04-20",
-        "duration_days": 10.0
+        "duration_days": 10.0,
+        "end": "2025-04-20"
       },
       "actual": {
         "start": null,
@@ -557,8 +557,8 @@
       },
       "sprint": {
         "start": "2025-04-01",
-        "finish": "2025-07-29",
-        "duration_days": 120.0
+        "duration_days": 120.0,
+        "end": "2025-07-29"
       },
       "actual": {
         "start": null,
@@ -593,8 +593,8 @@
       },
       "sprint": {
         "start": "2025-04-01",
-        "finish": "2025-07-29",
-        "duration_days": 120.0
+        "duration_days": 120.0,
+        "end": "2025-07-29"
       },
       "actual": {
         "start": null,
@@ -642,8 +642,8 @@
       },
       "sprint": {
         "start": "2025-04-01",
-        "finish": "2025-07-29",
-        "duration_days": 120.0
+        "duration_days": 120.0,
+        "end": "2025-07-29"
       },
       "actual": {
         "start": null,
@@ -691,8 +691,8 @@
       },
       "sprint": {
         "start": "2025-04-01",
-        "finish": "2025-07-29",
-        "duration_days": 120.0
+        "duration_days": 120.0,
+        "end": "2025-07-29"
       },
       "actual": {
         "start": null,
@@ -740,8 +740,8 @@
       },
       "sprint": {
         "start": "2025-04-21",
-        "finish": "2025-04-30",
-        "duration_days": 10.0
+        "duration_days": 10.0,
+        "end": "2025-04-30"
       },
       "actual": {
         "start": null,
@@ -789,8 +789,8 @@
       },
       "sprint": {
         "start": "2025-04-21",
-        "finish": "2025-04-30",
-        "duration_days": 10.0
+        "duration_days": 10.0,
+        "end": "2025-04-30"
       },
       "actual": {
         "start": null,
@@ -838,8 +838,8 @@
       },
       "sprint": {
         "start": "2025-04-21",
-        "finish": "2025-04-30",
-        "duration_days": 10.0
+        "duration_days": 10.0,
+        "end": "2025-04-30"
       },
       "actual": {
         "start": null,
@@ -1217,8 +1217,8 @@
       },
       "sprint": {
         "start": "2024-06-24",
-        "finish": "2027-10-12",
-        "duration_days": 1204.8
+        "duration_days": 1204.8,
+        "end": "2027-10-12"
       },
       "actual": {
         "start": null,
@@ -1253,8 +1253,8 @@
       },
       "sprint": {
         "start": "2025-03-08",
-        "finish": "2027-08-20",
-        "duration_days": 895.25
+        "duration_days": 895.25,
+        "end": "2027-08-20"
       },
       "actual": {
         "start": null,
@@ -1289,8 +1289,8 @@
       },
       "sprint": {
         "start": "2025-03-08",
-        "finish": "2025-07-19",
-        "duration_days": 124.0
+        "duration_days": 124.0,
+        "end": "2025-07-19"
       },
       "actual": {
         "start": "2025-03-07",
@@ -1668,8 +1668,8 @@
       },
       "sprint": {
         "start": "2025-07-20",
-        "finish": "2025-08-25",
-        "duration_days": 37.0
+        "duration_days": 37.0,
+        "end": "2025-08-25"
       },
       "actual": {
         "start": "2025-08-04",
@@ -1792,8 +1792,8 @@
       },
       "sprint": {
         "start": "2025-08-26",
-        "finish": "2025-09-21",
-        "duration_days": 26.0
+        "duration_days": 26.0,
+        "end": "2025-09-21"
       },
       "actual": {
         "start": "2025-06-06",
@@ -2069,8 +2069,8 @@
       },
       "sprint": {
         "start": "2025-09-21",
-        "finish": "2025-10-13",
-        "duration_days": 22.0
+        "duration_days": 22.0,
+        "end": "2025-10-13"
       },
       "actual": {
         "start": "2025-09-14",
@@ -2176,8 +2176,8 @@
       },
       "sprint": {
         "start": "2025-10-13",
-        "finish": "2025-11-07",
-        "duration_days": 25.0
+        "duration_days": 25.0,
+        "end": "2025-11-07"
       },
       "actual": {
         "start": "2025-09-11",
@@ -2385,8 +2385,8 @@
       },
       "sprint": {
         "start": "2025-11-07",
-        "finish": "2025-12-02",
-        "duration_days": 25.0
+        "duration_days": 25.0,
+        "end": "2025-12-02"
       },
       "actual": {
         "start": "2025-11-23",
@@ -2526,8 +2526,8 @@
       },
       "sprint": {
         "start": "2025-12-02",
-        "finish": "2025-12-27",
-        "duration_days": 25.0
+        "duration_days": 25.0,
+        "end": "2025-12-27"
       },
       "actual": {
         "start": "2025-11-21",
@@ -2667,8 +2667,8 @@
       },
       "sprint": {
         "start": "2025-12-27",
-        "finish": "2026-01-17",
-        "duration_days": 21.0
+        "duration_days": 21.0,
+        "end": "2026-01-17"
       },
       "actual": {
         "start": "2025-11-18",
@@ -2825,8 +2825,8 @@
       },
       "sprint": {
         "start": "2026-01-17",
-        "finish": "2026-02-01",
-        "duration_days": 15.0
+        "duration_days": 15.0,
+        "end": "2026-02-01"
       },
       "actual": {
         "start": "2025-11-17",
@@ -2983,8 +2983,8 @@
       },
       "sprint": {
         "start": "2026-02-01",
-        "finish": "2026-02-10",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-02-10"
       },
       "actual": {
         "start": "2025-11-24",
@@ -3107,8 +3107,8 @@
       },
       "sprint": {
         "start": "2026-02-10",
-        "finish": "2026-02-22",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-02-22"
       },
       "actual": {
         "start": null,
@@ -3248,8 +3248,8 @@
       },
       "sprint": {
         "start": "2026-02-22",
-        "finish": "2026-03-03",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-03-03"
       },
       "actual": {
         "start": null,
@@ -3389,8 +3389,8 @@
       },
       "sprint": {
         "start": "2026-03-03",
-        "finish": "2026-03-12",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-03-12"
       },
       "actual": {
         "start": null,
@@ -3530,8 +3530,8 @@
       },
       "sprint": {
         "start": "2026-03-12",
-        "finish": "2026-03-21",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-03-21"
       },
       "actual": {
         "start": null,
@@ -3671,8 +3671,8 @@
       },
       "sprint": {
         "start": "2026-03-21",
-        "finish": "2026-04-02",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-04-02"
       },
       "actual": {
         "start": null,
@@ -3829,8 +3829,8 @@
       },
       "sprint": {
         "start": "2026-04-02",
-        "finish": "2026-04-11",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-04-11"
       },
       "actual": {
         "start": null,
@@ -3970,8 +3970,8 @@
       },
       "sprint": {
         "start": "2026-04-11",
-        "finish": "2026-04-20",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-04-20"
       },
       "actual": {
         "start": null,
@@ -4094,8 +4094,8 @@
       },
       "sprint": {
         "start": "2026-04-20",
-        "finish": "2026-04-29",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-04-29"
       },
       "actual": {
         "start": null,
@@ -4166,8 +4166,8 @@
       },
       "sprint": {
         "start": "2026-04-29",
-        "finish": "2026-05-11",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-05-11"
       },
       "actual": {
         "start": null,
@@ -4238,8 +4238,8 @@
       },
       "sprint": {
         "start": "2026-05-11",
-        "finish": "2026-05-20",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-05-20"
       },
       "actual": {
         "start": null,
@@ -4310,8 +4310,8 @@
       },
       "sprint": {
         "start": "2026-05-20",
-        "finish": "2026-05-29",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-05-29"
       },
       "actual": {
         "start": null,
@@ -4382,8 +4382,8 @@
       },
       "sprint": {
         "start": "2026-05-29",
-        "finish": "2026-06-07",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-06-07"
       },
       "actual": {
         "start": null,
@@ -4454,8 +4454,8 @@
       },
       "sprint": {
         "start": "2026-06-07",
-        "finish": "2026-06-19",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-06-19"
       },
       "actual": {
         "start": null,
@@ -4526,8 +4526,8 @@
       },
       "sprint": {
         "start": "2026-06-19",
-        "finish": "2026-06-28",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-06-28"
       },
       "actual": {
         "start": null,
@@ -4598,8 +4598,8 @@
       },
       "sprint": {
         "start": "2026-06-28",
-        "finish": "2026-07-07",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-07-07"
       },
       "actual": {
         "start": null,
@@ -4670,8 +4670,8 @@
       },
       "sprint": {
         "start": "2026-07-07",
-        "finish": "2026-07-19",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-07-19"
       },
       "actual": {
         "start": null,
@@ -4742,8 +4742,8 @@
       },
       "sprint": {
         "start": "2026-07-19",
-        "finish": "2026-08-23",
-        "duration_days": 35.0
+        "duration_days": 35.0,
+        "end": "2026-08-23"
       },
       "actual": {
         "start": null,
@@ -4814,8 +4814,8 @@
       },
       "sprint": {
         "start": "2026-02-01",
-        "finish": "2027-04-05",
-        "duration_days": 428.0
+        "duration_days": 428.0,
+        "end": "2027-04-05"
       },
       "actual": {
         "start": null,
@@ -4886,8 +4886,8 @@
       },
       "sprint": {
         "start": "2026-10-04",
-        "finish": "2027-08-20",
-        "duration_days": 320.0
+        "duration_days": 320.0,
+        "end": "2027-08-20"
       },
       "actual": {
         "start": null,
@@ -4958,8 +4958,8 @@
       },
       "sprint": {
         "start": "2025-12-21",
-        "finish": "2026-11-18",
-        "duration_days": 332.0
+        "duration_days": 332.0,
+        "end": "2026-11-18"
       },
       "actual": {
         "start": null,
@@ -5030,8 +5030,8 @@
       },
       "sprint": {
         "start": "2026-12-01",
-        "finish": "2027-03-01",
-        "duration_days": 90.0
+        "duration_days": 90.0,
+        "end": "2027-03-01"
       },
       "actual": {
         "start": null,
@@ -86897,8 +86897,8 @@
       },
       "sprint": {
         "start": "2025-06-07",
-        "finish": "2027-10-12",
-        "duration_days": 857.5
+        "duration_days": 857.5,
+        "end": "2027-10-12"
       },
       "actual": {
         "start": null,
@@ -86933,8 +86933,8 @@
       },
       "sprint": {
         "start": "2025-06-07",
-        "finish": "2025-09-28",
-        "duration_days": 114.0
+        "duration_days": 114.0,
+        "end": "2025-09-28"
       },
       "actual": {
         "start": "2025-05-09",
@@ -87295,8 +87295,8 @@
       },
       "sprint": {
         "start": "2025-09-29",
-        "finish": "2025-11-04",
-        "duration_days": 37.0
+        "duration_days": 37.0,
+        "end": "2025-11-04"
       },
       "actual": {
         "start": "2025-08-23",
@@ -87470,8 +87470,8 @@
       },
       "sprint": {
         "start": "2025-11-05",
-        "finish": "2025-12-01",
-        "duration_days": 26.0
+        "duration_days": 26.0,
+        "end": "2025-12-01"
       },
       "actual": {
         "start": "2025-10-20",
@@ -87560,8 +87560,8 @@
       },
       "sprint": {
         "start": "2025-12-01",
-        "finish": "2025-12-23",
-        "duration_days": 22.0
+        "duration_days": 22.0,
+        "end": "2025-12-23"
       },
       "actual": {
         "start": "2025-10-17",
@@ -87667,8 +87667,8 @@
       },
       "sprint": {
         "start": "2025-12-23",
-        "finish": "2026-01-17",
-        "duration_days": 25.0
+        "duration_days": 25.0,
+        "end": "2026-01-17"
       },
       "actual": {
         "start": "2025-10-19",
@@ -87774,8 +87774,8 @@
       },
       "sprint": {
         "start": "2026-01-17",
-        "finish": "2026-02-11",
-        "duration_days": 25.0
+        "duration_days": 25.0,
+        "end": "2026-02-11"
       },
       "actual": {
         "start": null,
@@ -87898,8 +87898,8 @@
       },
       "sprint": {
         "start": "2026-02-11",
-        "finish": "2026-03-08",
-        "duration_days": 25.0
+        "duration_days": 25.0,
+        "end": "2026-03-08"
       },
       "actual": {
         "start": null,
@@ -87988,8 +87988,8 @@
       },
       "sprint": {
         "start": "2026-03-08",
-        "finish": "2026-03-29",
-        "duration_days": 21.0
+        "duration_days": 21.0,
+        "end": "2026-03-29"
       },
       "actual": {
         "start": null,
@@ -88129,8 +88129,8 @@
       },
       "sprint": {
         "start": "2026-03-29",
-        "finish": "2026-04-13",
-        "duration_days": 15.0
+        "duration_days": 15.0,
+        "end": "2026-04-13"
       },
       "actual": {
         "start": null,
@@ -88270,8 +88270,8 @@
       },
       "sprint": {
         "start": "2026-04-13",
-        "finish": "2026-04-22",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-04-22"
       },
       "actual": {
         "start": null,
@@ -88428,8 +88428,8 @@
       },
       "sprint": {
         "start": "2026-04-22",
-        "finish": "2026-05-04",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-05-04"
       },
       "actual": {
         "start": null,
@@ -88586,8 +88586,8 @@
       },
       "sprint": {
         "start": "2026-05-04",
-        "finish": "2026-05-13",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-05-13"
       },
       "actual": {
         "start": null,
@@ -88676,8 +88676,8 @@
       },
       "sprint": {
         "start": "2026-05-13",
-        "finish": "2026-05-22",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-05-22"
       },
       "actual": {
         "start": null,
@@ -88748,8 +88748,8 @@
       },
       "sprint": {
         "start": "2026-05-22",
-        "finish": "2026-05-31",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-05-31"
       },
       "actual": {
         "start": null,
@@ -88820,8 +88820,8 @@
       },
       "sprint": {
         "start": "2026-05-31",
-        "finish": "2026-06-12",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-06-12"
       },
       "actual": {
         "start": null,
@@ -88892,8 +88892,8 @@
       },
       "sprint": {
         "start": "2026-06-12",
-        "finish": "2026-06-21",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-06-21"
       },
       "actual": {
         "start": null,
@@ -88964,8 +88964,8 @@
       },
       "sprint": {
         "start": "2026-06-21",
-        "finish": "2026-06-30",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-06-30"
       },
       "actual": {
         "start": null,
@@ -89036,8 +89036,8 @@
       },
       "sprint": {
         "start": "2026-06-30",
-        "finish": "2026-07-09",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-07-09"
       },
       "actual": {
         "start": null,
@@ -89108,8 +89108,8 @@
       },
       "sprint": {
         "start": "2026-07-09",
-        "finish": "2026-07-21",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-07-21"
       },
       "actual": {
         "start": null,
@@ -89180,8 +89180,8 @@
       },
       "sprint": {
         "start": "2026-07-21",
-        "finish": "2026-07-30",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-07-30"
       },
       "actual": {
         "start": null,
@@ -89252,8 +89252,8 @@
       },
       "sprint": {
         "start": "2026-07-30",
-        "finish": "2026-08-08",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-08-08"
       },
       "actual": {
         "start": null,
@@ -89324,8 +89324,8 @@
       },
       "sprint": {
         "start": "2026-08-08",
-        "finish": "2026-08-17",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-08-17"
       },
       "actual": {
         "start": null,
@@ -89396,8 +89396,8 @@
       },
       "sprint": {
         "start": "2026-08-17",
-        "finish": "2026-08-29",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-08-29"
       },
       "actual": {
         "start": null,
@@ -89468,8 +89468,8 @@
       },
       "sprint": {
         "start": "2026-08-29",
-        "finish": "2026-09-07",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-09-07"
       },
       "actual": {
         "start": null,
@@ -89540,8 +89540,8 @@
       },
       "sprint": {
         "start": "2026-09-07",
-        "finish": "2026-09-19",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-09-19"
       },
       "actual": {
         "start": null,
@@ -89612,8 +89612,8 @@
       },
       "sprint": {
         "start": "2026-09-19",
-        "finish": "2026-10-24",
-        "duration_days": 35.0
+        "duration_days": 35.0,
+        "end": "2026-10-24"
       },
       "actual": {
         "start": null,
@@ -89684,8 +89684,8 @@
       },
       "sprint": {
         "start": "2026-04-13",
-        "finish": "2027-06-06",
-        "duration_days": 419.0
+        "duration_days": 419.0,
+        "end": "2027-06-06"
       },
       "actual": {
         "start": null,
@@ -89756,8 +89756,8 @@
       },
       "sprint": {
         "start": "2026-12-05",
-        "finish": "2027-10-12",
-        "duration_days": 311.0
+        "duration_days": 311.0,
+        "end": "2027-10-12"
       },
       "actual": {
         "start": null,
@@ -89828,8 +89828,8 @@
       },
       "sprint": {
         "start": "2026-03-02",
-        "finish": "2027-01-19",
-        "duration_days": 323.25
+        "duration_days": 323.25,
+        "end": "2027-01-19"
       },
       "actual": {
         "start": null,
@@ -89900,8 +89900,8 @@
       },
       "sprint": {
         "start": "2027-02-01",
-        "finish": "2027-05-02",
-        "duration_days": 90.0
+        "duration_days": 90.0,
+        "end": "2027-05-02"
       },
       "actual": {
         "start": null,
@@ -167237,8 +167237,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2027-08-18",
-        "duration_days": 898.0
+        "duration_days": 898.0,
+        "end": "2027-08-18"
       },
       "actual": {
         "start": null,
@@ -167273,8 +167273,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2025-07-18",
-        "duration_days": 128.0
+        "duration_days": 128.0,
+        "end": "2025-07-18"
       },
       "actual": {
         "start": "2025-03-04",
@@ -167618,8 +167618,8 @@
       },
       "sprint": {
         "start": "2025-07-19",
-        "finish": "2025-08-24",
-        "duration_days": 37.0
+        "duration_days": 37.0,
+        "end": "2025-08-24"
       },
       "actual": {
         "start": "2025-06-13",
@@ -167810,8 +167810,8 @@
       },
       "sprint": {
         "start": "2025-08-25",
-        "finish": "2025-09-19",
-        "duration_days": 26.0
+        "duration_days": 26.0,
+        "end": "2025-09-19"
       },
       "actual": {
         "start": "2025-06-03",
@@ -168002,8 +168002,8 @@
       },
       "sprint": {
         "start": "2025-09-20",
-        "finish": "2025-10-11",
-        "duration_days": 22.0
+        "duration_days": 22.0,
+        "end": "2025-10-11"
       },
       "actual": {
         "start": "2025-10-26",
@@ -168109,8 +168109,8 @@
       },
       "sprint": {
         "start": "2025-10-12",
-        "finish": "2025-11-05",
-        "duration_days": 25.0
+        "duration_days": 25.0,
+        "end": "2025-11-05"
       },
       "actual": {
         "start": "2025-08-11",
@@ -168233,8 +168233,8 @@
       },
       "sprint": {
         "start": "2025-11-06",
-        "finish": "2025-11-30",
-        "duration_days": 25.0
+        "duration_days": 25.0,
+        "end": "2025-11-30"
       },
       "actual": {
         "start": "2025-10-13",
@@ -168374,8 +168374,8 @@
       },
       "sprint": {
         "start": "2025-12-01",
-        "finish": "2025-12-25",
-        "duration_days": 25.0
+        "duration_days": 25.0,
+        "end": "2025-12-25"
       },
       "actual": {
         "start": "2025-10-15",
@@ -168515,8 +168515,8 @@
       },
       "sprint": {
         "start": "2025-12-26",
-        "finish": "2026-01-15",
-        "duration_days": 21.0
+        "duration_days": 21.0,
+        "end": "2026-01-15"
       },
       "actual": {
         "start": "2025-10-04",
@@ -168690,8 +168690,8 @@
       },
       "sprint": {
         "start": "2026-01-16",
-        "finish": "2026-01-30",
-        "duration_days": 15.0
+        "duration_days": 15.0,
+        "end": "2026-01-30"
       },
       "actual": {
         "start": "2025-11-05",
@@ -168797,8 +168797,8 @@
       },
       "sprint": {
         "start": "2026-01-31",
-        "finish": "2026-02-08",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-02-08"
       },
       "actual": {
         "start": "2025-10-29",
@@ -169006,8 +169006,8 @@
       },
       "sprint": {
         "start": "2026-02-09",
-        "finish": "2026-02-20",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-02-20"
       },
       "actual": {
         "start": "2025-11-04",
@@ -169198,8 +169198,8 @@
       },
       "sprint": {
         "start": "2026-02-21",
-        "finish": "2026-03-01",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-03-01"
       },
       "actual": {
         "start": "2025-11-08",
@@ -169390,8 +169390,8 @@
       },
       "sprint": {
         "start": "2026-03-02",
-        "finish": "2026-03-10",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-03-10"
       },
       "actual": {
         "start": null,
@@ -169531,8 +169531,8 @@
       },
       "sprint": {
         "start": "2026-03-11",
-        "finish": "2026-03-19",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-03-19"
       },
       "actual": {
         "start": null,
@@ -169672,8 +169672,8 @@
       },
       "sprint": {
         "start": "2026-03-20",
-        "finish": "2026-03-31",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-03-31"
       },
       "actual": {
         "start": null,
@@ -169830,8 +169830,8 @@
       },
       "sprint": {
         "start": "2026-04-01",
-        "finish": "2026-04-09",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-04-09"
       },
       "actual": {
         "start": null,
@@ -169971,8 +169971,8 @@
       },
       "sprint": {
         "start": "2026-04-10",
-        "finish": "2026-04-18",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-04-18"
       },
       "actual": {
         "start": null,
@@ -170078,8 +170078,8 @@
       },
       "sprint": {
         "start": "2026-04-19",
-        "finish": "2026-04-27",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-04-27"
       },
       "actual": {
         "start": null,
@@ -170150,8 +170150,8 @@
       },
       "sprint": {
         "start": "2026-04-28",
-        "finish": "2026-05-09",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-05-09"
       },
       "actual": {
         "start": null,
@@ -170222,8 +170222,8 @@
       },
       "sprint": {
         "start": "2026-05-10",
-        "finish": "2026-05-18",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-05-18"
       },
       "actual": {
         "start": null,
@@ -170294,8 +170294,8 @@
       },
       "sprint": {
         "start": "2026-05-19",
-        "finish": "2026-05-27",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-05-27"
       },
       "actual": {
         "start": null,
@@ -170366,8 +170366,8 @@
       },
       "sprint": {
         "start": "2026-05-28",
-        "finish": "2026-06-05",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-06-05"
       },
       "actual": {
         "start": null,
@@ -170438,8 +170438,8 @@
       },
       "sprint": {
         "start": "2026-06-06",
-        "finish": "2026-06-17",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-06-17"
       },
       "actual": {
         "start": null,
@@ -170510,8 +170510,8 @@
       },
       "sprint": {
         "start": "2026-06-18",
-        "finish": "2026-06-26",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-06-26"
       },
       "actual": {
         "start": null,
@@ -170582,8 +170582,8 @@
       },
       "sprint": {
         "start": "2026-06-27",
-        "finish": "2026-07-05",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-07-05"
       },
       "actual": {
         "start": null,
@@ -170654,8 +170654,8 @@
       },
       "sprint": {
         "start": "2026-07-06",
-        "finish": "2026-07-17",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-07-17"
       },
       "actual": {
         "start": null,
@@ -170726,8 +170726,8 @@
       },
       "sprint": {
         "start": "2026-07-18",
-        "finish": "2026-08-21",
-        "duration_days": 35.0
+        "duration_days": 35.0,
+        "end": "2026-08-21"
       },
       "actual": {
         "start": null,
@@ -170798,8 +170798,8 @@
       },
       "sprint": {
         "start": "2026-01-31",
-        "finish": "2027-04-03",
-        "duration_days": 428.0
+        "duration_days": 428.0,
+        "end": "2027-04-03"
       },
       "actual": {
         "start": null,
@@ -170870,8 +170870,8 @@
       },
       "sprint": {
         "start": "2026-10-03",
-        "finish": "2027-08-18",
-        "duration_days": 320.0
+        "duration_days": 320.0,
+        "end": "2027-08-18"
       },
       "actual": {
         "start": null,
@@ -170942,8 +170942,8 @@
       },
       "sprint": {
         "start": "2025-12-20",
-        "finish": "2026-11-16",
-        "duration_days": 332.0
+        "duration_days": 332.0,
+        "end": "2026-11-16"
       },
       "actual": {
         "start": null,
@@ -171014,8 +171014,8 @@
       },
       "sprint": {
         "start": "2026-11-30",
-        "finish": "2027-02-27",
-        "duration_days": 90.0
+        "duration_days": 90.0,
+        "end": "2027-02-27"
       },
       "actual": {
         "start": null,
@@ -252881,8 +252881,8 @@
       },
       "sprint": {
         "start": "2025-03-03",
-        "finish": "2027-07-30",
-        "duration_days": 880.0
+        "duration_days": 880.0,
+        "end": "2027-07-30"
       },
       "actual": {
         "start": null,
@@ -252917,8 +252917,8 @@
       },
       "sprint": {
         "start": "2025-03-03",
-        "finish": "2025-07-06",
-        "duration_days": 125.0
+        "duration_days": 125.0,
+        "end": "2025-07-06"
       },
       "actual": {
         "start": "2025-02-22",
@@ -253177,8 +253177,8 @@
       },
       "sprint": {
         "start": "2025-07-07",
-        "finish": "2025-08-12",
-        "duration_days": 37.0
+        "duration_days": 37.0,
+        "end": "2025-08-12"
       },
       "actual": {
         "start": "2025-08-17",
@@ -253471,8 +253471,8 @@
       },
       "sprint": {
         "start": "2025-08-13",
-        "finish": "2025-09-07",
-        "duration_days": 26.0
+        "duration_days": 26.0,
+        "end": "2025-09-07"
       },
       "actual": {
         "start": "2025-05-19",
@@ -253646,8 +253646,8 @@
       },
       "sprint": {
         "start": "2025-09-08",
-        "finish": "2025-09-29",
-        "duration_days": 22.0
+        "duration_days": 22.0,
+        "end": "2025-09-29"
       },
       "actual": {
         "start": "2025-06-27",
@@ -253736,8 +253736,8 @@
       },
       "sprint": {
         "start": "2025-09-30",
-        "finish": "2025-10-24",
-        "duration_days": 25.0
+        "duration_days": 25.0,
+        "end": "2025-10-24"
       },
       "actual": {
         "start": "2025-07-27",
@@ -253860,8 +253860,8 @@
       },
       "sprint": {
         "start": "2025-10-25",
-        "finish": "2025-11-18",
-        "duration_days": 25.0
+        "duration_days": 25.0,
+        "end": "2025-11-18"
       },
       "actual": {
         "start": "2025-07-25",
@@ -254273,8 +254273,8 @@
       },
       "sprint": {
         "start": "2025-11-19",
-        "finish": "2025-12-09",
-        "duration_days": 21.0
+        "duration_days": 21.0,
+        "end": "2025-12-09"
       },
       "actual": {
         "start": "2025-07-26",
@@ -254686,8 +254686,8 @@
       },
       "sprint": {
         "start": "2025-12-10",
-        "finish": "2025-12-24",
-        "duration_days": 15.0
+        "duration_days": 15.0,
+        "end": "2025-12-24"
       },
       "actual": {
         "start": "2025-07-26",
@@ -255082,8 +255082,8 @@
       },
       "sprint": {
         "start": "2025-12-25",
-        "finish": "2026-01-02",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-01-02"
       },
       "actual": {
         "start": "2025-06-26",
@@ -255546,8 +255546,8 @@
       },
       "sprint": {
         "start": "2026-01-03",
-        "finish": "2026-01-11",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-01-11"
       },
       "actual": {
         "start": "2025-11-20",
@@ -255687,8 +255687,8 @@
       },
       "sprint": {
         "start": "2026-01-12",
-        "finish": "2026-01-23",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-01-23"
       },
       "actual": {
         "start": null,
@@ -255828,8 +255828,8 @@
       },
       "sprint": {
         "start": "2026-01-24",
-        "finish": "2026-02-01",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-02-01"
       },
       "actual": {
         "start": null,
@@ -255969,8 +255969,8 @@
       },
       "sprint": {
         "start": "2026-02-02",
-        "finish": "2026-02-10",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-02-10"
       },
       "actual": {
         "start": null,
@@ -256110,8 +256110,8 @@
       },
       "sprint": {
         "start": "2026-02-11",
-        "finish": "2026-02-19",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-02-19"
       },
       "actual": {
         "start": null,
@@ -256251,8 +256251,8 @@
       },
       "sprint": {
         "start": "2026-02-20",
-        "finish": "2026-03-03",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-03-03"
       },
       "actual": {
         "start": null,
@@ -256392,8 +256392,8 @@
       },
       "sprint": {
         "start": "2026-03-04",
-        "finish": "2026-03-12",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-03-12"
       },
       "actual": {
         "start": null,
@@ -256533,8 +256533,8 @@
       },
       "sprint": {
         "start": "2026-03-13",
-        "finish": "2026-03-21",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-03-21"
       },
       "actual": {
         "start": null,
@@ -256657,8 +256657,8 @@
       },
       "sprint": {
         "start": "2026-03-22",
-        "finish": "2026-03-30",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-03-30"
       },
       "actual": {
         "start": null,
@@ -256764,8 +256764,8 @@
       },
       "sprint": {
         "start": "2026-03-31",
-        "finish": "2026-04-11",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-04-11"
       },
       "actual": {
         "start": null,
@@ -256836,8 +256836,8 @@
       },
       "sprint": {
         "start": "2026-04-12",
-        "finish": "2026-04-20",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-04-20"
       },
       "actual": {
         "start": null,
@@ -256908,8 +256908,8 @@
       },
       "sprint": {
         "start": "2026-04-21",
-        "finish": "2026-04-29",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-04-29"
       },
       "actual": {
         "start": null,
@@ -256980,8 +256980,8 @@
       },
       "sprint": {
         "start": "2026-04-30",
-        "finish": "2026-05-08",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-05-08"
       },
       "actual": {
         "start": null,
@@ -257052,8 +257052,8 @@
       },
       "sprint": {
         "start": "2026-05-09",
-        "finish": "2026-05-20",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-05-20"
       },
       "actual": {
         "start": null,
@@ -257124,8 +257124,8 @@
       },
       "sprint": {
         "start": "2026-05-21",
-        "finish": "2026-05-29",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-05-29"
       },
       "actual": {
         "start": null,
@@ -257196,8 +257196,8 @@
       },
       "sprint": {
         "start": "2026-05-30",
-        "finish": "2026-06-07",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-06-07"
       },
       "actual": {
         "start": null,
@@ -257268,8 +257268,8 @@
       },
       "sprint": {
         "start": "2026-06-08",
-        "finish": "2026-06-19",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-06-19"
       },
       "actual": {
         "start": null,
@@ -257340,8 +257340,8 @@
       },
       "sprint": {
         "start": "2026-06-20",
-        "finish": "2026-07-24",
-        "duration_days": 35.0
+        "duration_days": 35.0,
+        "end": "2026-07-24"
       },
       "actual": {
         "start": null,
@@ -257412,8 +257412,8 @@
       },
       "sprint": {
         "start": "2025-12-25",
-        "finish": "2027-03-06",
-        "duration_days": 437.0
+        "duration_days": 437.0,
+        "end": "2027-03-06"
       },
       "actual": {
         "start": null,
@@ -257484,8 +257484,8 @@
       },
       "sprint": {
         "start": "2026-09-05",
-        "finish": "2027-07-30",
-        "duration_days": 329.0
+        "duration_days": 329.0,
+        "end": "2027-07-30"
       },
       "actual": {
         "start": null,
@@ -257556,8 +257556,8 @@
       },
       "sprint": {
         "start": "2025-11-17",
-        "finish": "2026-10-19",
-        "duration_days": 337.0
+        "duration_days": 337.0,
+        "end": "2026-10-19"
       },
       "actual": {
         "start": null,
@@ -257628,8 +257628,8 @@
       },
       "sprint": {
         "start": "2026-11-02",
-        "finish": "2027-01-30",
-        "duration_days": 90.0
+        "duration_days": 90.0,
+        "end": "2027-01-30"
       },
       "actual": {
         "start": null,
@@ -343772,8 +343772,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2027-08-07",
-        "duration_days": 887.0
+        "duration_days": 887.0,
+        "end": "2027-08-07"
       },
       "actual": {
         "start": null,
@@ -343808,8 +343808,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2025-07-14",
-        "duration_days": 118.0
+        "duration_days": 118.0,
+        "end": "2025-07-14"
       },
       "actual": {
         "start": "2025-02-26",
@@ -344119,8 +344119,8 @@
       },
       "sprint": {
         "start": "2025-07-15",
-        "finish": "2025-08-20",
-        "duration_days": 37.0
+        "duration_days": 37.0,
+        "end": "2025-08-20"
       },
       "actual": {
         "start": "2025-05-20",
@@ -344260,8 +344260,8 @@
       },
       "sprint": {
         "start": "2025-08-21",
-        "finish": "2025-09-15",
-        "duration_days": 26.0
+        "duration_days": 26.0,
+        "end": "2025-09-15"
       },
       "actual": {
         "start": "2025-06-27",
@@ -344350,8 +344350,8 @@
       },
       "sprint": {
         "start": "2025-09-16",
-        "finish": "2025-10-07",
-        "duration_days": 22.0
+        "duration_days": 22.0,
+        "end": "2025-10-07"
       },
       "actual": {
         "start": "2025-07-20",
@@ -344474,8 +344474,8 @@
       },
       "sprint": {
         "start": "2025-10-08",
-        "finish": "2025-11-01",
-        "duration_days": 25.0
+        "duration_days": 25.0,
+        "end": "2025-11-01"
       },
       "actual": {
         "start": "2025-08-05",
@@ -344666,8 +344666,8 @@
       },
       "sprint": {
         "start": "2025-11-02",
-        "finish": "2025-11-26",
-        "duration_days": 25.0
+        "duration_days": 25.0,
+        "end": "2025-11-26"
       },
       "actual": {
         "start": "2025-08-09",
@@ -344858,8 +344858,8 @@
       },
       "sprint": {
         "start": "2025-11-27",
-        "finish": "2025-12-17",
-        "duration_days": 21.0
+        "duration_days": 21.0,
+        "end": "2025-12-17"
       },
       "actual": {
         "start": "2025-07-29",
@@ -345067,8 +345067,8 @@
       },
       "sprint": {
         "start": "2025-12-18",
-        "finish": "2026-01-01",
-        "duration_days": 15.0
+        "duration_days": 15.0,
+        "end": "2026-01-01"
       },
       "actual": {
         "start": "2025-07-29",
@@ -345276,8 +345276,8 @@
       },
       "sprint": {
         "start": "2026-01-02",
-        "finish": "2026-01-10",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-01-10"
       },
       "actual": {
         "start": "2025-07-29",
@@ -345485,8 +345485,8 @@
       },
       "sprint": {
         "start": "2026-01-11",
-        "finish": "2026-01-19",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-01-19"
       },
       "actual": {
         "start": "2025-06-26",
@@ -345779,8 +345779,8 @@
       },
       "sprint": {
         "start": "2026-01-20",
-        "finish": "2026-01-31",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-01-31"
       },
       "actual": {
         "start": "2025-08-01",
@@ -346090,8 +346090,8 @@
       },
       "sprint": {
         "start": "2026-02-01",
-        "finish": "2026-02-09",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-02-09"
       },
       "actual": {
         "start": "2025-09-02",
@@ -346316,8 +346316,8 @@
       },
       "sprint": {
         "start": "2026-02-10",
-        "finish": "2026-02-18",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-02-18"
       },
       "actual": {
         "start": "2025-08-27",
@@ -346559,8 +346559,8 @@
       },
       "sprint": {
         "start": "2026-02-19",
-        "finish": "2026-02-27",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-02-27"
       },
       "actual": {
         "start": "2025-10-14",
@@ -346768,8 +346768,8 @@
       },
       "sprint": {
         "start": "2026-02-28",
-        "finish": "2026-03-11",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-03-11"
       },
       "actual": {
         "start": "2025-11-14",
@@ -346943,8 +346943,8 @@
       },
       "sprint": {
         "start": "2026-03-12",
-        "finish": "2026-03-20",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-03-20"
       },
       "actual": {
         "start": null,
@@ -347101,8 +347101,8 @@
       },
       "sprint": {
         "start": "2026-03-21",
-        "finish": "2026-03-29",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-03-29"
       },
       "actual": {
         "start": null,
@@ -347242,8 +347242,8 @@
       },
       "sprint": {
         "start": "2026-03-30",
-        "finish": "2026-04-07",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-04-07"
       },
       "actual": {
         "start": null,
@@ -347366,8 +347366,8 @@
       },
       "sprint": {
         "start": "2026-04-08",
-        "finish": "2026-04-19",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-04-19"
       },
       "actual": {
         "start": null,
@@ -347490,8 +347490,8 @@
       },
       "sprint": {
         "start": "2026-04-20",
-        "finish": "2026-04-28",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-04-28"
       },
       "actual": {
         "start": null,
@@ -347597,8 +347597,8 @@
       },
       "sprint": {
         "start": "2026-04-29",
-        "finish": "2026-05-07",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-05-07"
       },
       "actual": {
         "start": null,
@@ -347704,8 +347704,8 @@
       },
       "sprint": {
         "start": "2026-05-08",
-        "finish": "2026-05-16",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-05-16"
       },
       "actual": {
         "start": null,
@@ -347811,8 +347811,8 @@
       },
       "sprint": {
         "start": "2026-05-17",
-        "finish": "2026-05-28",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-05-28"
       },
       "actual": {
         "start": null,
@@ -347883,8 +347883,8 @@
       },
       "sprint": {
         "start": "2026-05-29",
-        "finish": "2026-06-06",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-06-06"
       },
       "actual": {
         "start": null,
@@ -347955,8 +347955,8 @@
       },
       "sprint": {
         "start": "2026-06-07",
-        "finish": "2026-06-15",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-06-15"
       },
       "actual": {
         "start": null,
@@ -348027,8 +348027,8 @@
       },
       "sprint": {
         "start": "2026-06-16",
-        "finish": "2026-06-27",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-06-27"
       },
       "actual": {
         "start": null,
@@ -348099,8 +348099,8 @@
       },
       "sprint": {
         "start": "2026-06-28",
-        "finish": "2026-08-01",
-        "duration_days": 35.0
+        "duration_days": 35.0,
+        "end": "2026-08-01"
       },
       "actual": {
         "start": null,
@@ -348171,8 +348171,8 @@
       },
       "sprint": {
         "start": "2026-01-02",
-        "finish": "2027-03-14",
-        "duration_days": 437.0
+        "duration_days": 437.0,
+        "end": "2027-03-14"
       },
       "actual": {
         "start": null,
@@ -348243,8 +348243,8 @@
       },
       "sprint": {
         "start": "2026-09-13",
-        "finish": "2027-08-07",
-        "duration_days": 329.0
+        "duration_days": 329.0,
+        "end": "2027-08-07"
       },
       "actual": {
         "start": null,
@@ -348315,8 +348315,8 @@
       },
       "sprint": {
         "start": "2025-11-30",
-        "finish": "2026-10-27",
-        "duration_days": 332.0
+        "duration_days": 332.0,
+        "end": "2026-10-27"
       },
       "actual": {
         "start": null,
@@ -348387,8 +348387,8 @@
       },
       "sprint": {
         "start": "2026-11-10",
-        "finish": "2027-02-07",
-        "duration_days": 90.0
+        "duration_days": 90.0,
+        "end": "2027-02-07"
       },
       "actual": {
         "start": null,
@@ -434710,8 +434710,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2027-08-07",
-        "duration_days": 887.0
+        "duration_days": 887.0,
+        "end": "2027-08-07"
       },
       "actual": {
         "start": null,
@@ -434746,8 +434746,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2025-07-14",
-        "duration_days": 118.0
+        "duration_days": 118.0,
+        "end": "2025-07-14"
       },
       "actual": {
         "start": "2025-03-04",
@@ -435057,8 +435057,8 @@
       },
       "sprint": {
         "start": "2025-07-15",
-        "finish": "2025-08-20",
-        "duration_days": 37.0
+        "duration_days": 37.0,
+        "end": "2025-08-20"
       },
       "actual": {
         "start": "2025-05-21",
@@ -435232,8 +435232,8 @@
       },
       "sprint": {
         "start": "2025-08-21",
-        "finish": "2025-09-15",
-        "duration_days": 26.0
+        "duration_days": 26.0,
+        "end": "2025-09-15"
       },
       "actual": {
         "start": "2025-06-27",
@@ -435322,8 +435322,8 @@
       },
       "sprint": {
         "start": "2025-09-16",
-        "finish": "2025-10-07",
-        "duration_days": 22.0
+        "duration_days": 22.0,
+        "end": "2025-10-07"
       },
       "actual": {
         "start": "2025-08-18",
@@ -435412,8 +435412,8 @@
       },
       "sprint": {
         "start": "2025-10-08",
-        "finish": "2025-11-01",
-        "duration_days": 25.0
+        "duration_days": 25.0,
+        "end": "2025-11-01"
       },
       "actual": {
         "start": "2025-08-25",
@@ -435638,8 +435638,8 @@
       },
       "sprint": {
         "start": "2025-11-02",
-        "finish": "2025-11-26",
-        "duration_days": 25.0
+        "duration_days": 25.0,
+        "end": "2025-11-26"
       },
       "actual": {
         "start": "2025-08-27",
@@ -435864,8 +435864,8 @@
       },
       "sprint": {
         "start": "2025-11-27",
-        "finish": "2025-12-17",
-        "duration_days": 21.0
+        "duration_days": 21.0,
+        "end": "2025-12-17"
       },
       "actual": {
         "start": "2025-08-08",
@@ -436141,8 +436141,8 @@
       },
       "sprint": {
         "start": "2025-12-18",
-        "finish": "2026-01-01",
-        "duration_days": 15.0
+        "duration_days": 15.0,
+        "end": "2026-01-01"
       },
       "actual": {
         "start": "2025-08-27",
@@ -436367,8 +436367,8 @@
       },
       "sprint": {
         "start": "2026-01-02",
-        "finish": "2026-01-10",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-01-10"
       },
       "actual": {
         "start": "2025-08-27",
@@ -436593,8 +436593,8 @@
       },
       "sprint": {
         "start": "2026-01-11",
-        "finish": "2026-01-19",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-01-19"
       },
       "actual": {
         "start": "2025-06-26",
@@ -436989,8 +436989,8 @@
       },
       "sprint": {
         "start": "2026-01-20",
-        "finish": "2026-01-31",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-01-31"
       },
       "actual": {
         "start": "2025-09-25",
@@ -437215,8 +437215,8 @@
       },
       "sprint": {
         "start": "2026-02-01",
-        "finish": "2026-02-09",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-02-09"
       },
       "actual": {
         "start": "2025-10-27",
@@ -437356,8 +437356,8 @@
       },
       "sprint": {
         "start": "2026-02-10",
-        "finish": "2026-02-18",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-02-18"
       },
       "actual": {
         "start": "2025-10-27",
@@ -437497,8 +437497,8 @@
       },
       "sprint": {
         "start": "2026-02-19",
-        "finish": "2026-02-27",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-02-27"
       },
       "actual": {
         "start": "2025-11-18",
@@ -437638,8 +437638,8 @@
       },
       "sprint": {
         "start": "2026-02-28",
-        "finish": "2026-03-11",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-03-11"
       },
       "actual": {
         "start": "2025-11-27",
@@ -437779,8 +437779,8 @@
       },
       "sprint": {
         "start": "2026-03-12",
-        "finish": "2026-03-20",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-03-20"
       },
       "actual": {
         "start": null,
@@ -437920,8 +437920,8 @@
       },
       "sprint": {
         "start": "2026-03-21",
-        "finish": "2026-03-29",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-03-29"
       },
       "actual": {
         "start": null,
@@ -438061,8 +438061,8 @@
       },
       "sprint": {
         "start": "2026-03-30",
-        "finish": "2026-04-07",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-04-07"
       },
       "actual": {
         "start": null,
@@ -438185,8 +438185,8 @@
       },
       "sprint": {
         "start": "2026-04-08",
-        "finish": "2026-04-19",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-04-19"
       },
       "actual": {
         "start": null,
@@ -438309,8 +438309,8 @@
       },
       "sprint": {
         "start": "2026-04-20",
-        "finish": "2026-04-28",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-04-28"
       },
       "actual": {
         "start": null,
@@ -438433,8 +438433,8 @@
       },
       "sprint": {
         "start": "2026-04-29",
-        "finish": "2026-05-07",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-05-07"
       },
       "actual": {
         "start": null,
@@ -438540,8 +438540,8 @@
       },
       "sprint": {
         "start": "2026-05-08",
-        "finish": "2026-05-16",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-05-16"
       },
       "actual": {
         "start": null,
@@ -438647,8 +438647,8 @@
       },
       "sprint": {
         "start": "2026-05-17",
-        "finish": "2026-05-28",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-05-28"
       },
       "actual": {
         "start": null,
@@ -438719,8 +438719,8 @@
       },
       "sprint": {
         "start": "2026-05-29",
-        "finish": "2026-06-06",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-06-06"
       },
       "actual": {
         "start": null,
@@ -438791,8 +438791,8 @@
       },
       "sprint": {
         "start": "2026-06-07",
-        "finish": "2026-06-15",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-06-15"
       },
       "actual": {
         "start": null,
@@ -438863,8 +438863,8 @@
       },
       "sprint": {
         "start": "2026-06-16",
-        "finish": "2026-06-27",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-06-27"
       },
       "actual": {
         "start": null,
@@ -438935,8 +438935,8 @@
       },
       "sprint": {
         "start": "2026-06-28",
-        "finish": "2026-08-01",
-        "duration_days": 35.0
+        "duration_days": 35.0,
+        "end": "2026-08-01"
       },
       "actual": {
         "start": null,
@@ -439007,8 +439007,8 @@
       },
       "sprint": {
         "start": "2025-09-29",
-        "finish": "2027-03-24",
-        "duration_days": 542.0
+        "duration_days": 542.0,
+        "end": "2027-03-24"
       },
       "actual": {
         "start": null,
@@ -439079,8 +439079,8 @@
       },
       "sprint": {
         "start": "2026-09-13",
-        "finish": "2027-08-07",
-        "duration_days": 329.0
+        "duration_days": 329.0,
+        "end": "2027-08-07"
       },
       "actual": {
         "start": null,
@@ -439151,8 +439151,8 @@
       },
       "sprint": {
         "start": "2025-11-30",
-        "finish": "2026-10-27",
-        "duration_days": 332.0
+        "duration_days": 332.0,
+        "end": "2026-10-27"
       },
       "actual": {
         "start": null,
@@ -439223,8 +439223,8 @@
       },
       "sprint": {
         "start": "2026-11-10",
-        "finish": "2027-02-07",
-        "duration_days": 90.0
+        "duration_days": 90.0,
+        "end": "2027-02-07"
       },
       "actual": {
         "start": null,
@@ -525571,8 +525571,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2027-07-16",
-        "duration_days": 865.0
+        "duration_days": 865.0,
+        "end": "2027-07-16"
       },
       "actual": {
         "start": null,
@@ -525607,8 +525607,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2025-06-22",
-        "duration_days": 105.0
+        "duration_days": 105.0,
+        "end": "2025-06-22"
       },
       "actual": {
         "start": "2025-02-22",
@@ -525816,8 +525816,8 @@
       },
       "sprint": {
         "start": "2025-06-23",
-        "finish": "2025-07-29",
-        "duration_days": 37.0
+        "duration_days": 37.0,
+        "end": "2025-07-29"
       },
       "actual": {
         "start": "2025-05-30",
@@ -526178,8 +526178,8 @@
       },
       "sprint": {
         "start": "2025-07-30",
-        "finish": "2025-08-24",
-        "duration_days": 26.0
+        "duration_days": 26.0,
+        "end": "2025-08-24"
       },
       "actual": {
         "start": "2025-06-17",
@@ -526285,8 +526285,8 @@
       },
       "sprint": {
         "start": "2025-08-25",
-        "finish": "2025-09-15",
-        "duration_days": 22.0
+        "duration_days": 22.0,
+        "end": "2025-09-15"
       },
       "actual": {
         "start": "2025-07-07",
@@ -526443,8 +526443,8 @@
       },
       "sprint": {
         "start": "2025-09-16",
-        "finish": "2025-10-10",
-        "duration_days": 25.0
+        "duration_days": 25.0,
+        "end": "2025-10-10"
       },
       "actual": {
         "start": "2025-08-10",
@@ -526492,8 +526492,8 @@
       },
       "sprint": {
         "start": "2025-10-11",
-        "finish": "2025-11-04",
-        "duration_days": 25.0
+        "duration_days": 25.0,
+        "end": "2025-11-04"
       },
       "actual": {
         "start": "2025-08-04",
@@ -526684,8 +526684,8 @@
       },
       "sprint": {
         "start": "2025-11-05",
-        "finish": "2025-11-25",
-        "duration_days": 21.0
+        "duration_days": 21.0,
+        "end": "2025-11-25"
       },
       "actual": {
         "start": "2025-08-13",
@@ -526859,8 +526859,8 @@
       },
       "sprint": {
         "start": "2025-11-26",
-        "finish": "2025-12-10",
-        "duration_days": 15.0
+        "duration_days": 15.0,
+        "end": "2025-12-10"
       },
       "actual": {
         "start": "2025-08-04",
@@ -527051,8 +527051,8 @@
       },
       "sprint": {
         "start": "2025-12-11",
-        "finish": "2025-12-19",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2025-12-19"
       },
       "actual": {
         "start": "2025-08-04",
@@ -527243,8 +527243,8 @@
       },
       "sprint": {
         "start": "2025-12-20",
-        "finish": "2025-12-28",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2025-12-28"
       },
       "actual": {
         "start": "2025-08-20",
@@ -527401,8 +527401,8 @@
       },
       "sprint": {
         "start": "2025-12-29",
-        "finish": "2026-01-09",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-01-09"
       },
       "actual": {
         "start": "2025-08-20",
@@ -527559,8 +527559,8 @@
       },
       "sprint": {
         "start": "2026-01-10",
-        "finish": "2026-01-18",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-01-18"
       },
       "actual": {
         "start": "2025-05-26",
@@ -527938,8 +527938,8 @@
       },
       "sprint": {
         "start": "2026-01-19",
-        "finish": "2026-01-27",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-01-27"
       },
       "actual": {
         "start": "2025-08-11",
@@ -528113,8 +528113,8 @@
       },
       "sprint": {
         "start": "2026-01-28",
-        "finish": "2026-02-05",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-02-05"
       },
       "actual": {
         "start": "2025-09-07",
@@ -528288,8 +528288,8 @@
       },
       "sprint": {
         "start": "2026-02-06",
-        "finish": "2026-02-17",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-02-17"
       },
       "actual": {
         "start": "2025-09-05",
@@ -528463,8 +528463,8 @@
       },
       "sprint": {
         "start": "2026-02-18",
-        "finish": "2026-02-26",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-02-26"
       },
       "actual": {
         "start": "2025-10-13",
@@ -528655,8 +528655,8 @@
       },
       "sprint": {
         "start": "2026-02-27",
-        "finish": "2026-03-07",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-03-07"
       },
       "actual": {
         "start": "2025-11-08",
@@ -528847,8 +528847,8 @@
       },
       "sprint": {
         "start": "2026-03-08",
-        "finish": "2026-03-16",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-03-16"
       },
       "actual": {
         "start": null,
@@ -529005,8 +529005,8 @@
       },
       "sprint": {
         "start": "2026-03-17",
-        "finish": "2026-03-28",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-03-28"
       },
       "actual": {
         "start": null,
@@ -529146,8 +529146,8 @@
       },
       "sprint": {
         "start": "2026-03-29",
-        "finish": "2026-04-06",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-04-06"
       },
       "actual": {
         "start": null,
@@ -529270,8 +529270,8 @@
       },
       "sprint": {
         "start": "2026-04-07",
-        "finish": "2026-04-15",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-04-15"
       },
       "actual": {
         "start": null,
@@ -529377,8 +529377,8 @@
       },
       "sprint": {
         "start": "2026-04-16",
-        "finish": "2026-04-24",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-04-24"
       },
       "actual": {
         "start": null,
@@ -529484,8 +529484,8 @@
       },
       "sprint": {
         "start": "2026-04-25",
-        "finish": "2026-05-06",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-05-06"
       },
       "actual": {
         "start": null,
@@ -529608,8 +529608,8 @@
       },
       "sprint": {
         "start": "2026-05-07",
-        "finish": "2026-05-15",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-05-15"
       },
       "actual": {
         "start": null,
@@ -529715,8 +529715,8 @@
       },
       "sprint": {
         "start": "2026-05-16",
-        "finish": "2026-05-24",
-        "duration_days": 9.0
+        "duration_days": 9.0,
+        "end": "2026-05-24"
       },
       "actual": {
         "start": null,
@@ -529787,8 +529787,8 @@
       },
       "sprint": {
         "start": "2026-05-25",
-        "finish": "2026-06-05",
-        "duration_days": 12.0
+        "duration_days": 12.0,
+        "end": "2026-06-05"
       },
       "actual": {
         "start": null,
@@ -529859,8 +529859,8 @@
       },
       "sprint": {
         "start": "2026-06-06",
-        "finish": "2026-07-10",
-        "duration_days": 35.0
+        "duration_days": 35.0,
+        "end": "2026-07-10"
       },
       "actual": {
         "start": null,
@@ -529931,8 +529931,8 @@
       },
       "sprint": {
         "start": "2025-04-01",
-        "finish": "2027-02-20",
-        "duration_days": 691.0
+        "duration_days": 691.0,
+        "end": "2027-02-20"
       },
       "actual": {
         "start": null,
@@ -530003,8 +530003,8 @@
       },
       "sprint": {
         "start": "2026-08-22",
-        "finish": "2027-07-16",
-        "duration_days": 329.0
+        "duration_days": 329.0,
+        "end": "2027-07-16"
       },
       "actual": {
         "start": null,
@@ -530075,8 +530075,8 @@
       },
       "sprint": {
         "start": "2025-11-08",
-        "finish": "2026-10-05",
-        "duration_days": 332.0
+        "duration_days": 332.0,
+        "end": "2026-10-05"
       },
       "actual": {
         "start": null,
@@ -530147,8 +530147,8 @@
       },
       "sprint": {
         "start": "2026-10-19",
-        "finish": "2027-01-16",
-        "duration_days": 90.0
+        "duration_days": 90.0,
+        "end": "2027-01-16"
       },
       "actual": {
         "start": null,
@@ -616709,8 +616709,8 @@
       },
       "sprint": {
         "start": "2025-07-03",
-        "finish": "2027-07-16",
-        "duration_days": 743.25
+        "duration_days": 743.25,
+        "end": "2027-07-16"
       },
       "actual": {
         "start": null,
@@ -616745,8 +616745,8 @@
       },
       "sprint": {
         "start": "2025-07-03",
-        "finish": "2025-11-29",
-        "duration_days": 150.0
+        "duration_days": 150.0,
+        "end": "2025-11-29"
       },
       "actual": {
         "start": "2025-05-16",
@@ -617345,8 +617345,8 @@
       },
       "sprint": {
         "start": "2026-03-08",
-        "finish": "2026-09-24",
-        "duration_days": 200.0
+        "duration_days": 200.0,
+        "end": "2026-09-24"
       },
       "actual": {
         "start": null,
@@ -617707,8 +617707,8 @@
       },
       "sprint": {
         "start": "2026-09-24",
-        "finish": "2027-01-22",
-        "duration_days": 120.0
+        "duration_days": 120.0,
+        "end": "2027-01-22"
       },
       "actual": {
         "start": null,
@@ -617779,8 +617779,8 @@
       },
       "sprint": {
         "start": "2027-01-22",
-        "finish": "2027-04-17",
-        "duration_days": 85.0
+        "duration_days": 85.0,
+        "end": "2027-04-17"
       },
       "actual": {
         "start": null,
@@ -617851,8 +617851,8 @@
       },
       "sprint": {
         "start": "2027-04-17",
-        "finish": "2027-07-16",
-        "duration_days": 90.0
+        "duration_days": 90.0,
+        "end": "2027-07-16"
       },
       "actual": {
         "start": null,
@@ -617923,8 +617923,8 @@
       },
       "sprint": {
         "start": "2025-11-30",
-        "finish": "2027-07-22",
-        "duration_days": 600.0
+        "duration_days": 600.0,
+        "end": "2027-07-22"
       },
       "actual": {
         "start": null,
@@ -617959,8 +617959,8 @@
       },
       "sprint": {
         "start": "2025-11-30",
-        "finish": "2026-04-28",
-        "duration_days": 150.0
+        "duration_days": 150.0,
+        "end": "2026-04-28"
       },
       "actual": {
         "start": "2025-09-12",
@@ -618457,8 +618457,8 @@
       },
       "sprint": {
         "start": "2026-04-29",
-        "finish": "2026-09-25",
-        "duration_days": 150.0
+        "duration_days": 150.0,
+        "end": "2026-09-25"
       },
       "actual": {
         "start": null,
@@ -618768,8 +618768,8 @@
       },
       "sprint": {
         "start": "2026-09-26",
-        "finish": "2027-01-23",
-        "duration_days": 120.0
+        "duration_days": 120.0,
+        "end": "2027-01-23"
       },
       "actual": {
         "start": null,
@@ -618892,8 +618892,8 @@
       },
       "sprint": {
         "start": "2027-01-24",
-        "finish": "2027-04-23",
-        "duration_days": 90.0
+        "duration_days": 90.0,
+        "end": "2027-04-23"
       },
       "actual": {
         "start": null,
@@ -618964,8 +618964,8 @@
       },
       "sprint": {
         "start": "2027-04-24",
-        "finish": "2027-07-22",
-        "duration_days": 90.0
+        "duration_days": 90.0,
+        "end": "2027-07-22"
       },
       "actual": {
         "start": null,
@@ -619108,8 +619108,8 @@
       },
       "sprint": {
         "start": "2026-04-29",
-        "finish": "2027-04-28",
-        "duration_days": 365.0
+        "duration_days": 365.0,
+        "end": "2027-04-28"
       },
       "actual": {
         "start": null,
@@ -619144,8 +619144,8 @@
       },
       "sprint": {
         "start": "2026-04-29",
-        "finish": "2026-07-27",
-        "duration_days": 90.0
+        "duration_days": 90.0,
+        "end": "2026-07-27"
       },
       "actual": {
         "start": null,
@@ -619319,8 +619319,8 @@
       },
       "sprint": {
         "start": "2026-07-28",
-        "finish": "2027-01-03",
-        "duration_days": 160.0
+        "duration_days": 160.0,
+        "end": "2027-01-03"
       },
       "actual": {
         "start": null,
@@ -619391,8 +619391,8 @@
       },
       "sprint": {
         "start": "2026-08-27",
-        "finish": "2026-12-24",
-        "duration_days": 120.0
+        "duration_days": 120.0,
+        "end": "2026-12-24"
       },
       "actual": {
         "start": null,
@@ -619463,8 +619463,8 @@
       },
       "sprint": {
         "start": "2027-01-14",
-        "finish": "2027-04-23",
-        "duration_days": 100.0
+        "duration_days": 100.0,
+        "end": "2027-04-23"
       },
       "actual": {
         "start": null,
@@ -619535,8 +619535,8 @@
       },
       "sprint": {
         "start": "2027-02-28",
-        "finish": "2027-04-28",
-        "duration_days": 60.0
+        "duration_days": 60.0,
+        "end": "2027-04-28"
       },
       "actual": {
         "start": null,
@@ -619607,8 +619607,8 @@
       },
       "sprint": {
         "start": "2024-06-24",
-        "finish": "2027-04-23",
-        "duration_days": 1033.3
+        "duration_days": 1033.3,
+        "end": "2027-04-23"
       },
       "actual": {
         "start": null,
@@ -619643,8 +619643,8 @@
       },
       "sprint": {
         "start": "2024-06-24",
-        "finish": "2025-06-01",
-        "duration_days": 201.0
+        "duration_days": 201.0,
+        "end": "2025-06-01"
       },
       "actual": {
         "start": "2024-06-24",
@@ -620311,8 +620311,8 @@
       },
       "sprint": {
         "start": "2024-11-18",
-        "finish": "2025-04-01",
-        "duration_days": 41.0
+        "duration_days": 41.0,
+        "end": "2025-04-01"
       },
       "actual": {
         "start": "2024-11-18",
@@ -620979,8 +620979,8 @@
       },
       "sprint": {
         "start": "2024-07-17",
-        "finish": "2025-02-27",
-        "duration_days": 112.0
+        "duration_days": 112.0,
+        "end": "2025-02-27"
       },
       "actual": {
         "start": "2024-07-17",
@@ -621051,8 +621051,8 @@
       },
       "sprint": {
         "start": "2025-01-27",
-        "finish": "2026-09-01",
-        "duration_days": 100.0
+        "duration_days": 100.0,
+        "end": "2026-09-01"
       },
       "actual": {
         "start": "2025-01-27",
@@ -621753,8 +621753,8 @@
       },
       "sprint": {
         "start": "2027-01-04",
-        "finish": "2027-02-12",
-        "duration_days": 40.0
+        "duration_days": 40.0,
+        "end": "2027-02-12"
       },
       "actual": {
         "start": null,
@@ -621825,8 +621825,8 @@
       },
       "sprint": {
         "start": "2024-08-05",
-        "finish": "2024-12-10",
-        "duration_days": 127.0
+        "duration_days": 127.0,
+        "end": "2024-12-10"
       },
       "actual": {
         "start": "2024-08-05",
@@ -621897,8 +621897,8 @@
       },
       "sprint": {
         "start": "2025-01-03",
-        "finish": "2025-02-12",
-        "duration_days": 40.0
+        "duration_days": 40.0,
+        "end": "2025-02-12"
       },
       "actual": {
         "start": "2025-01-03",
@@ -621969,8 +621969,8 @@
       },
       "sprint": {
         "start": "2026-09-24",
-        "finish": "2027-02-21",
-        "duration_days": 150.0
+        "duration_days": 150.0,
+        "end": "2027-02-21"
       },
       "actual": {
         "start": null,
@@ -622041,8 +622041,8 @@
       },
       "sprint": {
         "start": "2026-09-24",
-        "finish": "2027-02-21",
-        "duration_days": 150.0
+        "duration_days": 150.0,
+        "end": "2027-02-21"
       },
       "actual": {
         "start": null,
@@ -622113,8 +622113,8 @@
       },
       "sprint": {
         "start": "2025-12-28",
-        "finish": "2026-01-01",
-        "duration_days": 5.0
+        "duration_days": 5.0,
+        "end": "2026-01-01"
       },
       "actual": {
         "start": null,
@@ -622162,8 +622162,8 @@
       },
       "sprint": {
         "start": "2026-11-25",
-        "finish": "2027-01-23",
-        "duration_days": 60.0
+        "duration_days": 60.0,
+        "end": "2027-01-23"
       },
       "actual": {
         "start": null,
@@ -622211,8 +622211,8 @@
       },
       "sprint": {
         "start": "2026-08-05",
-        "finish": "2027-02-21",
-        "duration_days": 200.0
+        "duration_days": 200.0,
+        "end": "2027-02-21"
       },
       "actual": {
         "start": null,
@@ -622283,8 +622283,8 @@
       },
       "sprint": {
         "start": "2026-09-26",
-        "finish": "2027-04-23",
-        "duration_days": 210.0
+        "duration_days": 210.0,
+        "end": "2027-04-23"
       },
       "actual": {
         "start": null,
@@ -622355,8 +622355,8 @@
       },
       "sprint": {
         "start": "2027-01-19",
-        "finish": "2027-07-16",
-        "duration_days": 177.75
+        "duration_days": 177.75,
+        "end": "2027-07-16"
       },
       "actual": {
         "start": null,
@@ -622391,8 +622391,8 @@
       },
       "sprint": {
         "start": "2027-01-19",
-        "finish": "2027-01-26",
-        "duration_days": 7.0
+        "duration_days": 7.0,
+        "end": "2027-01-26"
       },
       "actual": {
         "start": null,
@@ -622440,8 +622440,8 @@
       },
       "sprint": {
         "start": "2027-01-26",
-        "finish": "2027-03-12",
-        "duration_days": 45.0
+        "duration_days": 45.0,
+        "end": "2027-03-12"
       },
       "actual": {
         "start": null,
@@ -622489,8 +622489,8 @@
       },
       "sprint": {
         "start": "2027-05-02",
-        "finish": "2027-06-16",
-        "duration_days": 45.0
+        "duration_days": 45.0,
+        "end": "2027-06-16"
       },
       "actual": {
         "start": null,
@@ -622538,8 +622538,8 @@
       },
       "sprint": {
         "start": "2027-06-16",
-        "finish": "2027-07-16",
-        "duration_days": 30.0
+        "duration_days": 30.0,
+        "end": "2027-07-16"
       },
       "actual": {
         "start": null,
@@ -622587,8 +622587,8 @@
       },
       "sprint": {
         "start": "2027-07-17",
-        "finish": "2028-03-10",
-        "duration_days": 237.5
+        "duration_days": 237.5,
+        "end": "2028-03-10"
       },
       "actual": {
         "start": null,
@@ -622623,8 +622623,8 @@
       },
       "sprint": {
         "start": "2027-08-20",
-        "finish": "2027-12-18",
-        "duration_days": 120.0
+        "duration_days": 120.0,
+        "end": "2027-12-18"
       },
       "actual": {
         "start": null,
@@ -622695,8 +622695,8 @@
       },
       "sprint": {
         "start": "2027-11-11",
-        "finish": "2028-03-10",
-        "duration_days": 120.0
+        "duration_days": 120.0,
+        "end": "2028-03-10"
       },
       "actual": {
         "start": null,
@@ -622767,8 +622767,8 @@
       },
       "sprint": {
         "start": "2027-08-19",
-        "finish": "2027-12-16",
-        "duration_days": 120.0
+        "duration_days": 120.0,
+        "end": "2027-12-16"
       },
       "actual": {
         "start": null,
@@ -622839,8 +622839,8 @@
       },
       "sprint": {
         "start": "2027-07-31",
-        "finish": "2027-11-27",
-        "duration_days": 120.0
+        "duration_days": 120.0,
+        "end": "2027-11-27"
       },
       "actual": {
         "start": null,
@@ -622911,8 +622911,8 @@
       },
       "sprint": {
         "start": "2027-08-08",
-        "finish": "2027-12-05",
-        "duration_days": 120.0
+        "duration_days": 120.0,
+        "end": "2027-12-05"
       },
       "actual": {
         "start": null,
@@ -622983,8 +622983,8 @@
       },
       "sprint": {
         "start": "2027-08-08",
-        "finish": "2027-12-05",
-        "duration_days": 120.0
+        "duration_days": 120.0,
+        "end": "2027-12-05"
       },
       "actual": {
         "start": null,
@@ -623055,8 +623055,8 @@
       },
       "sprint": {
         "start": "2027-07-17",
-        "finish": "2027-11-13",
-        "duration_days": 120.0
+        "duration_days": 120.0,
+        "end": "2027-11-13"
       },
       "actual": {
         "start": null,
@@ -623127,8 +623127,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2028-03-10",
-        "duration_days": 1102.75
+        "duration_days": 1102.75,
+        "end": "2028-03-10"
       },
       "actual": {
         "start": null,
@@ -623163,8 +623163,8 @@
       },
       "sprint": {
         "start": "2025-03-08",
-        "finish": "2027-12-18",
-        "duration_days": 1015.25
+        "duration_days": 1015.25,
+        "end": "2027-12-18"
       },
       "actual": {
         "start": null,
@@ -623199,8 +623199,8 @@
       },
       "sprint": {
         "start": "2025-03-08",
-        "finish": "2025-03-08",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-03-08"
       },
       "actual": {
         "start": "2025-03-08",
@@ -623238,8 +623238,8 @@
       },
       "sprint": {
         "start": "2025-07-20",
-        "finish": "2025-07-20",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-07-20"
       },
       "actual": {
         "start": "2025-08-20",
@@ -623277,8 +623277,8 @@
       },
       "sprint": {
         "start": "2025-09-21",
-        "finish": "2025-09-21",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-09-21"
       },
       "actual": {
         "start": null,
@@ -623316,8 +623316,8 @@
       },
       "sprint": {
         "start": "2025-12-27",
-        "finish": "2025-12-27",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-12-27"
       },
       "actual": {
         "start": null,
@@ -623355,8 +623355,8 @@
       },
       "sprint": {
         "start": "2026-02-10",
-        "finish": "2026-02-10",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-02-10"
       },
       "actual": {
         "start": null,
@@ -623394,8 +623394,8 @@
       },
       "sprint": {
         "start": "2026-03-12",
-        "finish": "2026-03-12",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-03-12"
       },
       "actual": {
         "start": null,
@@ -623433,8 +623433,8 @@
       },
       "sprint": {
         "start": "2026-04-11",
-        "finish": "2026-04-11",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-04-11"
       },
       "actual": {
         "start": null,
@@ -623472,8 +623472,8 @@
       },
       "sprint": {
         "start": "2026-05-11",
-        "finish": "2026-05-11",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-05-11"
       },
       "actual": {
         "start": null,
@@ -623511,8 +623511,8 @@
       },
       "sprint": {
         "start": "2026-07-19",
-        "finish": "2026-07-19",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-07-19"
       },
       "actual": {
         "start": null,
@@ -623550,8 +623550,8 @@
       },
       "sprint": {
         "start": "2026-09-22",
-        "finish": "2026-09-22",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-09-22"
       },
       "actual": {
         "start": null,
@@ -623589,8 +623589,8 @@
       },
       "sprint": {
         "start": "2026-11-21",
-        "finish": "2026-11-21",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-11-21"
       },
       "actual": {
         "start": null,
@@ -623628,8 +623628,8 @@
       },
       "sprint": {
         "start": "2027-06-16",
-        "finish": "2027-06-16",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2027-06-16"
       },
       "actual": {
         "start": null,
@@ -623667,8 +623667,8 @@
       },
       "sprint": {
         "start": "2027-12-18",
-        "finish": "2027-12-18",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2027-12-18"
       },
       "actual": {
         "start": null,
@@ -623706,8 +623706,8 @@
       },
       "sprint": {
         "start": "2025-06-07",
-        "finish": "2028-03-10",
-        "duration_days": 1007.75
+        "duration_days": 1007.75,
+        "end": "2028-03-10"
       },
       "actual": {
         "start": null,
@@ -623742,8 +623742,8 @@
       },
       "sprint": {
         "start": "2025-06-07",
-        "finish": "2025-06-07",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-06-07"
       },
       "actual": {
         "start": "2025-05-15",
@@ -623781,8 +623781,8 @@
       },
       "sprint": {
         "start": "2025-09-29",
-        "finish": "2025-09-29",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-09-29"
       },
       "actual": {
         "start": "2025-09-25",
@@ -623820,8 +623820,8 @@
       },
       "sprint": {
         "start": "2025-12-01",
-        "finish": "2025-12-01",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-12-01"
       },
       "actual": {
         "start": null,
@@ -623859,8 +623859,8 @@
       },
       "sprint": {
         "start": "2026-03-08",
-        "finish": "2026-03-08",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-03-08"
       },
       "actual": {
         "start": null,
@@ -623898,8 +623898,8 @@
       },
       "sprint": {
         "start": "2026-04-22",
-        "finish": "2026-04-22",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-04-22"
       },
       "actual": {
         "start": null,
@@ -623937,8 +623937,8 @@
       },
       "sprint": {
         "start": "2026-05-22",
-        "finish": "2026-05-22",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-05-22"
       },
       "actual": {
         "start": null,
@@ -623976,8 +623976,8 @@
       },
       "sprint": {
         "start": "2026-06-21",
-        "finish": "2026-06-21",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-06-21"
       },
       "actual": {
         "start": null,
@@ -624015,8 +624015,8 @@
       },
       "sprint": {
         "start": "2026-07-21",
-        "finish": "2026-07-21",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-07-21"
       },
       "actual": {
         "start": null,
@@ -624054,8 +624054,8 @@
       },
       "sprint": {
         "start": "2026-10-24",
-        "finish": "2026-10-24",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-10-24"
       },
       "actual": {
         "start": null,
@@ -624093,8 +624093,8 @@
       },
       "sprint": {
         "start": "2026-11-23",
-        "finish": "2026-11-23",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-11-23"
       },
       "actual": {
         "start": null,
@@ -624132,8 +624132,8 @@
       },
       "sprint": {
         "start": "2027-01-22",
-        "finish": "2027-01-22",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2027-01-22"
       },
       "actual": {
         "start": null,
@@ -624171,8 +624171,8 @@
       },
       "sprint": {
         "start": "2027-06-16",
-        "finish": "2027-06-16",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2027-06-16"
       },
       "actual": {
         "start": null,
@@ -624210,8 +624210,8 @@
       },
       "sprint": {
         "start": "2028-03-10",
-        "finish": "2028-03-10",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2028-03-10"
       },
       "actual": {
         "start": null,
@@ -624249,8 +624249,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2027-12-17",
-        "duration_days": 1018.25
+        "duration_days": 1018.25,
+        "end": "2027-12-17"
       },
       "actual": {
         "start": null,
@@ -624285,8 +624285,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2025-03-04",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-03-04"
       },
       "actual": {
         "start": "2025-03-04",
@@ -624324,8 +624324,8 @@
       },
       "sprint": {
         "start": "2025-07-19",
-        "finish": "2025-07-19",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-07-19"
       },
       "actual": {
         "start": "2025-07-24",
@@ -624363,8 +624363,8 @@
       },
       "sprint": {
         "start": "2025-09-20",
-        "finish": "2025-09-20",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-09-20"
       },
       "actual": {
         "start": null,
@@ -624402,8 +624402,8 @@
       },
       "sprint": {
         "start": "2025-12-26",
-        "finish": "2025-12-26",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-12-26"
       },
       "actual": {
         "start": null,
@@ -624441,8 +624441,8 @@
       },
       "sprint": {
         "start": "2026-02-09",
-        "finish": "2026-02-09",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-02-09"
       },
       "actual": {
         "start": null,
@@ -624480,8 +624480,8 @@
       },
       "sprint": {
         "start": "2026-03-11",
-        "finish": "2026-03-11",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-03-11"
       },
       "actual": {
         "start": null,
@@ -624519,8 +624519,8 @@
       },
       "sprint": {
         "start": "2026-04-10",
-        "finish": "2026-04-10",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-04-10"
       },
       "actual": {
         "start": null,
@@ -624558,8 +624558,8 @@
       },
       "sprint": {
         "start": "2026-05-10",
-        "finish": "2026-05-10",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-05-10"
       },
       "actual": {
         "start": null,
@@ -624597,8 +624597,8 @@
       },
       "sprint": {
         "start": "2026-07-18",
-        "finish": "2026-07-18",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-07-18"
       },
       "actual": {
         "start": null,
@@ -624636,8 +624636,8 @@
       },
       "sprint": {
         "start": "2026-03-22",
-        "finish": "2026-03-22",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-03-22"
       },
       "actual": {
         "start": null,
@@ -624675,8 +624675,8 @@
       },
       "sprint": {
         "start": "2026-05-21",
-        "finish": "2026-05-21",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-05-21"
       },
       "actual": {
         "start": null,
@@ -624714,8 +624714,8 @@
       },
       "sprint": {
         "start": "2027-06-16",
-        "finish": "2027-06-16",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2027-06-16"
       },
       "actual": {
         "start": null,
@@ -624753,8 +624753,8 @@
       },
       "sprint": {
         "start": "2027-12-17",
-        "finish": "2027-12-17",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2027-12-17"
       },
       "actual": {
         "start": null,
@@ -624792,8 +624792,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2027-11-28",
-        "duration_days": 999.0
+        "duration_days": 999.0,
+        "end": "2027-11-28"
       },
       "actual": {
         "start": null,
@@ -624828,8 +624828,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2025-03-04",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-03-04"
       },
       "actual": {
         "start": "2025-03-04",
@@ -624867,8 +624867,8 @@
       },
       "sprint": {
         "start": "2025-07-07",
-        "finish": "2025-07-07",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-07-07"
       },
       "actual": {
         "start": "2025-06-12",
@@ -624906,8 +624906,8 @@
       },
       "sprint": {
         "start": "2025-09-08",
-        "finish": "2025-09-08",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-09-08"
       },
       "actual": {
         "start": null,
@@ -624945,8 +624945,8 @@
       },
       "sprint": {
         "start": "2025-12-10",
-        "finish": "2025-12-10",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-12-10"
       },
       "actual": {
         "start": null,
@@ -624984,8 +624984,8 @@
       },
       "sprint": {
         "start": "2026-01-12",
-        "finish": "2026-01-12",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-01-12"
       },
       "actual": {
         "start": null,
@@ -625023,8 +625023,8 @@
       },
       "sprint": {
         "start": "2026-02-11",
-        "finish": "2026-02-11",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-02-11"
       },
       "actual": {
         "start": null,
@@ -625062,8 +625062,8 @@
       },
       "sprint": {
         "start": "2026-03-13",
-        "finish": "2026-03-13",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-03-13"
       },
       "actual": {
         "start": null,
@@ -625101,8 +625101,8 @@
       },
       "sprint": {
         "start": "2026-04-12",
-        "finish": "2026-04-12",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-04-12"
       },
       "actual": {
         "start": null,
@@ -625140,8 +625140,8 @@
       },
       "sprint": {
         "start": "2026-06-20",
-        "finish": "2026-06-20",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-06-20"
       },
       "actual": {
         "start": null,
@@ -625179,8 +625179,8 @@
       },
       "sprint": {
         "start": "2026-08-24",
-        "finish": "2026-08-24",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-08-24"
       },
       "actual": {
         "start": null,
@@ -625218,8 +625218,8 @@
       },
       "sprint": {
         "start": "2026-10-23",
-        "finish": "2026-10-23",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-10-23"
       },
       "actual": {
         "start": null,
@@ -625257,8 +625257,8 @@
       },
       "sprint": {
         "start": "2027-06-16",
-        "finish": "2027-06-16",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2027-06-16"
       },
       "actual": {
         "start": null,
@@ -625296,8 +625296,8 @@
       },
       "sprint": {
         "start": "2027-11-28",
-        "finish": "2027-11-28",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2027-11-28"
       },
       "actual": {
         "start": null,
@@ -625335,8 +625335,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2027-12-06",
-        "duration_days": 1007.0
+        "duration_days": 1007.0,
+        "end": "2027-12-06"
       },
       "actual": {
         "start": null,
@@ -625371,8 +625371,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2025-03-04",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-03-04"
       },
       "actual": {
         "start": "2025-03-04",
@@ -625410,8 +625410,8 @@
       },
       "sprint": {
         "start": "2025-07-15",
-        "finish": "2025-07-15",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-07-15"
       },
       "actual": {
         "start": "2025-06-14",
@@ -625449,8 +625449,8 @@
       },
       "sprint": {
         "start": "2025-09-16",
-        "finish": "2025-09-16",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-09-16"
       },
       "actual": {
         "start": "2025-10-31",
@@ -625488,8 +625488,8 @@
       },
       "sprint": {
         "start": "2025-12-18",
-        "finish": "2025-12-18",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-12-18"
       },
       "actual": {
         "start": null,
@@ -625527,8 +625527,8 @@
       },
       "sprint": {
         "start": "2026-01-20",
-        "finish": "2026-01-20",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-01-20"
       },
       "actual": {
         "start": null,
@@ -625566,8 +625566,8 @@
       },
       "sprint": {
         "start": "2026-02-19",
-        "finish": "2026-02-19",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-02-19"
       },
       "actual": {
         "start": null,
@@ -625605,8 +625605,8 @@
       },
       "sprint": {
         "start": "2026-03-21",
-        "finish": "2026-03-21",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-03-21"
       },
       "actual": {
         "start": null,
@@ -625644,8 +625644,8 @@
       },
       "sprint": {
         "start": "2026-04-20",
-        "finish": "2026-04-20",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-04-20"
       },
       "actual": {
         "start": null,
@@ -625683,8 +625683,8 @@
       },
       "sprint": {
         "start": "2026-06-28",
-        "finish": "2026-06-28",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-06-28"
       },
       "actual": {
         "start": null,
@@ -625722,8 +625722,8 @@
       },
       "sprint": {
         "start": "2026-09-01",
-        "finish": "2026-09-01",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-09-01"
       },
       "actual": {
         "start": null,
@@ -625761,8 +625761,8 @@
       },
       "sprint": {
         "start": "2026-10-31",
-        "finish": "2026-10-31",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-10-31"
       },
       "actual": {
         "start": null,
@@ -625800,8 +625800,8 @@
       },
       "sprint": {
         "start": "2027-06-16",
-        "finish": "2027-06-16",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2027-06-16"
       },
       "actual": {
         "start": null,
@@ -625839,8 +625839,8 @@
       },
       "sprint": {
         "start": "2027-12-06",
-        "finish": "2027-12-06",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2027-12-06"
       },
       "actual": {
         "start": null,
@@ -625878,8 +625878,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2027-12-06",
-        "duration_days": 1007.0
+        "duration_days": 1007.0,
+        "end": "2027-12-06"
       },
       "actual": {
         "start": null,
@@ -625914,8 +625914,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2025-03-04",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-03-04"
       },
       "actual": {
         "start": "2025-03-04",
@@ -625953,8 +625953,8 @@
       },
       "sprint": {
         "start": "2025-07-15",
-        "finish": "2025-07-15",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-07-15"
       },
       "actual": {
         "start": "2025-07-01",
@@ -625992,8 +625992,8 @@
       },
       "sprint": {
         "start": "2025-09-16",
-        "finish": "2025-09-16",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-09-16"
       },
       "actual": {
         "start": null,
@@ -626031,8 +626031,8 @@
       },
       "sprint": {
         "start": "2025-12-18",
-        "finish": "2025-12-18",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-12-18"
       },
       "actual": {
         "start": null,
@@ -626070,8 +626070,8 @@
       },
       "sprint": {
         "start": "2026-01-20",
-        "finish": "2026-01-20",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-01-20"
       },
       "actual": {
         "start": null,
@@ -626109,8 +626109,8 @@
       },
       "sprint": {
         "start": "2026-02-19",
-        "finish": "2026-02-19",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-02-19"
       },
       "actual": {
         "start": null,
@@ -626148,8 +626148,8 @@
       },
       "sprint": {
         "start": "2026-03-21",
-        "finish": "2026-03-21",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-03-21"
       },
       "actual": {
         "start": null,
@@ -626187,8 +626187,8 @@
       },
       "sprint": {
         "start": "2026-04-20",
-        "finish": "2026-04-20",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-04-20"
       },
       "actual": {
         "start": null,
@@ -626226,8 +626226,8 @@
       },
       "sprint": {
         "start": "2026-06-28",
-        "finish": "2026-06-28",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-06-28"
       },
       "actual": {
         "start": null,
@@ -626265,8 +626265,8 @@
       },
       "sprint": {
         "start": "2026-09-01",
-        "finish": "2026-09-01",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-09-01"
       },
       "actual": {
         "start": null,
@@ -626304,8 +626304,8 @@
       },
       "sprint": {
         "start": "2026-11-10",
-        "finish": "2026-11-10",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-11-10"
       },
       "actual": {
         "start": null,
@@ -626343,8 +626343,8 @@
       },
       "sprint": {
         "start": "2027-06-16",
-        "finish": "2027-06-16",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2027-06-16"
       },
       "actual": {
         "start": null,
@@ -626382,8 +626382,8 @@
       },
       "sprint": {
         "start": "2027-12-06",
-        "finish": "2027-12-06",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2027-12-06"
       },
       "actual": {
         "start": null,
@@ -626421,8 +626421,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2027-11-14",
-        "duration_days": 985.0
+        "duration_days": 985.0,
+        "end": "2027-11-14"
       },
       "actual": {
         "start": null,
@@ -626457,8 +626457,8 @@
       },
       "sprint": {
         "start": "2025-03-04",
-        "finish": "2025-03-04",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-03-04"
       },
       "actual": {
         "start": "2025-03-04",
@@ -626496,8 +626496,8 @@
       },
       "sprint": {
         "start": "2025-06-23",
-        "finish": "2025-06-23",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-06-23"
       },
       "actual": {
         "start": "2025-05-23",
@@ -626535,8 +626535,8 @@
       },
       "sprint": {
         "start": "2025-08-25",
-        "finish": "2025-08-25",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-08-25"
       },
       "actual": {
         "start": "2025-10-12",
@@ -626574,8 +626574,8 @@
       },
       "sprint": {
         "start": "2025-11-26",
-        "finish": "2025-11-26",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-11-26"
       },
       "actual": {
         "start": null,
@@ -626613,8 +626613,8 @@
       },
       "sprint": {
         "start": "2025-12-29",
-        "finish": "2025-12-29",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2025-12-29"
       },
       "actual": {
         "start": null,
@@ -626652,8 +626652,8 @@
       },
       "sprint": {
         "start": "2026-01-28",
-        "finish": "2026-01-28",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-01-28"
       },
       "actual": {
         "start": null,
@@ -626691,8 +626691,8 @@
       },
       "sprint": {
         "start": "2026-02-27",
-        "finish": "2026-02-27",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-02-27"
       },
       "actual": {
         "start": null,
@@ -626730,8 +626730,8 @@
       },
       "sprint": {
         "start": "2026-03-29",
-        "finish": "2026-03-29",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-03-29"
       },
       "actual": {
         "start": null,
@@ -626769,8 +626769,8 @@
       },
       "sprint": {
         "start": "2026-06-06",
-        "finish": "2026-06-06",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-06-06"
       },
       "actual": {
         "start": null,
@@ -626808,8 +626808,8 @@
       },
       "sprint": {
         "start": "2026-08-10",
-        "finish": "2026-08-10",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-08-10"
       },
       "actual": {
         "start": null,
@@ -626847,8 +626847,8 @@
       },
       "sprint": {
         "start": "2026-10-09",
-        "finish": "2026-10-09",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2026-10-09"
       },
       "actual": {
         "start": null,
@@ -626886,8 +626886,8 @@
       },
       "sprint": {
         "start": "2027-06-16",
-        "finish": "2027-06-16",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2027-06-16"
       },
       "actual": {
         "start": null,
@@ -626925,8 +626925,8 @@
       },
       "sprint": {
         "start": "2027-11-14",
-        "finish": "2027-11-14",
-        "duration_days": 0.0
+        "duration_days": 0.0,
+        "end": "2027-11-14"
       },
       "actual": {
         "start": null,
