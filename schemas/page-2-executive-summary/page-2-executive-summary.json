@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://easybim.com/schemas/staging/page2-slab-cycle",
+  "title": "Page 2 Staging Dataset",
+  "description": "Pre-aggregated dataset for Slab Cycle Analysis, supporting FY/Quarter/Month time modes.",
+  "type": "object",
+  
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "generated_at": { "type": "string" }
+      }
+    },
+
+    "controls": {
+      "type": "object",
+      "description": "Configuration for UI Controls.",
+      "properties": {
+        "formwork_options": { "type": "array", "items": { "type": "string" } },
+        "time_modes": {
+          "type": "object",
+          "properties": {
+            "fy": { "type": "object", "properties": { "start": {"type": "string"}, "end": {"type": "string"} }},
+            "quarter": { "type": "object", "properties": { "start": {"type": "string"}, "end": {"type": "string"} }},
+            "month": { "type": "object", "properties": { "start": {"type": "string"}, "end": {"type": "string"} }}
+          }
+        }
+      }
+    },
+
+    "dashboard_data": {
+      "type": "object",
+      "description": "Keyed by composite ID (ALL, ZONE_MZ, etc.). Inside each ID, data is pre-calculated for 'fy', 'quarter', and 'month'.",
+      "patternProperties": {
+        "^.*$": {
+          "type": "object",
+          "properties": {
+            "region_chart": {
+              "type": "object",
+              "description": "Data for PG2-WIDGET-01",
+              "properties": {
+                "fy": { "type": "array", "items": { "$ref": "#/$defs/region_bar" } },
+                "quarter": { "type": "array", "items": { "$ref": "#/$defs/region_bar" } },
+                "month": { "type": "array", "items": { "$ref": "#/$defs/region_bar" } }
+              }
+            },
+
+            "tech_chart": {
+              "type": "object",
+              "description": "Data for PG2-WIDGET-02",
+              "properties": {
+                "fy": { "type": "array", "items": { "$ref": "#/$defs/tech_point" } },
+                "quarter": { "type": "array", "items": { "$ref": "#/$defs/tech_point" } },
+                "month": { "type": "array", "items": { "$ref": "#/$defs/tech_point" } }
+              }
+            },
+
+            "slab_matrix": {
+              "type": "object",
+              "description": "Data for PG2-WIDGET-03",
+              "properties": {
+                "fy": { "type": "array", "items": { "$ref": "#/$defs/matrix_row" } },
+                "quarter": { "type": "array", "items": { "$ref": "#/$defs/matrix_row" } },
+                "month": { "type": "array", "items": { "$ref": "#/$defs/matrix_row" } }
+              }
+            },
+
+            "top_5_leaderboard": {
+              "type": "object",
+              "description": "Data for PG2-WIDGET-04",
+              "properties": {
+                "fy": { "type": "array", "items": { "$ref": "#/$defs/leaderboard_row" } },
+                "quarter": { "type": "array", "items": { "$ref": "#/$defs/leaderboard_row" } },
+                "month": { "type": "array", "items": { "$ref": "#/$defs/leaderboard_row" } }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "$defs": {
+    "region_bar": {
+      "type": "object",
+      "properties": {
+        "region_name": { "type": "string" },
+        "avg_days": { "type": "number" },
+        "total_slabs_context": { "type": "integer" }
+      },
+      "required": ["region_name", "avg_days"]
+    },
+    "tech_point": {
+      "type": "object",
+      "properties": {
+        "technology": { "type": "string" },
+        "slab_count": { "type": "integer" },
+        "avg_days": { "type": "number" }
+      },
+      "required": ["technology", "slab_count", "avg_days"]
+    },
+    "matrix_row": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "type": { "type": "string" },
+        "kpis": {
+          "type": "object",
+          "properties": {
+            "total_slabs": { "type": "integer" },
+            "avg_cycle": { "type": "number" }
+          }
+        },
+        "distribution": {
+          "type": "object",
+          "properties": {
+            "upto_7": { "type": "integer" },
+            "7_10": { "type": "integer" },
+            "11_14": { "type": "integer" },
+            "15_20": { "type": "integer" },
+            "21_25": { "type": "integer" },
+            "26_30": { "type": "integer" },
+            "gt_30": { "type": "integer" }
+          }
+        }
+      },
+      "required": ["id", "label", "distribution"]
+    },
+    "leaderboard_row": {
+      "type": "object",
+      "properties": {
+        "project_name": { "type": "string" },
+        "tower_name": { "type": "string" },
+        "avg_last_5_days": { "type": "number" }
+      },
+      "required": ["project_name", "avg_last_5_days"]
+    }
+  },
+  "required": ["meta", "dashboard_data"]
+}
