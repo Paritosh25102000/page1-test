@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-XML to JSON ETL Runner for CCO Dashboard
+XML to JSON ETL Runner for COO Dashboard
 
 Converts Asta Powerproject XML files to JSON format according to
 the master schema (task_schema.json) and mapping rules.
@@ -474,14 +474,14 @@ def run_validation_only(
 def main():
     """Main entry point."""
     parser = argparse.ArgumentParser(
-        description="XML to JSON ETL for CCO Dashboard",
+        description="XML to JSON ETL for COO Dashboard",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
     )
     parser.add_argument("--file", help="Process single XML file")
     parser.add_argument(
         "--input-dir",
-        default="../source_data/asta-source-cco-dashboard/all-aop-baselines",
+        default="./input/all-aop-baselines",
         help="Input directory containing XML files",
     )
     parser.add_argument(
@@ -579,7 +579,7 @@ def main():
         logger.setLevel(logging.DEBUG)
 
     logger.info("=" * 60)
-    logger.info("CCO Dashboard ETL - XML to JSON Conversion")
+    logger.info("COO Dashboard ETL - XML to JSON Conversion")
     logger.info("=" * 60)
     logger.info(f"Input directory: {input_dir}")
     logger.info(f"Output directory: {output_dir}")

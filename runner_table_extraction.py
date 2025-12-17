@@ -25,6 +25,7 @@ import argparse
 import logging
 from pathlib import Path
 from src.table_extractor import extract_to_csv, batch_extract, generate_extraction_report
+from src.report_generator import save_pipeline_report
 
 
 def setup_logging(verbose: bool = False) -> None:
@@ -95,6 +96,19 @@ Examples:
         help='Path for extraction report (default: output/table/extraction_report.json)'
     )
 
+    # Pipeline report arguments
+    parser.add_argument(
+        '--pipeline-report',
+        action='store_true',
+        default=True,
+        help='Generate comprehensive pipeline report (default: True)'
+    )
+    parser.add_argument(
+        '--no-pipeline-report',
+        action='store_true',
+        help='Skip pipeline report generation'
+    )
+
     # Other arguments
     parser.add_argument(
         '--verbose',
@@ -148,6 +162,21 @@ Examples:
         print(f"Output file: {stats['output_file']}")
         print("="*60)
 
+        # Generate pipeline report
+        if not args.no_pipeline_report:
+            project_name = stats['project']
+            reports_dir = Path('output/reports')
+
+            json_report_path, md_report_path = save_pipeline_report(
+                project_name=project_name,
+                output_dir=str(reports_dir),
+                json_output_path=str(input_path),
+                csv_output_path=str(output_path),
+                qa_report_path=str(reports_dir / f"qa_report_{project_name}.json"),
+                summary_report_path=str(reports_dir / "summary_report.json"),
+            )
+            print(f"\nPipeline Report: {md_report_path}")
+
     else:
         # Batch mode
         logger.info(f"\nExtracting all files from: {args.input_dir}")
@@ -180,6 +209,32 @@ Examples:
                 print(f"  ✓ {stats['project']}: {stats['rows_written']} rows")
 
         print("="*60)
+
+        # Generate pipeline reports for all projects
+        if not args.no_pipeline_report:
+            reports_dir = Path('output/reports')
+            print("\nGenerating pipeline reports...")
+
+            for stats in stats_list:
+                if 'error' in stats:
+                    continue
+
+                project_name = stats['project']
+                json_path = Path(args.input_dir) / f"{project_name}.json"
+                csv_path = Path(args.output_dir) / f"{project_name}.csv"
+
+                try:
+                    json_report_path, md_report_path = save_pipeline_report(
+                        project_name=project_name,
+                        output_dir=str(reports_dir),
+                        json_output_path=str(json_path),
+                        csv_output_path=str(csv_path),
+                        qa_report_path=str(reports_dir / f"qa_report_{project_name}.json"),
+                        summary_report_path=str(reports_dir / "summary_report.json"),
+                    )
+                    print(f"  ✓ {project_name}: {md_report_path}")
+                except Exception as e:
+                    print(f"  ✗ {project_name}: {e}")
 
 
 if __name__ == '__main__':
