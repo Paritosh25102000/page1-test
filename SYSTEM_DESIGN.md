@@ -306,7 +306,7 @@ src/staging/
 |--------|--------|----------|---------|
 | Task Schema | JSON Schema | `task_schema.json` | Master JSON validation |
 | XML Mapping | JSON | `xml_to_json_mapping.json` | Field transformation rules |
-| Page 1 Staging | JSON Schema | `schemas/staging/page1-executive-summary.json` | Dashboard staging validation |
+| Page 1 Staging | JSON Schema | `schemas/page-1-executive-simmary/page1-executive-summary_schema.json` | Dashboard staging validation |
 | CSV Schema | Implicit | `table_extraction_plan.md` | Table column definitions |
 
 ### 5.2 Master JSON Structure (task_schema.json)

@@ -56,6 +56,7 @@ Pre-Aggregation Approach:
 | Page 1 Staging | `output/staging/page1-executive-summary.json` | Staging JSON |
 | Page 2 Staging | `output/staging/page2-{name}.json` | Staging JSON (future) |
 | Page 3 Staging | `output/staging/page3-{name}.json` | Staging JSON (future) |
+| Page 4 Staging | `output/staging/page4-{name}.json` | Staging JSON (future) |
 | Staging Report | `output/staging/staging_report.json` | Validation report |
 
 **Output Characteristics**:
@@ -76,7 +77,7 @@ Pre-Aggregation Approach:
 
 **Acceptance Criteria**:
 1. Running `runner_staging.py --page page1` produces `output/staging/page1-executive-summary.json`
-2. Output validates against `schemas/staging/page1-executive-summary.json`
+2. Output validates against `schemas/page-1-executive-simmary/page1-executive-summary_schema.json`
 3. All filter combinations (ALL, ZONE_*, REG_*, PROJ_*) are present
 4. Processing completes in under 2 minutes
 
@@ -110,10 +111,71 @@ Pre-Aggregation Approach:
 **So that** I can quickly assess schedule performance.
 
 **Acceptance Criteria**:
-1. Each filter key contains `kpi_gauges.aop` and `kpi_gauges.sprint`
-2. AOP achievement = (Actual Cost YTD / Plan Cost YTD) * 100
-3. Sprint achievement = Sprint actual / Sprint plan (where sprint data exists)
+1. Each filter key contains `kpi_gauges` with values for all time modes
+2. AOP achievement = (Actual Cost / Plan Cost) * 100
+3. Sprint achievement = (Sprint Actual Cost / Sprint Plan Cost) * 100 (where sprint data exists)
 4. Status color is pre-determined: red (<85%), amber (85-95%), green (>95%)
+5. Gauge values respond to **BOTH** filter selection **AND** time toggle simultaneously
+
+**Matrix Distribution**:
+
+KPI Gauges require pre-computed values for all combinations of:
+- **Filter Selection** (Zone/Region/Project) → ~50 filter keys
+- **Time Toggle** (FY/Quarter/Month) → 3 time modes
+
+```
+                    │   FY    │ Quarter │  Month  │
+────────────────────┼─────────┼─────────┼─────────┤
+ALL                 │ AOP+Spr │ AOP+Spr │ AOP+Spr │
+ZONE_MZ             │ AOP+Spr │ AOP+Spr │ AOP+Spr │
+ZONE_NZ             │ AOP+Spr │ AOP+Spr │ AOP+Spr │
+REG_MZ1             │ AOP+Spr │ AOP+Spr │ AOP+Spr │
+PROJ_Horizon        │ AOP+Spr │ AOP+Spr │ AOP+Spr │
+... (all keys)      │   ...   │   ...   │   ...   │
+────────────────────┴─────────┴─────────┴─────────┘
+```
+
+**Total pre-computed values**: ~50 filter keys × 3 time modes × 2 gauges = ~300 gauge values
+
+**Business Logic**:
+
+**AOP Achievement** (per filter key, per time mode):
+| Time Mode | Date Range | Calculation |
+|-----------|------------|-------------|
+| FY | Full Financial Year (Apr 1 - Mar 31) | Sum(actual_cost in FY) / Sum(plan_cost in FY) |
+| Quarter | Current calendar quarter | Sum(actual_cost in quarter weeks) / Sum(plan_cost in quarter weeks) |
+| Month | +/- 5 weeks from today | Sum(actual_cost in range) / Sum(plan_cost in range) |
+
+**Sprint Achievement** (per filter key, per time mode):
+- Only includes tasks where `dates.sprint.start` is not null
+- Sprint Plan Cost: Prorated `cost_plan_total` over sprint duration for overlap with time window
+- Sprint Actual Cost: Estimated from task progress (see `test/sprint-achievement-data-analysis.md`)
+- Time mode determines which portion of Sprint window to include
+
+**Data Structure** (per filter key):
+```json
+{
+  "kpi_gauges": {
+    "aop": {
+      "fy": {"achieved_pct": 87.5, "status_color": "amber", "actual": 1000000000, "plan": 1142857143},
+      "quarter": {"achieved_pct": 92.0, "status_color": "green", "actual": 250000000, "plan": 271739130},
+      "month": {"achieved_pct": 88.0, "status_color": "amber", "actual": 100000000, "plan": 113636364}
+    },
+    "sprint": {
+      "fy": {"achieved_pct": 92.0, "status_color": "green", "sprint_actual": 800000000, "sprint_plan": 869565217, "tasks_with_sprint": 45000},
+      "quarter": {"achieved_pct": 95.0, "status_color": "green", "sprint_actual": 200000000, "sprint_plan": 210526316, "tasks_with_sprint": 12000},
+      "month": {"achieved_pct": 90.0, "status_color": "amber", "sprint_actual": 80000000, "sprint_plan": 88888889, "tasks_with_sprint": 3500}
+    }
+  }
+}
+```
+
+**Frontend Lookup Example**:
+```javascript
+// User selects: Zone = MZ, Time = Quarter
+const aopValue = stagingData.dashboard_data["ZONE_MZ"].kpi_gauges.aop.quarter;
+// Returns: {achieved_pct: 94.5, status_color: "amber", actual: 85000000, plan: 89947090}
+```
 
 ### US-005: Generate Project Achievement Matrix (P1)
 

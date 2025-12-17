@@ -96,7 +96,7 @@
 
 - [ ] T040 Integration test with Miraya.json only
 - [ ] T041 Test with all 13 project files combined
-- [ ] T042 Validate output against page1-executive-summary.json schema
+- [ ] T042 Validate output against page1-executive-summary_schema.json schema
 - [ ] T043 Verify all filter keys present (~23 keys)
 - [ ] T044 Benchmark performance (target: <2 minutes)
 - [ ] T045 Memory profiling (target: <1GB)

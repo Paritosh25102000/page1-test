@@ -2,7 +2,7 @@
 
 **Stage**: 03-json-to-staging
 **Date**: 2025-12-16
-**Source Schema**: `schemas/staging/page1-executive-summary.json`
+**Source Schema**: `schemas/page-1-executive-simmary/page1-executive-summary_schema.json`
 
 ---
 

@@ -43,8 +43,8 @@ etl-cco-dashboard/
 ├── runner_staging.py                    # CLI entry point
 │
 ├── schemas/
-│   └── staging/
-│       └── page1-executive-summary.json # Output schema
+│   └── page-1-executive-simmary/
+│       └── page1-executive-summary_schema.json # Output schema
 │
 └── output/
     └── staging/                         # Output directory
