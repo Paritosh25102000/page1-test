@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import type { DashboardData } from '@/types/dashboard';
 import { useDashboard } from '@/context/DashboardContext';
 
-const DATA_URL = '/data/page1-mock-data.json';
+const DATA_URL = '/data/page1-executive-summary.json';
 
 export function useDashboardData() {
   const { state, dispatch } = useDashboard();
