@@ -81,17 +81,25 @@ export interface NodeData {
 // =============================================================================
 
 export interface KPIGauges {
-  aop: GaugeData;
-  sprint: GaugeData;
+  aop: TimeModeGaugeData;
+  sprint: TimeModeGaugeData;
+}
+
+/**
+ * Gauge data structured by time mode
+ */
+export interface TimeModeGaugeData {
+  fy: GaugeData;
+  quarter: GaugeData;
+  month: GaugeData;
 }
 
 export interface GaugeData {
   achieved_pct: number;
   status_color: StatusColor;
-  actual_ytd?: number;
-  plan_ytd?: number;
-  sprint_actual?: number;
-  sprint_plan?: number;
+  actual: number;
+  plan: number;
+  tasks_with_sprint: number;
 }
 
 export type StatusColor = 'red' | 'amber' | 'green';

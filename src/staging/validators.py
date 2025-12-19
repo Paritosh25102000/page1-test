@@ -127,7 +127,7 @@ def validate_node_data(key: str, node_data: Dict) -> List[str]:
 
 
 def validate_kpi_gauges(key: str, kpi_gauges: Dict) -> List[str]:
-    """Validate KPI gauges structure."""
+    """Validate KPI gauges structure with time-mode support."""
     errors = []
 
     for gauge_type in ["aop", "sprint"]:
@@ -136,16 +136,24 @@ def validate_kpi_gauges(key: str, kpi_gauges: Dict) -> List[str]:
             continue
 
         gauge = kpi_gauges[gauge_type]
-        required = ["achieved_pct", "status_color", "actual", "plan", "tasks_with_sprint"]
 
-        for field in required:
-            if field not in gauge:
-                errors.append(f"{key}: {gauge_type} missing field {field}")
+        # Check for time-mode structure
+        for time_mode in ["fy", "quarter", "month"]:
+            if time_mode not in gauge:
+                errors.append(f"{key}: {gauge_type} missing time mode {time_mode}")
+                continue
 
-        # Validate color
-        if "status_color" in gauge:
-            if gauge["status_color"] not in ["red", "amber", "green"]:
-                errors.append(f"{key}: {gauge_type} invalid status_color")
+            mode_data = gauge[time_mode]
+            required = ["achieved_pct", "status_color", "actual", "plan", "tasks_with_sprint"]
+
+            for field in required:
+                if field not in mode_data:
+                    errors.append(f"{key}: {gauge_type}.{time_mode} missing field {field}")
+
+            # Validate color
+            if "status_color" in mode_data:
+                if mode_data["status_color"] not in ["red", "amber", "green"]:
+                    errors.append(f"{key}: {gauge_type}.{time_mode} invalid status_color")
 
     return errors
 

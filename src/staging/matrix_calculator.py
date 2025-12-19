@@ -116,6 +116,17 @@ def empty_buckets() -> Dict[str, int]:
     }
 
 
+def empty_projects() -> Dict[str, List[Dict]]:
+    """Return empty projects list per bucket."""
+    return {
+        "gt_120": [],
+        "100_120": [],
+        "85_100": [],
+        "60_85": [],
+        "lt_60": []
+    }
+
+
 def generate_zone_rows(
     project_achievements: Dict[str, float],
     hierarchy: Dict
@@ -125,6 +136,7 @@ def generate_zone_rows(
 
     for zone in sorted(hierarchy.keys()):
         buckets = empty_buckets()
+        projects_by_bucket = empty_projects()
 
         # Count projects in this zone
         for region, projects in hierarchy[zone].items():
@@ -133,11 +145,16 @@ def generate_zone_rows(
                 if project_id in project_achievements:
                     bucket = bucket_achievement(project_achievements[project_id])
                     buckets[bucket] += 1
+                    projects_by_bucket[bucket].append({
+                        "id": project_id,
+                        "name": project["name"]
+                    })
 
         rows.append({
             "label": zone,
             "id": f"ZONE_{zone}",
-            "buckets": buckets
+            "buckets": buckets,
+            "projects": projects_by_bucket
         })
 
     return rows
@@ -154,17 +171,23 @@ def generate_region_rows(
     regions = hierarchy.get(zone, {})
     for region in sorted(regions.keys()):
         buckets = empty_buckets()
+        projects_by_bucket = empty_projects()
 
         for project in regions[region]:
             project_id = project["id"]
             if project_id in project_achievements:
                 bucket = bucket_achievement(project_achievements[project_id])
                 buckets[bucket] += 1
+                projects_by_bucket[bucket].append({
+                    "id": project_id,
+                    "name": project["name"]
+                })
 
         rows.append({
             "label": region,
             "id": f"REG_{region}",
-            "buckets": buckets
+            "buckets": buckets,
+            "projects": projects_by_bucket
         })
 
     return rows

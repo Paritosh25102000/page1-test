@@ -3,6 +3,13 @@ KPI Calculator - Calculate AOP and Sprint achievement gauges
 """
 
 from typing import Dict, List, Optional
+from datetime import datetime
+
+from .time_utils import (
+    get_fy_dates,
+    get_current_quarter_dates,
+    get_looking_glass_dates
+)
 
 
 def calculate_kpi_gauges(
@@ -10,7 +17,7 @@ def calculate_kpi_gauges(
     current_date: Optional[str] = None
 ) -> Dict:
     """
-    Calculate AOP and Sprint achievement values.
+    Calculate AOP and Sprint achievement values for all time modes.
 
     Args:
         tasks: Filtered tasks
@@ -18,21 +25,42 @@ def calculate_kpi_gauges(
 
     Returns:
         {
-            "aop": {"achieved_pct": 87.5, "status_color": "amber", ...},
-            "sprint": {"achieved_pct": 92.0, "status_color": "green", ...}
+            "aop": {
+                "fy": {"achieved_pct": 87.5, "status_color": "amber", ...},
+                "quarter": {...},
+                "month": {...}
+            },
+            "sprint": {
+                "fy": {...},
+                "quarter": {...},
+                "month": {...}
+            }
         }
     """
+    # Get date ranges for each time mode
+    fy_start, fy_end = get_fy_dates()
+    q_start, q_end = get_current_quarter_dates(current_date)
+    lg_start, lg_end = get_looking_glass_dates(current_date)
+
     return {
-        "aop": calculate_aop_gauge(tasks),
-        "sprint": calculate_sprint_gauge(tasks, current_date)
+        "aop": {
+            "fy": calculate_aop_gauge_for_period(tasks, fy_start, fy_end),
+            "quarter": calculate_aop_gauge_for_period(tasks, q_start, q_end),
+            "month": calculate_aop_gauge_for_period(tasks, lg_start, lg_end)
+        },
+        "sprint": {
+            "fy": calculate_sprint_gauge_for_period(tasks, fy_start, fy_end),
+            "quarter": calculate_sprint_gauge_for_period(tasks, q_start, q_end),
+            "month": calculate_sprint_gauge_for_period(tasks, lg_start, lg_end)
+        }
     }
 
 
-def calculate_aop_gauge(tasks: List[Dict]) -> Dict:
+def calculate_aop_gauge_for_period(tasks: List[Dict], start_date: str, end_date: str) -> Dict:
     """
-    Calculate AOP Achievement gauge.
+    Calculate AOP Achievement gauge for a specific period.
 
-    Formula: (Total Actual Cost YTD / Total Plan Cost YTD) * 100
+    Sums weekly costs that fall within the period.
     """
     total_plan = 0.0
     total_actual = 0.0
@@ -50,13 +78,20 @@ def calculate_aop_gauge(tasks: List[Dict]) -> Dict:
             tasks_with_sprint += 1
 
         timeline = task.get("cost_timeline") or {}
-        summary = timeline.get("summary") or {}
+        weekly_costs = timeline.get("weekly_costs") or []
 
-        plan = summary.get("plan_cost_in_fy") or 0.0
-        actual = summary.get("actual_cost_in_fy") or 0.0
+        # Sum costs for weeks within the period
+        for week in weekly_costs:
+            week_start = week.get("week_start")
+            if not week_start:
+                continue
 
-        total_plan += plan
-        total_actual += actual
+            # Check if week falls within period
+            if start_date <= week_start <= end_date:
+                plan = week.get("plan", {}).get("cost") or 0.0
+                actual = week.get("actual", {}).get("cost") or 0.0
+                total_plan += plan
+                total_actual += actual
 
     # Calculate percentage
     if total_plan > 0:
@@ -73,15 +108,11 @@ def calculate_aop_gauge(tasks: List[Dict]) -> Dict:
     }
 
 
-def calculate_sprint_gauge(
-    tasks: List[Dict],
-    current_date: Optional[str] = None
-) -> Dict:
+def calculate_sprint_gauge_for_period(tasks: List[Dict], start_date: str, end_date: str) -> Dict:
     """
-    Calculate Sprint Achievement gauge.
+    Calculate Sprint Achievement gauge for a specific period.
 
     Only considers tasks with Sprint dates.
-    Formula: (Sprint Actual / Sprint Plan) * 100
     """
     sprint_plan = 0.0
     sprint_actual = 0.0
@@ -100,18 +131,21 @@ def calculate_sprint_gauge(
 
         tasks_with_sprint += 1
 
-        # Get cost data
+        # Get cost data for weeks within period
         timeline = task.get("cost_timeline") or {}
-        summary = timeline.get("summary") or {}
+        weekly_costs = timeline.get("weekly_costs") or []
 
-        # Sprint plan = portion of cost aligned to sprint schedule
-        # For simplicity, use plan_cost_in_fy as sprint plan
-        # (More sophisticated: prorate based on sprint duration)
-        plan = summary.get("plan_cost_in_fy") or 0.0
-        actual = summary.get("actual_cost_in_fy") or 0.0
+        for week in weekly_costs:
+            week_start = week.get("week_start")
+            if not week_start:
+                continue
 
-        sprint_plan += plan
-        sprint_actual += actual
+            # Check if week falls within period
+            if start_date <= week_start <= end_date:
+                plan = week.get("plan", {}).get("cost") or 0.0
+                actual = week.get("actual", {}).get("cost") or 0.0
+                sprint_plan += plan
+                sprint_actual += actual
 
     # Calculate percentage
     if sprint_plan > 0:

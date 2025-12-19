@@ -27,26 +27,32 @@ export function formatIndianCurrency(value: number | null | undefined): string {
 }
 
 /**
- * Format for axis labels (shorter format)
+ * Format for axis labels (shorter format, no trailing .0)
  */
 export function formatIndianAxisLabel(value: number | null | undefined): string {
   if (value === null || value === undefined || value === 0) return '';
 
   const absValue = Math.abs(value);
 
+  // Helper to remove trailing .0
+  const formatNumber = (num: number, decimals: number): string => {
+    const fixed = num.toFixed(decimals);
+    return fixed.replace(/\.0$/, '');
+  };
+
   if (absValue >= 10000000) {
     // Crores
     const crores = absValue / 10000000;
-    return `${crores.toFixed(1)} Cr`;
+    return `${formatNumber(crores, 1)} Cr`;
   } else if (absValue >= 100000) {
     // Lakhs
     const lakhs = absValue / 100000;
-    return `${lakhs.toFixed(1)} L`;
+    return `${formatNumber(lakhs, 1)} L`;
   } else if (absValue >= 1000) {
     // Thousands
     const thousands = absValue / 1000;
-    return `${thousands.toFixed(0)}K`;
+    return `${formatNumber(thousands, 0)}K`;
   } else {
-    return `${absValue.toFixed(0)}`;
+    return `${formatNumber(absValue, 0)}`;
   }
 }

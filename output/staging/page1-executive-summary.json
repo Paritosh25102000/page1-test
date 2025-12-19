@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2025-12-17T20:58:58.622885",
+    "generated_at": "2025-12-19T16:16:55.529787",
     "data_version": "1.0",
     "currency_unit": "INR",
     "page": "page1"
@@ -95,8 +95,8 @@
       },
       "month": {
         "label": "Looking Glass (+/- 5 Wks)",
-        "start": "2025-11-12",
-        "end": "2026-01-21",
+        "start": "2025-11-14",
+        "end": "2026-01-23",
         "resolution": "week"
       }
     }
@@ -105,18 +105,50 @@
     "ALL": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 85.6,
-          "status_color": "amber",
-          "actual": 4303354987762.47,
-          "plan": 5027451532663.43,
-          "tasks_with_sprint": 35783
+          "fy": {
+            "achieved_pct": 85.7,
+            "status_color": "amber",
+            "actual": 4276427081726.15,
+            "plan": 4990498751323.81,
+            "tasks_with_sprint": 35783
+          },
+          "quarter": {
+            "achieved_pct": 94.1,
+            "status_color": "amber",
+            "actual": 1491964150782.87,
+            "plan": 1585111542145.8,
+            "tasks_with_sprint": 35783
+          },
+          "month": {
+            "achieved_pct": 98.8,
+            "status_color": "green",
+            "actual": 991502769367.43,
+            "plan": 1003917519907.48,
+            "tasks_with_sprint": 35783
+          }
         },
         "sprint": {
-          "achieved_pct": 82.4,
-          "status_color": "red",
-          "actual": 1579573334645.69,
-          "plan": 1916360809340.87,
-          "tasks_with_sprint": 35783
+          "fy": {
+            "achieved_pct": 82.4,
+            "status_color": "red",
+            "actual": 1573390852835.52,
+            "plan": 1908703422148.44,
+            "tasks_with_sprint": 35783
+          },
+          "quarter": {
+            "achieved_pct": 93.8,
+            "status_color": "amber",
+            "actual": 619407138557.32,
+            "plan": 660244988854.23,
+            "tasks_with_sprint": 35783
+          },
+          "month": {
+            "achieved_pct": 99.5,
+            "status_color": "green",
+            "actual": 380359474853.5,
+            "plan": 382372202851.23,
+            "tasks_with_sprint": 35783
+          }
         }
       },
       "coc_trend": {
@@ -434,6 +466,27 @@
               "85_100": 2,
               "60_85": 0,
               "lt_60": 0
+            },
+            "projects": {
+              "gt_120": [],
+              "100_120": [
+                {
+                  "id": "Reserve",
+                  "name": "Reserve"
+                }
+              ],
+              "85_100": [
+                {
+                  "id": "Avenue 11",
+                  "name": "Avenue 11"
+                },
+                {
+                  "id": "Horizon",
+                  "name": "Horizon"
+                }
+              ],
+              "60_85": [],
+              "lt_60": []
             }
           },
           {
@@ -445,6 +498,39 @@
               "85_100": 2,
               "60_85": 4,
               "lt_60": 0
+            },
+            "projects": {
+              "gt_120": [],
+              "100_120": [],
+              "85_100": [
+                {
+                  "id": "Miraya",
+                  "name": "Miraya"
+                },
+                {
+                  "id": "Jardinia",
+                  "name": "Jardinia"
+                }
+              ],
+              "60_85": [
+                {
+                  "id": "Aristocrat",
+                  "name": "Aristocrat"
+                },
+                {
+                  "id": "Zenith",
+                  "name": "Zenith"
+                },
+                {
+                  "id": "Sec. 44, Noida",
+                  "name": "Sec. 44, Noida"
+                },
+                {
+                  "id": "Tropical Isle",
+                  "name": "Tropical Isle"
+                }
+              ],
+              "lt_60": []
             }
           },
           {
@@ -456,6 +542,27 @@
               "85_100": 1,
               "60_85": 2,
               "lt_60": 0
+            },
+            "projects": {
+              "gt_120": [],
+              "100_120": [],
+              "85_100": [
+                {
+                  "id": "Ramaiah",
+                  "name": "Ramaiah"
+                }
+              ],
+              "60_85": [
+                {
+                  "id": "RGA 2",
+                  "name": "RGA 2"
+                },
+                {
+                  "id": "Woodscapes",
+                  "name": "Woodscapes"
+                }
+              ],
+              "lt_60": []
             }
           },
           {
@@ -467,6 +574,18 @@
               "85_100": 1,
               "60_85": 0,
               "lt_60": 0
+            },
+            "projects": {
+              "gt_120": [],
+              "100_120": [],
+              "85_100": [
+                {
+                  "id": "BL Saha",
+                  "name": "BL Saha"
+                }
+              ],
+              "60_85": [],
+              "lt_60": []
             }
           }
         ]
@@ -475,18 +594,50 @@
     "ZONE_MZ": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 92.3,
-          "status_color": "amber",
-          "actual": 1762732004307.09,
-          "plan": 1910621294291.3,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 92.4,
+            "status_color": "amber",
+            "actual": 1746338626031.72,
+            "plan": 1889630673602.79,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 98.7,
+            "status_color": "green",
+            "actual": 560004776976.7,
+            "plan": 567095277265.52,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 100.1,
+            "status_color": "green",
+            "actual": 365335372706.19,
+            "plan": 364825155095.32,
+            "tasks_with_sprint": 0
+          }
         },
         "sprint": {
-          "achieved_pct": 0.0,
-          "status_color": "red",
-          "actual": 0.0,
-          "plan": 0.0,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          }
         }
       },
       "coc_trend": {
@@ -804,6 +955,27 @@
               "85_100": 2,
               "60_85": 0,
               "lt_60": 0
+            },
+            "projects": {
+              "gt_120": [],
+              "100_120": [
+                {
+                  "id": "Reserve",
+                  "name": "Reserve"
+                }
+              ],
+              "85_100": [
+                {
+                  "id": "Avenue 11",
+                  "name": "Avenue 11"
+                },
+                {
+                  "id": "Horizon",
+                  "name": "Horizon"
+                }
+              ],
+              "60_85": [],
+              "lt_60": []
             }
           }
         ]
@@ -812,18 +984,50 @@
     "REG_MZ1": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 92.3,
-          "status_color": "amber",
-          "actual": 1762732004307.09,
-          "plan": 1910621294291.3,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 92.4,
+            "status_color": "amber",
+            "actual": 1746338626031.72,
+            "plan": 1889630673602.79,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 98.7,
+            "status_color": "green",
+            "actual": 560004776976.7,
+            "plan": 567095277265.52,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 100.1,
+            "status_color": "green",
+            "actual": 365335372706.19,
+            "plan": 364825155095.32,
+            "tasks_with_sprint": 0
+          }
         },
         "sprint": {
-          "achieved_pct": 0.0,
-          "status_color": "red",
-          "actual": 0.0,
-          "plan": 0.0,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          }
         }
       },
       "coc_trend": {
@@ -1174,18 +1378,50 @@
     "PROJ_Avenue 11": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 87.4,
-          "status_color": "amber",
-          "actual": 370820368397.03,
-          "plan": 424416288024.84,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 87.4,
+            "status_color": "amber",
+            "actual": 365416418166.29,
+            "plan": 418308726403.27,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 98.1,
+            "status_color": "green",
+            "actual": 95700542697.43,
+            "plan": 97534178003.36,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 100.6,
+            "status_color": "green",
+            "actual": 57071985244.12,
+            "plan": 56741384021.85,
+            "tasks_with_sprint": 0
+          }
         },
         "sprint": {
-          "achieved_pct": 0.0,
-          "status_color": "red",
-          "actual": 0.0,
-          "plan": 0.0,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          }
         }
       },
       "coc_trend": {
@@ -1512,18 +1748,50 @@
     "PROJ_Horizon": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 91.0,
-          "status_color": "amber",
-          "actual": 954945871419.87,
-          "plan": 1049574758147.1,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 91.2,
+            "status_color": "amber",
+            "actual": 944751720655.41,
+            "plan": 1035492495692.89,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 98.3,
+            "status_color": "green",
+            "actual": 305505389818.68,
+            "plan": 310911658744.73,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 100.1,
+            "status_color": "green",
+            "actual": 182033631455.93,
+            "plan": 181879363685.97,
+            "tasks_with_sprint": 0
+          }
         },
         "sprint": {
-          "achieved_pct": 0.0,
-          "status_color": "red",
-          "actual": 0.0,
-          "plan": 0.0,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          }
         }
       },
       "coc_trend": {
@@ -1850,18 +2118,50 @@
     "PROJ_Reserve": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 100.1,
-          "status_color": "green",
-          "actual": 436965764490.19,
-          "plan": 436630248119.35,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 100.1,
+            "status_color": "green",
+            "actual": 436170487210.03,
+            "plan": 435829451506.68,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 100.1,
+            "status_color": "green",
+            "actual": 158798844460.59,
+            "plan": 158649440517.43,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 100.0,
+            "status_color": "green",
+            "actual": 126229756006.14,
+            "plan": 126204407387.5,
+            "tasks_with_sprint": 0
+          }
         },
         "sprint": {
-          "achieved_pct": 0.0,
-          "status_color": "red",
-          "actual": 0.0,
-          "plan": 0.0,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          }
         }
       },
       "coc_trend": {
@@ -2188,18 +2488,50 @@
     "ZONE_NZ": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 81.1,
-          "status_color": "red",
-          "actual": 1554332892514.37,
-          "plan": 1915748219815.2,
-          "tasks_with_sprint": 14731
+          "fy": {
+            "achieved_pct": 81.3,
+            "status_color": "red",
+            "actual": 1546246760271.9,
+            "plan": 1902982701996.24,
+            "tasks_with_sprint": 14731
+          },
+          "quarter": {
+            "achieved_pct": 93.1,
+            "status_color": "amber",
+            "actual": 567626534491.37,
+            "plan": 609443998072.68,
+            "tasks_with_sprint": 14731
+          },
+          "month": {
+            "achieved_pct": 97.8,
+            "status_color": "green",
+            "actual": 435924776461.41,
+            "plan": 445815233344.87,
+            "tasks_with_sprint": 14731
+          }
         },
         "sprint": {
-          "achieved_pct": 81.6,
-          "status_color": "red",
-          "actual": 787535207205.32,
-          "plan": 965623213822.26,
-          "tasks_with_sprint": 14731
+          "fy": {
+            "achieved_pct": 81.6,
+            "status_color": "red",
+            "actual": 783602866224.84,
+            "plan": 960670108182.19,
+            "tasks_with_sprint": 14731
+          },
+          "quarter": {
+            "achieved_pct": 97.0,
+            "status_color": "green",
+            "actual": 329788008346.56,
+            "plan": 340023806342.05,
+            "tasks_with_sprint": 14731
+          },
+          "month": {
+            "achieved_pct": 99.8,
+            "status_color": "green",
+            "actual": 248396156838.0,
+            "plan": 249009684009.93,
+            "tasks_with_sprint": 14731
+          }
         }
       },
       "coc_trend": {
@@ -2517,6 +2849,27 @@
               "85_100": 1,
               "60_85": 2,
               "lt_60": 0
+            },
+            "projects": {
+              "gt_120": [],
+              "100_120": [],
+              "85_100": [
+                {
+                  "id": "Miraya",
+                  "name": "Miraya"
+                }
+              ],
+              "60_85": [
+                {
+                  "id": "Aristocrat",
+                  "name": "Aristocrat"
+                },
+                {
+                  "id": "Zenith",
+                  "name": "Zenith"
+                }
+              ],
+              "lt_60": []
             }
           },
           {
@@ -2528,6 +2881,27 @@
               "85_100": 1,
               "60_85": 2,
               "lt_60": 0
+            },
+            "projects": {
+              "gt_120": [],
+              "100_120": [],
+              "85_100": [
+                {
+                  "id": "Jardinia",
+                  "name": "Jardinia"
+                }
+              ],
+              "60_85": [
+                {
+                  "id": "Sec. 44, Noida",
+                  "name": "Sec. 44, Noida"
+                },
+                {
+                  "id": "Tropical Isle",
+                  "name": "Tropical Isle"
+                }
+              ],
+              "lt_60": []
             }
           }
         ]
@@ -2536,18 +2910,50 @@
     "REG_NZ1": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 73.2,
-          "status_color": "red",
-          "actual": 651383998675.56,
-          "plan": 889755117672.18,
-          "tasks_with_sprint": 10522
+          "fy": {
+            "achieved_pct": 73.4,
+            "status_color": "red",
+            "actual": 648048604132.97,
+            "plan": 882578102231.74,
+            "tasks_with_sprint": 10522
+          },
+          "quarter": {
+            "achieved_pct": 96.4,
+            "status_color": "green",
+            "actual": 242206306125.8,
+            "plan": 251139462338.09,
+            "tasks_with_sprint": 10522
+          },
+          "month": {
+            "achieved_pct": 100.0,
+            "status_color": "green",
+            "actual": 156817615474.36,
+            "plan": 156817615474.36,
+            "tasks_with_sprint": 10522
+          }
         },
         "sprint": {
-          "achieved_pct": 70.0,
-          "status_color": "red",
-          "actual": 385631926170.99,
-          "plan": 550800615185.49,
-          "tasks_with_sprint": 10522
+          "fy": {
+            "achieved_pct": 70.1,
+            "status_color": "red",
+            "actual": 384553561535.21,
+            "plan": 548935433527.86,
+            "tasks_with_sprint": 10522
+          },
+          "quarter": {
+            "achieved_pct": 96.5,
+            "status_color": "green",
+            "actual": 141565627858.92,
+            "plan": 146734070011.92,
+            "tasks_with_sprint": 10522
+          },
+          "month": {
+            "achieved_pct": 100.0,
+            "status_color": "green",
+            "actual": 96429023872.79,
+            "plan": 96429023872.79,
+            "tasks_with_sprint": 10522
+          }
         }
       },
       "coc_trend": {
@@ -2898,18 +3304,50 @@
     "PROJ_Aristocrat": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 78.4,
-          "status_color": "red",
-          "actual": 265752072504.57,
-          "plan": 338954502486.69,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 79.0,
+            "status_color": "red",
+            "actual": 263495042597.76,
+            "plan": 333642668703.88,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 96.4,
+            "status_color": "green",
+            "actual": 100640678266.88,
+            "plan": 104405392326.17,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 100.0,
+            "status_color": "green",
+            "actual": 60388591601.57,
+            "plan": 60388591601.57,
+            "tasks_with_sprint": 0
+          }
         },
         "sprint": {
-          "achieved_pct": 0.0,
-          "status_color": "red",
-          "actual": 0.0,
-          "plan": 0.0,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          }
         }
       },
       "coc_trend": {
@@ -3236,18 +3674,50 @@
     "PROJ_Miraya": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 85.5,
-          "status_color": "amber",
-          "actual": 169514430987.5,
-          "plan": 198310475620.98,
-          "tasks_with_sprint": 2523
+          "fy": {
+            "achieved_pct": 85.5,
+            "status_color": "amber",
+            "actual": 169406545990.48,
+            "plan": 198026178936.33,
+            "tasks_with_sprint": 2523
+          },
+          "quarter": {
+            "achieved_pct": 99.6,
+            "status_color": "green",
+            "actual": 84789889731.17,
+            "plan": 85167264937.27,
+            "tasks_with_sprint": 2523
+          },
+          "month": {
+            "achieved_pct": 100.0,
+            "status_color": "green",
+            "actual": 52592820823.17,
+            "plan": 52592820823.17,
+            "tasks_with_sprint": 2523
+          }
         },
         "sprint": {
-          "achieved_pct": 85.5,
-          "status_color": "amber",
-          "actual": 169514430987.5,
-          "plan": 198310475620.98,
-          "tasks_with_sprint": 2523
+          "fy": {
+            "achieved_pct": 85.5,
+            "status_color": "amber",
+            "actual": 169406545990.48,
+            "plan": 198026178936.33,
+            "tasks_with_sprint": 2523
+          },
+          "quarter": {
+            "achieved_pct": 99.6,
+            "status_color": "green",
+            "actual": 84789889731.17,
+            "plan": 85167264937.27,
+            "tasks_with_sprint": 2523
+          },
+          "month": {
+            "achieved_pct": 100.0,
+            "status_color": "green",
+            "actual": 52592820823.17,
+            "plan": 52592820823.17,
+            "tasks_with_sprint": 2523
+          }
         }
       },
       "coc_trend": {
@@ -3574,18 +4044,50 @@
     "PROJ_Zenith": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 61.3,
-          "status_color": "red",
-          "actual": 216117495183.49,
-          "plan": 352490139564.51,
-          "tasks_with_sprint": 7999
+          "fy": {
+            "achieved_pct": 61.3,
+            "status_color": "red",
+            "actual": 215147015544.73,
+            "plan": 350909254591.53,
+            "tasks_with_sprint": 7999
+          },
+          "quarter": {
+            "achieved_pct": 92.2,
+            "status_color": "amber",
+            "actual": 56775738127.75,
+            "plan": 61566805074.65,
+            "tasks_with_sprint": 7999
+          },
+          "month": {
+            "achieved_pct": 100.0,
+            "status_color": "green",
+            "actual": 43836203049.62,
+            "plan": 43836203049.62,
+            "tasks_with_sprint": 7999
+          }
         },
         "sprint": {
-          "achieved_pct": 61.3,
-          "status_color": "red",
-          "actual": 216117495183.49,
-          "plan": 352490139564.51,
-          "tasks_with_sprint": 7999
+          "fy": {
+            "achieved_pct": 61.3,
+            "status_color": "red",
+            "actual": 215147015544.73,
+            "plan": 350909254591.53,
+            "tasks_with_sprint": 7999
+          },
+          "quarter": {
+            "achieved_pct": 92.2,
+            "status_color": "amber",
+            "actual": 56775738127.75,
+            "plan": 61566805074.65,
+            "tasks_with_sprint": 7999
+          },
+          "month": {
+            "achieved_pct": 100.0,
+            "status_color": "green",
+            "actual": 43836203049.62,
+            "plan": 43836203049.62,
+            "tasks_with_sprint": 7999
+          }
         }
       },
       "coc_trend": {
@@ -3912,18 +4414,50 @@
     "REG_NZ2": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 88.0,
-          "status_color": "amber",
-          "actual": 902948893838.82,
-          "plan": 1025993102143.02,
-          "tasks_with_sprint": 4209
+          "fy": {
+            "achieved_pct": 88.0,
+            "status_color": "amber",
+            "actual": 898198156138.88,
+            "plan": 1020404599764.49,
+            "tasks_with_sprint": 4209
+          },
+          "quarter": {
+            "achieved_pct": 90.8,
+            "status_color": "amber",
+            "actual": 325420228365.57,
+            "plan": 358304535734.59,
+            "tasks_with_sprint": 4209
+          },
+          "month": {
+            "achieved_pct": 96.6,
+            "status_color": "green",
+            "actual": 279107160987.05,
+            "plan": 288997617870.51,
+            "tasks_with_sprint": 4209
+          }
         },
         "sprint": {
-          "achieved_pct": 96.9,
-          "status_color": "green",
-          "actual": 401903281034.33,
-          "plan": 414822598636.77,
-          "tasks_with_sprint": 4209
+          "fy": {
+            "achieved_pct": 96.9,
+            "status_color": "green",
+            "actual": 399049304689.63,
+            "plan": 411734674654.33,
+            "tasks_with_sprint": 4209
+          },
+          "quarter": {
+            "achieved_pct": 97.4,
+            "status_color": "green",
+            "actual": 188222380487.64,
+            "plan": 193289736330.13,
+            "tasks_with_sprint": 4209
+          },
+          "month": {
+            "achieved_pct": 99.6,
+            "status_color": "green",
+            "actual": 151967132965.21,
+            "plan": 152580660137.14,
+            "tasks_with_sprint": 4209
+          }
         }
       },
       "coc_trend": {
@@ -4274,18 +4808,50 @@
     "PROJ_Jardinia": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 96.9,
-          "status_color": "green",
-          "actual": 401903281034.33,
-          "plan": 414822598636.77,
-          "tasks_with_sprint": 4209
+          "fy": {
+            "achieved_pct": 96.9,
+            "status_color": "green",
+            "actual": 399049304689.63,
+            "plan": 411734674654.33,
+            "tasks_with_sprint": 4209
+          },
+          "quarter": {
+            "achieved_pct": 97.4,
+            "status_color": "green",
+            "actual": 188222380487.64,
+            "plan": 193289736330.13,
+            "tasks_with_sprint": 4209
+          },
+          "month": {
+            "achieved_pct": 99.6,
+            "status_color": "green",
+            "actual": 151967132965.21,
+            "plan": 152580660137.14,
+            "tasks_with_sprint": 4209
+          }
         },
         "sprint": {
-          "achieved_pct": 96.9,
-          "status_color": "green",
-          "actual": 401903281034.33,
-          "plan": 414822598636.77,
-          "tasks_with_sprint": 4209
+          "fy": {
+            "achieved_pct": 96.9,
+            "status_color": "green",
+            "actual": 399049304689.63,
+            "plan": 411734674654.33,
+            "tasks_with_sprint": 4209
+          },
+          "quarter": {
+            "achieved_pct": 97.4,
+            "status_color": "green",
+            "actual": 188222380487.64,
+            "plan": 193289736330.13,
+            "tasks_with_sprint": 4209
+          },
+          "month": {
+            "achieved_pct": 99.6,
+            "status_color": "green",
+            "actual": 151967132965.21,
+            "plan": 152580660137.14,
+            "tasks_with_sprint": 4209
+          }
         }
       },
       "coc_trend": {
@@ -4612,18 +5178,50 @@
     "PROJ_Sec. 44, Noida": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 79.9,
-          "status_color": "red",
-          "actual": 165751013676.19,
-          "plan": 207515798574.61,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 79.8,
+            "status_color": "red",
+            "actual": 165194667832.32,
+            "plan": 206890565176.41,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 99.1,
+            "status_color": "green",
+            "actual": 55417960327.0,
+            "plan": 55905182847.14,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 101.4,
+            "status_color": "green",
+            "actual": 42361925183.41,
+            "plan": 41791994923.17,
+            "tasks_with_sprint": 0
+          }
         },
         "sprint": {
-          "achieved_pct": 0.0,
-          "status_color": "red",
-          "actual": 0.0,
-          "plan": 0.0,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          }
         }
       },
       "coc_trend": {
@@ -4950,18 +5548,50 @@
     "PROJ_Tropical Isle": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 83.1,
-          "status_color": "red",
-          "actual": 335294599128.3,
-          "plan": 403654704931.64,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 83.1,
+            "status_color": "red",
+            "actual": 333954183616.93,
+            "plan": 401779359933.75,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 75.0,
+            "status_color": "red",
+            "actual": 81779887550.93,
+            "plan": 109109616557.32,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 89.6,
+            "status_color": "amber",
+            "actual": 84778102838.43,
+            "plan": 94624962810.2,
+            "tasks_with_sprint": 0
+          }
         },
         "sprint": {
-          "achieved_pct": 0.0,
-          "status_color": "red",
-          "actual": 0.0,
-          "plan": 0.0,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          }
         }
       },
       "coc_trend": {
@@ -5288,18 +5918,50 @@
     "ZONE_SZ": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 81.5,
-          "status_color": "red",
-          "actual": 892047285867.35,
-          "plan": 1094182451484.01,
-          "tasks_with_sprint": 20783
+          "fy": {
+            "achieved_pct": 81.6,
+            "status_color": "red",
+            "actual": 890714881579.68,
+            "plan": 1092171343490.26,
+            "tasks_with_sprint": 20783
+          },
+          "quarter": {
+            "achieved_pct": 89.5,
+            "status_color": "amber",
+            "actual": 338419756144.37,
+            "plan": 378210310201.98,
+            "tasks_with_sprint": 20783
+          },
+          "month": {
+            "achieved_pct": 98.5,
+            "status_color": "green",
+            "actual": 165134128622.53,
+            "plan": 167579975214.36,
+            "tasks_with_sprint": 20783
+          }
         },
         "sprint": {
-          "achieved_pct": 82.7,
-          "status_color": "red",
-          "actual": 698406805756.21,
-          "plan": 844449511835.18,
-          "tasks_with_sprint": 20783
+          "fy": {
+            "achieved_pct": 82.7,
+            "status_color": "red",
+            "actual": 697272656157.29,
+            "plan": 842930765121.18,
+            "tasks_with_sprint": 20783
+          },
+          "quarter": {
+            "achieved_pct": 91.0,
+            "status_color": "amber",
+            "actual": 263706047040.32,
+            "plan": 289859225906.56,
+            "tasks_with_sprint": 20783
+          },
+          "month": {
+            "achieved_pct": 99.2,
+            "status_color": "green",
+            "actual": 106854826438.2,
+            "plan": 107665362588.37,
+            "tasks_with_sprint": 20783
+          }
         }
       },
       "coc_trend": {
@@ -5617,6 +6279,22 @@
               "85_100": 0,
               "60_85": 2,
               "lt_60": 0
+            },
+            "projects": {
+              "gt_120": [],
+              "100_120": [],
+              "85_100": [],
+              "60_85": [
+                {
+                  "id": "RGA 2",
+                  "name": "RGA 2"
+                },
+                {
+                  "id": "Woodscapes",
+                  "name": "Woodscapes"
+                }
+              ],
+              "lt_60": []
             }
           },
           {
@@ -5628,6 +6306,18 @@
               "85_100": 1,
               "60_85": 0,
               "lt_60": 0
+            },
+            "projects": {
+              "gt_120": [],
+              "100_120": [],
+              "85_100": [
+                {
+                  "id": "Ramaiah",
+                  "name": "Ramaiah"
+                }
+              ],
+              "60_85": [],
+              "lt_60": []
             }
           }
         ]
@@ -5636,18 +6326,50 @@
     "REG_SZ1": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 78.6,
-          "status_color": "red",
-          "actual": 736605996914.28,
-          "plan": 937617722675.87,
-          "tasks_with_sprint": 20045
+          "fy": {
+            "achieved_pct": 78.6,
+            "status_color": "red",
+            "actual": 735871969878.85,
+            "plan": 936210601838.73,
+            "tasks_with_sprint": 20045
+          },
+          "quarter": {
+            "achieved_pct": 87.6,
+            "status_color": "amber",
+            "actual": 281199798478.49,
+            "plan": 320889966445.6,
+            "tasks_with_sprint": 20045
+          },
+          "month": {
+            "achieved_pct": 98.0,
+            "status_color": "green",
+            "actual": 117130378976.73,
+            "plan": 119576225568.56,
+            "tasks_with_sprint": 20045
+          }
         },
         "sprint": {
-          "achieved_pct": 80.7,
-          "status_color": "red",
-          "actual": 605307972296.39,
-          "plan": 750227238520.29,
-          "tasks_with_sprint": 20045
+          "fy": {
+            "achieved_pct": 80.7,
+            "status_color": "red",
+            "actual": 604772199949.5,
+            "plan": 749312478962.7,
+            "tasks_with_sprint": 20045
+          },
+          "quarter": {
+            "achieved_pct": 89.8,
+            "status_color": "amber",
+            "actual": 229869444894.96,
+            "plan": 255922237670.7,
+            "tasks_with_sprint": 20045
+          },
+          "month": {
+            "achieved_pct": 99.0,
+            "status_color": "green",
+            "actual": 83848253602.54,
+            "plan": 84658789752.71,
+            "tasks_with_sprint": 20045
+          }
         }
       },
       "coc_trend": {
@@ -5986,18 +6708,50 @@
     "PROJ_RGA 2": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 70.1,
-          "status_color": "red",
-          "actual": 131298024617.89,
-          "plan": 187390484155.58,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 70.1,
+            "status_color": "red",
+            "actual": 131099769929.34,
+            "plan": 186898122876.03,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 79.0,
+            "status_color": "red",
+            "actual": 51330353583.53,
+            "plan": 64967728774.9,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 95.3,
+            "status_color": "green",
+            "actual": 33282125374.19,
+            "plan": 34917435815.85,
+            "tasks_with_sprint": 0
+          }
         },
         "sprint": {
-          "achieved_pct": 0.0,
-          "status_color": "red",
-          "actual": 0.0,
-          "plan": 0.0,
-          "tasks_with_sprint": 0
+          "fy": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "quarter": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          },
+          "month": {
+            "achieved_pct": 0.0,
+            "status_color": "red",
+            "actual": 0.0,
+            "plan": 0.0,
+            "tasks_with_sprint": 0
+          }
         }
       },
       "coc_trend": {
@@ -6324,18 +7078,50 @@
     "PROJ_Woodscapes": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 80.7,
-          "status_color": "red",
-          "actual": 605307972296.39,
-          "plan": 750227238520.29,
-          "tasks_with_sprint": 20045
+          "fy": {
+            "achieved_pct": 80.7,
+            "status_color": "red",
+            "actual": 604772199949.5,
+            "plan": 749312478962.7,
+            "tasks_with_sprint": 20045
+          },
+          "quarter": {
+            "achieved_pct": 89.8,
+            "status_color": "amber",
+            "actual": 229869444894.96,
+            "plan": 255922237670.7,
+            "tasks_with_sprint": 20045
+          },
+          "month": {
+            "achieved_pct": 99.0,
+            "status_color": "green",
+            "actual": 83848253602.54,
+            "plan": 84658789752.71,
+            "tasks_with_sprint": 20045
+          }
         },
         "sprint": {
-          "achieved_pct": 80.7,
-          "status_color": "red",
-          "actual": 605307972296.39,
-          "plan": 750227238520.29,
-          "tasks_with_sprint": 20045
+          "fy": {
+            "achieved_pct": 80.7,
+            "status_color": "red",
+            "actual": 604772199949.5,
+            "plan": 749312478962.7,
+            "tasks_with_sprint": 20045
+          },
+          "quarter": {
+            "achieved_pct": 89.8,
+            "status_color": "amber",
+            "actual": 229869444894.96,
+            "plan": 255922237670.7,
+            "tasks_with_sprint": 20045
+          },
+          "month": {
+            "achieved_pct": 99.0,
+            "status_color": "green",
+            "actual": 83848253602.54,
+            "plan": 84658789752.71,
+            "tasks_with_sprint": 20045
+          }
         }
       },
       "coc_trend": {
@@ -6662,18 +7448,50 @@
     "REG_SZ2": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 99.3,
-          "status_color": "green",
-          "actual": 155441288953.07,
-          "plan": 156564728808.14,
-          "tasks_with_sprint": 738
+          "fy": {
+            "achieved_pct": 99.3,
+            "status_color": "green",
+            "actual": 154842911700.84,
+            "plan": 155960741651.54,
+            "tasks_with_sprint": 738
+          },
+          "quarter": {
+            "achieved_pct": 99.8,
+            "status_color": "green",
+            "actual": 57219957665.88,
+            "plan": 57320343756.38,
+            "tasks_with_sprint": 738
+          },
+          "month": {
+            "achieved_pct": 100.0,
+            "status_color": "green",
+            "actual": 48003749645.8,
+            "plan": 48003749645.8,
+            "tasks_with_sprint": 738
+          }
         },
         "sprint": {
-          "achieved_pct": 98.8,
-          "status_color": "green",
-          "actual": 93098833459.82,
-          "plan": 94222273314.89,
-          "tasks_with_sprint": 738
+          "fy": {
+            "achieved_pct": 98.8,
+            "status_color": "green",
+            "actual": 92500456207.78,
+            "plan": 93618286158.48,
+            "tasks_with_sprint": 738
+          },
+          "quarter": {
+            "achieved_pct": 99.7,
+            "status_color": "green",
+            "actual": 33836602145.36,
+            "plan": 33936988235.86,
+            "tasks_with_sprint": 738
+          },
+          "month": {
+            "achieved_pct": 100.0,
+            "status_color": "green",
+            "actual": 23006572835.66,
+            "plan": 23006572835.66,
+            "tasks_with_sprint": 738
+          }
         }
       },
       "coc_trend": {
@@ -7000,18 +7818,50 @@
     "PROJ_Ramaiah": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 99.3,
-          "status_color": "green",
-          "actual": 155441288953.07,
-          "plan": 156564728808.14,
-          "tasks_with_sprint": 738
+          "fy": {
+            "achieved_pct": 99.3,
+            "status_color": "green",
+            "actual": 154842911700.84,
+            "plan": 155960741651.54,
+            "tasks_with_sprint": 738
+          },
+          "quarter": {
+            "achieved_pct": 99.8,
+            "status_color": "green",
+            "actual": 57219957665.88,
+            "plan": 57320343756.38,
+            "tasks_with_sprint": 738
+          },
+          "month": {
+            "achieved_pct": 100.0,
+            "status_color": "green",
+            "actual": 48003749645.8,
+            "plan": 48003749645.8,
+            "tasks_with_sprint": 738
+          }
         },
         "sprint": {
-          "achieved_pct": 98.8,
-          "status_color": "green",
-          "actual": 93098833459.82,
-          "plan": 94222273314.89,
-          "tasks_with_sprint": 738
+          "fy": {
+            "achieved_pct": 98.8,
+            "status_color": "green",
+            "actual": 92500456207.78,
+            "plan": 93618286158.48,
+            "tasks_with_sprint": 738
+          },
+          "quarter": {
+            "achieved_pct": 99.7,
+            "status_color": "green",
+            "actual": 33836602145.36,
+            "plan": 33936988235.86,
+            "tasks_with_sprint": 738
+          },
+          "month": {
+            "achieved_pct": 100.0,
+            "status_color": "green",
+            "actual": 23006572835.66,
+            "plan": 23006572835.66,
+            "tasks_with_sprint": 738
+          }
         }
       },
       "coc_trend": {
@@ -7338,18 +8188,50 @@
     "ZONE_WEZ": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 88.2,
-          "status_color": "amber",
-          "actual": 94242805073.64,
-          "plan": 106899567072.91,
-          "tasks_with_sprint": 269
+          "fy": {
+            "achieved_pct": 88.1,
+            "status_color": "amber",
+            "actual": 93126813842.9,
+            "plan": 105714032234.56,
+            "tasks_with_sprint": 269
+          },
+          "quarter": {
+            "achieved_pct": 85.3,
+            "status_color": "amber",
+            "actual": 25913083170.44,
+            "plan": 30361956605.62,
+            "tasks_with_sprint": 269
+          },
+          "month": {
+            "achieved_pct": 97.7,
+            "status_color": "green",
+            "actual": 25108491577.3,
+            "plan": 25697156252.93,
+            "tasks_with_sprint": 269
+          }
         },
         "sprint": {
-          "achieved_pct": 88.1,
-          "status_color": "amber",
-          "actual": 93631321684.16,
-          "plan": 106288083683.43,
-          "tasks_with_sprint": 269
+          "fy": {
+            "achieved_pct": 88.0,
+            "status_color": "amber",
+            "actual": 92515330453.42,
+            "plan": 105102548845.08,
+            "tasks_with_sprint": 269
+          },
+          "quarter": {
+            "achieved_pct": 85.3,
+            "status_color": "amber",
+            "actual": 25913083170.44,
+            "plan": 30361956605.62,
+            "tasks_with_sprint": 269
+          },
+          "month": {
+            "achieved_pct": 97.7,
+            "status_color": "green",
+            "actual": 25108491577.3,
+            "plan": 25697156252.93,
+            "tasks_with_sprint": 269
+          }
         }
       },
       "coc_trend": {
@@ -7667,6 +8549,18 @@
               "85_100": 1,
               "60_85": 0,
               "lt_60": 0
+            },
+            "projects": {
+              "gt_120": [],
+              "100_120": [],
+              "85_100": [
+                {
+                  "id": "BL Saha",
+                  "name": "BL Saha"
+                }
+              ],
+              "60_85": [],
+              "lt_60": []
             }
           }
         ]
@@ -7675,18 +8569,50 @@
     "REG_Kolkata": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 88.2,
-          "status_color": "amber",
-          "actual": 94242805073.64,
-          "plan": 106899567072.91,
-          "tasks_with_sprint": 269
+          "fy": {
+            "achieved_pct": 88.1,
+            "status_color": "amber",
+            "actual": 93126813842.9,
+            "plan": 105714032234.56,
+            "tasks_with_sprint": 269
+          },
+          "quarter": {
+            "achieved_pct": 85.3,
+            "status_color": "amber",
+            "actual": 25913083170.44,
+            "plan": 30361956605.62,
+            "tasks_with_sprint": 269
+          },
+          "month": {
+            "achieved_pct": 97.7,
+            "status_color": "green",
+            "actual": 25108491577.3,
+            "plan": 25697156252.93,
+            "tasks_with_sprint": 269
+          }
         },
         "sprint": {
-          "achieved_pct": 88.1,
-          "status_color": "amber",
-          "actual": 93631321684.16,
-          "plan": 106288083683.43,
-          "tasks_with_sprint": 269
+          "fy": {
+            "achieved_pct": 88.0,
+            "status_color": "amber",
+            "actual": 92515330453.42,
+            "plan": 105102548845.08,
+            "tasks_with_sprint": 269
+          },
+          "quarter": {
+            "achieved_pct": 85.3,
+            "status_color": "amber",
+            "actual": 25913083170.44,
+            "plan": 30361956605.62,
+            "tasks_with_sprint": 269
+          },
+          "month": {
+            "achieved_pct": 97.7,
+            "status_color": "green",
+            "actual": 25108491577.3,
+            "plan": 25697156252.93,
+            "tasks_with_sprint": 269
+          }
         }
       },
       "coc_trend": {
@@ -8013,18 +8939,50 @@
     "PROJ_BL Saha": {
       "kpi_gauges": {
         "aop": {
-          "achieved_pct": 88.2,
-          "status_color": "amber",
-          "actual": 94242805073.64,
-          "plan": 106899567072.91,
-          "tasks_with_sprint": 269
+          "fy": {
+            "achieved_pct": 88.1,
+            "status_color": "amber",
+            "actual": 93126813842.9,
+            "plan": 105714032234.56,
+            "tasks_with_sprint": 269
+          },
+          "quarter": {
+            "achieved_pct": 85.3,
+            "status_color": "amber",
+            "actual": 25913083170.44,
+            "plan": 30361956605.62,
+            "tasks_with_sprint": 269
+          },
+          "month": {
+            "achieved_pct": 97.7,
+            "status_color": "green",
+            "actual": 25108491577.3,
+            "plan": 25697156252.93,
+            "tasks_with_sprint": 269
+          }
         },
         "sprint": {
-          "achieved_pct": 88.1,
-          "status_color": "amber",
-          "actual": 93631321684.16,
-          "plan": 106288083683.43,
-          "tasks_with_sprint": 269
+          "fy": {
+            "achieved_pct": 88.0,
+            "status_color": "amber",
+            "actual": 92515330453.42,
+            "plan": 105102548845.08,
+            "tasks_with_sprint": 269
+          },
+          "quarter": {
+            "achieved_pct": 85.3,
+            "status_color": "amber",
+            "actual": 25913083170.44,
+            "plan": 30361956605.62,
+            "tasks_with_sprint": 269
+          },
+          "month": {
+            "achieved_pct": 97.7,
+            "status_color": "green",
+            "actual": 25108491577.3,
+            "plan": 25697156252.93,
+            "tasks_with_sprint": 269
+          }
         }
       },
       "coc_trend": {

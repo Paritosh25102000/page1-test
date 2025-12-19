@@ -1,6 +1,7 @@
 import Chart from 'react-apexcharts';
 import { Stack, Title, Box } from '@mantine/core';
 import type { ApexOptions } from 'apexcharts';
+import type { ApexAxisChartSeries } from 'apexcharts';
 import { useDashboard } from '@/context/DashboardContext';
 import { LoadingSpinner } from '@/components/common/LoadingSpinner';
 import { ErrorMessage } from '@/components/common/ErrorMessage';
@@ -74,6 +75,7 @@ export function COCTrendChart() {
     },
     yaxis: [
       {
+        seriesName: 'Plan Cost',
         title: {
           text: 'Periodic Cost',
         },
@@ -82,10 +84,26 @@ export function COCTrendChart() {
         },
       },
       {
+        seriesName: 'Actual Cost',
+        show: false, // Hide duplicate axis, shares with Plan Cost
+        labels: {
+          formatter: (value: number) => formatIndianAxisLabel(value),
+        },
+      },
+      {
+        seriesName: 'Cumm Plan',
         opposite: true,
         title: {
           text: 'Cumulative Cost',
         },
+        labels: {
+          formatter: (value: number) => formatIndianAxisLabel(value),
+        },
+      },
+      {
+        seriesName: 'Cumm Actual',
+        opposite: true,
+        show: false, // Hide duplicate axis, shares with Cumm Plan
         labels: {
           formatter: (value: number) => formatIndianAxisLabel(value),
         },
@@ -116,7 +134,7 @@ export function COCTrendChart() {
     },
   };
 
-  const series = [
+  const series: ApexAxisChartSeries = [
     {
       name: 'Plan Cost',
       type: 'bar',
