@@ -1,0 +1,395 @@
+{
+  "meta": {
+    "generated_at": "2025-12-19T13:00:00.000000",
+    "data_version": "1.0",
+    "page": "page3_floor_achievement"
+  },
+  "controls": {
+    "activities": [
+      { "id": "all", "name": "All Activities" },
+      { "id": "structural", "name": "Structural" },
+      { "id": "finishing", "name": "Finishing" },
+      { "id": "mep", "name": "MEP" }
+    ]
+  },
+  "dashboard_data": {
+    "ALL": {
+      "floor_achievement_table": {
+        "rows": [
+          {
+            "label": "MZ",
+            "type": "zone",
+            "id": "MZ",
+            "aop_plan": 285,
+            "sprint_plan": 245,
+            "actual_completed": 238,
+            "pct_aop": 83.5,
+            "pct_sprint": 97.1,
+            "children": [
+              {
+                "label": "MZ1",
+                "type": "region",
+                "id": "MZ1",
+                "aop_plan": 285,
+                "sprint_plan": 245,
+                "actual_completed": 238,
+                "pct_aop": 83.5,
+                "pct_sprint": 97.1,
+                "children": [
+                  {
+                    "label": "Avenue 11",
+                    "type": "project",
+                    "id": "Avenue 11",
+                    "aop_plan": 95,
+                    "sprint_plan": 82,
+                    "actual_completed": 78,
+                    "pct_aop": 82.1,
+                    "pct_sprint": 95.1
+                  },
+                  {
+                    "label": "Horizon",
+                    "type": "project",
+                    "id": "Horizon",
+                    "aop_plan": 98,
+                    "sprint_plan": 85,
+                    "actual_completed": 83,
+                    "pct_aop": 84.7,
+                    "pct_sprint": 97.6
+                  },
+                  {
+                    "label": "Reserve",
+                    "type": "project",
+                    "id": "Reserve",
+                    "aop_plan": 92,
+                    "sprint_plan": 78,
+                    "actual_completed": 77,
+                    "pct_aop": 83.7,
+                    "pct_sprint": 98.7
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "WEZ",
+            "type": "zone",
+            "id": "WEZ",
+            "aop_plan": 156,
+            "sprint_plan": 132,
+            "actual_completed": 128,
+            "pct_aop": 82.1,
+            "pct_sprint": 97.0,
+            "children": [
+              {
+                "label": "Kolkata",
+                "type": "region",
+                "id": "Kolkata",
+                "aop_plan": 156,
+                "sprint_plan": 132,
+                "actual_completed": 128,
+                "pct_aop": 82.1,
+                "pct_sprint": 97.0,
+                "children": [
+                  {
+                    "label": "BL Saha",
+                    "type": "project",
+                    "id": "BL Saha",
+                    "aop_plan": 156,
+                    "sprint_plan": 132,
+                    "actual_completed": 128,
+                    "pct_aop": 82.1,
+                    "pct_sprint": 97.0
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "SZ",
+            "type": "zone",
+            "id": "SZ",
+            "aop_plan": 198,
+            "sprint_plan": 172,
+            "actual_completed": 182,
+            "pct_aop": 91.9,
+            "pct_sprint": 105.8,
+            "children": [
+              {
+                "label": "SZ1",
+                "type": "region",
+                "id": "SZ1",
+                "aop_plan": 142,
+                "sprint_plan": 125,
+                "actual_completed": 135,
+                "pct_aop": 95.1,
+                "pct_sprint": 108.0,
+                "children": [
+                  {
+                    "label": "RGA 2",
+                    "type": "project",
+                    "id": "RGA 2",
+                    "aop_plan": 75,
+                    "sprint_plan": 68,
+                    "actual_completed": 75,
+                    "pct_aop": 100.0,
+                    "pct_sprint": 110.3
+                  },
+                  {
+                    "label": "Woodscapes",
+                    "type": "project",
+                    "id": "Woodscapes",
+                    "aop_plan": 67,
+                    "sprint_plan": 57,
+                    "actual_completed": 60,
+                    "pct_aop": 89.6,
+                    "pct_sprint": 105.3
+                  }
+                ]
+              },
+              {
+                "label": "SZ2",
+                "type": "region",
+                "id": "SZ2",
+                "aop_plan": 56,
+                "sprint_plan": 47,
+                "actual_completed": 47,
+                "pct_aop": 83.9,
+                "pct_sprint": 100.0,
+                "children": [
+                  {
+                    "label": "Ramaiah",
+                    "type": "project",
+                    "id": "Ramaiah",
+                    "aop_plan": 56,
+                    "sprint_plan": 47,
+                    "actual_completed": 47,
+                    "pct_aop": 83.9,
+                    "pct_sprint": 100.0
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "NZ",
+            "type": "zone",
+            "id": "NZ",
+            "aop_plan": 312,
+            "sprint_plan": 268,
+            "actual_completed": 255,
+            "pct_aop": 81.7,
+            "pct_sprint": 95.1,
+            "children": [
+              {
+                "label": "NZ1",
+                "type": "region",
+                "id": "NZ1",
+                "aop_plan": 185,
+                "sprint_plan": 158,
+                "actual_completed": 148,
+                "pct_aop": 80.0,
+                "pct_sprint": 93.7,
+                "children": [
+                  {
+                    "label": "Aristocrat",
+                    "type": "project",
+                    "id": "Aristocrat",
+                    "aop_plan": 62,
+                    "sprint_plan": 53,
+                    "actual_completed": 49,
+                    "pct_aop": 79.0,
+                    "pct_sprint": 92.5
+                  },
+                  {
+                    "label": "Miraya",
+                    "type": "project",
+                    "id": "Miraya",
+                    "aop_plan": 61,
+                    "sprint_plan": 52,
+                    "actual_completed": 48,
+                    "pct_aop": 78.7,
+                    "pct_sprint": 92.3
+                  },
+                  {
+                    "label": "Zenith",
+                    "type": "project",
+                    "id": "Zenith",
+                    "aop_plan": 62,
+                    "sprint_plan": 53,
+                    "actual_completed": 51,
+                    "pct_aop": 82.3,
+                    "pct_sprint": 96.2
+                  }
+                ]
+              },
+              {
+                "label": "NZ2",
+                "type": "region",
+                "id": "NZ2",
+                "aop_plan": 127,
+                "sprint_plan": 110,
+                "actual_completed": 107,
+                "pct_aop": 84.3,
+                "pct_sprint": 97.3,
+                "children": [
+                  {
+                    "label": "Jardinia",
+                    "type": "project",
+                    "id": "Jardinia",
+                    "aop_plan": 42,
+                    "sprint_plan": 37,
+                    "actual_completed": 36,
+                    "pct_aop": 85.7,
+                    "pct_sprint": 97.3
+                  },
+                  {
+                    "label": "Sec. 44, Noida",
+                    "type": "project",
+                    "id": "Sec. 44, Noida",
+                    "aop_plan": 43,
+                    "sprint_plan": 37,
+                    "actual_completed": 36,
+                    "pct_aop": 83.7,
+                    "pct_sprint": 97.3
+                  },
+                  {
+                    "label": "Tropical Isle",
+                    "type": "project",
+                    "id": "Tropical Isle",
+                    "aop_plan": 42,
+                    "sprint_plan": 36,
+                    "actual_completed": 35,
+                    "pct_aop": 83.3,
+                    "pct_sprint": 97.2
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "achievement_matrix": {
+        "rows": [
+          {
+            "label": "MZ",
+            "id": "MZ",
+            "buckets": {
+              "gt_120": 0,
+              "100_120": 0,
+              "85_100": 3,
+              "60_85": 0,
+              "lt_60": 0
+            }
+          },
+          {
+            "label": "WEZ",
+            "id": "WEZ",
+            "buckets": {
+              "gt_120": 0,
+              "100_120": 0,
+              "85_100": 1,
+              "60_85": 0,
+              "lt_60": 0
+            }
+          },
+          {
+            "label": "SZ",
+            "id": "SZ",
+            "buckets": {
+              "gt_120": 2,
+              "100_120": 0,
+              "85_100": 1,
+              "60_85": 0,
+              "lt_60": 0
+            }
+          },
+          {
+            "label": "NZ",
+            "id": "NZ",
+            "buckets": {
+              "gt_120": 0,
+              "100_120": 0,
+              "85_100": 3,
+              "60_85": 3,
+              "lt_60": 0
+            }
+          }
+        ]
+      },
+      "top_projects": [
+        {
+          "rank": 1,
+          "project": "RGA 2",
+          "sprint_plan": 68,
+          "actual_completed": 75,
+          "pct_sprint": 110.3
+        },
+        {
+          "rank": 2,
+          "project": "Woodscapes",
+          "sprint_plan": 57,
+          "actual_completed": 60,
+          "pct_sprint": 105.3
+        },
+        {
+          "rank": 3,
+          "project": "Ramaiah",
+          "sprint_plan": 47,
+          "actual_completed": 47,
+          "pct_sprint": 100.0
+        },
+        {
+          "rank": 4,
+          "project": "Reserve",
+          "sprint_plan": 78,
+          "actual_completed": 77,
+          "pct_sprint": 98.7
+        },
+        {
+          "rank": 5,
+          "project": "Horizon",
+          "sprint_plan": 85,
+          "actual_completed": 83,
+          "pct_sprint": 97.6
+        }
+      ],
+      "bottom_projects": [
+        {
+          "rank": 1,
+          "project": "Miraya",
+          "sprint_plan": 52,
+          "actual_completed": 48,
+          "pct_sprint": 92.3
+        },
+        {
+          "rank": 2,
+          "project": "Aristocrat",
+          "sprint_plan": 53,
+          "actual_completed": 49,
+          "pct_sprint": 92.5
+        },
+        {
+          "rank": 3,
+          "project": "NZ1",
+          "sprint_plan": 158,
+          "actual_completed": 148,
+          "pct_sprint": 93.7
+        },
+        {
+          "rank": 4,
+          "project": "Avenue 11",
+          "sprint_plan": 82,
+          "actual_completed": 78,
+          "pct_sprint": 95.1
+        },
+        {
+          "rank": 5,
+          "project": "Zenith",
+          "sprint_plan": 53,
+          "actual_completed": 51,
+          "pct_sprint": 96.2
+        }
+      ]
+    }
+  }
+}

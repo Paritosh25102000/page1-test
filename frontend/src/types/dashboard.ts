@@ -171,9 +171,39 @@ export interface FilterState {
 
 export type TimeModeState = 'FY' | 'Quarter' | 'Month';
 
+// =============================================================================
+// Page-Specific Filter Types
+// =============================================================================
+
+/**
+ * Page 2: Slab Cycle Analysis Filters
+ */
+export interface Page2Filters {
+  typicalMode: 'typical' | 'non-typical' | 'all';
+  formworkType: string | null; // null means "All"
+}
+
+/**
+ * Page 3: Floor Achievement Analysis Filters
+ */
+export interface Page3Filters {
+  activity: string | null; // null means "All"
+}
+
+/**
+ * Page 4: Finishing Activities Filters
+ */
+export interface Page4Filters {
+  alphaStatus: 'alpha' | 'non-alpha' | 'all';
+  reraStatus: string | null; // null means "All"
+}
+
 export interface DashboardState {
   filters: FilterState;
   timeMode: TimeModeState;
+  page2Filters: Page2Filters;
+  page3Filters: Page3Filters;
+  page4Filters: Page4Filters;
   data: DashboardData | null;
   loading: boolean;
   error: string | null;
@@ -191,7 +221,18 @@ export type DashboardAction =
   | { type: 'SET_DATA'; payload: DashboardData }
   | { type: 'SET_LOADING'; payload: boolean }
   | { type: 'SET_ERROR'; payload: string | null }
-  | { type: 'RESET_FILTERS' };
+  | { type: 'RESET_FILTERS' }
+  // Page 2 actions
+  | { type: 'SET_PAGE2_TYPICAL_MODE'; payload: 'typical' | 'non-typical' | 'all' }
+  | { type: 'SET_PAGE2_FORMWORK_TYPE'; payload: string | null }
+  | { type: 'RESET_PAGE2_FILTERS' }
+  // Page 3 actions
+  | { type: 'SET_PAGE3_ACTIVITY'; payload: string | null }
+  | { type: 'RESET_PAGE3_FILTERS' }
+  // Page 4 actions
+  | { type: 'SET_PAGE4_ALPHA_STATUS'; payload: 'alpha' | 'non-alpha' | 'all' }
+  | { type: 'SET_PAGE4_RERA_STATUS'; payload: string | null }
+  | { type: 'RESET_PAGE4_FILTERS' };
 
 // =============================================================================
 // Utility Types

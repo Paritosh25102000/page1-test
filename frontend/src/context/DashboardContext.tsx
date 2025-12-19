@@ -6,6 +6,9 @@ import type {
   FilterState,
   TimeModeState,
   NodeData,
+  Page2Filters,
+  Page3Filters,
+  Page4Filters,
 } from '@/types/dashboard';
 import { buildDataKey } from '@/utils/dataKeys';
 
@@ -15,9 +18,26 @@ const initialFilterState: FilterState = {
   project: null,
 };
 
+const initialPage2Filters: Page2Filters = {
+  typicalMode: 'all',
+  formworkType: null,
+};
+
+const initialPage3Filters: Page3Filters = {
+  activity: null,
+};
+
+const initialPage4Filters: Page4Filters = {
+  alphaStatus: 'all',
+  reraStatus: null,
+};
+
 const initialState: DashboardState = {
   filters: initialFilterState,
   timeMode: 'FY',
+  page2Filters: initialPage2Filters,
+  page3Filters: initialPage3Filters,
+  page4Filters: initialPage4Filters,
   data: null,
   loading: true,
   error: null,
@@ -93,6 +113,72 @@ function dashboardReducer(state: DashboardState, action: DashboardAction): Dashb
         filters: initialFilterState,
       };
 
+    // Page 2 actions
+    case 'SET_PAGE2_TYPICAL_MODE':
+      return {
+        ...state,
+        page2Filters: {
+          ...state.page2Filters,
+          typicalMode: action.payload,
+        },
+      };
+
+    case 'SET_PAGE2_FORMWORK_TYPE':
+      return {
+        ...state,
+        page2Filters: {
+          ...state.page2Filters,
+          formworkType: action.payload,
+        },
+      };
+
+    case 'RESET_PAGE2_FILTERS':
+      return {
+        ...state,
+        page2Filters: initialPage2Filters,
+      };
+
+    // Page 3 actions
+    case 'SET_PAGE3_ACTIVITY':
+      return {
+        ...state,
+        page3Filters: {
+          ...state.page3Filters,
+          activity: action.payload,
+        },
+      };
+
+    case 'RESET_PAGE3_FILTERS':
+      return {
+        ...state,
+        page3Filters: initialPage3Filters,
+      };
+
+    // Page 4 actions
+    case 'SET_PAGE4_ALPHA_STATUS':
+      return {
+        ...state,
+        page4Filters: {
+          ...state.page4Filters,
+          alphaStatus: action.payload,
+        },
+      };
+
+    case 'SET_PAGE4_RERA_STATUS':
+      return {
+        ...state,
+        page4Filters: {
+          ...state.page4Filters,
+          reraStatus: action.payload,
+        },
+      };
+
+    case 'RESET_PAGE4_FILTERS':
+      return {
+        ...state,
+        page4Filters: initialPage4Filters,
+      };
+
     default:
       return state;
   }
@@ -108,6 +194,17 @@ interface DashboardContextValue {
   setProject: (project: string | null) => void;
   setTimeMode: (mode: TimeModeState) => void;
   resetFilters: () => void;
+  // Page 2 actions
+  setPage2TypicalMode: (mode: 'typical' | 'non-typical' | 'all') => void;
+  setPage2FormworkType: (type: string | null) => void;
+  resetPage2Filters: () => void;
+  // Page 3 actions
+  setPage3Activity: (activity: string | null) => void;
+  resetPage3Filters: () => void;
+  // Page 4 actions
+  setPage4AlphaStatus: (status: 'alpha' | 'non-alpha' | 'all') => void;
+  setPage4ReraStatus: (status: string | null) => void;
+  resetPage4Filters: () => void;
 }
 
 const DashboardContext = createContext<DashboardContextValue | null>(null);
@@ -142,6 +239,17 @@ export function DashboardProvider({ children, initialData }: DashboardProviderPr
       setProject: (project) => dispatch({ type: 'SET_PROJECT', payload: project }),
       setTimeMode: (mode) => dispatch({ type: 'SET_TIME_MODE', payload: mode }),
       resetFilters: () => dispatch({ type: 'RESET_FILTERS' }),
+      // Page 2 actions
+      setPage2TypicalMode: (mode) => dispatch({ type: 'SET_PAGE2_TYPICAL_MODE', payload: mode }),
+      setPage2FormworkType: (type) => dispatch({ type: 'SET_PAGE2_FORMWORK_TYPE', payload: type }),
+      resetPage2Filters: () => dispatch({ type: 'RESET_PAGE2_FILTERS' }),
+      // Page 3 actions
+      setPage3Activity: (activity) => dispatch({ type: 'SET_PAGE3_ACTIVITY', payload: activity }),
+      resetPage3Filters: () => dispatch({ type: 'RESET_PAGE3_FILTERS' }),
+      // Page 4 actions
+      setPage4AlphaStatus: (status) => dispatch({ type: 'SET_PAGE4_ALPHA_STATUS', payload: status }),
+      setPage4ReraStatus: (status) => dispatch({ type: 'SET_PAGE4_RERA_STATUS', payload: status }),
+      resetPage4Filters: () => dispatch({ type: 'RESET_PAGE4_FILTERS' }),
     }),
     [state, currentData, dataKey]
   );

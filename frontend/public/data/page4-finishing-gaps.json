@@ -1,0 +1,432 @@
+{
+  "meta": {
+    "generated_at": "2025-12-19T13:30:00.000000",
+    "data_version": "1.0",
+    "page": "page4_finishing_gaps"
+  },
+  "controls": {
+    "alpha_status": [
+      { "id": "all", "name": "All" },
+      { "id": "alpha", "name": "Alpha" },
+      { "id": "non_alpha", "name": "Non-Alpha" }
+    ],
+    "rera_status": [
+      { "id": "all", "name": "All" },
+      { "id": "compliant", "name": "RERA Compliant" },
+      { "id": "pending", "name": "RERA Pending" }
+    ]
+  },
+  "dashboard_data": {
+    "ALL": {
+      "slab_gap_charts": {
+        "blockwork": {
+          "chart_data": [
+            {
+              "zone": "MZ",
+              "avg_gap": 5.2,
+              "percentiles": {
+                "p10": 8,
+                "p11": 7,
+                "p13": 6,
+                "p15": 5
+              }
+            },
+            {
+              "zone": "WEZ",
+              "avg_gap": 7.1,
+              "percentiles": {
+                "p10": 8,
+                "p11": 7,
+                "p13": 6,
+                "p15": 5
+              }
+            },
+            {
+              "zone": "SZ",
+              "avg_gap": 6.0,
+              "percentiles": {
+                "p10": 8,
+                "p11": 7,
+                "p13": 6,
+                "p15": 5
+              }
+            },
+            {
+              "zone": "NZ",
+              "avg_gap": 5.0,
+              "percentiles": {
+                "p10": 8,
+                "p11": 7,
+                "p13": 6,
+                "p15": 5
+              }
+            }
+          ]
+        },
+        "internal_plaster": {
+          "chart_data": [
+            {
+              "zone": "MZ",
+              "avg_gap": 7.0,
+              "percentiles": {
+                "p10": 9,
+                "p11": 8.5,
+                "p13": 7.5,
+                "p15": 6.5
+              }
+            },
+            {
+              "zone": "WEZ",
+              "avg_gap": 8.0,
+              "percentiles": {
+                "p10": 9,
+                "p11": 8.5,
+                "p13": 7.5,
+                "p15": 6.5
+              }
+            },
+            {
+              "zone": "SZ",
+              "avg_gap": 10.0,
+              "percentiles": {
+                "p10": 9,
+                "p11": 8.5,
+                "p13": 7.5,
+                "p15": 6.5
+              }
+            },
+            {
+              "zone": "NZ",
+              "avg_gap": 7.0,
+              "percentiles": {
+                "p10": 9,
+                "p11": 8.5,
+                "p13": 7.5,
+                "p15": 6.5
+              }
+            }
+          ]
+        },
+        "toilet_flooring": {
+          "chart_data": [
+            {
+              "zone": "MZ",
+              "avg_gap": 13.0,
+              "percentiles": {
+                "p10": 8,
+                "p11": 7.5,
+                "p13": 7,
+                "p15": 6.5
+              }
+            },
+            {
+              "zone": "WEZ",
+              "avg_gap": 11.0,
+              "percentiles": {
+                "p10": 8,
+                "p11": 7.5,
+                "p13": 7,
+                "p15": 6.5
+              }
+            },
+            {
+              "zone": "SZ",
+              "avg_gap": 12.0,
+              "percentiles": {
+                "p10": 8,
+                "p11": 7.5,
+                "p13": 7,
+                "p15": 6.5
+              }
+            },
+            {
+              "zone": "NZ",
+              "avg_gap": 10.0,
+              "percentiles": {
+                "p10": 8,
+                "p11": 7.5,
+                "p13": 7,
+                "p15": 6.5
+              }
+            }
+          ]
+        },
+        "flat_flooring": {
+          "chart_data": [
+            {
+              "zone": "MZ",
+              "avg_gap": 13.0,
+              "percentiles": {
+                "p10": 14,
+                "p11": 13,
+                "p13": 10,
+                "p15": 8
+              }
+            },
+            {
+              "zone": "WEZ",
+              "avg_gap": 15.0,
+              "percentiles": {
+                "p10": 14,
+                "p11": 13,
+                "p13": 10,
+                "p15": 8
+              }
+            },
+            {
+              "zone": "SZ",
+              "avg_gap": 14.0,
+              "percentiles": {
+                "p10": 14,
+                "p11": 13,
+                "p13": 10,
+                "p15": 8
+              }
+            },
+            {
+              "zone": "NZ",
+              "avg_gap": 12.0,
+              "percentiles": {
+                "p10": 14,
+                "p11": 13,
+                "p13": 10,
+                "p15": 8
+              }
+            }
+          ]
+        }
+      },
+      "finishing_table": {
+        "rows": [
+          {
+            "label": "MZ",
+            "type": "zone",
+            "id": "MZ",
+            "blockwork": 5.2,
+            "plaster": 7.0,
+            "toilet_flooring": 13.0,
+            "flat_flooring": 13.0,
+            "children": [
+              {
+                "label": "MZ1",
+                "type": "region",
+                "id": "MZ1",
+                "blockwork": 5.2,
+                "plaster": 7.0,
+                "toilet_flooring": 13.0,
+                "flat_flooring": 13.0,
+                "children": [
+                  {
+                    "label": "Avenue 11",
+                    "type": "project",
+                    "id": "Avenue 11",
+                    "blockwork": 5.5,
+                    "plaster": 7.2,
+                    "toilet_flooring": 13.5,
+                    "flat_flooring": 13.5
+                  },
+                  {
+                    "label": "Horizon",
+                    "type": "project",
+                    "id": "Horizon",
+                    "blockwork": 5.0,
+                    "plaster": 6.8,
+                    "toilet_flooring": 12.8,
+                    "flat_flooring": 12.8
+                  },
+                  {
+                    "label": "Reserve",
+                    "type": "project",
+                    "id": "Reserve",
+                    "blockwork": 5.1,
+                    "plaster": 7.0,
+                    "toilet_flooring": 12.7,
+                    "flat_flooring": 12.7
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "WEZ",
+            "type": "zone",
+            "id": "WEZ",
+            "blockwork": 7.1,
+            "plaster": 8.0,
+            "toilet_flooring": 11.0,
+            "flat_flooring": 15.0,
+            "children": [
+              {
+                "label": "Kolkata",
+                "type": "region",
+                "id": "Kolkata",
+                "blockwork": 7.1,
+                "plaster": 8.0,
+                "toilet_flooring": 11.0,
+                "flat_flooring": 15.0,
+                "children": [
+                  {
+                    "label": "BL Saha",
+                    "type": "project",
+                    "id": "BL Saha",
+                    "blockwork": 7.1,
+                    "plaster": 8.0,
+                    "toilet_flooring": 11.0,
+                    "flat_flooring": 15.0
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "SZ",
+            "type": "zone",
+            "id": "SZ",
+            "blockwork": 6.0,
+            "plaster": 10.0,
+            "toilet_flooring": 12.0,
+            "flat_flooring": 14.0,
+            "children": [
+              {
+                "label": "SZ1",
+                "type": "region",
+                "id": "SZ1",
+                "blockwork": 6.2,
+                "plaster": 10.5,
+                "toilet_flooring": 12.3,
+                "flat_flooring": 14.2,
+                "children": [
+                  {
+                    "label": "RGA 2",
+                    "type": "project",
+                    "id": "RGA 2",
+                    "blockwork": 6.0,
+                    "plaster": 10.2,
+                    "toilet_flooring": 12.0,
+                    "flat_flooring": 14.0
+                  },
+                  {
+                    "label": "Woodscapes",
+                    "type": "project",
+                    "id": "Woodscapes",
+                    "blockwork": 6.5,
+                    "plaster": 10.8,
+                    "toilet_flooring": 12.5,
+                    "flat_flooring": 14.5
+                  }
+                ]
+              },
+              {
+                "label": "SZ2",
+                "type": "region",
+                "id": "SZ2",
+                "blockwork": 5.8,
+                "plaster": 9.5,
+                "toilet_flooring": 11.8,
+                "flat_flooring": 13.8,
+                "children": [
+                  {
+                    "label": "Ramaiah",
+                    "type": "project",
+                    "id": "Ramaiah",
+                    "blockwork": 5.8,
+                    "plaster": 9.5,
+                    "toilet_flooring": 11.8,
+                    "flat_flooring": 13.8
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "NZ",
+            "type": "zone",
+            "id": "NZ",
+            "blockwork": 5.0,
+            "plaster": 7.0,
+            "toilet_flooring": 10.0,
+            "flat_flooring": 12.0,
+            "children": [
+              {
+                "label": "NZ1",
+                "type": "region",
+                "id": "NZ1",
+                "blockwork": 5.2,
+                "plaster": 7.3,
+                "toilet_flooring": 10.3,
+                "flat_flooring": 12.3,
+                "children": [
+                  {
+                    "label": "Aristocrat",
+                    "type": "project",
+                    "id": "Aristocrat",
+                    "blockwork": 5.0,
+                    "plaster": 7.0,
+                    "toilet_flooring": 10.0,
+                    "flat_flooring": 12.0
+                  },
+                  {
+                    "label": "Miraya",
+                    "type": "project",
+                    "id": "Miraya",
+                    "blockwork": 5.3,
+                    "plaster": 7.5,
+                    "toilet_flooring": 10.5,
+                    "flat_flooring": 12.5
+                  },
+                  {
+                    "label": "Zenith",
+                    "type": "project",
+                    "id": "Zenith",
+                    "blockwork": 5.2,
+                    "plaster": 7.4,
+                    "toilet_flooring": 10.4,
+                    "flat_flooring": 12.4
+                  }
+                ]
+              },
+              {
+                "label": "NZ2",
+                "type": "region",
+                "id": "NZ2",
+                "blockwork": 4.8,
+                "plaster": 6.7,
+                "toilet_flooring": 9.7,
+                "flat_flooring": 11.7,
+                "children": [
+                  {
+                    "label": "Jardinia",
+                    "type": "project",
+                    "id": "Jardinia",
+                    "blockwork": 4.7,
+                    "plaster": 6.5,
+                    "toilet_flooring": 9.5,
+                    "flat_flooring": 11.5
+                  },
+                  {
+                    "label": "Sec. 44, Noida",
+                    "type": "project",
+                    "id": "Sec. 44, Noida",
+                    "blockwork": 4.8,
+                    "plaster": 6.8,
+                    "toilet_flooring": 9.8,
+                    "flat_flooring": 11.8
+                  },
+                  {
+                    "label": "Tropical Isle",
+                    "type": "project",
+                    "id": "Tropical Isle",
+                    "blockwork": 4.9,
+                    "plaster": 6.9,
+                    "toilet_flooring": 9.9,
+                    "flat_flooring": 11.9
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

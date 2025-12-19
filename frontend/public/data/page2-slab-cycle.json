@@ -1,0 +1,488 @@
+{
+  "meta": {
+    "generated_at": "2025-12-19T12:30:00.000000",
+    "data_version": "1.0",
+    "page": "page2_slab_cycle"
+  },
+  "controls": {
+    "formwork_types": [
+      { "id": "aluform_typical", "name": "Aluform Typical" },
+      { "id": "conventional", "name": "Conventional" },
+      { "id": "aluform_non_typical", "name": "Aluform Non-Typical (Change floor/Refuge)" },
+      { "id": "aluform_2nd_set", "name": "Aluform 2nd set up" },
+      { "id": "aluform_1st_set", "name": "Aluform 1st set up" },
+      { "id": "con_aluform", "name": "Con + Aluform" }
+    ]
+  },
+  "dashboard_data": {
+    "ALL": {
+      "region_slab_cycle": [
+        { "region_id": "MZ1", "region_name": "Pune 1", "avg_slab_cycle": 36 },
+        { "region_id": "Kolkata", "region_name": "Kolkata", "avg_slab_cycle": 34 },
+        { "region_id": "NZ1", "region_name": "NCR1", "avg_slab_cycle": 29 },
+        { "region_id": "SZ1", "region_name": "MMR2", "avg_slab_cycle": 20 },
+        { "region_id": "NZ2", "region_name": "NCR2", "avg_slab_cycle": 19 },
+        { "region_id": "SZ2", "region_name": "Pune 2", "avg_slab_cycle": 19 },
+        { "region_id": "SR2", "region_name": "SR2", "avg_slab_cycle": 15 },
+        { "region_id": "SR1", "region_name": "SR1", "avg_slab_cycle": 14 },
+        { "region_id": "MMR1", "region_name": "MMR1", "avg_slab_cycle": 13 }
+      ],
+      "technology_slab_cycle": [
+        {
+          "technology": "Aluform Typical",
+          "no_of_slabs": 243,
+          "avg_slab_cycle": 17
+        },
+        {
+          "technology": "Conventional",
+          "no_of_slabs": 17,
+          "avg_slab_cycle": 31
+        },
+        {
+          "technology": "Aluform Non-Typical (Change floor/Refuge)",
+          "no_of_slabs": 9,
+          "avg_slab_cycle": 21
+        },
+        {
+          "technology": "Aluform 2nd set up",
+          "no_of_slabs": 7,
+          "avg_slab_cycle": 19
+        },
+        {
+          "technology": "Aluform 1st set up",
+          "no_of_slabs": 6,
+          "avg_slab_cycle": 32
+        },
+        {
+          "technology": "Con + Aluform",
+          "no_of_slabs": 3,
+          "avg_slab_cycle": 16
+        }
+      ],
+      "slab_cycle_distribution": {
+        "rows": [
+          {
+            "label": "MZ",
+            "type": "zone",
+            "id": "MZ",
+            "no_of_slabs": 89,
+            "avg_slab_cycle": 36,
+            "buckets": {
+              "upto_7": 2,
+              "7_10": 5,
+              "11_14": 12,
+              "15_20": 25,
+              "21_25": 20,
+              "26_30": 15,
+              "gt_30": 10
+            },
+            "children": [
+              {
+                "label": "MZ1",
+                "type": "region",
+                "id": "MZ1",
+                "no_of_slabs": 89,
+                "avg_slab_cycle": 36,
+                "buckets": {
+                  "upto_7": 2,
+                  "7_10": 5,
+                  "11_14": 12,
+                  "15_20": 25,
+                  "21_25": 20,
+                  "26_30": 15,
+                  "gt_30": 10
+                },
+                "children": [
+                  {
+                    "label": "Avenue 11",
+                    "type": "project",
+                    "id": "Avenue 11",
+                    "no_of_slabs": 30,
+                    "avg_slab_cycle": 38,
+                    "buckets": {
+                      "upto_7": 0,
+                      "7_10": 2,
+                      "11_14": 4,
+                      "15_20": 8,
+                      "21_25": 7,
+                      "26_30": 6,
+                      "gt_30": 3
+                    }
+                  },
+                  {
+                    "label": "Horizon",
+                    "type": "project",
+                    "id": "Horizon",
+                    "no_of_slabs": 32,
+                    "avg_slab_cycle": 35,
+                    "buckets": {
+                      "upto_7": 1,
+                      "7_10": 2,
+                      "11_14": 5,
+                      "15_20": 9,
+                      "21_25": 8,
+                      "26_30": 5,
+                      "gt_30": 2
+                    }
+                  },
+                  {
+                    "label": "Reserve",
+                    "type": "project",
+                    "id": "Reserve",
+                    "no_of_slabs": 27,
+                    "avg_slab_cycle": 34,
+                    "buckets": {
+                      "upto_7": 1,
+                      "7_10": 1,
+                      "11_14": 3,
+                      "15_20": 8,
+                      "21_25": 5,
+                      "26_30": 4,
+                      "gt_30": 5
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "WEZ",
+            "type": "zone",
+            "id": "WEZ",
+            "no_of_slabs": 42,
+            "avg_slab_cycle": 34,
+            "buckets": {
+              "upto_7": 1,
+              "7_10": 3,
+              "11_14": 8,
+              "15_20": 12,
+              "21_25": 10,
+              "26_30": 6,
+              "gt_30": 2
+            },
+            "children": [
+              {
+                "label": "Kolkata",
+                "type": "region",
+                "id": "Kolkata",
+                "no_of_slabs": 42,
+                "avg_slab_cycle": 34,
+                "buckets": {
+                  "upto_7": 1,
+                  "7_10": 3,
+                  "11_14": 8,
+                  "15_20": 12,
+                  "21_25": 10,
+                  "26_30": 6,
+                  "gt_30": 2
+                },
+                "children": [
+                  {
+                    "label": "BL Saha",
+                    "type": "project",
+                    "id": "BL Saha",
+                    "no_of_slabs": 42,
+                    "avg_slab_cycle": 34,
+                    "buckets": {
+                      "upto_7": 1,
+                      "7_10": 3,
+                      "11_14": 8,
+                      "15_20": 12,
+                      "21_25": 10,
+                      "26_30": 6,
+                      "gt_30": 2
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "SZ",
+            "type": "zone",
+            "id": "SZ",
+            "no_of_slabs": 67,
+            "avg_slab_cycle": 19,
+            "buckets": {
+              "upto_7": 3,
+              "7_10": 8,
+              "11_14": 15,
+              "15_20": 20,
+              "21_25": 12,
+              "26_30": 7,
+              "gt_30": 2
+            },
+            "children": [
+              {
+                "label": "SZ1",
+                "type": "region",
+                "id": "SZ1",
+                "no_of_slabs": 45,
+                "avg_slab_cycle": 20,
+                "buckets": {
+                  "upto_7": 2,
+                  "7_10": 5,
+                  "11_14": 10,
+                  "15_20": 14,
+                  "21_25": 8,
+                  "26_30": 5,
+                  "gt_30": 1
+                },
+                "children": [
+                  {
+                    "label": "RGA 2",
+                    "type": "project",
+                    "id": "RGA 2",
+                    "no_of_slabs": 25,
+                    "avg_slab_cycle": 18,
+                    "buckets": {
+                      "upto_7": 1,
+                      "7_10": 3,
+                      "11_14": 6,
+                      "15_20": 8,
+                      "21_25": 4,
+                      "26_30": 2,
+                      "gt_30": 1
+                    }
+                  },
+                  {
+                    "label": "Woodscapes",
+                    "type": "project",
+                    "id": "Woodscapes",
+                    "no_of_slabs": 20,
+                    "avg_slab_cycle": 22,
+                    "buckets": {
+                      "upto_7": 1,
+                      "7_10": 2,
+                      "11_14": 4,
+                      "15_20": 6,
+                      "21_25": 4,
+                      "26_30": 3,
+                      "gt_30": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "label": "SZ2",
+                "type": "region",
+                "id": "SZ2",
+                "no_of_slabs": 22,
+                "avg_slab_cycle": 17,
+                "buckets": {
+                  "upto_7": 1,
+                  "7_10": 3,
+                  "11_14": 5,
+                  "15_20": 6,
+                  "21_25": 4,
+                  "26_30": 2,
+                  "gt_30": 1
+                },
+                "children": [
+                  {
+                    "label": "Ramaiah",
+                    "type": "project",
+                    "id": "Ramaiah",
+                    "no_of_slabs": 22,
+                    "avg_slab_cycle": 17,
+                    "buckets": {
+                      "upto_7": 1,
+                      "7_10": 3,
+                      "11_14": 5,
+                      "15_20": 6,
+                      "21_25": 4,
+                      "26_30": 2,
+                      "gt_30": 1
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "NZ",
+            "type": "zone",
+            "id": "NZ",
+            "no_of_slabs": 87,
+            "avg_slab_cycle": 24,
+            "buckets": {
+              "upto_7": 4,
+              "7_10": 10,
+              "11_14": 18,
+              "15_20": 25,
+              "21_25": 17,
+              "26_30": 10,
+              "gt_30": 3
+            },
+            "children": [
+              {
+                "label": "NZ1",
+                "type": "region",
+                "id": "NZ1",
+                "no_of_slabs": 52,
+                "avg_slab_cycle": 29,
+                "buckets": {
+                  "upto_7": 2,
+                  "7_10": 5,
+                  "11_14": 10,
+                  "15_20": 15,
+                  "21_25": 11,
+                  "26_30": 7,
+                  "gt_30": 2
+                },
+                "children": [
+                  {
+                    "label": "Aristocrat",
+                    "type": "project",
+                    "id": "Aristocrat",
+                    "no_of_slabs": 18,
+                    "avg_slab_cycle": 27,
+                    "buckets": {
+                      "upto_7": 1,
+                      "7_10": 2,
+                      "11_14": 4,
+                      "15_20": 5,
+                      "21_25": 3,
+                      "26_30": 2,
+                      "gt_30": 1
+                    }
+                  },
+                  {
+                    "label": "Miraya",
+                    "type": "project",
+                    "id": "Miraya",
+                    "no_of_slabs": 17,
+                    "avg_slab_cycle": 30,
+                    "buckets": {
+                      "upto_7": 0,
+                      "7_10": 2,
+                      "11_14": 3,
+                      "15_20": 5,
+                      "21_25": 4,
+                      "26_30": 2,
+                      "gt_30": 1
+                    }
+                  },
+                  {
+                    "label": "Zenith",
+                    "type": "project",
+                    "id": "Zenith",
+                    "no_of_slabs": 17,
+                    "avg_slab_cycle": 30,
+                    "buckets": {
+                      "upto_7": 1,
+                      "7_10": 1,
+                      "11_14": 3,
+                      "15_20": 5,
+                      "21_25": 4,
+                      "26_30": 3,
+                      "gt_30": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "label": "NZ2",
+                "type": "region",
+                "id": "NZ2",
+                "no_of_slabs": 35,
+                "avg_slab_cycle": 19,
+                "buckets": {
+                  "upto_7": 2,
+                  "7_10": 5,
+                  "11_14": 8,
+                  "15_20": 10,
+                  "21_25": 6,
+                  "26_30": 3,
+                  "gt_30": 1
+                },
+                "children": [
+                  {
+                    "label": "Jardinia",
+                    "type": "project",
+                    "id": "Jardinia",
+                    "no_of_slabs": 12,
+                    "avg_slab_cycle": 18,
+                    "buckets": {
+                      "upto_7": 1,
+                      "7_10": 2,
+                      "11_14": 3,
+                      "15_20": 3,
+                      "21_25": 2,
+                      "26_30": 1,
+                      "gt_30": 0
+                    }
+                  },
+                  {
+                    "label": "Sec. 44, Noida",
+                    "type": "project",
+                    "id": "Sec. 44, Noida",
+                    "no_of_slabs": 11,
+                    "avg_slab_cycle": 19,
+                    "buckets": {
+                      "upto_7": 0,
+                      "7_10": 2,
+                      "11_14": 2,
+                      "15_20": 4,
+                      "21_25": 2,
+                      "26_30": 1,
+                      "gt_30": 0
+                    }
+                  },
+                  {
+                    "label": "Tropical Isle",
+                    "type": "project",
+                    "id": "Tropical Isle",
+                    "no_of_slabs": 12,
+                    "avg_slab_cycle": 20,
+                    "buckets": {
+                      "upto_7": 1,
+                      "7_10": 1,
+                      "11_14": 3,
+                      "15_20": 3,
+                      "21_25": 2,
+                      "26_30": 1,
+                      "gt_30": 1
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "top_projects": [
+        {
+          "rank": 1,
+          "project": "Ramaiah",
+          "tower": "Tower A",
+          "slab_cycle": 12
+        },
+        {
+          "rank": 2,
+          "project": "RGA 2",
+          "tower": "Tower B",
+          "slab_cycle": 13
+        },
+        {
+          "rank": 3,
+          "project": "Jardinia",
+          "tower": "Tower C",
+          "slab_cycle": 14
+        },
+        {
+          "rank": 4,
+          "project": "Sec. 44, Noida",
+          "tower": "Tower A",
+          "slab_cycle": 15
+        },
+        {
+          "rank": 5,
+          "project": "Woodscapes",
+          "tower": "Tower D",
+          "slab_cycle": 16
+        }
+      ]
+    }
+  }
+}

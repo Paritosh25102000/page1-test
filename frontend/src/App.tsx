@@ -1,7 +1,12 @@
 import { MantineProvider, createTheme } from '@mantine/core';
 import '@mantine/core/styles.css';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { DashboardProvider } from '@/context/DashboardContext';
-import { DashboardShell } from '@/components/layout/DashboardShell';
+import { AppLayout } from '@/components/layout/AppLayout';
+import { Page1Shell } from '@/components/layout/Page1Shell';
+import { Page2Shell } from '@/components/layout/Page2Shell';
+import { Page3Shell } from '@/components/layout/Page3Shell';
+import { Page4Shell } from '@/components/layout/Page4Shell';
 import { useDashboardData } from '@/hooks/useDashboardData';
 
 // Custom theme configuration
@@ -19,15 +24,27 @@ function DashboardContent() {
   // Initialize data fetching
   useDashboardData();
 
-  return <DashboardShell />;
+  return (
+    <Routes>
+      <Route path="/" element={<AppLayout />}>
+        <Route index element={<Navigate to="/executive-summary" replace />} />
+        <Route path="executive-summary" element={<Page1Shell />} />
+        <Route path="slab-cycle" element={<Page2Shell />} />
+        <Route path="floor-achievement" element={<Page3Shell />} />
+        <Route path="finishing-activities" element={<Page4Shell />} />
+      </Route>
+    </Routes>
+  );
 }
 
 function App() {
   return (
     <MantineProvider theme={theme} defaultColorScheme="light">
-      <DashboardProvider>
-        <DashboardContent />
-      </DashboardProvider>
+      <BrowserRouter>
+        <DashboardProvider>
+          <DashboardContent />
+        </DashboardProvider>
+      </BrowserRouter>
     </MantineProvider>
   );
 }
