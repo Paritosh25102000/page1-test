@@ -1,0 +1,6378 @@
+{
+  "generated_at": "2025-12-19T20:37:08.136716",
+  "summary": {
+    "total_checks": 410,
+    "passed": 410,
+    "failed": 0,
+    "warnings": 0,
+    "pass_rate": 100.0
+  },
+  "by_category": {
+    "Hierarchy Aggregation": {
+      "name": "Hierarchy Aggregation",
+      "summary": {
+        "passed": 36,
+        "failed": 0,
+        "warnings": 0,
+        "total": 36
+      },
+      "checks": [
+        {
+          "check": "ZONE\u2192ALL fy plan costs",
+          "status": "pass",
+          "expected": "4.99T",
+          "actual": "4.99T",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "ZONE\u2192ALL fy actual costs",
+          "status": "pass",
+          "expected": "4.28T",
+          "actual": "4.28T",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "ZONE\u2192ALL quarter plan costs",
+          "status": "pass",
+          "expected": "1.71T",
+          "actual": "1.71T",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "ZONE\u2192ALL quarter actual costs",
+          "status": "pass",
+          "expected": "1.60T",
+          "actual": "1.60T",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "ZONE\u2192ALL month plan costs",
+          "status": "pass",
+          "expected": "1.15T",
+          "actual": "1.15T",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "ZONE\u2192ALL month actual costs",
+          "status": "pass",
+          "expected": "1.13T",
+          "actual": "1.13T",
+          "details": "Diff: -0.00"
+        },
+        {
+          "check": "REG\u2192ZONE_MZ fy plan",
+          "status": "pass",
+          "expected": "1.89T",
+          "actual": "1.89T",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "REG\u2192ZONE_MZ quarter plan",
+          "status": "pass",
+          "expected": "615.57B",
+          "actual": "615.57B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "REG\u2192ZONE_MZ month plan",
+          "status": "pass",
+          "expected": "411.68B",
+          "actual": "411.68B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "REG\u2192ZONE_NZ fy plan",
+          "status": "pass",
+          "expected": "1.90T",
+          "actual": "1.90T",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "REG\u2192ZONE_NZ quarter plan",
+          "status": "pass",
+          "expected": "650.75B",
+          "actual": "650.75B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "REG\u2192ZONE_NZ month plan",
+          "status": "pass",
+          "expected": "498.72B",
+          "actual": "498.72B",
+          "details": "Diff: -0.00"
+        },
+        {
+          "check": "REG\u2192ZONE_SZ fy plan",
+          "status": "pass",
+          "expected": "1.09T",
+          "actual": "1.09T",
+          "details": "Diff: -0.00"
+        },
+        {
+          "check": "REG\u2192ZONE_SZ quarter plan",
+          "status": "pass",
+          "expected": "414.72B",
+          "actual": "414.72B",
+          "details": "Diff: -0.00"
+        },
+        {
+          "check": "REG\u2192ZONE_SZ month plan",
+          "status": "pass",
+          "expected": "214.37B",
+          "actual": "214.37B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "REG\u2192ZONE_WEZ fy plan",
+          "status": "pass",
+          "expected": "105.71B",
+          "actual": "105.71B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "REG\u2192ZONE_WEZ quarter plan",
+          "status": "pass",
+          "expected": "32.26B",
+          "actual": "32.26B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "REG\u2192ZONE_WEZ month plan",
+          "status": "pass",
+          "expected": "28.16B",
+          "actual": "28.16B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_MZ1 fy plan",
+          "status": "pass",
+          "expected": "1.89T",
+          "actual": "1.89T",
+          "details": "Diff: -0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_MZ1 quarter plan",
+          "status": "pass",
+          "expected": "615.57B",
+          "actual": "615.57B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_MZ1 month plan",
+          "status": "pass",
+          "expected": "411.68B",
+          "actual": "411.68B",
+          "details": "Diff: -0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_NZ1 fy plan",
+          "status": "pass",
+          "expected": "882.58B",
+          "actual": "882.58B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_NZ1 quarter plan",
+          "status": "pass",
+          "expected": "275.49B",
+          "actual": "275.49B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_NZ1 month plan",
+          "status": "pass",
+          "expected": "178.88B",
+          "actual": "178.88B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_NZ2 fy plan",
+          "status": "pass",
+          "expected": "1.02T",
+          "actual": "1.02T",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_NZ2 quarter plan",
+          "status": "pass",
+          "expected": "375.26B",
+          "actual": "375.26B",
+          "details": "Diff: -0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_NZ2 month plan",
+          "status": "pass",
+          "expected": "319.83B",
+          "actual": "319.83B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_SZ1 fy plan",
+          "status": "pass",
+          "expected": "936.21B",
+          "actual": "936.21B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_SZ1 quarter plan",
+          "status": "pass",
+          "expected": "354.92B",
+          "actual": "354.92B",
+          "details": "Diff: -0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_SZ1 month plan",
+          "status": "pass",
+          "expected": "160.63B",
+          "actual": "160.63B",
+          "details": "Diff: -0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_SZ2 fy plan",
+          "status": "pass",
+          "expected": "155.96B",
+          "actual": "155.96B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_SZ2 quarter plan",
+          "status": "pass",
+          "expected": "59.79B",
+          "actual": "59.79B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_SZ2 month plan",
+          "status": "pass",
+          "expected": "53.74B",
+          "actual": "53.74B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_Kolkata fy plan",
+          "status": "pass",
+          "expected": "105.71B",
+          "actual": "105.71B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_Kolkata quarter plan",
+          "status": "pass",
+          "expected": "32.26B",
+          "actual": "32.26B",
+          "details": "Diff: 0.00"
+        },
+        {
+          "check": "PROJ\u2192REG_Kolkata month plan",
+          "status": "pass",
+          "expected": "28.16B",
+          "actual": "28.16B",
+          "details": "Diff: 0.00"
+        }
+      ]
+    },
+    "Time Slice Consistency": {
+      "name": "Time Slice Consistency",
+      "summary": {
+        "passed": 3,
+        "failed": 0,
+        "warnings": 0,
+        "total": 3
+      },
+      "checks": [
+        {
+          "check": "ALL FY series count",
+          "status": "pass",
+          "expected": 12,
+          "actual": 12,
+          "details": "FY should have 12 monthly periods"
+        },
+        {
+          "check": "ALL Quarter series count",
+          "status": "pass",
+          "expected": "12-15 weeks",
+          "actual": 14,
+          "details": "Quarter should have ~13 weekly periods"
+        },
+        {
+          "check": "ALL Month series count",
+          "status": "pass",
+          "expected": "9-12 weeks",
+          "actual": 11,
+          "details": "Month (Looking Glass) should have ~10 weekly periods"
+        }
+      ]
+    },
+    "Gauge Calculations": {
+      "name": "Gauge Calculations",
+      "summary": {
+        "passed": 288,
+        "failed": 0,
+        "warnings": 0,
+        "total": 288
+      },
+      "checks": [
+        {
+          "check": "ALL aop fy achieved_pct",
+          "status": "pass",
+          "expected": "85.7%",
+          "actual": "85.7%",
+          "details": "actual=4.28T, plan=4.99T"
+        },
+        {
+          "check": "ALL aop fy status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 85.7%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ALL aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "94.1%",
+          "actual": "94.1%",
+          "details": "actual=1.49T, plan=1.59T"
+        },
+        {
+          "check": "ALL aop quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 94.1%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ALL aop month achieved_pct",
+          "status": "pass",
+          "expected": "98.8%",
+          "actual": "98.8%",
+          "details": "actual=991.50B, plan=1.00T"
+        },
+        {
+          "check": "ALL aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 98.8%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ALL sprint fy achieved_pct",
+          "status": "pass",
+          "expected": "82.4%",
+          "actual": "82.4%",
+          "details": "actual=1.57T, plan=1.91T"
+        },
+        {
+          "check": "ALL sprint fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 82.4%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ALL sprint quarter achieved_pct",
+          "status": "pass",
+          "expected": "93.8%",
+          "actual": "93.8%",
+          "details": "actual=619.41B, plan=660.24B"
+        },
+        {
+          "check": "ALL sprint quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 93.8%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ALL sprint month achieved_pct",
+          "status": "pass",
+          "expected": "99.5%",
+          "actual": "99.5%",
+          "details": "actual=380.36B, plan=382.37B"
+        },
+        {
+          "check": "ALL sprint month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.5%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_MZ aop fy achieved_pct",
+          "status": "pass",
+          "expected": "92.4%",
+          "actual": "92.4%",
+          "details": "actual=1.75T, plan=1.89T"
+        },
+        {
+          "check": "ZONE_MZ aop fy status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 92.4%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_MZ aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "98.7%",
+          "actual": "98.7%",
+          "details": "actual=560.00B, plan=567.10B"
+        },
+        {
+          "check": "ZONE_MZ aop quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 98.7%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_MZ aop month achieved_pct",
+          "status": "pass",
+          "expected": "100.1%",
+          "actual": "100.1%",
+          "details": "actual=365.34B, plan=364.83B"
+        },
+        {
+          "check": "ZONE_MZ aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.1%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_MZ sprint fy zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "ZONE_MZ sprint fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_MZ sprint quarter zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "ZONE_MZ sprint quarter status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_MZ sprint month zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "ZONE_MZ sprint month status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_MZ1 aop fy achieved_pct",
+          "status": "pass",
+          "expected": "92.4%",
+          "actual": "92.4%",
+          "details": "actual=1.75T, plan=1.89T"
+        },
+        {
+          "check": "REG_MZ1 aop fy status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 92.4%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_MZ1 aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "98.7%",
+          "actual": "98.7%",
+          "details": "actual=560.00B, plan=567.10B"
+        },
+        {
+          "check": "REG_MZ1 aop quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 98.7%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_MZ1 aop month achieved_pct",
+          "status": "pass",
+          "expected": "100.1%",
+          "actual": "100.1%",
+          "details": "actual=365.34B, plan=364.83B"
+        },
+        {
+          "check": "REG_MZ1 aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.1%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_MZ1 sprint fy zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "REG_MZ1 sprint fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_MZ1 sprint quarter zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "REG_MZ1 sprint quarter status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_MZ1 sprint month zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "REG_MZ1 sprint month status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Avenue 11 aop fy achieved_pct",
+          "status": "pass",
+          "expected": "87.4%",
+          "actual": "87.4%",
+          "details": "actual=365.42B, plan=418.31B"
+        },
+        {
+          "check": "PROJ_Avenue 11 aop fy status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 87.4%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Avenue 11 aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "98.1%",
+          "actual": "98.1%",
+          "details": "actual=95.70B, plan=97.53B"
+        },
+        {
+          "check": "PROJ_Avenue 11 aop quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 98.1%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Avenue 11 aop month achieved_pct",
+          "status": "pass",
+          "expected": "100.6%",
+          "actual": "100.6%",
+          "details": "actual=57.07B, plan=56.74B"
+        },
+        {
+          "check": "PROJ_Avenue 11 aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.6%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Avenue 11 sprint fy zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Avenue 11 sprint fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Avenue 11 sprint quarter zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Avenue 11 sprint quarter status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Avenue 11 sprint month zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Avenue 11 sprint month status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Horizon aop fy achieved_pct",
+          "status": "pass",
+          "expected": "91.2%",
+          "actual": "91.2%",
+          "details": "actual=944.75B, plan=1.04T"
+        },
+        {
+          "check": "PROJ_Horizon aop fy status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 91.2%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Horizon aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "98.3%",
+          "actual": "98.3%",
+          "details": "actual=305.51B, plan=310.91B"
+        },
+        {
+          "check": "PROJ_Horizon aop quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 98.3%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Horizon aop month achieved_pct",
+          "status": "pass",
+          "expected": "100.1%",
+          "actual": "100.1%",
+          "details": "actual=182.03B, plan=181.88B"
+        },
+        {
+          "check": "PROJ_Horizon aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.1%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Horizon sprint fy zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Horizon sprint fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Horizon sprint quarter zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Horizon sprint quarter status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Horizon sprint month zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Horizon sprint month status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Reserve aop fy achieved_pct",
+          "status": "pass",
+          "expected": "100.1%",
+          "actual": "100.1%",
+          "details": "actual=436.17B, plan=435.83B"
+        },
+        {
+          "check": "PROJ_Reserve aop fy status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.1%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Reserve aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "100.1%",
+          "actual": "100.1%",
+          "details": "actual=158.80B, plan=158.65B"
+        },
+        {
+          "check": "PROJ_Reserve aop quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.1%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Reserve aop month achieved_pct",
+          "status": "pass",
+          "expected": "100.0%",
+          "actual": "100.0%",
+          "details": "actual=126.23B, plan=126.20B"
+        },
+        {
+          "check": "PROJ_Reserve aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Reserve sprint fy zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Reserve sprint fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Reserve sprint quarter zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Reserve sprint quarter status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Reserve sprint month zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Reserve sprint month status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_NZ aop fy achieved_pct",
+          "status": "pass",
+          "expected": "81.3%",
+          "actual": "81.3%",
+          "details": "actual=1.55T, plan=1.90T"
+        },
+        {
+          "check": "ZONE_NZ aop fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 81.3%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_NZ aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "93.1%",
+          "actual": "93.1%",
+          "details": "actual=567.63B, plan=609.44B"
+        },
+        {
+          "check": "ZONE_NZ aop quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 93.1%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_NZ aop month achieved_pct",
+          "status": "pass",
+          "expected": "97.8%",
+          "actual": "97.8%",
+          "details": "actual=435.92B, plan=445.82B"
+        },
+        {
+          "check": "ZONE_NZ aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 97.8%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_NZ sprint fy achieved_pct",
+          "status": "pass",
+          "expected": "81.6%",
+          "actual": "81.6%",
+          "details": "actual=783.60B, plan=960.67B"
+        },
+        {
+          "check": "ZONE_NZ sprint fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 81.6%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_NZ sprint quarter achieved_pct",
+          "status": "pass",
+          "expected": "97.0%",
+          "actual": "97.0%",
+          "details": "actual=329.79B, plan=340.02B"
+        },
+        {
+          "check": "ZONE_NZ sprint quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 97.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_NZ sprint month achieved_pct",
+          "status": "pass",
+          "expected": "99.8%",
+          "actual": "99.8%",
+          "details": "actual=248.40B, plan=249.01B"
+        },
+        {
+          "check": "ZONE_NZ sprint month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.8%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_NZ1 aop fy achieved_pct",
+          "status": "pass",
+          "expected": "73.4%",
+          "actual": "73.4%",
+          "details": "actual=648.05B, plan=882.58B"
+        },
+        {
+          "check": "REG_NZ1 aop fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 73.4%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_NZ1 aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "96.4%",
+          "actual": "96.4%",
+          "details": "actual=242.21B, plan=251.14B"
+        },
+        {
+          "check": "REG_NZ1 aop quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 96.4%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_NZ1 aop month achieved_pct",
+          "status": "pass",
+          "expected": "100.0%",
+          "actual": "100.0%",
+          "details": "actual=156.82B, plan=156.82B"
+        },
+        {
+          "check": "REG_NZ1 aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_NZ1 sprint fy achieved_pct",
+          "status": "pass",
+          "expected": "70.1%",
+          "actual": "70.1%",
+          "details": "actual=384.55B, plan=548.94B"
+        },
+        {
+          "check": "REG_NZ1 sprint fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 70.1%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_NZ1 sprint quarter achieved_pct",
+          "status": "pass",
+          "expected": "96.5%",
+          "actual": "96.5%",
+          "details": "actual=141.57B, plan=146.73B"
+        },
+        {
+          "check": "REG_NZ1 sprint quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 96.5%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_NZ1 sprint month achieved_pct",
+          "status": "pass",
+          "expected": "100.0%",
+          "actual": "100.0%",
+          "details": "actual=96.43B, plan=96.43B"
+        },
+        {
+          "check": "REG_NZ1 sprint month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Aristocrat aop fy achieved_pct",
+          "status": "pass",
+          "expected": "79.0%",
+          "actual": "79.0%",
+          "details": "actual=263.50B, plan=333.64B"
+        },
+        {
+          "check": "PROJ_Aristocrat aop fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 79.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Aristocrat aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "96.4%",
+          "actual": "96.4%",
+          "details": "actual=100.64B, plan=104.41B"
+        },
+        {
+          "check": "PROJ_Aristocrat aop quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 96.4%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Aristocrat aop month achieved_pct",
+          "status": "pass",
+          "expected": "100.0%",
+          "actual": "100.0%",
+          "details": "actual=60.39B, plan=60.39B"
+        },
+        {
+          "check": "PROJ_Aristocrat aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Aristocrat sprint fy zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Aristocrat sprint fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Aristocrat sprint quarter zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Aristocrat sprint quarter status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Aristocrat sprint month zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Aristocrat sprint month status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Miraya aop fy achieved_pct",
+          "status": "pass",
+          "expected": "85.5%",
+          "actual": "85.5%",
+          "details": "actual=169.41B, plan=198.03B"
+        },
+        {
+          "check": "PROJ_Miraya aop fy status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 85.5%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Miraya aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "99.6%",
+          "actual": "99.6%",
+          "details": "actual=84.79B, plan=85.17B"
+        },
+        {
+          "check": "PROJ_Miraya aop quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.6%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Miraya aop month achieved_pct",
+          "status": "pass",
+          "expected": "100.0%",
+          "actual": "100.0%",
+          "details": "actual=52.59B, plan=52.59B"
+        },
+        {
+          "check": "PROJ_Miraya aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Miraya sprint fy achieved_pct",
+          "status": "pass",
+          "expected": "85.5%",
+          "actual": "85.5%",
+          "details": "actual=169.41B, plan=198.03B"
+        },
+        {
+          "check": "PROJ_Miraya sprint fy status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 85.5%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Miraya sprint quarter achieved_pct",
+          "status": "pass",
+          "expected": "99.6%",
+          "actual": "99.6%",
+          "details": "actual=84.79B, plan=85.17B"
+        },
+        {
+          "check": "PROJ_Miraya sprint quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.6%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Miraya sprint month achieved_pct",
+          "status": "pass",
+          "expected": "100.0%",
+          "actual": "100.0%",
+          "details": "actual=52.59B, plan=52.59B"
+        },
+        {
+          "check": "PROJ_Miraya sprint month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Zenith aop fy achieved_pct",
+          "status": "pass",
+          "expected": "61.3%",
+          "actual": "61.3%",
+          "details": "actual=215.15B, plan=350.91B"
+        },
+        {
+          "check": "PROJ_Zenith aop fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 61.3%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Zenith aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "92.2%",
+          "actual": "92.2%",
+          "details": "actual=56.78B, plan=61.57B"
+        },
+        {
+          "check": "PROJ_Zenith aop quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 92.2%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Zenith aop month achieved_pct",
+          "status": "pass",
+          "expected": "100.0%",
+          "actual": "100.0%",
+          "details": "actual=43.84B, plan=43.84B"
+        },
+        {
+          "check": "PROJ_Zenith aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Zenith sprint fy achieved_pct",
+          "status": "pass",
+          "expected": "61.3%",
+          "actual": "61.3%",
+          "details": "actual=215.15B, plan=350.91B"
+        },
+        {
+          "check": "PROJ_Zenith sprint fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 61.3%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Zenith sprint quarter achieved_pct",
+          "status": "pass",
+          "expected": "92.2%",
+          "actual": "92.2%",
+          "details": "actual=56.78B, plan=61.57B"
+        },
+        {
+          "check": "PROJ_Zenith sprint quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 92.2%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Zenith sprint month achieved_pct",
+          "status": "pass",
+          "expected": "100.0%",
+          "actual": "100.0%",
+          "details": "actual=43.84B, plan=43.84B"
+        },
+        {
+          "check": "PROJ_Zenith sprint month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_NZ2 aop fy achieved_pct",
+          "status": "pass",
+          "expected": "88.0%",
+          "actual": "88.0%",
+          "details": "actual=898.20B, plan=1.02T"
+        },
+        {
+          "check": "REG_NZ2 aop fy status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 88.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_NZ2 aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "90.8%",
+          "actual": "90.8%",
+          "details": "actual=325.42B, plan=358.30B"
+        },
+        {
+          "check": "REG_NZ2 aop quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 90.8%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_NZ2 aop month achieved_pct",
+          "status": "pass",
+          "expected": "96.6%",
+          "actual": "96.6%",
+          "details": "actual=279.11B, plan=289.00B"
+        },
+        {
+          "check": "REG_NZ2 aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 96.6%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_NZ2 sprint fy achieved_pct",
+          "status": "pass",
+          "expected": "96.9%",
+          "actual": "96.9%",
+          "details": "actual=399.05B, plan=411.73B"
+        },
+        {
+          "check": "REG_NZ2 sprint fy status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 96.9%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_NZ2 sprint quarter achieved_pct",
+          "status": "pass",
+          "expected": "97.4%",
+          "actual": "97.4%",
+          "details": "actual=188.22B, plan=193.29B"
+        },
+        {
+          "check": "REG_NZ2 sprint quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 97.4%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_NZ2 sprint month achieved_pct",
+          "status": "pass",
+          "expected": "99.6%",
+          "actual": "99.6%",
+          "details": "actual=151.97B, plan=152.58B"
+        },
+        {
+          "check": "REG_NZ2 sprint month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.6%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Jardinia aop fy achieved_pct",
+          "status": "pass",
+          "expected": "96.9%",
+          "actual": "96.9%",
+          "details": "actual=399.05B, plan=411.73B"
+        },
+        {
+          "check": "PROJ_Jardinia aop fy status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 96.9%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Jardinia aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "97.4%",
+          "actual": "97.4%",
+          "details": "actual=188.22B, plan=193.29B"
+        },
+        {
+          "check": "PROJ_Jardinia aop quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 97.4%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Jardinia aop month achieved_pct",
+          "status": "pass",
+          "expected": "99.6%",
+          "actual": "99.6%",
+          "details": "actual=151.97B, plan=152.58B"
+        },
+        {
+          "check": "PROJ_Jardinia aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.6%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Jardinia sprint fy achieved_pct",
+          "status": "pass",
+          "expected": "96.9%",
+          "actual": "96.9%",
+          "details": "actual=399.05B, plan=411.73B"
+        },
+        {
+          "check": "PROJ_Jardinia sprint fy status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 96.9%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Jardinia sprint quarter achieved_pct",
+          "status": "pass",
+          "expected": "97.4%",
+          "actual": "97.4%",
+          "details": "actual=188.22B, plan=193.29B"
+        },
+        {
+          "check": "PROJ_Jardinia sprint quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 97.4%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Jardinia sprint month achieved_pct",
+          "status": "pass",
+          "expected": "99.6%",
+          "actual": "99.6%",
+          "details": "actual=151.97B, plan=152.58B"
+        },
+        {
+          "check": "PROJ_Jardinia sprint month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.6%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Sec. 44, Noida aop fy achieved_pct",
+          "status": "pass",
+          "expected": "79.8%",
+          "actual": "79.8%",
+          "details": "actual=165.19B, plan=206.89B"
+        },
+        {
+          "check": "PROJ_Sec. 44, Noida aop fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 79.8%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Sec. 44, Noida aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "99.1%",
+          "actual": "99.1%",
+          "details": "actual=55.42B, plan=55.91B"
+        },
+        {
+          "check": "PROJ_Sec. 44, Noida aop quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.1%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Sec. 44, Noida aop month achieved_pct",
+          "status": "pass",
+          "expected": "101.4%",
+          "actual": "101.4%",
+          "details": "actual=42.36B, plan=41.79B"
+        },
+        {
+          "check": "PROJ_Sec. 44, Noida aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 101.4%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Sec. 44, Noida sprint fy zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Sec. 44, Noida sprint fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Sec. 44, Noida sprint quarter zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Sec. 44, Noida sprint quarter status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Sec. 44, Noida sprint month zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Sec. 44, Noida sprint month status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Tropical Isle aop fy achieved_pct",
+          "status": "pass",
+          "expected": "83.1%",
+          "actual": "83.1%",
+          "details": "actual=333.95B, plan=401.78B"
+        },
+        {
+          "check": "PROJ_Tropical Isle aop fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 83.1%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Tropical Isle aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "75.0%",
+          "actual": "75.0%",
+          "details": "actual=81.78B, plan=109.11B"
+        },
+        {
+          "check": "PROJ_Tropical Isle aop quarter status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 75.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Tropical Isle aop month achieved_pct",
+          "status": "pass",
+          "expected": "89.6%",
+          "actual": "89.6%",
+          "details": "actual=84.78B, plan=94.62B"
+        },
+        {
+          "check": "PROJ_Tropical Isle aop month status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 89.6%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Tropical Isle sprint fy zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Tropical Isle sprint fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Tropical Isle sprint quarter zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Tropical Isle sprint quarter status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Tropical Isle sprint month zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_Tropical Isle sprint month status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_SZ aop fy achieved_pct",
+          "status": "pass",
+          "expected": "81.6%",
+          "actual": "81.6%",
+          "details": "actual=890.71B, plan=1.09T"
+        },
+        {
+          "check": "ZONE_SZ aop fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 81.6%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_SZ aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "89.5%",
+          "actual": "89.5%",
+          "details": "actual=338.42B, plan=378.21B"
+        },
+        {
+          "check": "ZONE_SZ aop quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 89.5%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_SZ aop month achieved_pct",
+          "status": "pass",
+          "expected": "98.5%",
+          "actual": "98.5%",
+          "details": "actual=165.13B, plan=167.58B"
+        },
+        {
+          "check": "ZONE_SZ aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 98.5%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_SZ sprint fy achieved_pct",
+          "status": "pass",
+          "expected": "82.7%",
+          "actual": "82.7%",
+          "details": "actual=697.27B, plan=842.93B"
+        },
+        {
+          "check": "ZONE_SZ sprint fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 82.7%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_SZ sprint quarter achieved_pct",
+          "status": "pass",
+          "expected": "91.0%",
+          "actual": "91.0%",
+          "details": "actual=263.71B, plan=289.86B"
+        },
+        {
+          "check": "ZONE_SZ sprint quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 91.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_SZ sprint month achieved_pct",
+          "status": "pass",
+          "expected": "99.2%",
+          "actual": "99.2%",
+          "details": "actual=106.85B, plan=107.67B"
+        },
+        {
+          "check": "ZONE_SZ sprint month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.2%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_SZ1 aop fy achieved_pct",
+          "status": "pass",
+          "expected": "78.6%",
+          "actual": "78.6%",
+          "details": "actual=735.87B, plan=936.21B"
+        },
+        {
+          "check": "REG_SZ1 aop fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 78.6%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_SZ1 aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "87.6%",
+          "actual": "87.6%",
+          "details": "actual=281.20B, plan=320.89B"
+        },
+        {
+          "check": "REG_SZ1 aop quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 87.6%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_SZ1 aop month achieved_pct",
+          "status": "pass",
+          "expected": "98.0%",
+          "actual": "98.0%",
+          "details": "actual=117.13B, plan=119.58B"
+        },
+        {
+          "check": "REG_SZ1 aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 98.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_SZ1 sprint fy achieved_pct",
+          "status": "pass",
+          "expected": "80.7%",
+          "actual": "80.7%",
+          "details": "actual=604.77B, plan=749.31B"
+        },
+        {
+          "check": "REG_SZ1 sprint fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 80.7%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_SZ1 sprint quarter achieved_pct",
+          "status": "pass",
+          "expected": "89.8%",
+          "actual": "89.8%",
+          "details": "actual=229.87B, plan=255.92B"
+        },
+        {
+          "check": "REG_SZ1 sprint quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 89.8%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_SZ1 sprint month achieved_pct",
+          "status": "pass",
+          "expected": "99.0%",
+          "actual": "99.0%",
+          "details": "actual=83.85B, plan=84.66B"
+        },
+        {
+          "check": "REG_SZ1 sprint month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_RGA 2 aop fy achieved_pct",
+          "status": "pass",
+          "expected": "70.1%",
+          "actual": "70.1%",
+          "details": "actual=131.10B, plan=186.90B"
+        },
+        {
+          "check": "PROJ_RGA 2 aop fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 70.1%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_RGA 2 aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "79.0%",
+          "actual": "79.0%",
+          "details": "actual=51.33B, plan=64.97B"
+        },
+        {
+          "check": "PROJ_RGA 2 aop quarter status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 79.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_RGA 2 aop month achieved_pct",
+          "status": "pass",
+          "expected": "95.3%",
+          "actual": "95.3%",
+          "details": "actual=33.28B, plan=34.92B"
+        },
+        {
+          "check": "PROJ_RGA 2 aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 95.3%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_RGA 2 sprint fy zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_RGA 2 sprint fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_RGA 2 sprint quarter zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_RGA 2 sprint quarter status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_RGA 2 sprint month zero plan",
+          "status": "pass",
+          "expected": "0%",
+          "actual": "0.0%",
+          "details": "Plan is zero, percentage should be 0"
+        },
+        {
+          "check": "PROJ_RGA 2 sprint month status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 0.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Woodscapes aop fy achieved_pct",
+          "status": "pass",
+          "expected": "80.7%",
+          "actual": "80.7%",
+          "details": "actual=604.77B, plan=749.31B"
+        },
+        {
+          "check": "PROJ_Woodscapes aop fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 80.7%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Woodscapes aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "89.8%",
+          "actual": "89.8%",
+          "details": "actual=229.87B, plan=255.92B"
+        },
+        {
+          "check": "PROJ_Woodscapes aop quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 89.8%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Woodscapes aop month achieved_pct",
+          "status": "pass",
+          "expected": "99.0%",
+          "actual": "99.0%",
+          "details": "actual=83.85B, plan=84.66B"
+        },
+        {
+          "check": "PROJ_Woodscapes aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Woodscapes sprint fy achieved_pct",
+          "status": "pass",
+          "expected": "80.7%",
+          "actual": "80.7%",
+          "details": "actual=604.77B, plan=749.31B"
+        },
+        {
+          "check": "PROJ_Woodscapes sprint fy status_color",
+          "status": "pass",
+          "expected": "red",
+          "actual": "red",
+          "details": "For 80.7%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Woodscapes sprint quarter achieved_pct",
+          "status": "pass",
+          "expected": "89.8%",
+          "actual": "89.8%",
+          "details": "actual=229.87B, plan=255.92B"
+        },
+        {
+          "check": "PROJ_Woodscapes sprint quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 89.8%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Woodscapes sprint month achieved_pct",
+          "status": "pass",
+          "expected": "99.0%",
+          "actual": "99.0%",
+          "details": "actual=83.85B, plan=84.66B"
+        },
+        {
+          "check": "PROJ_Woodscapes sprint month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_SZ2 aop fy achieved_pct",
+          "status": "pass",
+          "expected": "99.3%",
+          "actual": "99.3%",
+          "details": "actual=154.84B, plan=155.96B"
+        },
+        {
+          "check": "REG_SZ2 aop fy status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.3%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_SZ2 aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "99.8%",
+          "actual": "99.8%",
+          "details": "actual=57.22B, plan=57.32B"
+        },
+        {
+          "check": "REG_SZ2 aop quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.8%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_SZ2 aop month achieved_pct",
+          "status": "pass",
+          "expected": "100.0%",
+          "actual": "100.0%",
+          "details": "actual=48.00B, plan=48.00B"
+        },
+        {
+          "check": "REG_SZ2 aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_SZ2 sprint fy achieved_pct",
+          "status": "pass",
+          "expected": "98.8%",
+          "actual": "98.8%",
+          "details": "actual=92.50B, plan=93.62B"
+        },
+        {
+          "check": "REG_SZ2 sprint fy status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 98.8%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_SZ2 sprint quarter achieved_pct",
+          "status": "pass",
+          "expected": "99.7%",
+          "actual": "99.7%",
+          "details": "actual=33.84B, plan=33.94B"
+        },
+        {
+          "check": "REG_SZ2 sprint quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.7%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_SZ2 sprint month achieved_pct",
+          "status": "pass",
+          "expected": "100.0%",
+          "actual": "100.0%",
+          "details": "actual=23.01B, plan=23.01B"
+        },
+        {
+          "check": "REG_SZ2 sprint month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Ramaiah aop fy achieved_pct",
+          "status": "pass",
+          "expected": "99.3%",
+          "actual": "99.3%",
+          "details": "actual=154.84B, plan=155.96B"
+        },
+        {
+          "check": "PROJ_Ramaiah aop fy status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.3%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Ramaiah aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "99.8%",
+          "actual": "99.8%",
+          "details": "actual=57.22B, plan=57.32B"
+        },
+        {
+          "check": "PROJ_Ramaiah aop quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.8%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Ramaiah aop month achieved_pct",
+          "status": "pass",
+          "expected": "100.0%",
+          "actual": "100.0%",
+          "details": "actual=48.00B, plan=48.00B"
+        },
+        {
+          "check": "PROJ_Ramaiah aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Ramaiah sprint fy achieved_pct",
+          "status": "pass",
+          "expected": "98.8%",
+          "actual": "98.8%",
+          "details": "actual=92.50B, plan=93.62B"
+        },
+        {
+          "check": "PROJ_Ramaiah sprint fy status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 98.8%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Ramaiah sprint quarter achieved_pct",
+          "status": "pass",
+          "expected": "99.7%",
+          "actual": "99.7%",
+          "details": "actual=33.84B, plan=33.94B"
+        },
+        {
+          "check": "PROJ_Ramaiah sprint quarter status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 99.7%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_Ramaiah sprint month achieved_pct",
+          "status": "pass",
+          "expected": "100.0%",
+          "actual": "100.0%",
+          "details": "actual=23.01B, plan=23.01B"
+        },
+        {
+          "check": "PROJ_Ramaiah sprint month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 100.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_WEZ aop fy achieved_pct",
+          "status": "pass",
+          "expected": "88.1%",
+          "actual": "88.1%",
+          "details": "actual=93.13B, plan=105.71B"
+        },
+        {
+          "check": "ZONE_WEZ aop fy status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 88.1%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_WEZ aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "85.3%",
+          "actual": "85.3%",
+          "details": "actual=25.91B, plan=30.36B"
+        },
+        {
+          "check": "ZONE_WEZ aop quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 85.3%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_WEZ aop month achieved_pct",
+          "status": "pass",
+          "expected": "97.7%",
+          "actual": "97.7%",
+          "details": "actual=25.11B, plan=25.70B"
+        },
+        {
+          "check": "ZONE_WEZ aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 97.7%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_WEZ sprint fy achieved_pct",
+          "status": "pass",
+          "expected": "88.0%",
+          "actual": "88.0%",
+          "details": "actual=92.52B, plan=105.10B"
+        },
+        {
+          "check": "ZONE_WEZ sprint fy status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 88.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_WEZ sprint quarter achieved_pct",
+          "status": "pass",
+          "expected": "85.3%",
+          "actual": "85.3%",
+          "details": "actual=25.91B, plan=30.36B"
+        },
+        {
+          "check": "ZONE_WEZ sprint quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 85.3%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "ZONE_WEZ sprint month achieved_pct",
+          "status": "pass",
+          "expected": "97.7%",
+          "actual": "97.7%",
+          "details": "actual=25.11B, plan=25.70B"
+        },
+        {
+          "check": "ZONE_WEZ sprint month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 97.7%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_Kolkata aop fy achieved_pct",
+          "status": "pass",
+          "expected": "88.1%",
+          "actual": "88.1%",
+          "details": "actual=93.13B, plan=105.71B"
+        },
+        {
+          "check": "REG_Kolkata aop fy status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 88.1%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_Kolkata aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "85.3%",
+          "actual": "85.3%",
+          "details": "actual=25.91B, plan=30.36B"
+        },
+        {
+          "check": "REG_Kolkata aop quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 85.3%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_Kolkata aop month achieved_pct",
+          "status": "pass",
+          "expected": "97.7%",
+          "actual": "97.7%",
+          "details": "actual=25.11B, plan=25.70B"
+        },
+        {
+          "check": "REG_Kolkata aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 97.7%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_Kolkata sprint fy achieved_pct",
+          "status": "pass",
+          "expected": "88.0%",
+          "actual": "88.0%",
+          "details": "actual=92.52B, plan=105.10B"
+        },
+        {
+          "check": "REG_Kolkata sprint fy status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 88.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_Kolkata sprint quarter achieved_pct",
+          "status": "pass",
+          "expected": "85.3%",
+          "actual": "85.3%",
+          "details": "actual=25.91B, plan=30.36B"
+        },
+        {
+          "check": "REG_Kolkata sprint quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 85.3%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "REG_Kolkata sprint month achieved_pct",
+          "status": "pass",
+          "expected": "97.7%",
+          "actual": "97.7%",
+          "details": "actual=25.11B, plan=25.70B"
+        },
+        {
+          "check": "REG_Kolkata sprint month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 97.7%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_BL Saha aop fy achieved_pct",
+          "status": "pass",
+          "expected": "88.1%",
+          "actual": "88.1%",
+          "details": "actual=93.13B, plan=105.71B"
+        },
+        {
+          "check": "PROJ_BL Saha aop fy status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 88.1%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_BL Saha aop quarter achieved_pct",
+          "status": "pass",
+          "expected": "85.3%",
+          "actual": "85.3%",
+          "details": "actual=25.91B, plan=30.36B"
+        },
+        {
+          "check": "PROJ_BL Saha aop quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 85.3%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_BL Saha aop month achieved_pct",
+          "status": "pass",
+          "expected": "97.7%",
+          "actual": "97.7%",
+          "details": "actual=25.11B, plan=25.70B"
+        },
+        {
+          "check": "PROJ_BL Saha aop month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 97.7%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_BL Saha sprint fy achieved_pct",
+          "status": "pass",
+          "expected": "88.0%",
+          "actual": "88.0%",
+          "details": "actual=92.52B, plan=105.10B"
+        },
+        {
+          "check": "PROJ_BL Saha sprint fy status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 88.0%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_BL Saha sprint quarter achieved_pct",
+          "status": "pass",
+          "expected": "85.3%",
+          "actual": "85.3%",
+          "details": "actual=25.91B, plan=30.36B"
+        },
+        {
+          "check": "PROJ_BL Saha sprint quarter status_color",
+          "status": "pass",
+          "expected": "amber",
+          "actual": "amber",
+          "details": "For 85.3%: red<85, amber 85-95, green>95"
+        },
+        {
+          "check": "PROJ_BL Saha sprint month achieved_pct",
+          "status": "pass",
+          "expected": "97.7%",
+          "actual": "97.7%",
+          "details": "actual=25.11B, plan=25.70B"
+        },
+        {
+          "check": "PROJ_BL Saha sprint month status_color",
+          "status": "pass",
+          "expected": "green",
+          "actual": "green",
+          "details": "For 97.7%: red<85, amber 85-95, green>95"
+        }
+      ]
+    },
+    "Cumulative Costs": {
+      "name": "Cumulative Costs",
+      "summary": {
+        "passed": 72,
+        "failed": 0,
+        "warnings": 0,
+        "total": 72
+      },
+      "checks": [
+        {
+          "check": "ALL fy final cumulative plan",
+          "status": "pass",
+          "expected": "4.99T",
+          "actual": "4.99T",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "ALL quarter final cumulative plan",
+          "status": "pass",
+          "expected": "1.71T",
+          "actual": "1.71T",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "ALL month final cumulative plan",
+          "status": "pass",
+          "expected": "1.15T",
+          "actual": "1.15T",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "ZONE_MZ fy final cumulative plan",
+          "status": "pass",
+          "expected": "1.89T",
+          "actual": "1.89T",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "ZONE_MZ quarter final cumulative plan",
+          "status": "pass",
+          "expected": "615.57B",
+          "actual": "615.57B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "ZONE_MZ month final cumulative plan",
+          "status": "pass",
+          "expected": "411.68B",
+          "actual": "411.68B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "REG_MZ1 fy final cumulative plan",
+          "status": "pass",
+          "expected": "1.89T",
+          "actual": "1.89T",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "REG_MZ1 quarter final cumulative plan",
+          "status": "pass",
+          "expected": "615.57B",
+          "actual": "615.57B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "REG_MZ1 month final cumulative plan",
+          "status": "pass",
+          "expected": "411.68B",
+          "actual": "411.68B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "PROJ_Avenue 11 fy final cumulative plan",
+          "status": "pass",
+          "expected": "418.31B",
+          "actual": "418.31B",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "PROJ_Avenue 11 quarter final cumulative plan",
+          "status": "pass",
+          "expected": "110.73B",
+          "actual": "110.73B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "PROJ_Avenue 11 month final cumulative plan",
+          "status": "pass",
+          "expected": "62.21B",
+          "actual": "62.21B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "PROJ_Horizon fy final cumulative plan",
+          "status": "pass",
+          "expected": "1.04T",
+          "actual": "1.04T",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "PROJ_Horizon quarter final cumulative plan",
+          "status": "pass",
+          "expected": "337.00B",
+          "actual": "337.00B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "PROJ_Horizon month final cumulative plan",
+          "status": "pass",
+          "expected": "208.68B",
+          "actual": "208.68B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "PROJ_Reserve fy final cumulative plan",
+          "status": "pass",
+          "expected": "435.83B",
+          "actual": "435.83B",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "PROJ_Reserve quarter final cumulative plan",
+          "status": "pass",
+          "expected": "167.85B",
+          "actual": "167.85B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "PROJ_Reserve month final cumulative plan",
+          "status": "pass",
+          "expected": "140.79B",
+          "actual": "140.79B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "ZONE_NZ fy final cumulative plan",
+          "status": "pass",
+          "expected": "1.90T",
+          "actual": "1.90T",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "ZONE_NZ quarter final cumulative plan",
+          "status": "pass",
+          "expected": "650.75B",
+          "actual": "650.75B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "ZONE_NZ month final cumulative plan",
+          "status": "pass",
+          "expected": "498.72B",
+          "actual": "498.72B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "REG_NZ1 fy final cumulative plan",
+          "status": "pass",
+          "expected": "882.58B",
+          "actual": "882.58B",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "REG_NZ1 quarter final cumulative plan",
+          "status": "pass",
+          "expected": "275.49B",
+          "actual": "275.49B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "REG_NZ1 month final cumulative plan",
+          "status": "pass",
+          "expected": "178.88B",
+          "actual": "178.88B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "PROJ_Aristocrat fy final cumulative plan",
+          "status": "pass",
+          "expected": "333.64B",
+          "actual": "333.64B",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "PROJ_Aristocrat quarter final cumulative plan",
+          "status": "pass",
+          "expected": "112.64B",
+          "actual": "112.64B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "PROJ_Aristocrat month final cumulative plan",
+          "status": "pass",
+          "expected": "69.62B",
+          "actual": "69.62B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "PROJ_Miraya fy final cumulative plan",
+          "status": "pass",
+          "expected": "198.03B",
+          "actual": "198.03B",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "PROJ_Miraya quarter final cumulative plan",
+          "status": "pass",
+          "expected": "92.30B",
+          "actual": "92.30B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "PROJ_Miraya month final cumulative plan",
+          "status": "pass",
+          "expected": "59.88B",
+          "actual": "59.88B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "PROJ_Zenith fy final cumulative plan",
+          "status": "pass",
+          "expected": "350.91B",
+          "actual": "350.91B",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "PROJ_Zenith quarter final cumulative plan",
+          "status": "pass",
+          "expected": "70.55B",
+          "actual": "70.55B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "PROJ_Zenith month final cumulative plan",
+          "status": "pass",
+          "expected": "49.38B",
+          "actual": "49.38B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "REG_NZ2 fy final cumulative plan",
+          "status": "pass",
+          "expected": "1.02T",
+          "actual": "1.02T",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "REG_NZ2 quarter final cumulative plan",
+          "status": "pass",
+          "expected": "375.26B",
+          "actual": "375.26B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "REG_NZ2 month final cumulative plan",
+          "status": "pass",
+          "expected": "319.83B",
+          "actual": "319.83B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "PROJ_Jardinia fy final cumulative plan",
+          "status": "pass",
+          "expected": "411.73B",
+          "actual": "411.73B",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "PROJ_Jardinia quarter final cumulative plan",
+          "status": "pass",
+          "expected": "199.13B",
+          "actual": "199.13B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "PROJ_Jardinia month final cumulative plan",
+          "status": "pass",
+          "expected": "168.36B",
+          "actual": "168.36B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "PROJ_Sec. 44, Noida fy final cumulative plan",
+          "status": "pass",
+          "expected": "206.89B",
+          "actual": "206.89B",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "PROJ_Sec. 44, Noida quarter final cumulative plan",
+          "status": "pass",
+          "expected": "59.29B",
+          "actual": "59.29B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "PROJ_Sec. 44, Noida month final cumulative plan",
+          "status": "pass",
+          "expected": "46.40B",
+          "actual": "46.40B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "PROJ_Tropical Isle fy final cumulative plan",
+          "status": "pass",
+          "expected": "401.78B",
+          "actual": "401.78B",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "PROJ_Tropical Isle quarter final cumulative plan",
+          "status": "pass",
+          "expected": "116.84B",
+          "actual": "116.84B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "PROJ_Tropical Isle month final cumulative plan",
+          "status": "pass",
+          "expected": "105.07B",
+          "actual": "105.07B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "ZONE_SZ fy final cumulative plan",
+          "status": "pass",
+          "expected": "1.09T",
+          "actual": "1.09T",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "ZONE_SZ quarter final cumulative plan",
+          "status": "pass",
+          "expected": "414.72B",
+          "actual": "414.72B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "ZONE_SZ month final cumulative plan",
+          "status": "pass",
+          "expected": "214.37B",
+          "actual": "214.37B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "REG_SZ1 fy final cumulative plan",
+          "status": "pass",
+          "expected": "936.21B",
+          "actual": "936.21B",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "REG_SZ1 quarter final cumulative plan",
+          "status": "pass",
+          "expected": "354.92B",
+          "actual": "354.92B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "REG_SZ1 month final cumulative plan",
+          "status": "pass",
+          "expected": "160.63B",
+          "actual": "160.63B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "PROJ_RGA 2 fy final cumulative plan",
+          "status": "pass",
+          "expected": "186.90B",
+          "actual": "186.90B",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "PROJ_RGA 2 quarter final cumulative plan",
+          "status": "pass",
+          "expected": "70.65B",
+          "actual": "70.65B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "PROJ_RGA 2 month final cumulative plan",
+          "status": "pass",
+          "expected": "42.34B",
+          "actual": "42.34B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "PROJ_Woodscapes fy final cumulative plan",
+          "status": "pass",
+          "expected": "749.31B",
+          "actual": "749.31B",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "PROJ_Woodscapes quarter final cumulative plan",
+          "status": "pass",
+          "expected": "284.28B",
+          "actual": "284.28B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "PROJ_Woodscapes month final cumulative plan",
+          "status": "pass",
+          "expected": "118.29B",
+          "actual": "118.29B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "REG_SZ2 fy final cumulative plan",
+          "status": "pass",
+          "expected": "155.96B",
+          "actual": "155.96B",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "REG_SZ2 quarter final cumulative plan",
+          "status": "pass",
+          "expected": "59.79B",
+          "actual": "59.79B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "REG_SZ2 month final cumulative plan",
+          "status": "pass",
+          "expected": "53.74B",
+          "actual": "53.74B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "PROJ_Ramaiah fy final cumulative plan",
+          "status": "pass",
+          "expected": "155.96B",
+          "actual": "155.96B",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "PROJ_Ramaiah quarter final cumulative plan",
+          "status": "pass",
+          "expected": "59.79B",
+          "actual": "59.79B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "PROJ_Ramaiah month final cumulative plan",
+          "status": "pass",
+          "expected": "53.74B",
+          "actual": "53.74B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "ZONE_WEZ fy final cumulative plan",
+          "status": "pass",
+          "expected": "105.71B",
+          "actual": "105.71B",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "ZONE_WEZ quarter final cumulative plan",
+          "status": "pass",
+          "expected": "32.26B",
+          "actual": "32.26B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "ZONE_WEZ month final cumulative plan",
+          "status": "pass",
+          "expected": "28.16B",
+          "actual": "28.16B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "REG_Kolkata fy final cumulative plan",
+          "status": "pass",
+          "expected": "105.71B",
+          "actual": "105.71B",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "REG_Kolkata quarter final cumulative plan",
+          "status": "pass",
+          "expected": "32.26B",
+          "actual": "32.26B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "REG_Kolkata month final cumulative plan",
+          "status": "pass",
+          "expected": "28.16B",
+          "actual": "28.16B",
+          "details": "Final period: Wk 4"
+        },
+        {
+          "check": "PROJ_BL Saha fy final cumulative plan",
+          "status": "pass",
+          "expected": "105.71B",
+          "actual": "105.71B",
+          "details": "Final period: Mar-26"
+        },
+        {
+          "check": "PROJ_BL Saha quarter final cumulative plan",
+          "status": "pass",
+          "expected": "32.26B",
+          "actual": "32.26B",
+          "details": "Final period: Wk 1"
+        },
+        {
+          "check": "PROJ_BL Saha month final cumulative plan",
+          "status": "pass",
+          "expected": "28.16B",
+          "actual": "28.16B",
+          "details": "Final period: Wk 4"
+        }
+      ]
+    },
+    "Matrix Bucket Consistency": {
+      "name": "Matrix Bucket Consistency",
+      "summary": {
+        "passed": 5,
+        "failed": 0,
+        "warnings": 0,
+        "total": 5
+      },
+      "checks": [
+        {
+          "check": "ALL matrix bucket sum = total projects",
+          "status": "pass",
+          "expected": 13,
+          "actual": 13,
+          "details": "Hierarchy has 13 projects"
+        },
+        {
+          "check": "ZONE_MZ bucket sum = zone projects",
+          "status": "pass",
+          "expected": 3,
+          "actual": 3,
+          "details": "Zone MZ has 3 projects"
+        },
+        {
+          "check": "ZONE_NZ bucket sum = zone projects",
+          "status": "pass",
+          "expected": 6,
+          "actual": 6,
+          "details": "Zone NZ has 6 projects"
+        },
+        {
+          "check": "ZONE_SZ bucket sum = zone projects",
+          "status": "pass",
+          "expected": 3,
+          "actual": 3,
+          "details": "Zone SZ has 3 projects"
+        },
+        {
+          "check": "ZONE_WEZ bucket sum = zone projects",
+          "status": "pass",
+          "expected": 1,
+          "actual": 1,
+          "details": "Zone WEZ has 1 projects"
+        }
+      ]
+    },
+    "Additional Cross-Checks": {
+      "name": "Additional Cross-Checks",
+      "summary": {
+        "passed": 6,
+        "failed": 0,
+        "warnings": 0,
+        "total": 6
+      },
+      "checks": [
+        {
+          "check": "No negative costs",
+          "status": "pass",
+          "expected": "0 negative values",
+          "actual": "0 negative values",
+          "details": null
+        },
+        {
+          "check": "Series dates in ascending order",
+          "status": "pass",
+          "expected": "All ordered",
+          "actual": "0 out of order",
+          "details": null
+        },
+        {
+          "check": "Achievement percentages in reasonable range (0-200%)",
+          "status": "pass",
+          "expected": "All in range",
+          "actual": "0 out of range",
+          "details": null
+        },
+        {
+          "check": "ALL fy gauge vs trend plan ratio",
+          "status": "pass",
+          "expected": "0.5-2.0",
+          "actual": "1.00",
+          "details": "Gauge: 4.99T, Trend: 4.99T"
+        },
+        {
+          "check": "ALL quarter gauge vs trend plan ratio",
+          "status": "pass",
+          "expected": "0.5-2.0",
+          "actual": "0.93",
+          "details": "Gauge: 1.59T, Trend: 1.71T"
+        },
+        {
+          "check": "ALL month gauge vs trend plan ratio",
+          "status": "pass",
+          "expected": "0.5-2.0",
+          "actual": "0.87",
+          "details": "Gauge: 1.00T, Trend: 1.15T"
+        }
+      ]
+    }
+  },
+  "all_checks": [
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "ZONE\u2192ALL fy plan costs",
+      "status": "pass",
+      "expected": "4.99T",
+      "actual": "4.99T",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "ZONE\u2192ALL fy actual costs",
+      "status": "pass",
+      "expected": "4.28T",
+      "actual": "4.28T",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "ZONE\u2192ALL quarter plan costs",
+      "status": "pass",
+      "expected": "1.71T",
+      "actual": "1.71T",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "ZONE\u2192ALL quarter actual costs",
+      "status": "pass",
+      "expected": "1.60T",
+      "actual": "1.60T",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "ZONE\u2192ALL month plan costs",
+      "status": "pass",
+      "expected": "1.15T",
+      "actual": "1.15T",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "ZONE\u2192ALL month actual costs",
+      "status": "pass",
+      "expected": "1.13T",
+      "actual": "1.13T",
+      "details": "Diff: -0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "REG\u2192ZONE_MZ fy plan",
+      "status": "pass",
+      "expected": "1.89T",
+      "actual": "1.89T",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "REG\u2192ZONE_MZ quarter plan",
+      "status": "pass",
+      "expected": "615.57B",
+      "actual": "615.57B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "REG\u2192ZONE_MZ month plan",
+      "status": "pass",
+      "expected": "411.68B",
+      "actual": "411.68B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "REG\u2192ZONE_NZ fy plan",
+      "status": "pass",
+      "expected": "1.90T",
+      "actual": "1.90T",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "REG\u2192ZONE_NZ quarter plan",
+      "status": "pass",
+      "expected": "650.75B",
+      "actual": "650.75B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "REG\u2192ZONE_NZ month plan",
+      "status": "pass",
+      "expected": "498.72B",
+      "actual": "498.72B",
+      "details": "Diff: -0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "REG\u2192ZONE_SZ fy plan",
+      "status": "pass",
+      "expected": "1.09T",
+      "actual": "1.09T",
+      "details": "Diff: -0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "REG\u2192ZONE_SZ quarter plan",
+      "status": "pass",
+      "expected": "414.72B",
+      "actual": "414.72B",
+      "details": "Diff: -0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "REG\u2192ZONE_SZ month plan",
+      "status": "pass",
+      "expected": "214.37B",
+      "actual": "214.37B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "REG\u2192ZONE_WEZ fy plan",
+      "status": "pass",
+      "expected": "105.71B",
+      "actual": "105.71B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "REG\u2192ZONE_WEZ quarter plan",
+      "status": "pass",
+      "expected": "32.26B",
+      "actual": "32.26B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "REG\u2192ZONE_WEZ month plan",
+      "status": "pass",
+      "expected": "28.16B",
+      "actual": "28.16B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_MZ1 fy plan",
+      "status": "pass",
+      "expected": "1.89T",
+      "actual": "1.89T",
+      "details": "Diff: -0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_MZ1 quarter plan",
+      "status": "pass",
+      "expected": "615.57B",
+      "actual": "615.57B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_MZ1 month plan",
+      "status": "pass",
+      "expected": "411.68B",
+      "actual": "411.68B",
+      "details": "Diff: -0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_NZ1 fy plan",
+      "status": "pass",
+      "expected": "882.58B",
+      "actual": "882.58B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_NZ1 quarter plan",
+      "status": "pass",
+      "expected": "275.49B",
+      "actual": "275.49B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_NZ1 month plan",
+      "status": "pass",
+      "expected": "178.88B",
+      "actual": "178.88B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_NZ2 fy plan",
+      "status": "pass",
+      "expected": "1.02T",
+      "actual": "1.02T",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_NZ2 quarter plan",
+      "status": "pass",
+      "expected": "375.26B",
+      "actual": "375.26B",
+      "details": "Diff: -0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_NZ2 month plan",
+      "status": "pass",
+      "expected": "319.83B",
+      "actual": "319.83B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_SZ1 fy plan",
+      "status": "pass",
+      "expected": "936.21B",
+      "actual": "936.21B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_SZ1 quarter plan",
+      "status": "pass",
+      "expected": "354.92B",
+      "actual": "354.92B",
+      "details": "Diff: -0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_SZ1 month plan",
+      "status": "pass",
+      "expected": "160.63B",
+      "actual": "160.63B",
+      "details": "Diff: -0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_SZ2 fy plan",
+      "status": "pass",
+      "expected": "155.96B",
+      "actual": "155.96B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_SZ2 quarter plan",
+      "status": "pass",
+      "expected": "59.79B",
+      "actual": "59.79B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_SZ2 month plan",
+      "status": "pass",
+      "expected": "53.74B",
+      "actual": "53.74B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_Kolkata fy plan",
+      "status": "pass",
+      "expected": "105.71B",
+      "actual": "105.71B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_Kolkata quarter plan",
+      "status": "pass",
+      "expected": "32.26B",
+      "actual": "32.26B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "PROJ\u2192REG_Kolkata month plan",
+      "status": "pass",
+      "expected": "28.16B",
+      "actual": "28.16B",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Time Slice Consistency",
+      "check": "ALL FY series count",
+      "status": "pass",
+      "expected": 12,
+      "actual": 12,
+      "details": "FY should have 12 monthly periods"
+    },
+    {
+      "category": "Time Slice Consistency",
+      "check": "ALL Quarter series count",
+      "status": "pass",
+      "expected": "12-15 weeks",
+      "actual": 14,
+      "details": "Quarter should have ~13 weekly periods"
+    },
+    {
+      "category": "Time Slice Consistency",
+      "check": "ALL Month series count",
+      "status": "pass",
+      "expected": "9-12 weeks",
+      "actual": 11,
+      "details": "Month (Looking Glass) should have ~10 weekly periods"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ALL aop fy achieved_pct",
+      "status": "pass",
+      "expected": "85.7%",
+      "actual": "85.7%",
+      "details": "actual=4.28T, plan=4.99T"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ALL aop fy status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 85.7%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ALL aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "94.1%",
+      "actual": "94.1%",
+      "details": "actual=1.49T, plan=1.59T"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ALL aop quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 94.1%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ALL aop month achieved_pct",
+      "status": "pass",
+      "expected": "98.8%",
+      "actual": "98.8%",
+      "details": "actual=991.50B, plan=1.00T"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ALL aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 98.8%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ALL sprint fy achieved_pct",
+      "status": "pass",
+      "expected": "82.4%",
+      "actual": "82.4%",
+      "details": "actual=1.57T, plan=1.91T"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ALL sprint fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 82.4%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ALL sprint quarter achieved_pct",
+      "status": "pass",
+      "expected": "93.8%",
+      "actual": "93.8%",
+      "details": "actual=619.41B, plan=660.24B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ALL sprint quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 93.8%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ALL sprint month achieved_pct",
+      "status": "pass",
+      "expected": "99.5%",
+      "actual": "99.5%",
+      "details": "actual=380.36B, plan=382.37B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ALL sprint month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.5%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_MZ aop fy achieved_pct",
+      "status": "pass",
+      "expected": "92.4%",
+      "actual": "92.4%",
+      "details": "actual=1.75T, plan=1.89T"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_MZ aop fy status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 92.4%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_MZ aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "98.7%",
+      "actual": "98.7%",
+      "details": "actual=560.00B, plan=567.10B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_MZ aop quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 98.7%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_MZ aop month achieved_pct",
+      "status": "pass",
+      "expected": "100.1%",
+      "actual": "100.1%",
+      "details": "actual=365.34B, plan=364.83B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_MZ aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.1%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_MZ sprint fy zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_MZ sprint fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_MZ sprint quarter zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_MZ sprint quarter status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_MZ sprint month zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_MZ sprint month status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_MZ1 aop fy achieved_pct",
+      "status": "pass",
+      "expected": "92.4%",
+      "actual": "92.4%",
+      "details": "actual=1.75T, plan=1.89T"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_MZ1 aop fy status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 92.4%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_MZ1 aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "98.7%",
+      "actual": "98.7%",
+      "details": "actual=560.00B, plan=567.10B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_MZ1 aop quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 98.7%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_MZ1 aop month achieved_pct",
+      "status": "pass",
+      "expected": "100.1%",
+      "actual": "100.1%",
+      "details": "actual=365.34B, plan=364.83B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_MZ1 aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.1%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_MZ1 sprint fy zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_MZ1 sprint fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_MZ1 sprint quarter zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_MZ1 sprint quarter status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_MZ1 sprint month zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_MZ1 sprint month status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Avenue 11 aop fy achieved_pct",
+      "status": "pass",
+      "expected": "87.4%",
+      "actual": "87.4%",
+      "details": "actual=365.42B, plan=418.31B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Avenue 11 aop fy status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 87.4%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Avenue 11 aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "98.1%",
+      "actual": "98.1%",
+      "details": "actual=95.70B, plan=97.53B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Avenue 11 aop quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 98.1%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Avenue 11 aop month achieved_pct",
+      "status": "pass",
+      "expected": "100.6%",
+      "actual": "100.6%",
+      "details": "actual=57.07B, plan=56.74B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Avenue 11 aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.6%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Avenue 11 sprint fy zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Avenue 11 sprint fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Avenue 11 sprint quarter zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Avenue 11 sprint quarter status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Avenue 11 sprint month zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Avenue 11 sprint month status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Horizon aop fy achieved_pct",
+      "status": "pass",
+      "expected": "91.2%",
+      "actual": "91.2%",
+      "details": "actual=944.75B, plan=1.04T"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Horizon aop fy status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 91.2%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Horizon aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "98.3%",
+      "actual": "98.3%",
+      "details": "actual=305.51B, plan=310.91B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Horizon aop quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 98.3%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Horizon aop month achieved_pct",
+      "status": "pass",
+      "expected": "100.1%",
+      "actual": "100.1%",
+      "details": "actual=182.03B, plan=181.88B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Horizon aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.1%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Horizon sprint fy zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Horizon sprint fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Horizon sprint quarter zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Horizon sprint quarter status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Horizon sprint month zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Horizon sprint month status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Reserve aop fy achieved_pct",
+      "status": "pass",
+      "expected": "100.1%",
+      "actual": "100.1%",
+      "details": "actual=436.17B, plan=435.83B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Reserve aop fy status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.1%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Reserve aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "100.1%",
+      "actual": "100.1%",
+      "details": "actual=158.80B, plan=158.65B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Reserve aop quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.1%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Reserve aop month achieved_pct",
+      "status": "pass",
+      "expected": "100.0%",
+      "actual": "100.0%",
+      "details": "actual=126.23B, plan=126.20B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Reserve aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Reserve sprint fy zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Reserve sprint fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Reserve sprint quarter zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Reserve sprint quarter status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Reserve sprint month zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Reserve sprint month status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_NZ aop fy achieved_pct",
+      "status": "pass",
+      "expected": "81.3%",
+      "actual": "81.3%",
+      "details": "actual=1.55T, plan=1.90T"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_NZ aop fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 81.3%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_NZ aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "93.1%",
+      "actual": "93.1%",
+      "details": "actual=567.63B, plan=609.44B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_NZ aop quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 93.1%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_NZ aop month achieved_pct",
+      "status": "pass",
+      "expected": "97.8%",
+      "actual": "97.8%",
+      "details": "actual=435.92B, plan=445.82B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_NZ aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 97.8%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_NZ sprint fy achieved_pct",
+      "status": "pass",
+      "expected": "81.6%",
+      "actual": "81.6%",
+      "details": "actual=783.60B, plan=960.67B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_NZ sprint fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 81.6%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_NZ sprint quarter achieved_pct",
+      "status": "pass",
+      "expected": "97.0%",
+      "actual": "97.0%",
+      "details": "actual=329.79B, plan=340.02B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_NZ sprint quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 97.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_NZ sprint month achieved_pct",
+      "status": "pass",
+      "expected": "99.8%",
+      "actual": "99.8%",
+      "details": "actual=248.40B, plan=249.01B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_NZ sprint month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.8%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ1 aop fy achieved_pct",
+      "status": "pass",
+      "expected": "73.4%",
+      "actual": "73.4%",
+      "details": "actual=648.05B, plan=882.58B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ1 aop fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 73.4%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ1 aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "96.4%",
+      "actual": "96.4%",
+      "details": "actual=242.21B, plan=251.14B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ1 aop quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 96.4%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ1 aop month achieved_pct",
+      "status": "pass",
+      "expected": "100.0%",
+      "actual": "100.0%",
+      "details": "actual=156.82B, plan=156.82B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ1 aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ1 sprint fy achieved_pct",
+      "status": "pass",
+      "expected": "70.1%",
+      "actual": "70.1%",
+      "details": "actual=384.55B, plan=548.94B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ1 sprint fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 70.1%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ1 sprint quarter achieved_pct",
+      "status": "pass",
+      "expected": "96.5%",
+      "actual": "96.5%",
+      "details": "actual=141.57B, plan=146.73B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ1 sprint quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 96.5%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ1 sprint month achieved_pct",
+      "status": "pass",
+      "expected": "100.0%",
+      "actual": "100.0%",
+      "details": "actual=96.43B, plan=96.43B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ1 sprint month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Aristocrat aop fy achieved_pct",
+      "status": "pass",
+      "expected": "79.0%",
+      "actual": "79.0%",
+      "details": "actual=263.50B, plan=333.64B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Aristocrat aop fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 79.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Aristocrat aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "96.4%",
+      "actual": "96.4%",
+      "details": "actual=100.64B, plan=104.41B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Aristocrat aop quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 96.4%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Aristocrat aop month achieved_pct",
+      "status": "pass",
+      "expected": "100.0%",
+      "actual": "100.0%",
+      "details": "actual=60.39B, plan=60.39B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Aristocrat aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Aristocrat sprint fy zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Aristocrat sprint fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Aristocrat sprint quarter zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Aristocrat sprint quarter status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Aristocrat sprint month zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Aristocrat sprint month status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Miraya aop fy achieved_pct",
+      "status": "pass",
+      "expected": "85.5%",
+      "actual": "85.5%",
+      "details": "actual=169.41B, plan=198.03B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Miraya aop fy status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 85.5%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Miraya aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "99.6%",
+      "actual": "99.6%",
+      "details": "actual=84.79B, plan=85.17B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Miraya aop quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.6%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Miraya aop month achieved_pct",
+      "status": "pass",
+      "expected": "100.0%",
+      "actual": "100.0%",
+      "details": "actual=52.59B, plan=52.59B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Miraya aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Miraya sprint fy achieved_pct",
+      "status": "pass",
+      "expected": "85.5%",
+      "actual": "85.5%",
+      "details": "actual=169.41B, plan=198.03B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Miraya sprint fy status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 85.5%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Miraya sprint quarter achieved_pct",
+      "status": "pass",
+      "expected": "99.6%",
+      "actual": "99.6%",
+      "details": "actual=84.79B, plan=85.17B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Miraya sprint quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.6%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Miraya sprint month achieved_pct",
+      "status": "pass",
+      "expected": "100.0%",
+      "actual": "100.0%",
+      "details": "actual=52.59B, plan=52.59B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Miraya sprint month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Zenith aop fy achieved_pct",
+      "status": "pass",
+      "expected": "61.3%",
+      "actual": "61.3%",
+      "details": "actual=215.15B, plan=350.91B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Zenith aop fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 61.3%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Zenith aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "92.2%",
+      "actual": "92.2%",
+      "details": "actual=56.78B, plan=61.57B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Zenith aop quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 92.2%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Zenith aop month achieved_pct",
+      "status": "pass",
+      "expected": "100.0%",
+      "actual": "100.0%",
+      "details": "actual=43.84B, plan=43.84B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Zenith aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Zenith sprint fy achieved_pct",
+      "status": "pass",
+      "expected": "61.3%",
+      "actual": "61.3%",
+      "details": "actual=215.15B, plan=350.91B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Zenith sprint fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 61.3%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Zenith sprint quarter achieved_pct",
+      "status": "pass",
+      "expected": "92.2%",
+      "actual": "92.2%",
+      "details": "actual=56.78B, plan=61.57B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Zenith sprint quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 92.2%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Zenith sprint month achieved_pct",
+      "status": "pass",
+      "expected": "100.0%",
+      "actual": "100.0%",
+      "details": "actual=43.84B, plan=43.84B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Zenith sprint month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ2 aop fy achieved_pct",
+      "status": "pass",
+      "expected": "88.0%",
+      "actual": "88.0%",
+      "details": "actual=898.20B, plan=1.02T"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ2 aop fy status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 88.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ2 aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "90.8%",
+      "actual": "90.8%",
+      "details": "actual=325.42B, plan=358.30B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ2 aop quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 90.8%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ2 aop month achieved_pct",
+      "status": "pass",
+      "expected": "96.6%",
+      "actual": "96.6%",
+      "details": "actual=279.11B, plan=289.00B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ2 aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 96.6%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ2 sprint fy achieved_pct",
+      "status": "pass",
+      "expected": "96.9%",
+      "actual": "96.9%",
+      "details": "actual=399.05B, plan=411.73B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ2 sprint fy status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 96.9%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ2 sprint quarter achieved_pct",
+      "status": "pass",
+      "expected": "97.4%",
+      "actual": "97.4%",
+      "details": "actual=188.22B, plan=193.29B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ2 sprint quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 97.4%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ2 sprint month achieved_pct",
+      "status": "pass",
+      "expected": "99.6%",
+      "actual": "99.6%",
+      "details": "actual=151.97B, plan=152.58B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_NZ2 sprint month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.6%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Jardinia aop fy achieved_pct",
+      "status": "pass",
+      "expected": "96.9%",
+      "actual": "96.9%",
+      "details": "actual=399.05B, plan=411.73B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Jardinia aop fy status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 96.9%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Jardinia aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "97.4%",
+      "actual": "97.4%",
+      "details": "actual=188.22B, plan=193.29B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Jardinia aop quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 97.4%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Jardinia aop month achieved_pct",
+      "status": "pass",
+      "expected": "99.6%",
+      "actual": "99.6%",
+      "details": "actual=151.97B, plan=152.58B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Jardinia aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.6%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Jardinia sprint fy achieved_pct",
+      "status": "pass",
+      "expected": "96.9%",
+      "actual": "96.9%",
+      "details": "actual=399.05B, plan=411.73B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Jardinia sprint fy status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 96.9%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Jardinia sprint quarter achieved_pct",
+      "status": "pass",
+      "expected": "97.4%",
+      "actual": "97.4%",
+      "details": "actual=188.22B, plan=193.29B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Jardinia sprint quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 97.4%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Jardinia sprint month achieved_pct",
+      "status": "pass",
+      "expected": "99.6%",
+      "actual": "99.6%",
+      "details": "actual=151.97B, plan=152.58B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Jardinia sprint month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.6%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Sec. 44, Noida aop fy achieved_pct",
+      "status": "pass",
+      "expected": "79.8%",
+      "actual": "79.8%",
+      "details": "actual=165.19B, plan=206.89B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Sec. 44, Noida aop fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 79.8%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Sec. 44, Noida aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "99.1%",
+      "actual": "99.1%",
+      "details": "actual=55.42B, plan=55.91B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Sec. 44, Noida aop quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.1%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Sec. 44, Noida aop month achieved_pct",
+      "status": "pass",
+      "expected": "101.4%",
+      "actual": "101.4%",
+      "details": "actual=42.36B, plan=41.79B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Sec. 44, Noida aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 101.4%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Sec. 44, Noida sprint fy zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Sec. 44, Noida sprint fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Sec. 44, Noida sprint quarter zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Sec. 44, Noida sprint quarter status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Sec. 44, Noida sprint month zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Sec. 44, Noida sprint month status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Tropical Isle aop fy achieved_pct",
+      "status": "pass",
+      "expected": "83.1%",
+      "actual": "83.1%",
+      "details": "actual=333.95B, plan=401.78B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Tropical Isle aop fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 83.1%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Tropical Isle aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "75.0%",
+      "actual": "75.0%",
+      "details": "actual=81.78B, plan=109.11B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Tropical Isle aop quarter status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 75.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Tropical Isle aop month achieved_pct",
+      "status": "pass",
+      "expected": "89.6%",
+      "actual": "89.6%",
+      "details": "actual=84.78B, plan=94.62B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Tropical Isle aop month status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 89.6%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Tropical Isle sprint fy zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Tropical Isle sprint fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Tropical Isle sprint quarter zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Tropical Isle sprint quarter status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Tropical Isle sprint month zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Tropical Isle sprint month status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_SZ aop fy achieved_pct",
+      "status": "pass",
+      "expected": "81.6%",
+      "actual": "81.6%",
+      "details": "actual=890.71B, plan=1.09T"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_SZ aop fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 81.6%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_SZ aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "89.5%",
+      "actual": "89.5%",
+      "details": "actual=338.42B, plan=378.21B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_SZ aop quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 89.5%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_SZ aop month achieved_pct",
+      "status": "pass",
+      "expected": "98.5%",
+      "actual": "98.5%",
+      "details": "actual=165.13B, plan=167.58B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_SZ aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 98.5%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_SZ sprint fy achieved_pct",
+      "status": "pass",
+      "expected": "82.7%",
+      "actual": "82.7%",
+      "details": "actual=697.27B, plan=842.93B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_SZ sprint fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 82.7%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_SZ sprint quarter achieved_pct",
+      "status": "pass",
+      "expected": "91.0%",
+      "actual": "91.0%",
+      "details": "actual=263.71B, plan=289.86B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_SZ sprint quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 91.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_SZ sprint month achieved_pct",
+      "status": "pass",
+      "expected": "99.2%",
+      "actual": "99.2%",
+      "details": "actual=106.85B, plan=107.67B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_SZ sprint month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.2%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ1 aop fy achieved_pct",
+      "status": "pass",
+      "expected": "78.6%",
+      "actual": "78.6%",
+      "details": "actual=735.87B, plan=936.21B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ1 aop fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 78.6%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ1 aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "87.6%",
+      "actual": "87.6%",
+      "details": "actual=281.20B, plan=320.89B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ1 aop quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 87.6%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ1 aop month achieved_pct",
+      "status": "pass",
+      "expected": "98.0%",
+      "actual": "98.0%",
+      "details": "actual=117.13B, plan=119.58B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ1 aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 98.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ1 sprint fy achieved_pct",
+      "status": "pass",
+      "expected": "80.7%",
+      "actual": "80.7%",
+      "details": "actual=604.77B, plan=749.31B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ1 sprint fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 80.7%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ1 sprint quarter achieved_pct",
+      "status": "pass",
+      "expected": "89.8%",
+      "actual": "89.8%",
+      "details": "actual=229.87B, plan=255.92B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ1 sprint quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 89.8%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ1 sprint month achieved_pct",
+      "status": "pass",
+      "expected": "99.0%",
+      "actual": "99.0%",
+      "details": "actual=83.85B, plan=84.66B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ1 sprint month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_RGA 2 aop fy achieved_pct",
+      "status": "pass",
+      "expected": "70.1%",
+      "actual": "70.1%",
+      "details": "actual=131.10B, plan=186.90B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_RGA 2 aop fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 70.1%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_RGA 2 aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "79.0%",
+      "actual": "79.0%",
+      "details": "actual=51.33B, plan=64.97B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_RGA 2 aop quarter status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 79.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_RGA 2 aop month achieved_pct",
+      "status": "pass",
+      "expected": "95.3%",
+      "actual": "95.3%",
+      "details": "actual=33.28B, plan=34.92B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_RGA 2 aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 95.3%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_RGA 2 sprint fy zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_RGA 2 sprint fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_RGA 2 sprint quarter zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_RGA 2 sprint quarter status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_RGA 2 sprint month zero plan",
+      "status": "pass",
+      "expected": "0%",
+      "actual": "0.0%",
+      "details": "Plan is zero, percentage should be 0"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_RGA 2 sprint month status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 0.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Woodscapes aop fy achieved_pct",
+      "status": "pass",
+      "expected": "80.7%",
+      "actual": "80.7%",
+      "details": "actual=604.77B, plan=749.31B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Woodscapes aop fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 80.7%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Woodscapes aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "89.8%",
+      "actual": "89.8%",
+      "details": "actual=229.87B, plan=255.92B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Woodscapes aop quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 89.8%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Woodscapes aop month achieved_pct",
+      "status": "pass",
+      "expected": "99.0%",
+      "actual": "99.0%",
+      "details": "actual=83.85B, plan=84.66B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Woodscapes aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Woodscapes sprint fy achieved_pct",
+      "status": "pass",
+      "expected": "80.7%",
+      "actual": "80.7%",
+      "details": "actual=604.77B, plan=749.31B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Woodscapes sprint fy status_color",
+      "status": "pass",
+      "expected": "red",
+      "actual": "red",
+      "details": "For 80.7%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Woodscapes sprint quarter achieved_pct",
+      "status": "pass",
+      "expected": "89.8%",
+      "actual": "89.8%",
+      "details": "actual=229.87B, plan=255.92B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Woodscapes sprint quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 89.8%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Woodscapes sprint month achieved_pct",
+      "status": "pass",
+      "expected": "99.0%",
+      "actual": "99.0%",
+      "details": "actual=83.85B, plan=84.66B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Woodscapes sprint month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ2 aop fy achieved_pct",
+      "status": "pass",
+      "expected": "99.3%",
+      "actual": "99.3%",
+      "details": "actual=154.84B, plan=155.96B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ2 aop fy status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.3%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ2 aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "99.8%",
+      "actual": "99.8%",
+      "details": "actual=57.22B, plan=57.32B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ2 aop quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.8%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ2 aop month achieved_pct",
+      "status": "pass",
+      "expected": "100.0%",
+      "actual": "100.0%",
+      "details": "actual=48.00B, plan=48.00B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ2 aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ2 sprint fy achieved_pct",
+      "status": "pass",
+      "expected": "98.8%",
+      "actual": "98.8%",
+      "details": "actual=92.50B, plan=93.62B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ2 sprint fy status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 98.8%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ2 sprint quarter achieved_pct",
+      "status": "pass",
+      "expected": "99.7%",
+      "actual": "99.7%",
+      "details": "actual=33.84B, plan=33.94B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ2 sprint quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.7%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ2 sprint month achieved_pct",
+      "status": "pass",
+      "expected": "100.0%",
+      "actual": "100.0%",
+      "details": "actual=23.01B, plan=23.01B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_SZ2 sprint month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Ramaiah aop fy achieved_pct",
+      "status": "pass",
+      "expected": "99.3%",
+      "actual": "99.3%",
+      "details": "actual=154.84B, plan=155.96B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Ramaiah aop fy status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.3%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Ramaiah aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "99.8%",
+      "actual": "99.8%",
+      "details": "actual=57.22B, plan=57.32B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Ramaiah aop quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.8%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Ramaiah aop month achieved_pct",
+      "status": "pass",
+      "expected": "100.0%",
+      "actual": "100.0%",
+      "details": "actual=48.00B, plan=48.00B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Ramaiah aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Ramaiah sprint fy achieved_pct",
+      "status": "pass",
+      "expected": "98.8%",
+      "actual": "98.8%",
+      "details": "actual=92.50B, plan=93.62B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Ramaiah sprint fy status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 98.8%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Ramaiah sprint quarter achieved_pct",
+      "status": "pass",
+      "expected": "99.7%",
+      "actual": "99.7%",
+      "details": "actual=33.84B, plan=33.94B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Ramaiah sprint quarter status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 99.7%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Ramaiah sprint month achieved_pct",
+      "status": "pass",
+      "expected": "100.0%",
+      "actual": "100.0%",
+      "details": "actual=23.01B, plan=23.01B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_Ramaiah sprint month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 100.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_WEZ aop fy achieved_pct",
+      "status": "pass",
+      "expected": "88.1%",
+      "actual": "88.1%",
+      "details": "actual=93.13B, plan=105.71B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_WEZ aop fy status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 88.1%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_WEZ aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "85.3%",
+      "actual": "85.3%",
+      "details": "actual=25.91B, plan=30.36B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_WEZ aop quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 85.3%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_WEZ aop month achieved_pct",
+      "status": "pass",
+      "expected": "97.7%",
+      "actual": "97.7%",
+      "details": "actual=25.11B, plan=25.70B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_WEZ aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 97.7%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_WEZ sprint fy achieved_pct",
+      "status": "pass",
+      "expected": "88.0%",
+      "actual": "88.0%",
+      "details": "actual=92.52B, plan=105.10B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_WEZ sprint fy status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 88.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_WEZ sprint quarter achieved_pct",
+      "status": "pass",
+      "expected": "85.3%",
+      "actual": "85.3%",
+      "details": "actual=25.91B, plan=30.36B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_WEZ sprint quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 85.3%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_WEZ sprint month achieved_pct",
+      "status": "pass",
+      "expected": "97.7%",
+      "actual": "97.7%",
+      "details": "actual=25.11B, plan=25.70B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ZONE_WEZ sprint month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 97.7%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_Kolkata aop fy achieved_pct",
+      "status": "pass",
+      "expected": "88.1%",
+      "actual": "88.1%",
+      "details": "actual=93.13B, plan=105.71B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_Kolkata aop fy status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 88.1%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_Kolkata aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "85.3%",
+      "actual": "85.3%",
+      "details": "actual=25.91B, plan=30.36B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_Kolkata aop quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 85.3%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_Kolkata aop month achieved_pct",
+      "status": "pass",
+      "expected": "97.7%",
+      "actual": "97.7%",
+      "details": "actual=25.11B, plan=25.70B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_Kolkata aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 97.7%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_Kolkata sprint fy achieved_pct",
+      "status": "pass",
+      "expected": "88.0%",
+      "actual": "88.0%",
+      "details": "actual=92.52B, plan=105.10B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_Kolkata sprint fy status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 88.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_Kolkata sprint quarter achieved_pct",
+      "status": "pass",
+      "expected": "85.3%",
+      "actual": "85.3%",
+      "details": "actual=25.91B, plan=30.36B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_Kolkata sprint quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 85.3%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_Kolkata sprint month achieved_pct",
+      "status": "pass",
+      "expected": "97.7%",
+      "actual": "97.7%",
+      "details": "actual=25.11B, plan=25.70B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "REG_Kolkata sprint month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 97.7%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_BL Saha aop fy achieved_pct",
+      "status": "pass",
+      "expected": "88.1%",
+      "actual": "88.1%",
+      "details": "actual=93.13B, plan=105.71B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_BL Saha aop fy status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 88.1%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_BL Saha aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "85.3%",
+      "actual": "85.3%",
+      "details": "actual=25.91B, plan=30.36B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_BL Saha aop quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 85.3%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_BL Saha aop month achieved_pct",
+      "status": "pass",
+      "expected": "97.7%",
+      "actual": "97.7%",
+      "details": "actual=25.11B, plan=25.70B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_BL Saha aop month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 97.7%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_BL Saha sprint fy achieved_pct",
+      "status": "pass",
+      "expected": "88.0%",
+      "actual": "88.0%",
+      "details": "actual=92.52B, plan=105.10B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_BL Saha sprint fy status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 88.0%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_BL Saha sprint quarter achieved_pct",
+      "status": "pass",
+      "expected": "85.3%",
+      "actual": "85.3%",
+      "details": "actual=25.91B, plan=30.36B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_BL Saha sprint quarter status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 85.3%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_BL Saha sprint month achieved_pct",
+      "status": "pass",
+      "expected": "97.7%",
+      "actual": "97.7%",
+      "details": "actual=25.11B, plan=25.70B"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "PROJ_BL Saha sprint month status_color",
+      "status": "pass",
+      "expected": "green",
+      "actual": "green",
+      "details": "For 97.7%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ALL fy final cumulative plan",
+      "status": "pass",
+      "expected": "4.99T",
+      "actual": "4.99T",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ALL quarter final cumulative plan",
+      "status": "pass",
+      "expected": "1.71T",
+      "actual": "1.71T",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ALL month final cumulative plan",
+      "status": "pass",
+      "expected": "1.15T",
+      "actual": "1.15T",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ZONE_MZ fy final cumulative plan",
+      "status": "pass",
+      "expected": "1.89T",
+      "actual": "1.89T",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ZONE_MZ quarter final cumulative plan",
+      "status": "pass",
+      "expected": "615.57B",
+      "actual": "615.57B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ZONE_MZ month final cumulative plan",
+      "status": "pass",
+      "expected": "411.68B",
+      "actual": "411.68B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_MZ1 fy final cumulative plan",
+      "status": "pass",
+      "expected": "1.89T",
+      "actual": "1.89T",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_MZ1 quarter final cumulative plan",
+      "status": "pass",
+      "expected": "615.57B",
+      "actual": "615.57B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_MZ1 month final cumulative plan",
+      "status": "pass",
+      "expected": "411.68B",
+      "actual": "411.68B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Avenue 11 fy final cumulative plan",
+      "status": "pass",
+      "expected": "418.31B",
+      "actual": "418.31B",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Avenue 11 quarter final cumulative plan",
+      "status": "pass",
+      "expected": "110.73B",
+      "actual": "110.73B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Avenue 11 month final cumulative plan",
+      "status": "pass",
+      "expected": "62.21B",
+      "actual": "62.21B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Horizon fy final cumulative plan",
+      "status": "pass",
+      "expected": "1.04T",
+      "actual": "1.04T",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Horizon quarter final cumulative plan",
+      "status": "pass",
+      "expected": "337.00B",
+      "actual": "337.00B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Horizon month final cumulative plan",
+      "status": "pass",
+      "expected": "208.68B",
+      "actual": "208.68B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Reserve fy final cumulative plan",
+      "status": "pass",
+      "expected": "435.83B",
+      "actual": "435.83B",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Reserve quarter final cumulative plan",
+      "status": "pass",
+      "expected": "167.85B",
+      "actual": "167.85B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Reserve month final cumulative plan",
+      "status": "pass",
+      "expected": "140.79B",
+      "actual": "140.79B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ZONE_NZ fy final cumulative plan",
+      "status": "pass",
+      "expected": "1.90T",
+      "actual": "1.90T",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ZONE_NZ quarter final cumulative plan",
+      "status": "pass",
+      "expected": "650.75B",
+      "actual": "650.75B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ZONE_NZ month final cumulative plan",
+      "status": "pass",
+      "expected": "498.72B",
+      "actual": "498.72B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_NZ1 fy final cumulative plan",
+      "status": "pass",
+      "expected": "882.58B",
+      "actual": "882.58B",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_NZ1 quarter final cumulative plan",
+      "status": "pass",
+      "expected": "275.49B",
+      "actual": "275.49B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_NZ1 month final cumulative plan",
+      "status": "pass",
+      "expected": "178.88B",
+      "actual": "178.88B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Aristocrat fy final cumulative plan",
+      "status": "pass",
+      "expected": "333.64B",
+      "actual": "333.64B",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Aristocrat quarter final cumulative plan",
+      "status": "pass",
+      "expected": "112.64B",
+      "actual": "112.64B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Aristocrat month final cumulative plan",
+      "status": "pass",
+      "expected": "69.62B",
+      "actual": "69.62B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Miraya fy final cumulative plan",
+      "status": "pass",
+      "expected": "198.03B",
+      "actual": "198.03B",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Miraya quarter final cumulative plan",
+      "status": "pass",
+      "expected": "92.30B",
+      "actual": "92.30B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Miraya month final cumulative plan",
+      "status": "pass",
+      "expected": "59.88B",
+      "actual": "59.88B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Zenith fy final cumulative plan",
+      "status": "pass",
+      "expected": "350.91B",
+      "actual": "350.91B",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Zenith quarter final cumulative plan",
+      "status": "pass",
+      "expected": "70.55B",
+      "actual": "70.55B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Zenith month final cumulative plan",
+      "status": "pass",
+      "expected": "49.38B",
+      "actual": "49.38B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_NZ2 fy final cumulative plan",
+      "status": "pass",
+      "expected": "1.02T",
+      "actual": "1.02T",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_NZ2 quarter final cumulative plan",
+      "status": "pass",
+      "expected": "375.26B",
+      "actual": "375.26B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_NZ2 month final cumulative plan",
+      "status": "pass",
+      "expected": "319.83B",
+      "actual": "319.83B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Jardinia fy final cumulative plan",
+      "status": "pass",
+      "expected": "411.73B",
+      "actual": "411.73B",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Jardinia quarter final cumulative plan",
+      "status": "pass",
+      "expected": "199.13B",
+      "actual": "199.13B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Jardinia month final cumulative plan",
+      "status": "pass",
+      "expected": "168.36B",
+      "actual": "168.36B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Sec. 44, Noida fy final cumulative plan",
+      "status": "pass",
+      "expected": "206.89B",
+      "actual": "206.89B",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Sec. 44, Noida quarter final cumulative plan",
+      "status": "pass",
+      "expected": "59.29B",
+      "actual": "59.29B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Sec. 44, Noida month final cumulative plan",
+      "status": "pass",
+      "expected": "46.40B",
+      "actual": "46.40B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Tropical Isle fy final cumulative plan",
+      "status": "pass",
+      "expected": "401.78B",
+      "actual": "401.78B",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Tropical Isle quarter final cumulative plan",
+      "status": "pass",
+      "expected": "116.84B",
+      "actual": "116.84B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Tropical Isle month final cumulative plan",
+      "status": "pass",
+      "expected": "105.07B",
+      "actual": "105.07B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ZONE_SZ fy final cumulative plan",
+      "status": "pass",
+      "expected": "1.09T",
+      "actual": "1.09T",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ZONE_SZ quarter final cumulative plan",
+      "status": "pass",
+      "expected": "414.72B",
+      "actual": "414.72B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ZONE_SZ month final cumulative plan",
+      "status": "pass",
+      "expected": "214.37B",
+      "actual": "214.37B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_SZ1 fy final cumulative plan",
+      "status": "pass",
+      "expected": "936.21B",
+      "actual": "936.21B",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_SZ1 quarter final cumulative plan",
+      "status": "pass",
+      "expected": "354.92B",
+      "actual": "354.92B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_SZ1 month final cumulative plan",
+      "status": "pass",
+      "expected": "160.63B",
+      "actual": "160.63B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_RGA 2 fy final cumulative plan",
+      "status": "pass",
+      "expected": "186.90B",
+      "actual": "186.90B",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_RGA 2 quarter final cumulative plan",
+      "status": "pass",
+      "expected": "70.65B",
+      "actual": "70.65B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_RGA 2 month final cumulative plan",
+      "status": "pass",
+      "expected": "42.34B",
+      "actual": "42.34B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Woodscapes fy final cumulative plan",
+      "status": "pass",
+      "expected": "749.31B",
+      "actual": "749.31B",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Woodscapes quarter final cumulative plan",
+      "status": "pass",
+      "expected": "284.28B",
+      "actual": "284.28B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Woodscapes month final cumulative plan",
+      "status": "pass",
+      "expected": "118.29B",
+      "actual": "118.29B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_SZ2 fy final cumulative plan",
+      "status": "pass",
+      "expected": "155.96B",
+      "actual": "155.96B",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_SZ2 quarter final cumulative plan",
+      "status": "pass",
+      "expected": "59.79B",
+      "actual": "59.79B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_SZ2 month final cumulative plan",
+      "status": "pass",
+      "expected": "53.74B",
+      "actual": "53.74B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Ramaiah fy final cumulative plan",
+      "status": "pass",
+      "expected": "155.96B",
+      "actual": "155.96B",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Ramaiah quarter final cumulative plan",
+      "status": "pass",
+      "expected": "59.79B",
+      "actual": "59.79B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_Ramaiah month final cumulative plan",
+      "status": "pass",
+      "expected": "53.74B",
+      "actual": "53.74B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ZONE_WEZ fy final cumulative plan",
+      "status": "pass",
+      "expected": "105.71B",
+      "actual": "105.71B",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ZONE_WEZ quarter final cumulative plan",
+      "status": "pass",
+      "expected": "32.26B",
+      "actual": "32.26B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ZONE_WEZ month final cumulative plan",
+      "status": "pass",
+      "expected": "28.16B",
+      "actual": "28.16B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_Kolkata fy final cumulative plan",
+      "status": "pass",
+      "expected": "105.71B",
+      "actual": "105.71B",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_Kolkata quarter final cumulative plan",
+      "status": "pass",
+      "expected": "32.26B",
+      "actual": "32.26B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "REG_Kolkata month final cumulative plan",
+      "status": "pass",
+      "expected": "28.16B",
+      "actual": "28.16B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_BL Saha fy final cumulative plan",
+      "status": "pass",
+      "expected": "105.71B",
+      "actual": "105.71B",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_BL Saha quarter final cumulative plan",
+      "status": "pass",
+      "expected": "32.26B",
+      "actual": "32.26B",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "PROJ_BL Saha month final cumulative plan",
+      "status": "pass",
+      "expected": "28.16B",
+      "actual": "28.16B",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Matrix Bucket Consistency",
+      "check": "ALL matrix bucket sum = total projects",
+      "status": "pass",
+      "expected": 13,
+      "actual": 13,
+      "details": "Hierarchy has 13 projects"
+    },
+    {
+      "category": "Matrix Bucket Consistency",
+      "check": "ZONE_MZ bucket sum = zone projects",
+      "status": "pass",
+      "expected": 3,
+      "actual": 3,
+      "details": "Zone MZ has 3 projects"
+    },
+    {
+      "category": "Matrix Bucket Consistency",
+      "check": "ZONE_NZ bucket sum = zone projects",
+      "status": "pass",
+      "expected": 6,
+      "actual": 6,
+      "details": "Zone NZ has 6 projects"
+    },
+    {
+      "category": "Matrix Bucket Consistency",
+      "check": "ZONE_SZ bucket sum = zone projects",
+      "status": "pass",
+      "expected": 3,
+      "actual": 3,
+      "details": "Zone SZ has 3 projects"
+    },
+    {
+      "category": "Matrix Bucket Consistency",
+      "check": "ZONE_WEZ bucket sum = zone projects",
+      "status": "pass",
+      "expected": 1,
+      "actual": 1,
+      "details": "Zone WEZ has 1 projects"
+    },
+    {
+      "category": "Additional Cross-Checks",
+      "check": "No negative costs",
+      "status": "pass",
+      "expected": "0 negative values",
+      "actual": "0 negative values",
+      "details": null
+    },
+    {
+      "category": "Additional Cross-Checks",
+      "check": "Series dates in ascending order",
+      "status": "pass",
+      "expected": "All ordered",
+      "actual": "0 out of order",
+      "details": null
+    },
+    {
+      "category": "Additional Cross-Checks",
+      "check": "Achievement percentages in reasonable range (0-200%)",
+      "status": "pass",
+      "expected": "All in range",
+      "actual": "0 out of range",
+      "details": null
+    },
+    {
+      "category": "Additional Cross-Checks",
+      "check": "ALL fy gauge vs trend plan ratio",
+      "status": "pass",
+      "expected": "0.5-2.0",
+      "actual": "1.00",
+      "details": "Gauge: 4.99T, Trend: 4.99T"
+    },
+    {
+      "category": "Additional Cross-Checks",
+      "check": "ALL quarter gauge vs trend plan ratio",
+      "status": "pass",
+      "expected": "0.5-2.0",
+      "actual": "0.93",
+      "details": "Gauge: 1.59T, Trend: 1.71T"
+    },
+    {
+      "category": "Additional Cross-Checks",
+      "check": "ALL month gauge vs trend plan ratio",
+      "status": "pass",
+      "expected": "0.5-2.0",
+      "actual": "0.87",
+      "details": "Gauge: 1.00T, Trend: 1.15T"
+    }
+  ],
+  "failed_checks": [],
+  "warning_checks": [],
+  "sample_checks": [
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "ZONE\u2192ALL fy plan costs",
+      "status": "pass",
+      "expected": "4.99T",
+      "actual": "4.99T",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "ZONE\u2192ALL fy actual costs",
+      "status": "pass",
+      "expected": "4.28T",
+      "actual": "4.28T",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Hierarchy Aggregation",
+      "check": "ZONE\u2192ALL quarter plan costs",
+      "status": "pass",
+      "expected": "1.71T",
+      "actual": "1.71T",
+      "details": "Diff: 0.00"
+    },
+    {
+      "category": "Time Slice Consistency",
+      "check": "ALL FY series count",
+      "status": "pass",
+      "expected": 12,
+      "actual": 12,
+      "details": "FY should have 12 monthly periods"
+    },
+    {
+      "category": "Time Slice Consistency",
+      "check": "ALL Quarter series count",
+      "status": "pass",
+      "expected": "12-15 weeks",
+      "actual": 14,
+      "details": "Quarter should have ~13 weekly periods"
+    },
+    {
+      "category": "Time Slice Consistency",
+      "check": "ALL Month series count",
+      "status": "pass",
+      "expected": "9-12 weeks",
+      "actual": 11,
+      "details": "Month (Looking Glass) should have ~10 weekly periods"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ALL aop fy achieved_pct",
+      "status": "pass",
+      "expected": "85.7%",
+      "actual": "85.7%",
+      "details": "actual=4.28T, plan=4.99T"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ALL aop fy status_color",
+      "status": "pass",
+      "expected": "amber",
+      "actual": "amber",
+      "details": "For 85.7%: red<85, amber 85-95, green>95"
+    },
+    {
+      "category": "Gauge Calculations",
+      "check": "ALL aop quarter achieved_pct",
+      "status": "pass",
+      "expected": "94.1%",
+      "actual": "94.1%",
+      "details": "actual=1.49T, plan=1.59T"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ALL fy final cumulative plan",
+      "status": "pass",
+      "expected": "4.99T",
+      "actual": "4.99T",
+      "details": "Final period: Mar-26"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ALL quarter final cumulative plan",
+      "status": "pass",
+      "expected": "1.71T",
+      "actual": "1.71T",
+      "details": "Final period: Wk 1"
+    },
+    {
+      "category": "Cumulative Costs",
+      "check": "ALL month final cumulative plan",
+      "status": "pass",
+      "expected": "1.15T",
+      "actual": "1.15T",
+      "details": "Final period: Wk 4"
+    },
+    {
+      "category": "Matrix Bucket Consistency",
+      "check": "ALL matrix bucket sum = total projects",
+      "status": "pass",
+      "expected": 13,
+      "actual": 13,
+      "details": "Hierarchy has 13 projects"
+    },
+    {
+      "category": "Matrix Bucket Consistency",
+      "check": "ZONE_MZ bucket sum = zone projects",
+      "status": "pass",
+      "expected": 3,
+      "actual": 3,
+      "details": "Zone MZ has 3 projects"
+    },
+    {
+      "category": "Matrix Bucket Consistency",
+      "check": "ZONE_NZ bucket sum = zone projects",
+      "status": "pass",
+      "expected": 6,
+      "actual": 6,
+      "details": "Zone NZ has 6 projects"
+    },
+    {
+      "category": "Additional Cross-Checks",
+      "check": "No negative costs",
+      "status": "pass",
+      "expected": "0 negative values",
+      "actual": "0 negative values",
+      "details": null
+    },
+    {
+      "category": "Additional Cross-Checks",
+      "check": "Series dates in ascending order",
+      "status": "pass",
+      "expected": "All ordered",
+      "actual": "0 out of order",
+      "details": null
+    },
+    {
+      "category": "Additional Cross-Checks",
+      "check": "Achievement percentages in reasonable range (0-200%)",
+      "status": "pass",
+      "expected": "All in range",
+      "actual": "0 out of range",
+      "details": null
+    }
+  ]
+}
